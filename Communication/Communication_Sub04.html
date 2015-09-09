@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard2.css" />
+    
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+</head>
+<body style="width: 1000px; height: 390px;">
+<div style="margin-top:10px; margin-bottom:10px; margin-left:10px;">
+    <div id="communicationboard-header" style="height:60px;">
+        <h2>
+            下取車両
+        </h2>
+        <ul>
+            <li style="margin-top:15px; margin-left: 40px; font-size: 18px;">
+                <table width="100%">
+                <tr>
+                    <td width="8%" valign="top">お客様：</td>
+                    <td style="overflow: hidden;" formxmlcolspan="1" width="10%" valign="top">
+                        <table class="ms-crm-Lookup" id="Table3" style="width: 220px;
+                            table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                        <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                            style="width: 200px;">
+                                            <li style="display: inline; white-space: nowrap;">
+                                                <span 
+                                                    class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                    oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                    otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                    <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img5" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                    <span class="ms-crm-LookupItem-Name" wrapper="true">お客様</span>
+                                                </span>
+                                            </li>
+                                        </div>
+                                        <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text3"
+                                            style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                            border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                            ime-mode="auto">
+                                    </td>
+                                    <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                            id="Img6" style="-ms-ime-mode: auto;" 
+                                            src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                            req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                            isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                            disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                            lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                            lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                            lookuptypes="1" forcesubmit="false">
+                                            <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="1%">
+                    </td>
+                    <td width="8%" valign="top">対象車両：</td>
+                    <td id="Td4" style="overflow: hidden;" formxmlcolspan="1" width="10%" valign="top">
+                        <table class="ms-crm-Lookup" id="Table4" style="width: 220px;
+                            table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                        <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                            style="width: 200px;">
+                                            <li style="display: inline; white-space: nowrap;">
+                                                <span 
+                                                    class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                    oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                    otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                    <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img7" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                    <span class="ms-crm-LookupItem-Name" wrapper="true">対象車両</span>
+                                                </span>
+                                            </li>
+                                        </div>
+                                        <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text4"
+                                            style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                            border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                            ime-mode="auto">
+                                    </td>
+                                    <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                            id="Img8" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                            req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                            isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                            disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                            lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                            lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                            lookuptypes="1" forcesubmit="false">
+                                            <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="1%"></td>
+                    <td width="15%">
+                        <input type="button" class="blue_btn_class" value="車両カルテ" style="width:100px; height: 25px;" />
+                    </td>
+                </tr>
+            </table>
+            </li>
+        </ul>
+    </div>
+    <div id="trade-car-information">
+        <div style="height:180px;">
+            <div id="communicationboard-header" style="height:40px;">
+                <h2 style="margin-left:20px;">
+                    ■査定結果
+                        <input type="button" class="blue_btn_class" value="新規査定" style="width:100px; height: 25px; margin-right: 140px; float: right" />
+                        <input type="button" class="blue_btn_class" value="再表示" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+                </h2>
+            </div>
+
+            <div id="communicationboard-detail" style="margin:0px 0px 25px 30px;">
+                <form>
+                    <table class="sample1" style="height:auto;">
+                        <tr>
+                            <th width="100px;">査定証No</th>
+                            <th width="100px;">査定日</th>
+                            <th width="100px;">査定士</th>
+                            <th width="100px;">査定ステータス</th>
+                            <th width="125px;">基本価格</th>
+                            <th width="125px;">査定額</th>
+                        </tr>
+                        <tr>
+                            <td><a>AS00000000</a></td>
+                            <td>2014/6/20</td>
+                            <td>松本　松子</td>
+                            <td>価格応答完了</td>
+                            <td class="numeric">2,500,000円</td>
+                            <td class="numeric">350,000円</td>
+                        </tr>
+                        <tr>
+                            <td><a>AS00000000</a></td>
+                            <td>2014/6/1</td>
+                            <td>松本　松子</td>
+                            <td>査定入力完了</td>
+                            <td class="numeric">2,500,000円</td>
+                            <td class="numeric">350,000円</td>
+                        </tr>
+                        <tr>
+                            <td><a>AS00000000</a></td>
+                            <td>2014/5/15</td>
+                            <td>松本　松子</td>
+                            <td>価格応答完了</td>
+                            <td class="numeric">2,500,000円</td>
+                            <td class="numeric">350,000円</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div id="communicationboard-header" style="height:40px;">
+                <h2 style="margin-left:20px;">
+                    ■残債状況
+                    <span style="margin-left:30px; font-size:14px;font-weight:normal;">前回照会日：2014/6/15</span>
+                        <input type="button" class="blue_btn_class" value="残債照会" style="width:100px; height: 25px; margin-right: 230px; float: right" />
+                        <input type="button" class="blue_btn_class" value="保存" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+                </h2>
+            </div>
+
+            <div id="communicationboard-detail" style="margin: 0px 0px 25px 30px;">
+                <form>
+                    <table class="sample1" style="height:auto;">
+                        <tr>
+                            <th colspan="2" width="200px;">１</th>
+                            <th colspan="2" width="200px;">２</th>
+                            <th colspan="2" width="200px;">３</th>
+                        </tr>
+                        <tr>
+                            <th>支払期限</th>
+                            <th>残債額</th>
+                            <th>支払期限</th>
+                            <th>残債額</th>
+                            <th>支払期限</th>
+                            <th>残債額</th>
+                        </tr>
+                        <tr>
+                            <td>2014/9/20</td>
+                            <td class="numeric">300,000円</td>
+                            <td>2014/10/20</td>
+                            <td class="numeric">200,000円</td>
+                            <td>2014/11/20</td>
+                            <td class="numeric">100,000円</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

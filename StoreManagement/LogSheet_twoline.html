@@ -1,0 +1,994 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>ログシート</title>
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        function openpage() {
+            var iWidth = 1280;
+            var iHeight = 650;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            window.open("LogSheet_twoline_related.html","ログシート（関連ログ検索）","height="+iHeight+",width="+iWidth+",top="+iTop+",left="+iLeft);
+        }
+        function DateInputFrom_onclick() {
+
+        }
+
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/logsheet.css" />
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/MsAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/accounting.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .style5
+        {
+            width: 10%;
+        }
+    </style>
+
+</head>
+<body id="test" style="width:1280px;height:768px; margin:0px; padding:0px;"> <!--onload="prettyPrint();-->
+    <!--ログシート-->
+    <div id="logsheet-content">
+        <h2>ログシート</h2>
+            <!--検索条件-->
+            <div class="logsheet-search-condition">
+                <form>
+                    <table style="width: 1221px">
+                        <tr>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name_a">店舗</label>
+                            </td>
+                            <td id="new_lookuptestentity_d" style="overflow: hidden;" formxmlcolspan="1" width="10%">
+                                <table class="ms-crm-Lookup" id="new_lookuptestentity_lookupTable" style="width: 100%;
+                                    table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                    <li style="display: inline; white-space: nowrap;">
+                                                        <span 
+                                                            class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                            oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                            otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="ico_16_1" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">店舗</span>
+                                                        </span>
+                                                    </li>
+                                                </div>
+                                                <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="new_lookuptestentity_ledit"
+                                                    style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                    border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                                    ime-mode="auto">
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="new_lookuptestentity" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td id="new_datetimetest" formxmlcolspan="1" colspan="6"
+                                class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="50%">
+                                <div class="ms-crm-RadioButton" id="new_twooptionstest" 
+                                    style="-ms-ime-mode: auto;" attrpriv="7" attrname="new_twooptionstest" req="0" 
+                                    atype="Boolean">
+                                <table class="ms-crm-DateTime" id="Table5" cellspacing="0" cellpadding="0" 
+                                        attrformat="datetime" attrpriv="7" attrname="new_datetimetest" req="0" 
+                                        cachevaluesonclient="false" initialallowtimeedit="true" 
+                                        initialalldaydisplaymode="false" initialdisableinit="false" 
+                                        initialallowblankdate="true" initialshowtime="true" format="datetime">
+                                    <tr>
+                                        <td align="right" width="10%">
+                                            <input name="rad_new_twooptionstest" tabindex="2" class="ms-crm-RadioButton" 
+                                                id="rad_new_twooptionstest1" style="margin-left: 0px;" type="radio" value="0" 
+                                                align="middle"><label for="rad_new_twooptionstest1">検索日付</label>
+                                        </td>
+                                        <td width="10%">
+                                        <table width="10%">
+                                            <tr>
+                                                <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container" width="1%">
+                                                    <input tabindex="3" class="ms-crm-Input" id="DateInputFrom" style="-ms-ime-mode: auto; width: 100px;" type="text" onclick="return DateInputFrom_onclick()"><label for="DateInputFrom"></label>
+                                                </td>
+                                                <td>
+                                                    <img class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="new_dateonlytestimg"
+                                                        alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                        <td width="2%">&nbsp;～</td>
+                                        <td width="10%">
+                                        <table width="10%">
+                                            <tr>
+                                                <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container" width="2%">
+                                                    <input tabindex="3" class="ms-crm-Input" id="Text5" style="-ms-ime-mode: auto; width: 100px;" type="text" onclick="return DateInputFrom_onclick()"><label for="DateInputFrom"></label>
+                                                </td>
+                                                <td>
+                                                    <img class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img9"
+                                                        alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                        <td>
+                                            <input name="rad_new_twooptionstest" tabindex="5" class="ms-crm-RadioButton" 
+                                                id="rad_new_twooptionstest2" type="radio" value="1" align="middle"><label for="rad_new_twooptionstest2">最新ログのみ</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">状況</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="new_listboxtest_d" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="6" class="ms-crm-SelectBox" 
+                                    id="new_listboxtest" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">来店前</option>
+                                    <option value="Option2">来店中</option>
+                                    <option value="Option3">退店後</option>
+                                    <option value="Option4">訪問前</option>
+                                    <option value="Option5">訪問中</option>
+                                    <option value="Option6">退去後</option>
+                                    <option value="Option7">キャンセル</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">お客様</label>
+                            </td>
+                            <td id="Td4" formxmlcolspan="1" width="10%">
+                                <table class="ms-crm-Lookup" id="Table1" style="width: 100%;
+                                    table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                    <li style="display: inline; white-space: nowrap;">
+                                                        <span 
+                                                            class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                            oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                            otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img2" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">お客様</span>
+                                                        </span>
+                                                    </li>
+                                                </div>
+                                                <input tabindex="7" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text2"
+                                                    style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                    border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                                    ime-mode="auto">
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="Img3" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">担当者</label>
+                            </td>
+                            <td id="Td1" formxmlcolspan="1" width="8%">
+                                <table class="ms-crm-Lookup" id="Table2" style="width: 100%;
+                                    table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-right: 1px; padding-left: 1px;" width="72%">
+                                                <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                    <li style="display: inline; white-space: nowrap;">
+                                                        <span 
+                                                            class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                            oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                            otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img1" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">担当者</span>
+                                                        </span>
+                                                    </li>
+                                                </div>
+                                                <input tabindex="7" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text1"
+                                                    style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                    border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                                    ime-mode="auto">
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="Img6" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">商談案件番号</label>
+                            </td>
+                            <td id="Td5" formxmlcolspan="1" width="10%">
+                                <table class="ms-crm-Lookup" id="Table3" style="width: 100%;
+                                    table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                    <li style="display: inline; white-space: nowrap;">
+                                                        <span 
+                                                            class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                            oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                            otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img4" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                        <span class="ms-crm-LookupItem-Name" wrapper="true">案件番号</span>
+                                                        </span>
+                                                    </li>
+                                                </div>
+                                                <input tabindex="9" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text3"
+                                                    style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                    border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                                    ime-mode="auto">
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="Img7" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="7%">
+                                <label for="name">目的</label>
+                            </td>
+　　　　　　　　　　　　　　<td formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="10" class="ms-crm-SelectBox" 
+                                    id="Select1" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">新車</option>
+                                    <option value="Option2">中古車</option>
+                                    <option value="Option3">新車／中古車</option>
+                                </select>
+                            </td>
+                            <td width="10%" class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                                <input tabindex="11" class="ms-crm-CheckBox" id="new_checkboxtest" 
+                                    type="checkbox" attrpriv="7" attrname="new_checkboxtest" req="0" align="middle"><label for="new_checkboxtest">初来店ログのみ</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">AB区分</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td15" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="12" class="ms-crm-SelectBox" 
+                                    id="Select2" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">AB</option>
+                                    <option value="Option2">NON-AB</option>
+                                </select>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">お客様区分</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td17" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                                    id="Select3" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1"></option>
+                                    <option value="Option2"></option>
+                                </select>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">見込車種</label>
+                            </td>
+                            <td id="Td7" formxmlcolspan="1" width="10%">
+                                <table class="ms-crm-Lookup" id="Table4" style="width: 100%;
+                                    table-layout: fixed; height: 22px;" cellspacing="0" cellpadding="0" 
+                                    lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                    <li style="display: inline; white-space: nowrap;">
+                                                        <span 
+                                                            class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                            oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                            otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img5" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">見込車種</span>
+                                                        </span>
+                                                    </li>
+                                                </div>
+                                                <input tabindex="14" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text4"
+                                                    style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                    border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                                    ime-mode="auto">
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="Img8" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="7%">
+                                <label for="name">確度</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td22" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="15" class="ms-crm-SelectBox" 
+                                    id="Select4" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1"></option>
+                                    <option value="Option2"></option>
+                                </select>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">成約見込日</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td24" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="16" class="ms-crm-SelectBox" 
+                                    id="Select5" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected">当月</option>
+                                    <option value="Option1">次月</option>
+                                    <option value="Option2">それ以降</option>
+                                    <option value="Option2">先月以前</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">登録見込日</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td26" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="17" class="ms-crm-SelectBox" 
+                                    id="Select6" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected">当月</option>
+                                    <option value="Option1">次月</option>
+                                    <option value="Option2">それ以降</option>
+                                    <option value="Option2">先月以前</option>
+                                </select>
+                            </td>
+                            <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" width="10%">
+                                <label for="name">今回の結果</label>
+                            </td>
+　　　　　　　　　　　　　　<td id="Td28" formxmlcolspan="1" width="10%">
+                                <select name="new_listboxtest" tabindex="18" class="ms-crm-SelectBox" 
+                                    id="Select7" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                    attrname="new_listboxtest" req="0" defaultselected="">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">要件確認済</option>
+                                    <option value="Option2">概算見積提示済</option>
+                                    <option value="Option3">契約条件確認済</option>
+                                    <option value="Option4">最終提案済</option>
+                                    <option value="Option5">成約報告済</option>
+                                    <option value="Option6">成約報告承認済</option>
+                                    <option value="Option7">受注</option>
+                                    <option value="Option8">保留</option>
+                                    <option value="Option9">クローズ</option>
+                                    <option value="Option10">受注後キャンセル</option>
+                                </select>
+                            </td>
+                            <td width="60%" colspan="6"></td>
+                        </tr>
+                        <tr>
+                            <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td33" colspan="8">
+                            </td>
+                            <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td32" align="right" colspan="2">
+                                <button onclick="openpage();">関連ログ検索</button>
+                                <button>検索</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!--
+            <div id="entry-submit" style="margin-bottom:10px;height:30px;">
+                <input type="button" onclick="openpage();" value="関連ログ検索" class="blue_btn_class" style="float:right; padding: 2px; height: 25px; width:120px; margin-left:10px;"/>
+                <input type="submit" value="検索" class="blue_btn_class" style="float: right; padding: 2px; height: 25px; width: 120px; margin-left: 10px;" />
+            </div>
+            -->
+            
+            <div id="logsheet-search-result-2">
+            <table class="logsheet-result-twoline-2">
+                <thead>
+                    <!--ラベル-->
+                    <tr>
+                        <th rowspan="2" width="26px">
+                            <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox1" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0">
+                        </th>
+                        <th rowspan="1" width="63px">日時</th>
+                        <th rowspan="1" width="90px">お客様</th>
+                        <th rowspan="1" width="25px">目的</th>
+                        <th rowspan="2" style="writing-mode:tb-rl; height:88px; width:20px;">来店きっかけ</th>
+                        <th rowspan="2" width="30px">担当者</th>
+                        <th rowspan="1" colspan="11">成約プロセス</th>
+                        <th rowspan="2" width="9px">商談<br />回数</th>
+                        <th rowspan="1" width="78px">見込み車種</th>
+                        <th rowspan="1" width="53px">見積</th>
+                        <th rowspan="2" width="41px">競合車</th>
+                        <th rowspan="1" width="156px">商談時メモ</th>
+                        <th rowspan="1" width="23px">AB<br />区分</th>
+                        <th rowspan="1" width="63px">成約見込日</th>
+                        <th rowspan="2" width="50px">今回の<br />結果</th>
+                        <th rowspan="1">商談振り返りコメント</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">状況</th>
+                        <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">商談案件番号</th>
+                        <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">お<br />客様<br />区分</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:12px;">アンケート</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">商品説明</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">デモ</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">査定</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:12px;">つながり</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">クレジット</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">見積</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">保険</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:12px;">コミット</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">店長承認</th>
+                        <th rowspan="1" style="white-space:normal; writing-mode:tb-rl; height:51px; width:11px;">捺印</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb;">下取車</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb;">下取金</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb;">ネック／他</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb;">確度</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb;">登録見込月</th>
+                        <th rowspan="1" style="white-space:nowrap; writing-mode:lr-tb; width:150px;">店長フォロー／指示</th>
+                    </tr>
+                </thead>
+            </table>
+            </div>
+            <div id="logsheet-search-result">
+                <form>
+                    <table class="logsheet-result-twoline">
+                        <!--データ-->
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox2" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:01</td>
+                                <td rowspan="1" style="width:90px;"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" width="22px">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox3" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox4" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox5" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox6" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox7" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox8" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox9" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox10" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox11" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox12" type="checkbox"
+                                        attrpriv="7" attrname="new_checkboxtest" req="0">
+                                </td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <!--フッター（担当者情報）-->
+        <div id="user-information" style="float:right;">
+            <ul>
+                <li>
+                    <label class="userinfo">○○マツダ</label>
+                    <label class="userinfo">△△店</label>
+                    <label class="userinfo">辻　竜太</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

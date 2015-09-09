@@ -1,0 +1,764 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/tabchange.js"></script>
+    <script src="../Scripts/dialog.js"></script>
+
+    <!--Grid Table-->
+    <script type="text/javascript" src="../Scripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/formsample/jquery.css3gridtable.js"></script><title>ターゲティングリスト</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/targetinglist.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    
+    <script>
+        function openpage() {
+            var iWidth = 1050;
+            var iHeight = 650;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            window.open("Targeting_Search.html", "ログシート（関連ログ検索）", "height=" + iHeight + ",width=" + iWidth + ",top=" + iTop + ",left=" + iLeft);
+        }
+        function DateInputFrom_onclick() {
+
+        }
+
+    </script>
+</head>
+<body>  
+    <div>
+        <table>
+            <tr>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td32" align="right">
+                    <button style="width: 120px" tabindex="1">お客様ビュー</button>
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td11" align="right">
+                    <button style="width: 120px" tabindex="2" onclick="openpage();">任意条件抽出</button>
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td12" align="right">
+                    <button style="width: 120px" tabindex="3">来店予約カレンダー</button>
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td13" align="right">
+                    <button style="width: 120px" tabindex="4">活動入力</button>
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td16" align="right">
+                    <button style="width: 120px" tabindex="5">DMラベル印刷</button>
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td17" align="right">
+                    <button style="width: 120px" tabindex="6">コール担当者割当</button>
+                </td>
+            </tr>
+        </table>
+        <div id="search-condition">
+            <table style="width: 1221px">
+                <tr>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td14" style="width: 10%;">
+                        <label for="name">ご提案種別:</label>
+                    </td>
+　　　　　　　　　  <td id="Td15" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="7" class="ms-crm-SelectBox" 
+                            id="Select2" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="option1">ご意向確認</option>
+                            <option value="option2">満足伺い</option>
+                            <option value="option3">リコール</option>
+                            <option value="option4" selected="selected">車両販売</option>
+                            <option value="option5">車検</option>
+                            <option value="option6">点検</option>
+                            <option value="option7">満期</option>
+                            <option value="option8">後日提案/部用品キャンペーン</option>
+                        </select>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td1" style="width: 10%;">
+                        <label for="name">表示範囲:</label>
+                    </td>
+　　　　　　　　　  <td id="Td2" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="8" class="ms-crm-SelectBox" 
+                            id="Select1" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="option1" selected="selected">自分のみ</option>
+                            <option value="option2">店舗内全て</option>
+                        </select>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td3" style="width: 10%;">
+                        <label for="name">希望曜日:</label>
+                    </td>
+　　　　　　　　　  <td id="Td4" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="9" class="ms-crm-SelectBox" 
+                            id="Select3" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="option1" selected="selected">すべて</option>
+                            <option value="option2">月</option>
+                            <option value="option3">火</option>
+                            <option value="option4">水</option>
+                            <option value="option5">木</option>
+                            <option value="option6">金</option>
+                            <option value="option7">土</option>
+                            <option value="option8">日</option>
+                        </select>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td5" style="width: 10%;">
+                        <label for="name">ステータス:</label>
+                    </td>
+　　　　　　　　　  <td id="Td6" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="10" class="ms-crm-SelectBox" 
+                            id="Select4" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="option1" selected="selected">未対応</option>
+                            <option value="option2">継続フォロー</option>
+                            <option value="option3">来店確約</option>
+                            <option value="option4">来店獲得不可</option>
+                            <option value="option4">対応済み</option>
+                        </select>
+                    </td>
+　　　　　　　　　  <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td18" align="right" rowspan="2">
+                        <button style="width: 120px" tabindex="13">結果を表示</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td7" style="width: 10%;">
+                        <label for="name">コンタクト対象月:</label>
+                    </td>
+　　　　　　　　　  <td id="Td8" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="11" class="ms-crm-SelectBox" 
+                            id="Select5" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="option1">前々月以前</option>
+                            <option value="option2">前月</option>
+                            <option value="option3" selected="selected">当月</option>
+                            <option value="option4">翌月</option>
+                            <option value="option5">翌々月以降</option>
+                        </select>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" id="Td9" style="width: 10%;">
+                        <label for="name">リコール作業内容:</label>
+                    </td>
+　　　　　　　　　  <td id="Td10" formxmlcolspan="1" class="style9">
+                        <select name="new_listboxtest" tabindex="12" class="ms-crm-SelectBox" 
+                            id="Select6" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="Question">----</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div class="category">
+            <table class="grid">
+                <thead>
+                    <tr>
+                        <th class="category" scope="col" style="width:3%;"></th>
+                        <th class="category" colspan="16" scope="col" style="width:3%;">お客様情報</th>
+                        <th class="category" colspan="6" scope="col" style="width:3%;">商談案件情報</th>
+                        <th class="category" colspan="3" scope="col" style="width:3%;">重複活動</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" style="width:3%;"><input type="checkbox" style="width:20px;" /></th>
+                        <th scope="col" style="width:10%;">お客様名<span></span></th>
+                        <th scope="col" style="width:5%;">担当者<span></span></th>
+                        <th scope="col" style="width:12%;">管理担当者<span></span></th>
+                        <th scope="col" style="width:5%;">サービス拠点<span></span></th>
+                        <th scope="col" style="width:6%;">つながりたい度<span></span></th>
+                        <th scope="col" style="width:6%;">顧客区分<span></span></th>
+                        <th scope="col" style="width:6%;">電話番号<span></span></th>
+                        <th scope="col" style="width:6%;">希望連絡先<span></span></th>
+                        <th scope="col" style="width:6%;">希望曜日<span></span></th>
+                        <th scope="col" style="width:5%;">希望時間<span></span></th>
+                        <th scope="col" style="width:3%;">前回来店日<span></span></th>
+                        <th scope="col" style="width:5%;">前回の接客内容<span></span></th>
+                        <th scope="col" style="width:6%;">次回来店目的<span></span></th>
+                        <th scope="col" style="width:6%;">ステータス<span></span></th>
+                        <th scope="col" style="width:6%;">発生源理由<span></span></th>
+                        <th scope="col" style="width:6%;">債権未回収有無<span></span></th>
+                        <th scope="col" style="width:6%;">商談案件番号<span></span></th>
+                        <th scope="col" style="width:6%;">見込み車種<span></span></th>
+                        <th scope="col" style="width:6%;">確度<span></span></th>
+                        <th scope="col" style="width:6%;">案件ステータス<span></span></th>
+                        <th scope="col" style="width:6%;">成約見込み日<span></span></th>
+                        <th scope="col" style="width:6%;">必達案件フラグ<span></span></th>
+                        <th scope="col" style="width:6%;">車検<span></span></th>
+                        <th scope="col" style="width:6%;">点検<span></span></th>
+                        <th scope="col" style="width:6%;">その他<span></span></th>
+                    </tr>
+                </thead>
+                <tbody style="border-color: #000000; background-color: #FFFFFF;">
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;" >野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr><tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width: 10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                    <tr>
+                        <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                        <td style="width:10%;">野村　謙二郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">山田 太郎</td>
+                        <td style="width:5%;">広島店</td>
+                        <td style="width:6%;">5</td>
+                        <td style="width:6%;">顧客</td>
+                        <td style="width:6%;">090-1111-1111</td>
+                        <td style="width:6%;">電話</td>
+                        <td style="width:6%;">土</td>
+                        <td style="width:6%;">9:00-12:00</td>
+                        <td style="width:6%;">2014/07/01</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">お車のご検討</td>
+                        <td style="width:6%;">未対応</td>
+                        <td style="width:6%;">XXXXXXXXXX</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">OP-00000000</td>
+                        <td style="width:6%;">デミオ</td>
+                        <td style="width:6%;">70</td>
+                        <td style="width:6%;">YYYYYYYY</td>
+                        <td style="width:6%;">2014/06/30</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                        <td style="width:6%;">○</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

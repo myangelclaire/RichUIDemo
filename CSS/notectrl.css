@@ -1,0 +1,12 @@
+iframe.noteData {
+	width: 100%; height: 100%;
+}
+.crm-note-padding {
+	padding-left: 2%;
+}
+.crm-note-floatLeft {
+	float: left;
+}
+.crm-note-floatRight {
+	float: right;
+}

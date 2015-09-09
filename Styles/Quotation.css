@@ -1,0 +1,736 @@
+﻿/* Common -------------------------------- */
+#quotation-category {
+    height: 30px;
+    margin: 5px 10px 0px 10px;
+}
+
+#quotation-detail {
+    /*height:550px;*/
+    margin: 0px 10px 0px 10px;
+}
+
+
+#quotation-menu {
+    float: left;
+}
+
+    #quotation-menu h4 {
+        font-size: 20px;
+        /*margin-bottom:5px;*/
+    }
+
+    #quotation-menu table {
+        margin-left: 5px;
+        margin-bottom: 10px;
+        height: 570px;
+        width: 150px;
+    }
+
+    #quotation-menu tr {
+        margin: 5px;
+    }
+
+    #quotation-menu td {
+        width: 130px;
+        text-align: center;
+        text-decoration: underline;
+        background: #eee;
+        cursor: pointer;
+        border: 5px solid lightgray;
+        -ms-transition: background-color 1.0s ease-out; /* ie */
+    }
+
+        #quotation-menu td.select {
+            background: pink;
+            transition: text-shadow 1s ease-out;
+        }
+
+.quotation-content_wrap {
+    position: absolute;
+    clear: left;
+    float: left;
+    width: 1010px;
+    height: 480px;
+    /*height: 570px;*/
+    /*overflow-y:scroll;*/
+    font-size: 14px;
+    margin: 10px 10px 10px 150px;
+    padding-top: 0px;
+    padding-left: 10px;
+    border: 5px solid lightgray;
+    /*box-shadow: 0px 0px 10px #000000;*/
+    -ms-transition: display 1.0s ease-out; /* ie */
+}
+
+.notselected {
+    display: none;
+}
+
+/* quote-optionlist ----------------------------------------------------------*/
+#quote-optionlist {
+    width: auto;
+    margin: 10px 10px;
+    white-space: nowrap;
+}
+
+    #quote-optionlist li span {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #quote-optionlist table tr td {
+        padding: 3px;
+    }
+
+
+/* quotaiontable ----------------------------------------------------------*/
+table.quotaiontable {
+    white-space: nowrap;
+    /*margin:20px 10px 50px;*/
+    border-top: 1px solid #708090;
+    border-left: 1px solid #708090;
+    border-spacing: 0px;
+}
+
+    table.quotaiontable thead {
+        float: left;
+        overflow: hidden;
+        width: auto;
+    }
+
+    table.quotaiontable tbody {
+        float: left;
+        overflow-y: auto;
+        height: auto;
+        width: auto;
+    }
+
+    table.quotaiontable tr th, table.quotaiontable tr td {
+        font-size: 14px;
+        border-bottom: 1px solid #708090;
+        border-right: 1px solid #708090;
+        padding: 3px;
+    }
+
+    table.quotaiontable tr th {
+        background: #ADD8E6;
+    }
+
+    table.quotaiontable tr:nth-child(2n+1) {
+        background: #f8f8ff;
+    }
+
+
+/* Quotation.html -------------------------------- */
+#message-header {
+    margin: 0px 50px 0px 50px;
+}
+
+    #message-header tr {
+        line-height: 30px;
+    }
+
+        #message-header tr th {
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        #message-header tr td.lookup {
+            background: url(./Images/lookup_icon/btn_off_lookup.png) no-repeat 0px 5px;
+            cursor: pointer;
+        }
+
+            #message-header tr td.lookup:hover {
+                background: url(./Images/lookup_icon/btn_on_lookup.png) no-repeat 0px 5px;
+                cursor: pointer;
+            }
+
+        #message-header tr td input[type="radio"] {
+            padding: 0px 5px 0px 15px;
+        }
+
+        #message-header tr td select option {
+            text-align: center;
+        }
+
+
+#message-action {
+    margin: 30px 50px 30px 50px;
+}
+
+    #message-action ul li button {
+        height: 60px;
+        width: 120px;
+        margin-right: 40px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+table.gradechoice {
+    overflow-x: scroll;
+    white-space: nowrap;
+    border-top: 1px solid #708090;
+    border-left: 1px solid #708090;
+    border-spacing: 0px;
+}
+
+    table.gradechoice tr th, table.gradechoice tr td {
+        font-size: 14px;
+        border-bottom: 1px solid #708090;
+        border-right: 1px solid #708090;
+        padding: 3px;
+    }
+
+    table.gradechoice tr th {
+        background: #ADD8E6;
+        text-align: center;
+    }
+
+
+.blue_btn_class {
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: normal;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    border: 1px solid #337fed;
+    padding: 5px;
+    text-decoration: none;
+    background: -moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+    background: -ms-linear-gradient( top, #3d94f6 5%, #1e62d0 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #3d94f6), color-stop(100%, #1e62d0) );
+    background-color: #3d94f6;
+    color: #ffffff;
+    display: inline-block;
+    text-shadow: 1px 1px 1px #1570cd;
+    -webkit-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    -moz-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    box-shadow: inset 1px 1px 0px 0px #97c4fe;
+}
+
+    .blue_btn_class:hover {
+        cursor: pointer;
+        background: -moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+        background: -ms-linear-gradient( top, #1e62d0 5%, #3d94f6 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #1e62d0), color-stop(100%, #3d94f6) );
+        background-color: #1e62d0;
+    }
+
+    .blue_btn_class:active {
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+    }
+
+
+/*Grade_Comparison.html--------------------------------*/
+#grade_comparison {
+    margin-top: 10px;
+}
+
+    #grade_comparison h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+table.gradesample {
+    float: left;
+    white-space: nowrap;
+    border-top: 1px solid #708090;
+    border-left: 1px solid #708090;
+    border-spacing: 0px;
+    overflow: hidden;
+}
+
+    table.gradesample thead {
+        overflow: hidden;
+        width: 900px;
+    }
+
+    table.gradesample tr th, table.gradesample tr td {
+        font-size: 14px;
+        border-bottom: 1px solid #708090;
+        border-right: 1px solid #708090;
+        padding: 7px;
+    }
+
+    table.gradesample tr th {
+        background: #ADD8E6;
+    }
+
+
+#grade_comparison table {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    height: 350px;
+    width: 900px;
+    overflow-y: scroll;
+}
+
+#grade_comparison tr {
+    margin: 20px;
+    height: 60px;
+}
+
+    #grade_comparison tr.header {
+        height: 30px;
+    }
+
+#grade_comparison th {
+    width: 100px;
+    text-align: center;
+}
+
+    #grade_comparison th.header {
+        text-align: left;
+        padding-left: 10px;
+        text-decoration: underline;
+    }
+
+#grade_comparison td {
+    width: 360px;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+    #grade_comparison td.header {
+        width: 360px;
+        padding: 5px 20px;
+        text-align: left;
+    }
+
+/* ShopOption_Search.html -------------------------------- */
+#optionsearchcondition {
+    margin: 10px 10px 10px 10px;
+    height: 30px;
+}
+
+    #optionsearchcondition ul li label {
+        margin-left: 30px;
+        margin: 0px 10px 0px 30px;
+        width: 150px;
+    }
+
+    #optionsearchcondition ul li input {
+        height: 25px;
+        font-size: 16px;
+        width: 150px;
+    }
+
+#shopoptionlist {
+    border-collapse: collapse;
+    margin: 0px 0px;
+    height: 330px;
+    width: 970px;
+    overflow-y: scroll;
+}
+
+
+/* payment-selection -------------------------------- */
+
+#payment-selection {
+    margin: 10px 5px;
+    font-size: 13px;
+}
+
+    #payment-selection th {
+        height: 17px;
+        width: 110px;
+        text-align: left;
+        /*border:3px solid lightgray;*/
+        color: black;
+    }
+
+        #payment-selection th.plan-name {
+            width: 200px;
+            padding: 5px 5px;
+            color: crimson;
+            font-size: 18px;
+            border: none;
+        }
+
+    #payment-selection td.summary-price {
+        padding: 5px 10px;
+        background-color: darkseagreen;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+#payment_method {
+    width: 240px;
+    height: 100px;
+    margin-bottom: 7px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+
+
+#cash-plan {
+    width: 750px;
+    height: 100px;
+    margin-bottom: 7px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+
+    #cash-plan tr {
+        line-height: 30px;
+    }
+
+    #cash-plan th {
+        text-align: center;
+    }
+
+    #cash-plan td {
+        text-align: center;
+    }
+
+
+#credit-plan1 {
+    width: 480px;
+    height: 215px;
+    float: left;
+    padding-left: 5px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+
+#credit-plan2 {
+    width: 480px;
+    height: 215px;
+    float: right;
+    padding-left: 3px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+
+#credit-step1 {
+    width: 480px;
+    height: 65px;
+    float: left;
+    padding-left: 5px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+#credit-step2 {
+    width: 480px;
+    height: 65px;
+    float: right;
+    padding-left: 3px;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+}
+
+#credit-pay {
+    width: 450px;
+    height: 150px;
+    float: left;
+    border: 3px solid lightgray;
+    background: #eee;
+    color: black;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+/* Expenses_Detail.html -------------------------------- */
+#optionsearchcondition {
+    margin: 10px 10px 10px 10px;
+    height: 30px;
+}
+
+    #optionsearchcondition ul li label {
+        margin-left: 30px;
+        margin: 0px 10px 0px 30px;
+        width: 150px;
+    }
+
+    #optionsearchcondition ul li input {
+        height: 25px;
+        font-size: 16px;
+        width: 150px;
+    }
+
+#expencelist {
+    border-collapse: collapse;
+    margin: 0px 0px;
+    height: 280px;
+    width: 970px;
+    overflow-y: scroll;
+}
+
+
+/*quotation-confirm-----------------------------------------------*/
+#estimate-total2 {
+    display: inline-block;
+    _display: inline;
+    float: right;
+}
+
+    #estimate-total2 table {
+        margin-left: 20px;
+        margin-bottom:0px;
+        height: 410px;
+        width: 470px;
+    }
+
+    #estimate-total2 tr {
+        margin: 5px;
+    }
+
+    #estimate-total2 th {
+        padding-left: 10px;
+        width: 305px;
+        text-align: left;
+    }
+
+    #estimate-total2 td {
+        font-size: 18px;
+        text-align: right;
+        width: 150px;
+    }
+
+    #estimate-total2 th.subtotal {
+        padding-left: 0px;
+        background: lightgray;
+        border-top: solid black;
+    }
+
+    #estimate-total2 td.subtotal {
+        background: lightgray;
+        border-top: solid black;
+    }
+
+    #estimate-total2 th.total {
+        font-size: 14px;
+        background: lightgray;
+        border-top: double black;
+    }
+
+    #estimate-total2 td.total {
+        font-size: 20px;
+        background: lightgray;
+        border-top: double black;
+    }
+
+/*old*/
+#estimate-total table {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height: 150px;
+    width: 950px;
+}
+
+#estimate-total tr {
+    margin: 5px;
+}
+
+#estimate-total th {
+    height: 40px;
+    width: 150px;
+    background: lightgray;
+}
+
+#estimate-total td {
+    text-align: right;
+    background: lightgray;
+}
+
+    #estimate-total td.subtotal {
+        font-size: 18px;
+    }
+
+    #estimate-total td.total {
+        font-size: 20px;
+    }
+
+/*price-table-----------------------------------------------*/
+#price-table {
+    position: absolute;
+    clear: left;
+    float: left;
+    width: 1020px;
+    height: 100px;
+    font-size: 14px;
+    /*margin: 495px 10px 10px 150px;*/
+    border: 5px solid lightgray;
+}
+
+    #price-table th {
+        height: 30px;
+        width: 250px;
+        padding: 0px 10px;
+        text-align: left;
+        background: #eeeeee;
+        background: -ms-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+        background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+        border-right: none;
+    }
+
+    #price-table td {
+        height: 30px;
+        width: 250px;
+        padding: 0px 15px;
+        text-align: left;
+        font-weight: bold;
+        color: black;
+        background: rgb(132,226,118);
+        background: -ms-linear-gradient(top, rgba(132,226,118,1) 0%,rgba(9,229,60,1) 100%);
+        background: linear-gradient(to bottom, rgba(132,226,118,1) 0%,rgba(9,229,60,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84e276', endColorstr='#09e53c',GradientType=0 );
+        border-left: none;
+    }
+
+
+/*.quotation_button-----------------------------------------------*/
+.quotation_button {
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: normal;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    border: 1px solid #337fed;
+    padding: 0px;
+    text-decoration: none;
+    background: -moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+    background: -ms-linear-gradient( top, #3d94f6 5%, #1e62d0 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #3d94f6), color-stop(100%, #1e62d0) );
+    background-color: #3d94f6;
+    color: #ffffff;
+    display: inline-block;
+    text-shadow: 1px 1px 1px #1570cd;
+    -webkit-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    -moz-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    box-shadow: inset 1px 1px 0px 0px #97c4fe;
+}
+
+    .quotation_button:hover {
+        cursor: pointer;
+        background: -moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+        background: -ms-linear-gradient( top, #1e62d0 5%, #3d94f6 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #1e62d0), color-stop(100%, #3d94f6) );
+        background-color: #1e62d0;
+    }
+
+    .quotation_button:active {
+        cursor: pointer;
+        position: relative;
+        top: 1px;
+    }
+
+
+/* recycle  ----------------------------------------------------------*/
+#recycle th {
+    text-align: left;
+}
+
+#recycle td {
+    text-align: right;
+}
+
+/*rycycle-expence-area-------------------------- */
+#rycycle-expence-area{
+    position: absolute;
+    clear: left;
+    float: left;
+    width: 870px;
+    height: 320px;
+    font-size: 14px;
+    margin: 30px 10px 10px 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 5px solid lightgray;
+}
+
+/*rycycle-expence-area-------------------------- */
+#old-car-area{
+    position: absolute;
+    clear: left;
+    float: left;
+    width: 950px;
+    height: 360px;
+    font-size: 14px;
+    margin: 10px 10px 10px 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border: 5px solid lightgray;
+}
+
+table.oldcarselect{
+    padding-left: 10px;
+}
+
+    table.oldcarselect tr{
+        line-height: 35px;
+    }
+    
+    table.oldcarselect th{
+        width: 200px;
+        text-align: left;
+    }
+    
+    table.oldcarselect td{
+        width: 170px;
+    }
+/* discount  ----------------------------------------------------------*/
+#discount table {
+    font-size: large;
+    margin:auto;
+}
+
+#discount th {
+    width: 300px;
+    text-align: right;
+}
+
+#discount td {
+    width: 300px;
+}
+
+    #discount td.price {
+        text-align: right;
+    }
+
+    #discount td.total {
+        background-color:pink;
+        font-size:x-large;
+        text-align: right;
+    }
+
+#discount-option {
+    border:solid;
+    border-color:lightgray;
+    margin:auto;
+}
+
+        #discount-option-tab li {
+            float: left;
+            padding:inherit;
+            text-align: center;
+            list-style: none;
+            cursor: pointer;
+            background: #eee;
+            box-shadow: 0px 0px 5px #000000;
+            -ms-transition: background-color  1.0s ease-out; /* ie */               
+        }
+
+        #discount-option-tab li.select {
+                transition: text-shadow 1s ease-out;
+                background: pink;
+            }
+

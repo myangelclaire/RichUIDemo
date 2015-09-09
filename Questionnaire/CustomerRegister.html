@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/tabchange.js"></script>
+    <script src="../Scripts/dialog.js"></script>
+    
+
+    <title>商談への関連付け(お客様情報）</title>
+    
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+    <!--ヘッダー-->
+    <label class="title" style="font-size:24px; style=" width:120px;">商談への関連付け(お客様情報）</label>
+    <br />
+    <br />
+    <div id="customer-information">
+        <ul>
+            <li>
+                <label style="font-weight:bold;">アンケート回答情報</label>
+            </li>
+            <li>
+                <label >姓:</label>
+                <label >山田</label>
+            </li>
+            <li>
+                <label>名:</label>
+                <label>敬介</label>
+            </li>
+            <li>
+                <label >住所:</label>
+                <label >広島県　中区１－２－３</label>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <table width="100%">
+                    <tr>
+                        <td colspan="2">
+                            <label>該当するお客様のデータが存在する場合、該当するデータをチェックして「次へ」を押して下さい。</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="95%">
+                            <label>※チェックがない場合、「次へ」を押すとお客様情報を新規登録します。</label>
+                        </td>
+                        <td id="new_singlelinetexttest_d" style="overflow: hidden;" formxmlcolspan="1">
+                            <button onclick='location.href = "VisitStore.html"' style="width: 100px">次へ</button>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+    <br/>
+    <br />
+    <!--一覧-->
+    <label style="font-weight:bold;">アンケート結果に関連するお客様一覧</label>    
+    <div id="communicationboard-detail">
+            <form>
+                <table class="sample1" style="height:auto;">
+                    <tr>
+                        <th scope="col" style="width:10px;"><span></span></th>
+                        <th width="200px;">作成日</th>
+                        <th width="200px;">お客様（姓）</th>
+                        <th width="200px;">（名）</th>
+                        <th width="500px;">住所</th>
+                        <th width="100px;">管理担当者</th>
+                        <th width="100px;">管理拠点</th>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2014/03/04</td>
+                        <td style="color: #0000ff; text-decoration: underline;">山田</td>
+                        <td>敬介</td>
+                        <td>広島県　南区１－1－1</td>
+                        <td>広島　幸一</td>
+                        <td>広島</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2013/01/04</td>
+                        <td style="color: #0000ff; text-decoration: underline;">山田</td>
+                        <td>和彦</td>
+                        <td>広島県　中区１－１－１</td>
+                        <td>広島　花子</td>
+                        <td>広島</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2012/01/04</td>
+                        <td style="color: #0000ff; text-decoration: underline;">田中</td>
+                        <td>敬介</td>
+                        <td>広島県　東区１－１－１</td>
+                        <td>広島　太郎</td>
+                        <td>広島</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2010/12/23</td>
+                        <td style="color: #0000ff; text-decoration: underline;">山田</td>
+                        <td>敬介</td>
+                        <td>東京都　中野区１－２－３</td>
+                        <td>東京　太郎</td>
+                        <td>東京</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2010/12/31</td>
+                        <td style="color: #0000ff; text-decoration: underline;">山田</td>
+                        <td>太郎</td>
+                        <td>山口県　墨田区１－１－１</td>
+                        <td>山口　達也</td>
+                        <td>山口</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+</body>
+</html>

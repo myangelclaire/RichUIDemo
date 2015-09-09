@@ -1,0 +1,827 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <!--title-->
+    <title>Microsoft Dynamics CRM</title>
+    <!--Meta-->
+    <meta content="IE=8.0000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="" ie="8">
+    <meta name="DownloadOptions" content="noopen">
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .tab
+        {
+            margin: 10px;
+        }
+        .tab-menu
+        {
+            padding-left: 0px;
+        }
+        .tab-menu li
+        {
+            float: left;
+            display: inline;
+            border: 1px solid #333;
+            border-bottom: none;
+            margin-right: 5px;
+            width: 130px;
+            height: 20px;
+            cursor: pointer;
+            color: White;
+            background-color: rgb(0, 114, 198);
+            text-align: center;
+            font-size: 15px;
+        }
+        .tab-contnet
+        {
+            border: 1px solid #333;
+            clear: both; /* padding: 5px; */
+            width: 1050px;
+            height: 720px;
+            background-color: #ccc;
+        }
+        .head-table td
+        {
+            font-size: 12px;
+        }
+        .label-yellow
+        {
+            background-color: #eee8aa;
+            border: 1px solid #e6e6fa;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        .label-blue
+        {
+            background-color: #add8e6;
+            border: 1px solid #e6e6fa;
+            padding: 2px 3px;
+            text-align: center;
+        }
+    </style>
+    <!--    <script src="/JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>-->
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTab.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsDateBox.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var mydata1 = [
+                            { 部品番号: "XXXXXXXXXXXXX", 主: "X", 部品名称: "XXXXXXXX1XXXXXXXX2", 数量: "-999.9", 現品: "X", 単価: "999,999", 部品代: "-9,999,999", 承認数量: "-999.9", 承認金額: "-9,999,999"},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""},
+                            { 部品番号: "", 主: "", 部品名称: "", 数量: "", 現品: "", 単価: "", 部品代: "", 承認数量: "", 承認金額: ""}
+                         ];
+            $("#Grid1").jqGrid({
+                data: mydata1,
+                datatype: "local",
+                height: 100,
+                colNames: ['部品番号', '主', '部品名称', '数量', '現品', '単価', '部品代', '承認数量', '承認金額'],
+                colModel: [
+               		        { name: '部品番号', index: '部品番号', width: 100, align:'center'},
+               		        { name: '主', index: '主', width: 30, align: "center" },
+                            { name: '部品名称', index: '部品名称', width: 160 },
+                            { name: '数量', index: '数量', width: 100 },
+                            { name: '現品', index: '現品', width: 100 },
+                            { name: '単価', index: '単価', width: 100 },
+                            { name: '部品代', index: '部品代', width: 100 },
+                            { name: '承認数量', index: '承認数量', width: 100 },
+                            { name: '承認金額', index: '承認金額', width: 100 },
+               	          ],
+                pager: "#gridPager1",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                multiselect: true,
+                pgbuttons: true,
+
+
+
+                //caption: "Manipulating Array Data"
+            });
+
+
+            var mydata2 = [
+                            { 発注No: "10012345", 部品No: "BBB", 部品名: "XXXXX", コメント: "XXXXX", BO数: "3", 予定納期: "2014/5/25", 発注日: "2014/5/25", ステータス: "予定", 発注担当: "大阪次郎", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "10012345", 部品No: "DDD", 部品名: "XXXXX", コメント: "", BO数: "5", 予定納期: "2014/5/25", 発注日: "2014/5/25", ステータス: "予定", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+
+                         ];
+            $("#Grid2").jqGrid({
+                data: mydata2,
+                datatype: "local",
+                height: 100,
+                colNames: ['発注No.', '部品No.', '部品名', 'コメント', 'BO数', '予定納期', '発注日', 'ステータス', '発注担当', '理由コード', '理由名', '振替前部品No.', '発注明細連番', '前回予定納期', '前回最遅納期'],
+                colModel: [
+               		        { name: '発注No', index: '発注No', width: 100 },
+               		        { name: '部品No', index: '部品No', width: 100 },
+                            { name: '部品名', index: '部品名', width: 100 },
+                            { name: 'コメント', index: 'コメント', width: 100 },
+                            { name: 'BO数', index: 'BO数', width: 100 },
+                            { name: '予定納期', index: '予定納期', width: 100 },
+                            { name: '発注日', index: '発注日', width: 100 },
+                            { name: 'ステータス', index: 'ステータス', width: 100 },
+                            { name: '発注担当', index: '発注担当', width: 100 },
+                            { name: '理由コード', index: '理由コード', width: 100 },
+                            { name: '理由名', index: '理由名', width: 100 },
+                            { name: '振替前部品No', index: '振替前部品No', width: 100 },
+                            { name: '発注明細連番', index: '発注明細連番', width: 100 },
+                            { name: '前回予定納期', index: '前回予定納期', width: 100 },
+                            { name: '前回最遅納期', index: '前回最遅納期', width: 100 }
+               	          ],
+                pager: "#gridPager2",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                multiselect: true,
+                pgbuttons: true
+
+            });
+
+            var mydata3 = [
+                            { 発注No: "10012345", 部品No: "BBB", 部品名: "XXXXX", コメント: "XXXXX", BO数: "3", 予定納期: "2014/5/25", 発注日: "2014/5/25", ステータス: "予定", 発注担当: "大阪次郎", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "10012345", 部品No: "DDD", 部品名: "XXXXX", コメント: "", BO数: "5", 予定納期: "2014/5/25", 発注日: "2014/5/25", ステータス: "予定", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+                            { 発注No: "", 部品No: "", 部品名: "", コメント: "", BO数: "", 予定納期: "", 発注日: "", ステータス: "", 発注担当: "", 理由コード: "", 理由名: "", 振替前部品No: "", 発注明細連番: "", 前回予定納期: "", 前回最遅納期: "" },
+
+                         ];
+            $("#Grid3").jqGrid({
+                data: mydata3,
+                datatype: "local",
+                height: 100,
+                colNames: ['発注No.', '部品No.', '部品名', 'コメント', 'BO数', '予定納期', '発注日', 'ステータス', '発注担当', '理由コード', '理由名', '振替前部品No.', '発注明細連番', '前回予定納期', '前回最遅納期'],
+                colModel: [
+               		        { name: '発注No', index: '発注No', width: 100 },
+               		        { name: '部品No', index: '部品No', width: 100 },
+                            { name: '部品名', index: '部品名', width: 100 },
+                            { name: 'コメント', index: 'コメント', width: 100 },
+                            { name: 'BO数', index: 'BO数', width: 100 },
+                            { name: '予定納期', index: '予定納期', width: 100 },
+                            { name: '発注日', index: '発注日', width: 100 },
+                            { name: 'ステータス', index: 'ステータス', width: 100 },
+                            { name: '発注担当', index: '発注担当', width: 100 },
+                            { name: '理由コード', index: '理由コード', width: 100 },
+                            { name: '理由名', index: '理由名', width: 100 },
+                            { name: '振替前部品No', index: '振替前部品No', width: 100 },
+                            { name: '発注明細連番', index: '発注明細連番', width: 100 },
+                            { name: '前回予定納期', index: '前回予定納期', width: 100 },
+                            { name: '前回最遅納期', index: '前回最遅納期', width: 100 }
+               	          ],
+                pager: "#gridPager3",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                multiselect: true,
+                pgbuttons: true
+
+            });
+
+            var mydata4 = [
+                            { 部位ｺｰﾄﾞ: "XXX" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" },
+                            { 部位ｺｰﾄﾞ: "" }
+                         ];
+
+            $("#Grid4").jqGrid({
+                data: mydata4,
+                datatype: "local",
+                height: 60,
+                colNames: ['部位ｺｰﾄﾞ'],
+                colModel: [
+               		        { name: '部位ｺｰﾄﾞ', index: '部位ｺｰﾄﾞ', width: 100 }
+               	          ],
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+
+            });
+
+            var mydata5 = [
+                            { DTCｺｰﾄﾞ: "XXXXXXXXXXXXX", 主: "*" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" },
+                            { DTCｺｰﾄﾞ: "", 主: "" }
+                         ];
+
+            $("#Grid5").jqGrid({
+                data: mydata5,
+                datatype: "local",
+                height: 60,
+                colNames: ['DTCｺｰﾄﾞ', '主'],
+                colModel: [
+               		        { name: 'DTCｺｰﾄﾞ', index: 'DTCｺｰﾄﾞ', width: 150 },
+                            { name: '主', index: '主', width: 40 }
+               	          ],
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+
+            });
+
+            var mydata6 = [
+                            { 送付区分: "XXXXXXXXXXXXX", 情報区分: "", 取込: "○", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" },
+                            { 送付区分: "", 情報区分: "", 取込: "", ファイル名: "", コメント: "" }
+                         ];
+
+            $("#Grid6").jqGrid({
+                data: mydata6,
+                datatype: "local",
+                height: 120,
+                width: 860,
+                colNames: ['送付区分', '情報区分', '取込', 'ファイル名', 'コメント'],
+                colModel: [
+               		        { name: '送付区分', index: '送付区分', width: 150 },
+                            { name: '情報区分', index: '情報区分', width: 150 },
+                            { name: '取込', index: '取込', width: 60, align:'center'},
+                            { name: 'ファイル名', index: 'ファイル名' },
+                            { name: 'コメント', index: 'コメント'}
+               	          ],
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+
+            });
+
+
+            function resizeJqGridWidth(grid_id, div_id, width) {
+                $(window).bind('resize', function () {
+                    $('#' + grid_id).setGridWidth(width, true); //Back to original width
+                    $('#' + grid_id).setGridWidth($('#' + div_id).width(), true); //Resized to new width as per window
+                }).trigger('resize');
+            };
+
+            resizeJqGridWidth("Grid1", "div_Grid1", "150");
+            resizeJqGridWidth("Grid2", "div_Grid2", "150");
+            resizeJqGridWidth("Grid3", "div_Grid3", "150");
+
+
+
+
+
+
+        })
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="tab" id="tabs" suffix="_tc">
+        <ul class="tab-menu">
+            <li id="t1">申請データタブ</li>
+            <li id="t2">添付/メッセージタブ</li>
+        </ul>
+        <div class="tab-contnet">
+            <!-- 第1个Tab -->
+            <div id="t1_tc">
+                <!-- 头部表格 -->
+                <div>
+                    <!-- 第1行表格 -->
+                    <table class="head-table">
+                        <tbody>
+                            <tr>
+                                <td class="label-yellow">
+                                    拠点
+                                </td>
+                                <td class="label-blue">
+                                    拠点名称
+                                </td>
+                                <td class="label-blue">
+                                    申請No
+                                </td>
+                                <td class="label-blue">
+                                    枝番
+                                </td>
+                                <td class="label-yellow">
+                                    VIN
+                                </td>
+                                <td class="label-blue">
+                                    AT
+                                </td>
+                                <td class="label-blue">
+                                    WT
+                                </td>
+                                <td class="label-blue">
+                                    ﾌﾟﾛｾｽNo
+                                </td>
+                                <td class="label-blue">
+                                    事前承認No
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 240px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 80px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 70px;" />
+                                    -
+                                    <input type="text" value="xxx" style="width: 70px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 20px;" />
+                                    -
+                                    <input type="text" value="xxx" style="width: 70px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 30px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 120px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 120px;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- /第1行表格 -->
+                    <!-- 第2行表格 -->
+                    <table class="head-table">
+                        <tbody>
+                            <tr>
+                                <td class="label-yellow">
+                                    走行距離
+                                </td>
+                                <td class="label-yellow">
+                                    修理日
+                                </td>
+                                <td class="label-blue">
+                                    整備納品書No
+                                </td>
+                                <td class="label-blue">
+                                    初度登録日
+                                </td>
+                                <td class="label-blue">
+                                    登録No
+                                </td>
+                                <td class="label-blue">
+                                    受付担当
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 120px;" />
+                                </td>
+                                <td>
+                                    <select style="width: 80px;">
+                                    </select>
+                                    -
+                                    <input type="text" value="_/_/_" style="width: 80px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 120px;" />
+                                </td>
+                                <td>
+                                    <select style="width: 80px;">
+                                    </select>
+                                    -
+                                    <input type="text" value="_/_/_" style="width: 80px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                    <input type="text" value="xxx" style="width: 80px;" />
+                                    <input type="text" value="xxx" style="width: 30px;" />
+                                    <input type="text" value="xxx" style="width: 20px;" />
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                    <input type="text" value="xxx" style="width: 100px;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- /第2行表格 -->
+                    <!-- 第3行表格 -->
+                    <table class="head-table">
+                        <tbody>
+                            <tr>
+                                <td class="label-blue">
+                                    取付時距離
+                                </td>
+                                <td class="label-blue">
+                                    部品取付日
+                                </td>
+                                <td class="label-blue">
+                                    注文書／納品書No
+                                </td>
+                                <td class="label-blue">
+                                    氏名
+                                </td>
+                                <td class="label-blue">
+                                    作業担当
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 120px;" />
+                                </td>
+                                <td>
+                                    <select style="width: 80px;">
+                                    </select>
+                                    -
+                                    <input type="text" value="_/_/_" style="width: 80px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 160px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 240px;" />
+                                </td>
+                                <td>
+                                    <input type="text" value="xxx" style="width: 40px;" />
+                                    <input type="text" value="xxx" style="width: 100px;" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- /第3行表格 -->
+                </div>
+                <!-- /头部表格 -->
+                <!-- Grid List-->
+                <div>
+                    <!-- 左侧Grid List -->
+                    <div id="gridList" style="width: 800px;  margin-left: 5px; float: left;">
+                        <div id="div_Grid1" style="width: 100%; margin-top:3px">
+                            <table class="head-table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="label-blue" style="padding: 2px 20px;">
+                                                部品</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="Grid1" style="overflow: auto;" >
+                            </table>
+<!--                            <div id="gridPager1">
+                            </div>-->
+                        </div>
+                        <div id="div_Grid2" style="width: 100%; margin-top: 10px;">
+                            <table class="head-table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="label-blue" style="padding: 2px 20px;">
+                                                作業</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="Grid2">
+                            </table>
+<!--                            <div id="gridPager2">
+                            </div>-->
+                        </div>
+                        <div id="div_Grid3" style="width: 100%; margin-top: 10px;">
+                            <table class="head-table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="label-blue" style="padding: 2px 20px;">
+                                                実費</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table id="Grid3">
+                            </table>
+<!--                            <div id="gridPager3">
+                            </div>-->
+                        </div>
+                    </div>
+                    <!-- /左侧Grid List -->
+                    <!-- 右侧Grid List -->
+                    <div id="gridlist2" style="float: right; width: 240px; ">
+                        <div style="width: 100%;">
+                            <table class="head-table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="label-blue" style="padding: 2px 5px;">
+                                                セクション</label>
+                                        </td>
+                                        <td>
+                                            <label class="label-blue" style="padding: 2px 25px;">
+                                                不具合コード</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <input type="text" value="X" style="width: 20px" />
+                                        </td>
+                                        <td>
+                                            <input type="text" value="XXX" style="width: 40px" />
+                                            <input type="text" value="X" style="width: 20px" />
+                                            <input type="text" value="XXX" style="width: 40px" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="Div_Grid4" style="width: 100%; margin-top: 10px;">
+                                <table id="Grid4" style="overflow: auto">
+                                </table>
+<!--                                <div id="gridPager4">
+                                </div>-->
+                            </div>
+                            <div id="Div_Grid5" style="width: 100%; margin-top: 10px;">
+                                <table id="Grid5" style="overflow: auto;">
+                                </table>
+<!--                                <div id="gridPager5">
+                                </div>-->
+                            </div>
+                            <table class="head-table">
+                                <tbody>
+                                    <tr>
+                                        <td style="border:1px solid #eee;">
+                                        </td>
+                                        <td class="label-blue">
+                                            申請金額
+                                        </td>
+                                        <td class="label-blue">
+                                            承認金額
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue" style="width: 50px;">
+                                            部品
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue">
+                                            工賃
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue">
+                                            実費
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue">
+                                            合計
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue" colspan="2">
+                                            部品管理費
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-blue" colspan="2">
+                                            ｸﾚｰﾑ費用総合計**
+                                        </td>
+                                        <td>
+                                            <input type="text" value="-9,999,999" style="width: 80px;" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- /右侧Grid List -->
+                </div>
+                <!-- /Grid List-->
+            </div>
+            <!-- /第1个Tab -->
+            <!-- 第2个Tab -->
+            <div id="t2_tc">
+                <table class="head-table">
+                    <tbody>
+                        <tr>
+                            <td style="width: 50px;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue" style="width: 50px;">
+                                            拠点
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <input type="text" value="xxx" style="width: 40px;" />
+                            </td>
+                            <td>
+                                <input type="text" value="xxx" style="width: 280px;" />
+                            </td>
+                            <td class="label-blue" style="width: 40px;">
+                                申請No
+                            </td>
+                            <td>
+                                <input type="text" value="xxx" style="width: 80px;" />
+                            </td>
+                            <td class="label-blue" style="width: 40px;">
+                                VIN
+                            </td>
+                            <td>
+                                <input type="text" value="xxx" style="width: 100px;" />
+                                -
+                                <input type="text" value="xxx" style="width: 100px;" />
+                            </td>
+                            <td class="label-blue" style="width: 40px;">
+                                AT
+                            </td>
+                            <td>
+                                <input type="text" value="xxx" style="width: 20px;" />
+                                <input type="text" value="xxx" style="width: 100px;" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue" style="width: 90px;">
+                                            保証宛
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <input type="checkbox" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px; vertical-align: top;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue">
+                                            メッセージ<br />
+                                            （販社→MC）
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <textarea style="width: 860px; height: 50px;">XXXXXXXXXXXXXXXXXXXXXX
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px; vertical-align: top;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue">
+                                            メッセージ<br />
+                                            （MC→販社）
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <textarea style="width: 860px; height: 50px;">XXXXXXXXXXXXXXXXXXXXXX
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px; vertical-align: top;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue">
+                                            不具合状況テキスト
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <textarea style="width: 860px; height: 50px;">XXXXXXXXXXXXXXXXXXXXXX
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px; vertical-align: top;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue">
+                                            不具合主原因テキスト
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <textarea style="width: 860px; height: 50px;">XXXXXXXXXXXXXXXXXXXXXX
+                                </textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 90px; vertical-align: top;">
+                                <table class="head-table">
+                                    <tr>
+                                        <td class="label-blue" style="width: 90px;height: 30px;">
+                                            添付情報
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <div id="Div_Grid6" style="width: 100%; margin-top: 10px;">
+                                    <table id="Grid6" style="overflow: auto;">
+                                    </table>
+<!--                                    <div id="gridPager6">
+                                    </div>-->
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /第2个Tab -->
+        </div>
+    </div>
+</body>
+</html>

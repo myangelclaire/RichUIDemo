@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>商談アラート一覧</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+    <!--ヘッダー-->
+    <label class="title" style="font-size:24px; style=" width:120px;">アラート一覧</label>
+    <br />
+    <br />
+    <label class="title" style="width:120px;"></label>
+    <br/>
+    <label class="title" style="width:120px;"></label>
+    <button onclick='location.href = "Communication_Board.html"' style="margin-left:1000px; width: 120px; height: 25px;">確認済</button>
+    <br/>
+    <br />
+    <!--一覧-->
+    <label style="font-weight:bold;"></label>    
+    <div id="communicationboard-detail">
+            <form>
+                <table class="sample1" style="height:auto;">
+                    <tr>
+                        <th scope="col" style="width:10px;"><span></span></th>
+                        <th width="100px;">登録日</th>
+                        <th width="200px;">関連情報</th>
+                        <th width="400px;">内容</th>
+                        <th width="200px;">登録者</th>
+                        <th width="100px;">確認状況</th>
+
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2014/08/04</td>
+                        <td style="color: #0000ff; text-decoration: underline;">AS1092698741</td>
+                        <td>査定結果を受信しました</td>
+                        <td>エルドレッド</td>
+                        <td>未確認</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2014/06/15</td>
+                        <td style="color: #0000ff; text-decoration: underline;">OP0291078321</td>
+                        <td>メモが登録されました</td>
+                        <td>ドログバ</td>
+                        <td>未確認</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2014/04/01</td>
+                        <td style="color: #0000ff; text-decoration: underline;">CR0923984289</td>
+                        <td>審査結果を受信しました</td>
+                        <td>カシオス</td>
+                        <td>確認済み</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+</body>
+</html>

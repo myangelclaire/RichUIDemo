@@ -1,0 +1,24 @@
+div.Notifications {
+	border: 1px solid rgb(197, 197, 197); overflow: auto; background-color: rgb(255, 255, 174);
+}
+div.Notification {
+	color: rgb(0, 0, 0);
+}
+div.Notifications-qrk {
+	padding: 1%;
+}
+div.Notification-qrk {
+	width: 98%; padding-top: 2px; padding-bottom: 2px;
+}
+div.Notifications-strict {
+	padding: 5px;
+}
+div.Notifications-strict-bottom {
+	left: 0px; right: 0px; border-right-color: currentColor; border-bottom-color: currentColor; border-left-color: currentColor; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-right-style: none; border-bottom-style: none; border-left-style: none; position: relative; -ms-overflow-x: hidden;
+}
+.ie7 div.Notifications-strict-bottom {
+	bottom: 0px;
+}
+.ms-crm-NotificationCheckBox {
+	padding: 0px; width: 16px; margin-right: 7px; margin-left: 0px; cursor: pointer;
+}

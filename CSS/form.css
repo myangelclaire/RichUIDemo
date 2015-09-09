@@ -1,0 +1,393 @@
+body.ms-crm-iframeInnerBody {
+	overflow: hidden;
+}
+body.ms-crm-AreaPage {
+	background-color: transparent;
+}
+.ms-crm-Form {
+	margin: 0px;
+}
+div.ms-crm-TabS {
+	padding: 10px; -ms-overflow-y: auto;
+}
+div.ms-crm-Tab {
+	padding: 10px; -ms-overflow-y: auto;
+}
+div.ms-crm-InlineTabContainer {
+	height: 100%;
+}
+div.ms-crm-InlineTab {
+	padding: 6px 6px 6px 0px;
+}
+td.ms-crm-Form-Areas {
+	padding: 6px 6px 6px 0px;
+}
+.ms-crm-NRForm-Background {
+	left: 0px; top: 98px; right: 0px; bottom: 24px; border-top-width: 1px; border-top-style: dotted; position: absolute;
+}
+table.ms-crm-FormSection {
+	width: 100%;
+}
+div.ms-crm-FormSection-Container {
+	
+}
+img.icon {
+	margin-right: 5px; margin-left: 2px;
+}
+.ms-crm-IE7-Height-Fix-Dummy-Container-PrintForm {
+	width: 100%;
+}
+td.ms-crm-Form-SectionBar-Spacer {
+	height: 7px;
+}
+td.ms-crm-Form-SectionBar {
+	border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.ms-crm-Form-SectionBar {
+	border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ms-crm-Field-Required {
+	overflow: hidden; padding-top: 5px; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-Field-Recommended {
+	overflow: hidden; padding-top: 5px; -ms-text-overflow: ellipsis;
+}
+div.ms-crm-Field-Recommended {
+	overflow: hidden; padding-top: 5px; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-Field-Normal {
+	overflow: hidden; padding-top: 5px; -ms-text-overflow: ellipsis;
+}
+div.ms-crm-Field-Normal {
+	overflow: hidden; padding-top: 5px; -ms-text-overflow: ellipsis;
+}
+div.ms-crm-Form-StatusBar {
+	color: rgb(255, 255, 255);
+}
+table.ms-crm-Form-StatusBar {
+	color: rgb(255, 255, 255);
+}
+table.ms-crm-Form-Dashboard {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+body.ms-crm-Form-Dashboard {
+	
+}
+div.ms-crm-FSBContainer {
+	left: 0px; height: 24px; right: 0px; bottom: 0px; position: absolute;
+}
+div.ms-crm-Form-StatusBar {
+	height: 24px; color: rgb(0, 0, 0); padding-left: 5px; border-bottom-color: rgb(72, 86, 115); border-bottom-width: 1px; border-bottom-style: solid;
+}
+td.ms-crm-Form-StatusBar {
+	height: 24px; color: rgb(0, 0, 0); padding-left: 5px; border-bottom-color: rgb(72, 86, 115); border-bottom-width: 1px; border-bottom-style: solid;
+}
+label {
+	cursor: pointer;
+}
+.ms-crm-Form-LeftBar-Header {
+	text-align: left; padding-top: 22px; padding-bottom: 4px; padding-left: 12px; vertical-align: top;
+}
+.ms-crm-Form-LeftBar {
+	text-align: left; overflow: auto; padding-top: 4px; vertical-align: top; border-top-width: 1px; border-top-style: dotted;
+}
+.ms-crm-Form-AreaContainer-qrk {
+	border-top-width: 1px; border-top-style: dotted;
+}
+.ms-crm-NRForm-Background {
+	background-repeat: repeat-x;
+}
+.ms-crm-Form-Background {
+	background-repeat: repeat-x;
+}
+.ms-crm-Form-HeaderContainer {
+	left: 0px; top: 0px; right: 0px; border-bottom-width: 1px; border-bottom-style: solid; position: absolute; min-height: 40px;
+}
+.ms-crm-Form-HeaderContainer-Print {
+	min-height: 40px;
+}
+.ms-crm-Form-FooterContainer td.ms-crm-Field-Label-Print {
+	padding-right: 10px;
+}
+.ms-crm-Form-FooterContainer td.ms-crm-Field-Data-Print {
+	padding-left: 10px;
+}
+.ms-crm-Form-FooterContainer td.ms-crm-Field-Label-Print span {
+	white-space: nowrap;
+}
+table.ms-crm-Email-Body-Error {
+	border: 1px solid rgb(197, 197, 197); table-layout: fixed; background-color: rgb(255, 255, 174);
+}
+div.ms-crm-Form-Area-Customize {
+	-ms-overflow-x: auto;
+}
+div.ms-crm-Form-Area-Customize {
+	padding: 0px 7px 10px 10px;
+}
+.ms-crm-NRForm-Main-Container {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-Form-Main-Container {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-Form-Main-Container {
+	margin: 5px 8px 8px;
+}
+.ms-crm-Form-Main-Container-Print {
+	margin: 5px 8px 8px;
+}
+.ms-crm-Form-Page {
+	border-width: 1px; border-style: solid; padding: 1px; left: 0px; height: 100%; right: 0px; position: relative; background-repeat: repeat-x;
+}
+div.ms-crm-Form-Layout {
+	width: 100%; height: 100%; table-layout: fixed; background-repeat: repeat-x;
+}
+table.ms-crm-Form-Layout {
+	width: 100%; height: 100%; table-layout: fixed; background-repeat: repeat-x;
+}
+table.ms-crm-Form-Grid-Layout {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-Form-SubGrid-Layout-Selected {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-Form-Chart-Layout-Selected {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-Form-AssociatedGrid-Layout {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-Form-SubGrid-Layout {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+div.ms-crm-Form-SubGrid-Layout-Print {
+	left: 1px; top: 1px; width: auto !important; right: 1px; bottom: 1px;
+}
+div.ms-crm-Form-Grid-Layout {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-SubGrid-Layout-Selected {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-Chart-Layout-Selected {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-AssociatedGrid-Layout {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-SubGrid-Layout {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-SubGrid-Layout-Lite {
+	left: 1px; top: 1px; right: 1px; bottom: 1px; position: absolute;
+}
+div.ms-crm-Form-SubGrid-Layout {
+	overflow: hidden;
+}
+div.ms-crm-Form-SubGrid-Layout-Selected {
+	overflow: hidden;
+}
+div.ms-crm-Form-SubGrid-Layout-Selected {
+	border: 2px solid rgb(0, 139, 190); left: 2px; top: 2px; right: 2px; bottom: 2px; position: absolute;
+}
+div.ms-crm-Form-AssociatedGrid-Layout {
+	border: 2px solid rgb(0, 139, 190); left: 2px; top: 2px; right: 2px; bottom: 2px; position: absolute;
+}
+table.ms-crm-Form-SubGrid-Layout-Selected {
+	border: 2px solid rgb(0, 139, 190);
+}
+table.ms-crm-Form-AssociatedGrid-Layout {
+	border: 2px solid rgb(0, 139, 190);
+}
+.ms-crm-Form-Chart-Layout-Selected {
+	border: 1px solid rgb(0, 139, 190);
+}
+.ms-crm-Form-SubGrid-Layout-Print {
+	border: 1px solid rgb(161, 165, 170);
+}
+div.ms-crm-Roles-Form-Area {
+	width: 100%; height: 100%; overflow: auto;
+}
+.ms-crm-Form-FooterContainer {
+	background-position: bottom; padding: 2px 6px 0px; border-top-width: 1px; border-top-style: solid; min-height: 20px; background-repeat: repeat-x;
+}
+.formFootersContainer {
+	left: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-Form-FooterContainer-Print {
+	background-position: bottom; padding: 2px 6px 0px; border-top-width: 1px; border-top-style: dotted; min-height: 20px; background-repeat: repeat-x;
+}
+.ms-crm-Form-AreaContainer {
+	left: 0px; right: 0px; position: absolute;
+}
+.RelatedInformationPaneContainer {
+	top: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-FormBodyContainer {
+	top: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-FormAndRIContainer {
+	top: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-NoRIPane {
+	left: 0px; right: 0px;
+}
+.ms-crm-FormBodyContainer {
+	overflow: auto;
+}
+.ms-crm-FormAndRIContainer {
+	left: 0px; right: 0px;
+}
+.ms-crm-FormBodyRIExpanded {
+	left: 0px; right: 210px;
+}
+.ms-crm-FormBodyRICollapsed {
+	left: 0px; right: 29px;
+}
+.ms-crm-Form-Container {
+	width: 100%; height: 100%; position: relative;
+}
+table.headerDataContainerTable div.ms-crm-Field-Data-Print {
+	width: 100%; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.ms-crm-Form-FooterContainer div.ms-crm-Field-Data-Print {
+	width: 100%; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-Form-Header-splitter {
+	height: 8px;
+}
+table.ms-crm-Form-StandaloneSection {
+	width: 100%; line-height: 16px; overflow: hidden; table-layout: fixed;
+}
+.ms-crm-Field-Label-Print {
+	overflow: hidden; vertical-align: top; -ms-text-overflow: ellipsis;
+}
+.ms-crm-Field-Data-Print {
+	font-weight: bold; vertical-align: top; -ms-word-wrap: break-word;
+}
+table.formHeader {
+	table-layout: auto;
+}
+table.headerContainerTable td {
+	white-space: nowrap;
+}
+table.headerContainerTable {
+	table-layout: fixed;
+}
+.ms-crm-Form-Title-Label {
+	font-size: 13px; font-weight: normal;
+}
+.ms-crm-Form-Title-Data {
+	font-size: 17px; font-weight: bold;
+}
+.ms-crm-Form-Title-Data h1 {
+	font-size: 17px; font-weight: bold;
+}
+.ms-crm-Form-Title-Data h1 {
+	font-weight: 600; margin-top: 0px; margin-bottom: 0px;
+}
+table.headerContainerTable .ms-crm-Field-Label-Print {
+	line-height: 18px; font-size: 11px; font-weight: normal;
+}
+table.headerContainerTable div.ms-crm-Field-Data-Print {
+	padding-bottom: 7px;
+}
+div.ms-crm-Field-Data-Print {
+	font-weight: 600;
+}
+.ms-crm-Field-DateTime-Print {
+	direction: ltr;
+}
+.ms-crm-Field-Number-Print {
+	direction: ltr;
+}
+table.ms-crm-Form-Grid-Layout-Print {
+	table-layout: auto;
+}
+div.ms-crm-Form-Breadcrumb {
+	height: 43px; padding-bottom: 5px; position: relative;
+}
+div.ms-crm-Form-Breadcrumb::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+span.ms-crm-Form-Breadcrumb {
+	left: 3px; right: 180px; line-height: 20px; margin-top: 3px; vertical-align: baseline; position: absolute;
+}
+div.ms-crm-Form-Information-Title {
+	line-height: 26px; padding-left: 10px; border-bottom-width: 1px; border-bottom-style: solid;
+}
+.ms-crm-Loading-Message {
+	width: 100%; height: 100%; text-align: center; color: black; table-layout: fixed;
+}
+img.recnav-leftcap {
+	width: 2px; height: 21px;
+}
+img.recnav-rightcap {
+	width: 2px; height: 21px;
+}
+img.recnav-dropdown {
+	width: 15px; height: 21px;
+}
+img.recnav-up {
+	width: 19px; height: 21px;
+}
+img.recnav-down {
+	width: 19px; height: 21px;
+}
+span.recnav-dropdown {
+	width: 100px; height: 19px; margin-bottom: 4px;
+}
+img.recnav-dropdownfiller-disabled {
+	color: rgb(35, 39, 44);
+}
+img.recnav-dropdownfiller-rest {
+	color: rgb(35, 39, 44);
+}
+span.recnav-dropdown-rest {
+	color: rgb(35, 39, 44);
+}
+span.recnav-dropdown-disabled {
+	color: rgb(153, 153, 153);
+}
+span.recnav-dropdown-hover {
+	color: rgb(35, 39, 44);
+}
+img.recnav-dropdownfiller-hover {
+	color: rgb(35, 39, 44);
+}
+span.recnav-dropdown-selected {
+	color: rgb(35, 39, 44);
+}
+img.recnav-dropdownfiller-selected {
+	color: rgb(35, 39, 44);
+}
+span.recnav-dropdown {
+	width: 100px; height: 21px; line-height: 21px; overflow: hidden; font-family: Segoe UI,Tahoma,Arial; font-size: 11px; font-weight: normal; margin-left: 5px; vertical-align: top; display: inline-block; -ms-text-overflow: ellipsis;
+}
+img.recnav-dropdown-filler {
+	width: 5px; height: 21px;
+}
+span.ms-crm-Form-RecNav {
+	right: 7px; margin-top: 6px; position: absolute;
+}
+a.recnav-up {
+	height: 21px; text-align: left; font-size: 11px; vertical-align: top; display: inline-block;
+}
+a.recnav-down {
+	height: 21px; text-align: left; font-size: 11px; vertical-align: top; display: inline-block;
+}
+a.recnav-dropdown {
+	height: 21px; text-align: left; font-size: 11px; vertical-align: top; display: inline-block;
+}
+a.recnav-dropdown {
+	border-width: 1px; border-style: solid;
+}
+a.recnav-up {
+	border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+a.recnav-down {
+	border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+.ms-crm-Dashboard-Area {
+	height: 100%;
+}

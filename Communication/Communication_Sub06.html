@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard2.css" />
+    
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+    <script>
+        function openpage(value) {
+            var iWidth = 700;
+            var iHeight = 300;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            var htmlName = null;
+            var htmlTitle = null;
+            if (value == 1) {
+                html = "Memo_Add.html";
+                htmlTitle = "商談メモ 新規登録";
+            } else {
+               return;
+            }
+
+            window.open(html, htmlTitle, "height=" + iHeight + ",width=" + iWidth + ",top=" + iTop + ",left=" + iLeft);
+        }
+</script>
+</head>
+<body style="width: 1000px; height: 390px;">
+<div style="margin-top:10px; margin-bottom:10px; margin-left:10px;">
+<div id="communicationboard-detail" style="margin-top:50px;">
+    <ul>
+        <li style="height:40px;">
+            <input type="button" class="blue_btn_class" value="更新" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+            <input type="button" class="blue_btn_class" value="保存" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+            <input type="button" class="blue_btn_class" value="削除" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+            <input onclick="openpage(1);" type="button" class="blue_btn_class" value="作成" style="width:80px; height: 25px; margin-right: 10px; float: right" />
+        </li>
+    </ul>
+    <table class="sample1" style="height:auto;">
+        <tr>
+            <th scope="col" style="width:20px;"><span></span></th>
+            <th width="130px;">登録日</th>
+            <th width="150px;">登録者</th>
+            <th width="800px;">メモ</th>
+        </tr>
+        <tr>
+            <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+            <td>2014/3/14</td>
+            <td>松田　デミ男</td>
+            <td>あああああああああああああああああああああああああああああああああああああああああ</td>
+        </tr>
+        <tr>
+            <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+            <td>2014/3/7</td>
+            <td>阿久　世良</td>
+            <td>いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい</td>
+        </tr>
+        <tr>
+            <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+            <td>2014/3/1</td>
+            <td>松田　デミ男</td>
+            <td>うええええええええええええええええええええええええええええええええええええええええ</td>
+        </tr>
+
+    </table>
+</div>
+</div>
+</body>
+</html>

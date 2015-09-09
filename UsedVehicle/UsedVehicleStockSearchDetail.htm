@@ -1,0 +1,704 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="/JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="/JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <script src="/JQGrid/scripts/json2.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    
+    <style type="text/css">
+        input {width:auto;}
+        th {text-align: center;}
+        body {height: 100%; overflow: auto;}
+        
+        
+        table.gridtable {
+	        font-family: verdana,arial,sans-serif;
+	        font-size:11px;
+	        color:#333333;
+	        border-width: 1px;
+	        border-color: #666666;
+	        border-collapse: collapse;
+        }
+        table.gridtable th {
+	        border-width: 1px;
+	        padding: 8px;
+	        border-style: solid;
+	        border-color: #666666;
+	        background-color: #dedede;
+        }
+        table.gridtable td {
+	        border-width: 1px;
+	        border-style: solid;
+	        border-color: #666666;
+	        background-color: #FDEADA;
+        }
+        .ui-widget
+        {
+            font-size:11px;
+        }
+        
+        .my-dialog-y .ui-dialog-titlebar-close
+        {
+            display:none
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#img_expant').on("click", function () {
+
+                var url = $('#img_expant').attr("src").toLowerCase();
+
+                if (url == "/images/usedvehicle/down.png") {
+                    $('#img_expant').attr("src", "/images/UsedVehicle/up.png");
+                    $('#Expand_Condition').show();
+                    $('#lab_more').html('メーカーオプション内容を閉じる');
+                } else {
+                    $('#img_expant').attr("src", "/images/UsedVehicle/down.png");
+                    $('#Expand_Condition').hide();
+                    $('#lab_more').html('メーカーオプション内容を表示する');
+                }
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div style="width:1200px;">
+        <div style="background:#DBEEF4; padding-top:10px; padding-bottom:10px;">
+            <label style="font-size:29px; margin-left:15px;">中古車在庫検索詳細</label>
+            <label style="margin-left:700px;">商談案件番号：XXXXXXXXXX</label>
+        </div>
+
+        <div style="background:#DBEEF4; margin-top:15px;">
+        
+        <table style="width:100%;">
+            <tr>
+                <td align="center">
+
+                    <table  style="width:90%;" class="gridtable">
+                        <tr>
+                            <td colspan="6" style="text-align:left; height:50px; padding-left:3px; background:#0066FF;">
+                                <label style="font-size:16px;"><b>マツダ　アテンザ　2.2 XD Lパッケージ</b></label>
+                                <button style="float:right; margin-right:30px;background:#84C1FF;">予約する</button>
+                                <button style="float:right; margin-right:30px;background:#84C1FF;">見積りを作成</button>                               
+                            </td>
+                        </tr>
+                        <tr style="height:50px;">
+                            <td style="width:150px;background:#84C1FF;"><label><b>販売価格</b></label></td>
+                            <td style="width:210px;background:#FFFFFF;"><label><b><span style="font-size:14px; color:Red;">294.3</span> 万円</b></label></td>
+                            <td style="width:150px;background:#84C1FF;"><label><b>年式</b></label></td>
+                            <td style="width:210px;background:#FFFFFF"><label><b>2013（H25）年</b></label></td>
+                            <td style="width:150px;background:#84C1FF;"><label><b>走行距離</b></label></td>
+                            <td style="width:210px;background:#FFFFFF"><label><b>10,671km</b></label></td>
+                        </tr>
+                        <tr style="height:50px;">
+                            <td style="background:#84C1FF;"><label><b>車検</b></label></td>
+                            <td style="background:#FFFFFF;"><label><b>2016 (H28)年03月</b></label></td>
+                            <td style="background:#84C1FF;"><label><b>修復歴</b></label></td>
+                            <td style="background:#FFFFFF;"><label><b>なし</b></label></td>
+                            <td style="background:#84C1FF;"><label><b>商談待ち人数</b></label></td>
+                            <td style="background:#FFFFFF;"><label><b>7人</b></label></td>
+                        </tr>
+                        <tr style="height:550px;">
+                            <td colspan="6">
+                                <table style="width:100%; height:550px;">
+                                    <tr>
+                                        <td style="width:780px;">
+                                            <table style="width:100%;">
+                                                <tr style="height:500px;">
+                                                    <td style="border-style:none; text-align:left;background:#FFFFFF;">
+                                                        <!--<button style="height:150px; width:25px;"> << </button>-->
+                                                        <img src="../images/UsedVehicle/left.png" style="cursor:pointer;" />
+                                                    </td>
+                                                    <td style="width:640px; border-style:none;background:#FFFFFF;">
+                                                        <img src="../images/UsedVehicle/car5.png" style="height:480px;" />
+                                                    </td>
+                                                    <td style="border-style:none; text-align:right;background:#FFFFFF;">
+                                                        <!--<button style="height:150px; width:25px;"> >> </button>-->
+                                                        <img src="../images/UsedVehicle/right.png" style="cursor:pointer;" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td rowspan="2" align="center" valign="top">
+                                            <table style="width:100%;">
+                                                <tr style="height:92px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/UsedVehicle/car6.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_1.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_2.png" style="width:70px;" /></td>
+                                                </tr>
+                                                <tr style="height:92px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_5.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_7.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_11.png" style="width:70px;" /></td>
+                                                </tr>
+                                                <tr style="height:92px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_3.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_4.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_8.png" style="width:70px;" /></td>
+                                                </tr>
+                                                <tr style="height:92px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_9.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_10.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_1.png" style="width:70px;" /></td>
+                                                </tr>
+                                                <tr style="height:92px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_2.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_5.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_7.png" style="width:70px;" /></td>
+                                                </tr>
+                                                <tr style="height:93px;">
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_11.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_3.png" style="width:70px;" /></td>
+                                                    <td style="width:33%; border-style:none;background:#FFFFFF;"><img src="../images/carModel_4.png" style="width:70px;" /></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height:50px; text-align:left;background:#FFFFFF;">
+                                            <label style="margin-left:3px;">アテンザのデモアップカーが新登場！上級グレードのLパッケージです！</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>車両品質評価</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td>
+                                            <table style="width:100%;">
+                                                <tr>
+                                                    <td style="border-style:none; width:90px; text-align:left;">
+                                                        <img src="../images/UsedVehicle/ais.png" />
+                                                    </td>
+                                                    <td style="border-style:none; width:60%; text-align:left;">
+                                                        <label style="color:Red; font-size:16px;"><b>5</b></label><label>点</label>
+                                                    </td>
+                                                    <td style="border-style:none; width:30%">
+                                                        <button style="float:right; margin-right:30px;background:#84C1FF;">評価書を見る</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <table style="width:100%;">
+                                            <tr>
+                                                <td style="border-style:none; width:65%"><img src="../images/UsedVehicle/pingjia.png" /></td>
+                                                <td style="border-style:none; width:35%">
+                                                    <table style="width:100%;">
+                                                        <tr style="height:25px;">
+                                                            <td style="width:20%; text-align:center; background:#F2F2F2;">内装</td>
+                                                            <td style="width:30%;background:#ffffff;"></td>
+                                                            <td style="width:20%; text-align:center; background:#F2F2F2;">修复历</td>
+                                                            <td style="width:30%;background:#ffffff;"></td>
+                                                        </tr>
+                                                        <tr style="height:25px;">
+                                                            <td style="width:20%; text-align:center; background:#F2F2F2;">外装</td>
+                                                            <td style="background:#ffffff;"></td>
+                                                            <td style="width:20%; text-align:center; background:#F2F2F2;"></td>
+                                                            <td style="background:#ffffff;"></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>基本情報</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                	<tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">中古車No</td>
+                                        <td style="width:13%;background:#ffffff;">XXXXXXXX</td>
+                                        <td style="width:12%; background:#F2F2F2;">車台型式</td>
+                                        <td style="width:13%;background:#ffffff;">XXXXXXXXX</td>
+                                        <td style="width:12%; background:#F2F2F2;">カーNo</td>
+                                        <td style="width:13%;background:#ffffff;">XXXXXXXX</td>
+                                        <td style="width:12%; background:#F2F2F2;">ボディータイプ</td>
+                                        <td style="width:13%;background:#ffffff;">セダン</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">駆動方式</td>
+                                        <td style="width:13%;background:#ffffff;">FF</td>
+                                        <td style="width:12%; background:#F2F2F2;">排気量</td>
+                                        <td style="width:13%;background:#ffffff;">2,200cc</td>
+                                        <td style="width:12%; background:#F2F2F2;">ドア数</td>
+                                        <td style="width:13%;background:#ffffff;">5</td>
+                                        <td style="width:12%; background:#F2F2F2;">ミッション</td>
+                                        <td style="width:13%;background:#ffffff;">6AT</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">全長</td>
+                                        <td style="width:13%;background:#ffffff;">480cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">全幅</td>
+                                        <td style="width:13%;background:#ffffff;">184cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">全高</td>
+                                        <td style="width:13%;background:#ffffff;">1480cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">車両重量</td>
+                                        <td style="width:13%;background:#ffffff;">1,530Kg</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">室内長</td>
+                                        <td style="width:13%;background:#ffffff;">1,845cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">室内幅</td>
+                                        <td style="width:13%;background:#ffffff;">1,505cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">室内高</td>
+                                        <td style="width:13%;background:#ffffff;">1,170cm</td>
+                                        <td style="width:12%; background:#F2F2F2;">ホイールベース</td>
+                                        <td style="width:13%;background:#ffffff;">1,2,700cm</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">最小回転半径</td>
+                                        <td style="width:13%;background:#ffffff;">5.3m</td>
+                                        <td style="width:12%; background:#F2F2F2;">乗車定員</td>
+                                        <td style="width:13%;background:#ffffff;">5人</td>
+                                        <td style="width:12%; background:#F2F2F2;">燃料</td>
+                                        <td style="width:13%;background:#ffffff;">ガソリン</td>
+                                        <td style="width:12%; background:#F2F2F2;">吸気方式</td>
+                                        <td style="width:13%;background:#ffffff;">ターボ／ＳＣ</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">JC08モード燃費</td>
+                                        <td style="width:13%;background:#ffffff;">14.2</td>
+                                        <td style="width:12%; background:#F2F2F2;">10-15モード燃費</td>
+                                        <td style="width:13%;background:#ffffff;">15.2</td>
+                                        <td style="width:12%; background:#F2F2F2;">最高出力/回転数</td>
+                                        <td style="width:13%;background:#ffffff;">82/6000kW/rpm</td>
+                                        <td style="width:12%; background:#F2F2F2;">最大トルク/回転数</td>
+                                        <td style="width:13%;background:#ffffff;">144/3500N･m/rpm</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">タイヤサイズ（前）</td>
+                                        <td style="width:13%;background:#ffffff;">195/55R17</td>
+                                        <td style="width:12%; background:#F2F2F2;">タイヤサイズ（後）</td>
+                                        <td style="width:13%;background:#ffffff;">195/55R17</td>
+                                        <td style="width:12%; background:#F2F2F2;">サスペンション形式</td>
+                                        <td style="width:13%;background:#ffffff;">マクファーソンストラット式</td>
+                                        <td style="width:12%; background:#F2F2F2;">サスペンション形式</td>
+                                        <td style="width:13%;background:#ffffff;">マルチリンク式</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">ボディーカラー</td>
+                                        <td style="width:13%;background:#ffffff;">赤</td>
+                                        <td style="width:12%; background:#F2F2F2;">色詳細</td>
+                                        <td style="width:13%;background:#ffffff;">ソウルレッド</td>
+                                        <td style="width:12%; background:#F2F2F2;">内装色</td>
+                                        <td style="width:13%;background:#ffffff;">XXXX</td>
+                                        <td style="width:12%; background:#F2F2F2;">リサイクル預託有無</td>
+                                        <td style="width:13%;background:#ffffff;">リ未廃</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">新車時価格（税抜き）</td>
+                                        <td style="width:13%;background:#ffffff;">324.4万円</td>
+                                        <td style="width:12%; background:#F2F2F2;">展示拠点</td>
+                                        <td style="width:13%;background:#ffffff;">大洲</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>状態</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">取扱説明書</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">整備手帳</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">点検記録簿</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">マツダ認定U-car</td>
+                                        <td style="width:13%;background:#ffffff;">
+                                            <img src="../images/UsedVehicle/car4.png" />
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">ワンオーナー</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">禁煙車</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:12%; background:#F2F2F2;">未使用車</td>
+                                        <td style="width:13%;background:#ffffff;font-size:32px;">－</td>
+                                        <td style="width:12%; background:#F2F2F2;">モカーアップ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            ○
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">サービスカーアップ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:12%; background:#F2F2F2;">レンタ―アップ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:12%; background:#F2F2F2;">福祉車両</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:12%; background:#F2F2F2;">Uカーサーチ掲載</td>
+                                        <td style="width:13%;background:#ffffff;">
+                                            掲載予定
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>保証・整備</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr style="height:40px;">
+                                        <td style="width:25%; background:#F2F2F2; text-align:left;">基本保証(無償)</td>
+                                        <td style="width:75%; text-align:left;background:#ffffff;">
+                                            さわやか保証（部分保証）　1年 走行距離無制限
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:25%; background:#F2F2F2; text-align:left;">延長保証(有償)</td>
+                                        <td style="width:75%; text-align:left;background:#ffffff;">
+                                            さわやかプラス（部分保証) / マツダ延長保証（部分保証) / なし　
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:25%; background:#F2F2F2; text-align:left;">新車保証継承</td>
+                                        <td style="width:75%; text-align:left;background:#ffffff;">
+                                            一般：yyyy年mm月 または 走行距離6万Kmまで　／　特別：yyyy年mm月 または 走行距離10万Kmまで
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:25%; background:#F2F2F2; text-align:left;">整備</td>
+                                        <td style="width:75%; text-align:left;background:#ffffff;">
+                                            定期点検整備あり（納車時）費用別途1.2万円
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>装備・オプション</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">エアコン</td>
+                                        <td style="width:13%;background:#ffffff;">オート(シングル)</td>
+                                        <td style="width:12%; background:#F2F2F2;">オーディオ</td>
+                                        <td style="width:13%;background:#ffffff;">ラジオ</td>
+                                        <td style="width:12%; background:#F2F2F2;">パワステ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">パワーウィンドウ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            ○
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">ナビゲーション</td>
+                                        <td style="width:13%;background:#ffffff;">HDDナビ</td>
+                                        <td style="width:12%; background:#F2F2F2;">テレビ</td>
+                                        <td style="width:13%;background:#ffffff;">フルセグ</td>
+                                        <td style="width:12%; background:#F2F2F2;">カメラ</td>
+                                        <td style="width:13%;background:#ffffff;">サイド/バック</td>
+                                        <td style="width:12%; background:#F2F2F2;">キーレス</td>
+                                        <td style="width:13%;background:#ffffff;">
+                                            スマートキー
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">ETC</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">盗難防止装置</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">スライドドア</td>
+                                        <td style="width:13%;background:#ffffff;">両側電動</td>
+                                        <td style="width:12%; background:#F2F2F2;">3列シート</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            ○
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">アルミホイール</td>
+                                        <td style="width:13%;background:#ffffff;">純正(17インチ)</td>
+                                        <td style="width:12%; background:#F2F2F2;">サンルーフ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">ヘッドライト</td>
+                                        <td style="width:13%;background:#ffffff;">HID</td>
+                                        <td style="width:12%; background:#F2F2F2;">ABS</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            ○
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">エアバック</td>
+                                        <td style="width:13%;background:#ffffff;">運転席/助手席</td>
+                                        <td style="width:12%; background:#F2F2F2;">革シート</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">パワーシート</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">シートヒーター</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            －
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">横滑り防止装置</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">アイドリングストップ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:12%; background:#F2F2F2;">クルーズコントロール</td>
+                                        <td style="width:13%;background:#ffffff;">レーダークルーズ</td>
+                                        <td style="width:12%; background:#F2F2F2;">衝突被害軽減ブレーキ</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">
+                                            ○
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:12%; background:#F2F2F2;">MTモード付きAT</td>
+                                        <td style="width:13%;background:#ffffff;font-size:16px;">○</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>メーカーオプション</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr>
+                                        <td style="width:25%; background:#F2F2F2; text-align:left;">パッケージ名</td>
+                                        <td style="width:35%; text-align:left;border:0px;background:#ffffff;">
+                                               LEDコンフォートパッケージ<br />
+                                               セーフティパッケージ<br />
+                                               XXXXXXXXXXＸパッケージ<br />
+                                               XXXXXXXXXXＸパッケージ
+                                        </td>
+										<td style="width:40%; text-align:left; border:0px;background:#ffffff;">
+                                               XXXXXXXXXXＸパッケージ<br />
+                                               XXXXXXXXXXＸパッケージ<br />
+											<br />
+											<br />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div id="Expand_Condition" style="display:none;">
+                                    <table style="width:100%; margin-top:2px;">
+                                        <tr>
+                                            <td style="width:25%; background:#F2F2F2; text-align:left;">メーカーオプション内容</td>
+                                            <td style="width:75%; text-align:left;background:#ffffff;">
+                                                【スマートシティブレーキサポート】　【オートクルーズコントロール】　【車線逸脱警報システム】<br />
+                                                【LEDヘッドランプ】　【ハイビームコントロールシステム】　【LEDヘッドランプシグネチャーランプ】<br />
+                                                【オートライトシステム】　【レインセンサーワイパー】　【フロントフルオートエアコン】<br />
+                                                【CD/DVDプレイヤー】　【地上デジタルTVチューナー】　【アドバンストキーレスエントリー＆スタートシステム・・・】
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <table style="width:90%; margin-top:20px;">
+                        <tr>
+                            <td style="text-align:left; width:25px;"><img id="img_expant" src="/images/UsedVehicle/down.png" alt="" /></td>
+                            <td style="text-align:left;"><label id="lab_more">メーカーオプション内容を表示する</label></td>
+                        </tr>
+                    </table>
+
+                    <table  style="width:90%; margin-top:20px;" class="gridtable">
+                        <tr>
+                            <td style="text-align:left; height:50px; padding-left:3px; background:#9FC6FF;">
+                                <label style="font-size:16px;"><b>独自装備</b></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:100%;">
+                                <table style="width:100%;">
+                                    <tr style="height:40px;">
+                                        <td colspan="8" style="width:100%; background:#F2F2F2; text-align:left;"><b>SKYACTIV技術</b></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-G</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-D</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-HYBRID</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-MT</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">
+                                            －
+                                        </td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-DRIVE</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-BODY</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">SKYACTIV-CHASSIS</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:24%; border-style:none;"></td>
+                                        <td style="width:26%; border-style:none;"></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td colspan="8" style="width:100%; background:#F2F2F2; text-align:left;"><b>安全</b></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">HLA<br />（ヒルローンチアシスト）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:24%; background:#F2F2F2;">AFS<br />（アダプティブフロントライティングシステム）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">ALH<br />（アダプティブLEDヘッドライト)
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">RVM<br />（リアビークルモニタリングシステム）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">ESS<br />（エマージェンシーシグナルシステム）</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">SCBS<br />（スマートシティブレーキサポート）</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">後方SCBS<br />（後方スマートシティブレーキサポート）</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">SBS<br />（スマートブレーキサポート）</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">LDWS<br />（レーンデパーチャーワーニングシステム）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">LAS<br />（レーンキープアシストシステム）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                   </tr>
+                                   <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">HBC<br />（ハイビームコントロールシステム）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">BSM<br />（ブラインドスポットモニタリング）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">DAA<br />（ドライバーアテンションアラート)
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; border-style:none;"></td>
+                                        <td style="width:26%; border-style:none;"></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td colspan="8" style="width:100%; background:#F2F2F2; text-align:left;"><b>環境</b></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">i-ELOOP<br />（アイイーループ）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                        <td style="width:24%; background:#F2F2F2;">i-STOP<br />（アイストップ）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td colspan="8" style="width:100%; background:#F2F2F2; text-align:left;"><b>その他</b></td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">i-DM<br />（インテリジェントドライブマスター）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; background:#F2F2F2;">MID<br />（マルチインフォメーションディスプレイ）
+</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">○</td>
+                                    </tr>
+                                    <tr style="height:40px;">
+                                        <td style="width:24%; background:#F2F2F2;">BOSEサウンドシステム</td>
+                                        <td style="width:26%;background:#ffffff;font-size:16px;">－</td>
+                                        <td style="width:24%; border-style:none;"></td>
+                                        <td style="width:26%; border-style:none;"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+            </tr>
+        </table>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,492 @@
+div.ms-crm-VS-Localizable {
+	float: left;
+}
+li.ms-crm-Menu {
+	height: 23px; float: left;
+}
+li.ms-crm-Menu-Spacer {
+	height: 23px; float: left;
+}
+li.ms-crm-Menu-Read {
+	margin-right: 8px;
+}
+li.ms-crm-Menu-Jewel {
+	padding-top: 7px;
+}
+li.ms-crm-Menu-Spacer {
+	height: auto; margin-top: 2px;
+}
+li.ms-crm-FilterPopupMenu {
+	height: 16px; float: left;
+}
+table.ms-crm-FilterPopupContainer {
+	width: 20px; height: 18px; vertical-align: middle; table-layout: fixed;
+}
+td.ms-crm-FilterPopupContainerTD {
+	width: 0px; text-align: left;
+}
+span.ms-crm-Menu-Label {
+	height: 19px; padding-top: 3px; padding-right: 2px; padding-left: 2px; display: inline-block; cursor: default; -ms-overflow-y: hidden;
+}
+span.ms-crm-FilterPopupMenu-Label {
+	height: 16px; padding-top: 1px; cursor: default; -ms-overflow-y: hidden;
+}
+a.ms-crm-FilterPopupMenu-Label:focus {
+	border: 1px dotted currentColor; position: absolute;
+}
+div.ms-crm-FilterPopupMenu-Label {
+	margin-top: 1px; position: relative; cursor: default;
+}
+div.ms-crm-FilterPopupMenu-Label a.ms-crm-FilterPopupMenu-Label.DIV {
+	width: 16px; height: 16px; display: block;
+}
+a.ms-crm-Menu-Label {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-Menu-Label:link {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-Menu-Label:visited {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-Menu-Label:active {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-Menu-Label:hover {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-MenuLink {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-MenuLink:link {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-MenuLink:visited {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-MenuLink:active {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+a.ms-crm-MenuLink:hover {
+	text-decoration: none; white-space: nowrap; cursor: default;
+}
+.ms-crm-MenuBar * td.ms-crm-Menu-ICRight {
+	padding-bottom: 14px;
+}
+span.ms-crm-Menu-Label-Opened {
+	border-width: 1px; border-style: solid; padding-top: 2px; padding-right: 1px; padding-left: 1px; display: inline-block; white-space: nowrap;
+}
+span.ms-crm-Menu-Label-Hovered {
+	border-width: 1px; border-style: solid; height: 18px; padding-top: 2px; padding-right: 1px; padding-left: 1px; display: inline-block; -ms-overflow-y: hidden;
+}
+.ms-crm-Menu-disabled * {
+	color: rgb(91, 98, 108) !important; cursor: default !important;
+}
+img.ms-crm-Menu-Button-disabled {
+	opacity: 0.3; background-color: rgb(255, 255, 255) !important;
+}
+img.ms-crm-Menu-Button {
+	width: 16px; height: 16px; vertical-align: top;
+}
+img.ms-crm-Menu-ButtonFirst {
+	width: 16px; height: 16px; vertical-align: top;
+}
+img.ms-crm-Menu-ButtonRTL {
+	width: 16px; height: 16px; vertical-align: top;
+}
+img.ms-crm-Menu-ButtonLTR {
+	width: 16px; height: 16px; vertical-align: top;
+}
+img.ms-crm-Menu-ButtonFilter {
+	width: 14px; height: 14px;
+}
+span.ms-crm-Menu-FilterImgWrapper {
+	border-width: 1px; border-style: solid;
+}
+span.ms-crm-Menu-FilterImgWrapper-Hover {
+	border-width: 1px; border-style: solid;
+}
+span.ms-crm-Menu-FilterImgWrapper-Open {
+	border-width: 1px; border-style: solid;
+}
+div.ms-crm-Menu-FilterImgWrapper {
+	border-width: 1px; border-style: solid; width: 14px; height: 14px;
+}
+div.ms-crm-Menu-FilterImgWrapper-Hover {
+	border-width: 1px; border-style: solid; width: 14px; height: 14px;
+}
+div.ms-crm-Menu-FilterImgWrapper-Open {
+	border-width: 1px; border-style: solid; width: 14px; height: 14px;
+}
+span.ms-crm-MenuItem-Text {
+	margin: 0px 1px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+span.ms-crm-MenuItem-Text-MultiSelect-Populated {
+	margin: 0px 1px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+span.ms-crm-MenuItem-Text-MultiSelect {
+	height: 16px; text-align: center; color: rgb(126, 126, 126); padding-top: 2px; font-style: italic; margin-top: 1px; margin-bottom: 4px;
+}
+span.ms-crm-MenuItem-Text-MultiSelect-Populated {
+	width: 100px;
+}
+img.ms-crm-Menu-Button {
+	margin-right: 1px; margin-left: 1px;
+}
+span.ms-crm-MenuItem-TextRTL {
+	padding-right: 4px; padding-bottom: 3px; padding-left: 5px;
+}
+img.ms-crm-Menu-ButtonRTL {
+	padding-right: 4px; padding-bottom: 3px; padding-left: 5px;
+}
+img.ms-crm-Menu-ButtonLTR {
+	padding-right: 5px; padding-bottom: 3px; padding-left: 4px;
+}
+span.ms-crm-MenuItem-TextLTR {
+	padding-right: 5px; padding-bottom: 3px; padding-left: 4px;
+}
+span.ms-crm-MenuItem-Text {
+	height: 16px; color: rgb(0, 0, 0); vertical-align: top;
+}
+span.ms-crm-MenuItem-Text-MultiSelect-Populated {
+	height: 16px; color: rgb(0, 0, 0); vertical-align: top;
+}
+span.ms-crm-MenuItem-TextFirst {
+	height: 16px; color: rgb(0, 0, 0); vertical-align: top;
+}
+span.ms-crm-MenuItem-TextRTL {
+	height: 16px; color: rgb(0, 0, 0); vertical-align: top;
+}
+span.ms-crm-MenuItem-TextLTR {
+	height: 16px; color: rgb(0, 0, 0); vertical-align: top;
+}
+td.ms-crm-MenuItem-Text {
+	color: rgb(21, 66, 139);
+}
+img.ms-crm-Menu-DownArrow {
+	width: 11px; height: 16px; vertical-align: top;
+}
+td.ms-crm-MenuItem-Icon {
+	width: 30px; margin-right: 1px; margin-left: 1px;
+}
+span.ms-crm-MenuItem-Icon {
+	width: 30px; margin-right: 1px; margin-left: 1px;
+}
+span.ms-crm-MenuItem-Icon-MultiSelect {
+	width: 30px; margin-top: 8px; margin-left: 5px; position: relative;
+}
+li.ms-crm-MenuItem-Icon-MultiSelect {
+	margin-left: -16px;
+}
+img.ms-crm-SubMenu-RightArrow {
+	width: 4px; height: 7px; right: 6px; margin-top: 5px; position: absolute;
+}
+span.ms-crm-Menu-Group {
+	color: rgb(126, 126, 126); background-repeat: repeat-y; background-color: rgb(233, 233, 233);
+}
+span.ms-crm-Menu-Group-Opened {
+	color: rgb(126, 126, 126); background-repeat: repeat-y; background-color: rgb(233, 233, 233);
+}
+span.ms-crm-Menu-Group-Hovered {
+	color: rgb(126, 126, 126); background-repeat: repeat-y; background-color: rgb(233, 233, 233);
+}
+span.ms-crm-Menu-Group {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-Menu-Group-Opened {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-Menu-Group-Hovered {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+table.ms-crm-MenuItem-Notification-Label {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-MenuItem-Label {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-MenuItem-Label-Opened {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-MenuItem-Label-Hovered {
+	width: 100%; margin-top: 1px; cursor: default;
+}
+span.ms-crm-Menu-Group {
+	padding: 3px; height: 22px;
+}
+span.ms-crm-Menu-Group-Opened {
+	padding: 3px; height: 22px;
+}
+span.ms-crm-Menu-Group-Hovered {
+	padding: 3px; height: 22px;
+}
+span.ms-crm-MenuItem-Label {
+	padding: 3px; height: 22px;
+}
+span.ms-crm-MenuItem-Label-Opened {
+	border-width: 1px; border-style: solid; padding: 2px; height: 20px;
+}
+span.ms-crm-MenuItem-Label-Hovered {
+	border-width: 1px; border-style: solid; padding: 2px; height: 20px;
+}
+span.ms-crm-Menu-MultiSelect {
+	padding: 3px;
+}
+span.ms-crm-Menu-MultiSelect {
+	width: 100%; height: 21px; margin-top: 1px; cursor: default;
+}
+span.ms-crm-Menu-MultiSelect-Hovered {
+	width: 100%; height: 21px; margin-top: 1px; cursor: default;
+}
+span.ms-crm-Menu-MultiSelect-Hovered {
+	padding: 2px; border: 1px solid rgb(255, 183, 76);
+}
+img.ms-crm-Menu-JewelButton {
+	margin-top: 2px; margin-right: 5px; margin-left: 5px;
+}
+ul.ms-crm-MenuBar-Left {
+	list-style: none; margin: 2px 0px 0px; padding: 0px;
+}
+ul.ms-crm-MenuBar-Right {
+	list-style: none; margin: 2px 0px 0px; padding: 0px;
+}
+.ms-crm-GridActionBar * ul.ms-crm-MenuBar-Left {
+	margin-top: 0px;
+}
+.ms-crm-GridActionBar * ul.ms-crm-MenuBar-Right {
+	margin-top: 0px;
+}
+.ms-crm-ActionBar * ul.ms-crm-MenuBar-Left {
+	margin-top: 0px;
+}
+.ms-crm-ActionBar * ul.ms-crm-MenuBar-Right {
+	margin-top: 0px;
+}
+ul.ms-crm-MenuBar-Right {
+	float: right;
+}
+ul.ms-crm-MenuBar-Left {
+	float: left;
+}
+li.ms-crm-MenuItem-Boxed {
+	background-image: url("/_imgs/ico_16_insertCheck.gif");
+}
+li.ms-crm-MenuItem-Unboxed {
+	background-image: url("/_imgs/ico/16_L_check.gif");
+}
+table.scroll {
+	width: 100%; height: 100%; -ms-behavior: url(/_static/_common/scripts/scroll.htc?ver=60076166);
+}
+ul.ms-crm-MenuList {
+	background: repeat-y rgb(255, 255, 255); list-style: none; margin: 0px; padding: 0px; border: 1px solid rgb(126, 126, 126); width: 100%; display: none;
+}
+ul.ms-crm-MenuListMenu {
+	border: 0px solid rgb(126, 126, 126);
+}
+td.ms-crm-MenuListTD {
+	background: url("/_imgs/menu_margin.gif") repeat-y rgb(255, 255, 255); margin: 0px; padding: 0px; border: 1px solid rgb(126, 126, 126); width: 100%;
+}
+li.ms-crm-Group-Spacer {
+	width: 100%; height: 23px; display: inline; white-space: nowrap;
+}
+li.ms-crm-SubMenu {
+	width: 100%; height: 23px; display: inline; white-space: nowrap;
+}
+li.ms-crm-MenuItem-Notification-Label {
+	width: 100%; margin-left: -16px;
+}
+li.ms-crm-MenuItem-Label {
+	width: 100%; margin-left: -16px;
+}
+li.ms-crm-MenuItem-Label {
+	height: 23px; white-space: nowrap;
+}
+li.ms-crm-MenuItem-Notification-Label {
+	border: 1px solid rgb(197, 197, 197); background-color: rgb(255, 255, 174);
+}
+li.ms-crm-Menu-MultiSelect-Spacer {
+	border: 1px solid rgb(126, 126, 126); margin-bottom: 8px;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Top {
+	margin-top: 1px;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Bottom {
+	margin-bottom: 1px;
+}
+li.ms-crm-Menu-MultiSelect-Spacer {
+	width: 100%; height: 23px; white-space: nowrap;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Top {
+	width: 100%; height: 23px; white-space: nowrap;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Picklist-Top {
+	width: 100%; height: 23px; white-space: nowrap;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Middle {
+	width: 100%; height: 23px; white-space: nowrap;
+}
+li.ms-crm-Menu-MultiSelect-Populated-Bottom {
+	width: 100%; height: 23px; white-space: nowrap;
+}
+li.ms-crm-menu-MultiSelect-Picklist-Message {
+	margin-top: 9px; margin-right: 8px; margin-left: 19px; border-top-color: rgb(126, 126, 126); border-right-color: rgb(126, 126, 126); border-left-color: rgb(126, 126, 126); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid;
+}
+ul.ms-crm-MultiSelect-container {
+	margin-left: -16px; -ms-overflow-x: hidden; -ms-overflow-y: auto;
+}
+li.ms-crm-MultiSelect-container {
+	border: 1px solid rgb(126, 126, 126); margin-right: 8px; margin-bottom: 8px; margin-left: 35px;
+}
+li.ms-crm-Picklist-Container-WithImage {
+	margin-top: -20px;
+}
+li.ms-crm-Picklist-Container-WithoutImage {
+	margin-top: -14px;
+}
+span.ms-crm-Menu-Button {
+	width: 100%; height: 21px; text-align: right; margin-top: 5px; margin-right: 8px; margin-bottom: 5px; cursor: default;
+}
+button.ms-crm-Menu-Button {
+	width: 60px; margin-left: 5px;
+}
+div.ms-crm-MenuBar {
+	width: 100%; height: 44px; color: rgb(0, 0, 0); overflow: hidden; padding-top: 3px; display: inline-block; background-repeat: repeat-x;
+}
+div.ms-crm-AppMenuBar {
+	height: 27px; color: rgb(0, 0, 0); overflow: hidden; padding-right: 4px; padding-left: 4px; background-image: url("/_imgs/appmenu_back.gif"); background-repeat: repeat-x;
+}
+.ms-crm-GridActionBar {
+	color: rgb(0, 0, 0); overflow: hidden; display: block; background-repeat: repeat-x;
+}
+.ms-crm-ActionBar {
+	color: rgb(0, 0, 0); overflow: hidden; display: block; background-repeat: repeat-x;
+}
+.ms-crm-ActionBar {
+	height: 25px; border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid;
+}
+li.ms-crm-MenuList-Spacer {
+	height: 2px; margin-top: -7px; margin-bottom: -7px; margin-left: 35px; display: inline;
+}
+span.ms-crm-Menu-JewelButton-first-span {
+	width: 14px; display: inline-block;
+}
+span.ms-crm-Menu-JewelButton-third-span {
+	width: 14px; margin-right: 12px; display: inline-block;
+}
+span.ms-crm-Menu-JewelButton-second-span {
+	color: rgb(255, 255, 255); vertical-align: top; display: inline-block;
+}
+span.ms-crm-Menu-Jewel-label {
+	margin-top: 5px; display: inline-block;
+}
+td.ms-crm-MenuBar-Items {
+	width: 85%; vertical-align: top;
+}
+td.ms-crm-Menu-ICRight {
+	text-align: right; right: 0px; position: absolute;
+}
+div.ms-crm-Menu-Title {
+	color: rgb(0, 0, 0); padding-top: 3px; cursor: default;
+}
+div.ms-crm-Menu-Right {
+	text-align: right; padding-right: 5px;
+}
+hr.ms-crm-MenuList-Spacer {
+	width: 100%; height: 1px; color: rgb(197, 197, 197);
+}
+div.ms-crm-MenuBar-Shadow {
+	border-top-color: rgb(168, 174, 181); border-bottom-color: rgb(255, 255, 255); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.ms-crm-ToolBar-Shadow {
+	line-height: 0px; border-bottom-width: 1px; border-bottom-style: solid;
+}
+table.ms-crm-Form-Title {
+	width: 100%; height: 48px; table-layout: fixed;
+}
+table.ms-crm-Form-Title-NoNav {
+	width: 100%; height: 54px; padding-top: 6px; table-layout: fixed;
+}
+td.ms-crm-Form-Title {
+	text-align: left; overflow: hidden; padding-right: 1px; padding-left: 1px; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-solution-title {
+	text-align: right; overflow: hidden; padding-right: 10px; padding-left: 10px; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-Picklist-Values {
+	height: 190px; text-align: right; padding-right: 2px; vertical-align: top;
+}
+img.ms-crm-Form-Breadcrumb-Nav {
+	margin-right: 8px; vertical-align: middle;
+}
+span.ms-crm-Form-Title {
+	line-height: 16px; vertical-align: bottom;
+}
+span.ms-crm-solution-title {
+	text-align: right; line-height: 16px; vertical-align: bottom;
+}
+div.ms-crm-Standard-Popup {
+	background: repeat-y rgb(255, 255, 255); margin: 0px; padding: 0px; border: 1px solid rgb(126, 126, 126); width: 100%; display: none;
+}
+div.ms-crm-Standard-Item {
+	padding: 3px 3px 3px 35px; width: 100%; height: 22px; text-align: left; margin-top: 1px; cursor: pointer;
+}
+div.ms-crm-Standard-Item-Glow {
+	border-width: 1px; border-style: solid; padding: 2px 2px 2px 34px; width: 100%; height: 22px; text-align: left; margin-top: 1px; cursor: pointer;
+}
+hr.ms-crm-Standard-Item {
+	width: 100%; height: 1px; color: rgb(197, 197, 197); margin-right: 7px; margin-left: 35px;
+}
+input.ms-crm-MenuItem-Input {
+	border: 0px currentColor; color: rgb(0, 0, 0);
+}
+input.ms-crm-MenuItem-Input-VSA {
+	border: 0px currentColor; color: rgb(0, 0, 0);
+}
+input.ms-crm-MenuItem-Input-SelectAll {
+	border: 0px currentColor; color: rgb(0, 0, 0);
+}
+input.ms-crm-MenuItem-Input {
+	margin-right: 10px;
+}
+input.ms-crm-MenuItem-Input-VSA {
+	margin-left: 8px;
+}
+ul.ms-crm-AVS-Menu-qrk {
+	list-style: none; width: 100%; height: auto; overflow: hidden; padding-left: 0px; margin-left: 0px;
+}
+ul.ms-crm-AVS-Menu {
+	list-style: none; width: 100%; height: auto; overflow: hidden; padding-left: 0px; margin-left: 0px;
+}
+ul.ms-crm-VS-Menu {
+	list-style: none; width: 100%; height: auto; overflow: hidden; padding-left: 0px; margin-left: 0px;
+}
+ul.ms-crm-POPUP-Menu {
+	list-style: none; width: 100%; height: auto; overflow: hidden; padding-left: 0px; margin-left: 0px;
+}
+div.ms-crm-AVS-Menu-qrk {
+	border: 1px solid rgb(161, 165, 170); -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-AVS-Menu {
+	border: 1px solid rgb(161, 165, 170); -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-POPUP-Menu {
+	border: 1px solid rgb(161, 165, 170); -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-LK-Menu {
+	border: 1px solid rgb(161, 165, 170); -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-VS-Menu {
+	-ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-MRU-Menu {
+	border-right-color: rgb(198, 198, 198); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(198, 198, 198); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-Menu {
+	border-right-color: rgb(198, 198, 198); border-bottom-color: rgb(204, 204, 204); border-left-color: rgb(198, 198, 198); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; -ms-overflow-x: hidden; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-Menu {
+	border-top-color: rgb(198, 198, 198); border-top-width: 1px; border-top-style: solid;
+}
+div.ms-crm-modalDialog {
+	width: 100%; height: 100%; overflow: hidden; z-index: 2001; background-color: rgb(255, 255, 255);
+}

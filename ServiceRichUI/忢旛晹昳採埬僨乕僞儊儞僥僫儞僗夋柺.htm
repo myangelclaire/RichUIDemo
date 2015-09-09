@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>常備部品提案データメンテナンス画面</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'SEQ': '0001',
+                                '委託品': '○',
+                                '提案種別': '新規',
+                                '品名コード': 'X00001',
+                                '棚番': 'X000000001',
+                                '製品': '製品製品製品製品製品製品製品製品製品製品製品製01',
+                                '部品No.': 'X000000000000000001',
+                                '部品名': '部品名部品名部品名01',
+                                '非整備': '振替前',
+                                '決定数': '1,000',
+                                '提案数': '1,000',
+                                '現決定数': '1,000',
+                                '売上数': '1,000',
+                                '油脂': '○',
+                                '原単価': '1,000,000',
+                                '金額': '10,000,000',
+                                'M3P反映区分': '自'
+                            },
+                            {
+                                'SEQ': '0002',
+                                '委託品': '',
+                                '提案種別': '継続',
+                                '品名コード': 'X00002',
+                                '棚番': 'X000000002',
+                                '製品': '製品製品製品製品製品製品製品製品製品製品製品製02',
+                                '部品No.': 'X000000000000000002',
+                                '部品名': '部品名部品名部品名02',
+                                '非整備': '変換前',
+                                '決定数': '',
+                                '提案数': '',
+                                '現決定数': '',
+                                '売上数': '',
+                                '油脂': '○',
+                                '原単価': '',
+                                '金額': '',
+                                'M3P反映区分': 'M'
+                            },
+                            {
+                                'SEQ': '0003',
+                                '委託品': '○',
+                                '提案種別': '新規',
+                                '品名コード': 'X00003',
+                                '棚番': 'X000000001',
+                                '製品': '製品製品製品製品製品製品製品製品製品製品製品製03',
+                                '部品No.': 'X000000000000000003',
+                                '部品名': '部品名部品名部品名03',
+                                '非整備': '振替前',
+                                '決定数': '3,000',
+                                '提案数': '3,000',
+                                '現決定数': '3,000',
+                                '売上数': '3,000',
+                                '油脂': '○',
+                                '原単価': '3,000,000',
+                                '金額': '30,000,000',
+                                'M3P反映区分': 'M'
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 246,
+                width: 1200,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+               // buttons:{"行追加"},
+                //rowList: [10],
+                colNames: [
+                            'SEQ',
+                            '委託品',
+                            '提案種別',
+                            '品名コード',
+                            '棚番',
+                            '製品',
+                            '部品No.',
+                            '部品名',
+                            '非整備',
+                            '決定数',
+                            '提案数',
+                            '現決定数',
+                            '売上数',
+                            '油脂',
+                            '原単価',
+                            '金額',
+                            'M3P反映区分'
+                           ],
+                colModel: [
+               		        { name: 'SEQ', index: 'SEQ', width: 40, align: "center" },
+               		        { name: '委託品', index: '委託品', width: 60, align: "center" },
+               		        { name: '提案種別', index: '提案種別', width: 80, align: "center" },
+               		        { name: '品名コード', index: '品名コード', width: 80, align: "right" },
+               		        { name: '棚番', index: '棚番', width: 90, align: "right" },
+               		        { name: '製品', index: '製品', width: 310, align: "right" },
+               		        { name: '部品No.', index: '部品No.', width: 160, align: "left" },
+                            { name: '部品名', index: '部品名', width: 160, align: "left" },
+                            { name: '非整備', index: '非整備', width: 40, align: "left" },
+                            { name: '決定数', index: '決定数', width: 40, align: "right" },
+                            { name: '提案数', index: '提案数', width: 40, align: "right" },
+                            { name: '現決定数', index: '現決定数', width: 50, align: "right" },
+                            { name: '売上数', index: '売上数', width: 50, align: "right" },
+                            { name: '油脂', index: '油脂', width: 50, align: "center" },
+                            { name: '原単価', index: '原単価', width: 80, align: "right" },
+                            { name: '金額', index: '金額', width: 100, align: "right" },
+                            { name: 'M3P反映区分', index: 'M3P反映区分', width: 80, align: "center" }
+               	        ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+</head>
+<body>
+<div>
+     <div style="margin-top:10px; margin-left:3px;">
+        <button style="height:50px; width:80px; font-size:13px;">新規取込</button>
+        <button style="height:50px; width:120px; font-size:13px;">前回データのコピー</button>
+        <button style="height:50px; width:90px; font-size:13px;">売上数取得</button>
+        <button style="height:50px; width:60px; font-size:13px;">保存</button>
+        <button style="height:50px; width:60px; font-size:13px;">申請</button>
+        <button style="height:50px; width:60px; font-size:13px;">承認</button>
+        <button style="height:50px; width:60px; font-size:13px;">否認</button>
+        <button style="height:50px; width:80px; font-size:13px;">承認取下</button>
+        <button style="height:50px; width:60px; font-size:13px;">印刷</button>
+        <button style="height:50px; width:120px; font-size:13px;">非整備変換結果</button>
+        <button style="height:50px; width:90px; font-size:13px;">０変換</button>
+        <button style="height:50px; width:90px; font-size:13px;">Ｍに変換</button>
+        <button style="height:50px; width:90px; font-size:13px;">自に変換</button>
+    </div>
+
+    <div style="margin-top:10px">
+        <fieldset title="基本情報">
+            <legend style="font-size:12px; color:Blue">基本情報</legend>
+            <table style="height:100px;">
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>店舗</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="new_lookuptestentity_lookupTable" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">向洋店</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="new_lookuptestentity" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                        src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick="" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px; padding-left: 250px;">
+                        <table>
+                            <tr>
+                                <td style="width:400px;"><label>部販取引コード</label></td>
+                                <td style="width:600px; padding-left: 55px;">
+                                    <table class="ms-crm-Lookup" id="Table1" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;" disabled="disabled"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">向洋マツダ    向洋店</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 0px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img2" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                        src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick="" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px"></td>
+                </tr>
+
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>常備部品提案No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table2" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;" disabled="disabled"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">000009991234567</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="padding-left: 250px;">
+                        <table>
+                            <tr>
+                                <td style="width:400px;"><label>部販社提案データ発行日</label></td>
+                                <td style="width:340px;">
+                                    <table class="ms-crm-Lookup" id="Table3" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;" disabled="disabled"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">2014/05/08</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>売上月数</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 20%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">11</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="padding-left: 250px;">
+                        <table>
+                            <tr>
+                                <td style="width:80px;"><label>合計金額</label></td>
+                                <td style="width:80px;">
+                                    <table class="ms-crm-Lookup" id="Table5" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;" disabled="disabled"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">1000000001</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:10px;"></td>
+                    <td style="width:200px;">
+                        <table>
+                            <tr>
+                                <td style="width:60px;"><label>ステータス</label></td>
+                                <td style="width:150px;">
+                                    <table class="ms-crm-Lookup" id="Table6" style="width: 60%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;" disabled="disabled"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <font color="black">処理済み</font>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+     <div style="margin-top:12px; margin-left:1030px; height:1px;">
+        <button style="height:35px; width:70px; font-size:13px;">行追加</button>
+        <button style="height:35px; width:70px; font-size:13px;">行削除</button>
+    </div>
+
+     <div style="margin-top:15px; margin-left:7px; height:1px;">
+       <tr> 
+            <font color = "Blue" style="font-size:12px;">明細情報</font>
+      </tr>
+    </div>
+
+    <div style="margin-top:20px; margin-left:3px; height:300px;">
+        <table id="list47"></table>
+        <div id="gridPager"></div>
+    </div>
+</div>
+</body>
+</html>

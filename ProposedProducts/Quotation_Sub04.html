@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard2.css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+
+</head>
+<body style="height: 350px;">
+    <div id="proposed-products-header" style="margin-left:20px; margin-right:50px;">
+        <ul>
+            <li>
+                <input type="button" value="見積作成（新車）" onclick='location.href = "Quotation_Sub04-1.html"'>
+                <input type="button" value="見積作成（中古車）" onclick='location.href = "Quotation_Sub04-2.html"'>
+            </li>
+        </ul>
+    </div>
+
+    <div id="propose-nav" >
+        <ul>
+            <li style="margin-left:20px;">
+                <select style="width:150px;">
+                    <option selected="selected">すべて</option>
+                    <option>デミオ</option>
+                    <option>アテンザ</option>
+                    <option>CX-5</option>
+                    <option>非表示のみ</option>
+                    <option>新車</option>
+                    <option>中古車</option>
+                </select>
+                <input type="button" value="非表示" style="margin-right:0px;"/>
+                <input type="button" value="再表示" />
+                <input type="button" value="コピー" />
+                <input type="button" value="検討車に設定" />
+                <input type="button" value="見積内容確認" />
+            </li>
+        </ul>
+    </div>
+
+    <div id="proposed-product-detail" style="float:left;">
+        <table>
+            <tr>
+                <th class="control" height="15px;">                        
+                </th>
+                <td class="button">
+                    <img src="../Styles/Images/arrow_reverce.gif" style="float: left;" />
+                    <input type="button" style="" />
+                </td>
+                <td class="button">
+                    <input class="selected" type="button" style="" />
+                </td>
+                <td class="button">
+                    <input type="button" style="" />
+                </td>
+                <td class="button">
+                    <input type="button" style="" />
+                </td>
+                <td class="button">
+                    <input type="button" style="" />
+                </td>
+                <td class="button">
+                    <input type="button" style="" />
+                    <img src="../Styles/Images/arrow.gif" style="float:right;" />
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">見積書No.<span></span></th>
+                <td style="width:8%;">ES-N-0000000</td>
+                <td class="selected" style="width:8%;">ES-N-0000001</td>
+                <td style="width:8%;">ES-N-0000002</td>
+                <td style="width:8%;">ES-N-0000003</td>
+                <td class="used" style="width:8%;">ES-N-0000004</td>
+                <td style="width:8%;">ES-N-0000005</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">車種<span></span></th>
+                <td style="width:8%;">アテンザセダン</td>
+                <td class="selected" style="width:8%;">アテンザセダン</td>
+                <td style="width:8%;">アテンザワゴン</td>
+                <td style="width:8%;">デミオ</td>
+                <td class="used" style="width:8%;">デミオ</td>
+                <td style="width:8%;">CX-5</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">車種仕様名<span></span></th>
+                <td style="width:8%;">20S 5WGN2WD<br />SKYACTIV-G2.0</td>
+                <td class="selected" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">外装色/内装色<span></span></th>
+                <td style="width:8%;">ｿｳﾙﾚｯﾄﾞﾌﾟﾚﾐｱﾑ<br />/白</td>
+                <td class="selected" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">販売車種コード<br>/ 中古車ナンバー<span></span></th>
+                <td style="width:8%;">LD2 B2 Y3 2</td>
+                <td class="selected" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:6%;">お支払い総ご予算<span></span></th>
+                <td style="width:8%;">￥2,500,000</td>
+                <td class="selected" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:5%;">カーライフサポート商品<span></span></th>
+                <td style="width:8%;">パックDEメンテ</td>
+                <td class="selected" style="width:8%;">・パックdeメンテ30<br />・マツダ延長保証</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:6%;">支払方法<span></span></th>
+                <td style="width:8%;">スカイプラン<br />61回<br />月々0,000円</td>
+                <td class="selected" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+                <td class="used" style="width:8%;">XXXXXXXXX</td>
+                <td style="width:8%;">XXXXXXXXX</td>
+            </tr>
+            <tr>
+                <th scope="row" style="width:10%;">クレジットステータス<span></span></th>
+                <td style="width:8%;">申込み済</td>
+                <td class="selected" style="width:8%;">一度審査済</td>
+                <td style="width:8%;">一度審査済</td>
+                <td style="width:8%;">一度審査済</td>
+                <td class="used" style="width:8%;">一度審査済</td>
+                <td style="width:8%;">一度審査済</td>
+            </tr>
+            <!--<tr>
+                <th class="control" align="left" style="color:black;">
+                    ▼
+                </th>
+            </tr>-->
+            <tr id="contact-status" class="expansion-content" style="display:normal;">
+                <th scope="row" style="width:6%;">商品説明<span></span></th>
+                <td style="width:8%;"><input type="checkbox" checked="checked" /></td>
+                <td class="selected" style="width:8%;"><input type="checkbox" /></td>
+                <td style="width:8%;"><input type="checkbox" /></td>
+                <td style="width:8%;"><input type="checkbox" /></td>
+                <td class="used" style="width:8%;"><input type="checkbox" /></td>
+                <td style="width:8%;"><input type="checkbox" /></td>
+            </tr>
+            <tr id="contact-status" class="expansion-content" style="display: normal;">
+                <th scope="row" style="width:6%;">見積提示<span></span></th>
+                <td style="width:8%;">2014/6/4</td>
+                <td class="selected" style="width:8%;"></td>
+                <td style="width:8%;"></td>
+                <td style="width:8%;"></td>
+                <td class="used" style="width:8%;"></td>
+                <td style="width:8%;"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

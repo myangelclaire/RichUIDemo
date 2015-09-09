@@ -1,0 +1,257 @@
+﻿
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 1.2;
+	-webkit-font-smoothing: antialiased;
+	color: #000;
+	font-size: 16px;
+	background: #fff;
+}
+
+div.form {
+	width: 700px;
+	margin: 100px auto 0;
+}
+
+fieldset {
+	border: 1px solid #999;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+
+legend {
+	background: #fff;
+	border: 1px solid #999;
+	padding: 5px;
+}
+
+dl dt {
+	float: left;
+	clear: left;
+	margin: 0 15px 15px 0;
+	width: 28%;
+}
+
+dd {
+	margin: 0 15px 15px 0;
+	width: 60%;
+	float: left;
+}
+
+input[type="text"], textarea {
+	border: none;
+	border-radius: 3px;
+	padding: 4px;
+	color: #000;
+	line-height: 1;
+	border: 1px solid #ccc;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: -webkit-box-shadow .2s, width 0.4s ease-out, height 0.4s ease-out;
+	width: 200px;
+	}
+	
+textarea {
+	width: 400px;
+	height: 100px;
+}
+
+input[type="text"]:focus, textarea:focus {
+	width: 430px;
+}
+
+div.customSelector {
+	margin-bottom: 60px;
+}
+
+div.customSelector dl {
+	position: absolute;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 0 2px #333;
+	box-shadow: 0 0 2px #333;
+	background: rgba(255,255,255,0.9);
+}
+
+div.customSelector dl dt {
+	float: none;
+	clear: both;
+	width: auto;
+	margin: 0;
+}
+
+div.customSelector dl dt a {
+	text-decoration: none;
+	padding: 5px 20px;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	border-radius: 0 0 5px 5px;
+	line-height: 1;
+	color: #222;
+	-webkit-box-shadow: 0 0 1px #333;
+	box-shadow: 0 0 1px #333;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ffffff), color-stop(0.51, #d1d1d1), color-stop(0.50, #dbdbdb), color-stop(0.00, #dcdcdc));
+	background: -moz-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #ffffff 100%);
+
+}
+
+div.customSelector dl dd {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: none;
+	-webkit-transition: 0.3s ease-in;
+	-moz-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+
+div.customSelector dl dd ul li a {
+	text-decoration: none;
+	padding: 5px 20px;
+	display: block;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1;
+	color: #222;
+}
+
+div.customSelector dl dd ul li a:hover {
+	background: #4574F7;
+	color: white;
+	-webkit-box-shadow: 0 0 20px #03F;
+	box-shadow: 0 0 20px #03F;
+}
+
+
+/**/
+
+div.customRadioButton {
+	margin-bottom: 15px;
+}
+
+div.customRadioButton ul li {
+	display: inline-block;
+}
+
+div.customRadioButton ul li a {
+	display: block;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1;
+	color: #222;
+	border: 1px solid rgba(100,100,100,0.5);
+	border-radius: 30px;
+	-webkit-box-shadow:  0 0 1px #333;
+	box-shadow:  0 0 1px #333;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ffffff), color-stop(0.51, #d1d1d1), color-stop(0.50, #dbdbdb), color-stop(0.00, #dcdcdc));
+	background: -moz-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #ffffff 100%);
+	}
+
+div.customRadioButton ul li a.checked {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #bcf4fd), color-stop(0.75, #87c2fb), color-stop(0.51, #6ba8e4), color-stop(0.50, #8fbff0), color-stop(0.20, #91bae4), color-stop(0.00, #b6e2fd));
+	background: -moz-linear-gradient(top, #b6e2fd 0%, #91bae4 20%, #8fbff0 50%, #6ba8e4 51%, #87c2fb 75%, #bcf4fd 100%);
+}
+
+
+/**/
+div.customCheckBox {
+	margin-bottom: 15px;
+}
+
+div.customCheckBox::after {
+	display: block;
+	content: "";
+	clear: both;
+	height:0;
+}
+
+div.customCheckBox ul li {
+	display: inline-block;
+	float: left;
+	margin: 0 0 1px 0;
+}
+
+div.customCheckBox ul li a {
+	display: block;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1;
+	border: 1px solid rgba(100,100,100,0.5);
+	border-right: none;
+	color: #222;
+	-webkit-box-shadow:  0 0 1px #333;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #ffffff), color-stop(0.51, #d1d1d1), color-stop(0.50, #dbdbdb), color-stop(0.00, #dcdcdc));
+	background: -moz-linear-gradient(top, #dcdcdc 0%, #dbdbdb 50%, #d1d1d1 51%, #ffffff 100%);
+	}
+	
+div.customCheckBox ul li:last-child a {
+	border-right: 1px solid rgba(100,100,100,0.5);
+	border-radius: 0 6px 6px 0;
+}
+
+div.customCheckBox ul li:nth-child(1) a {
+	border-radius: 6px 0 0 6px;
+}
+
+div.customCheckBox ul li a.checked {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #bcf4fd), color-stop(0.75, #87c2fb), color-stop(0.51, #6ba8e4), color-stop(0.50, #8fbff0), color-stop(0.20, #91bae4), color-stop(0.00, #b6e2fd));
+	background: -moz-linear-gradient(top, #b6e2fd 0%, #91bae4 20%, #8fbff0 50%, #6ba8e4 51%, #87c2fb 75%, #bcf4fd 100%);
+}
+
+div.customCheckBox ul li a:hover {
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
+	-ms-transform: scale(1.3);
+	-o-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+p.result {
+	text-align: center;
+}
+
+div.moreQuestion {
+	margin: 15px 0;
+	display: none;
+}
+
+div.moreQuestion p {
+	margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

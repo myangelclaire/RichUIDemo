@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/tabchange.js"></script>
+
+    <title>アンケート登録　現在お乗りのお車に関する項目</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/questionnaire.css" />
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <style>
+    </style>
+
+</head>
+<body>
+    <div id="questionnaire-header">
+        <h2>関東マツダ　アンケート<span>7／14ページ</span></h2>
+    </div>
+    <div id="questionnaire_entry">
+        <div id="questionnaire-category">
+            <h2>現在お乗りのお車に関する質問</h2>
+        </div>
+        <div id="question-area">
+            <div id="question" style="height: 170px">
+                <div id="question-description">
+                    <h2>■メーカー名、車種、年式、走行距離、次回車検時期についてお聞かせ下さい。</h2>
+                </div>
+                <div id="question-response">
+                    メーカー名
+                    <select name="new_listboxtest" tabindex="1" class="ms-crm-SelectBox" 
+                                id="Select8" style="-ms-ime-mode: auto; width: 150px;" attrpriv="7" 
+                                attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="1">        　　　　　　　　　　　</option>
+                        <option value="2">マツダ　　　　　　　　　　　　</option>
+                        <option value="3">トヨタ</option>
+                        <option value="4">日産</option>
+                    </select>
+                    <label style="margin:0px 0px 0px 230px">車種&nbsp;&nbsp;&nbsp;&nbsp;</label>　
+                    <select name="new_listboxtest" tabindex="1" class="ms-crm-SelectBox" 
+                                id="Select1" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                                attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="1">        　　　　　　　　　　　</option>
+                        <option value="2">プレマシー　　　　　　　　　　</option>
+                        <option value="3">アクセラ　　　　　　　　　　　</option>
+                        <option value="4">アテンザ　　　　　　　　　　</option>
+                    </select>
+                    <br />
+                    年式（購入された年）　　
+                    <select name="new_listboxtest" tabindex="1" class="ms-crm-SelectBox" 
+                                id="Select2" style="-ms-ime-mode: auto; width: 50px;" attrpriv="7" 
+                                attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="1">      </option>
+                        <option value="2">平成　</option>
+                        <option value="3">昭和　</option>
+                    </select>
+                    <input tabindex="3" class="ms-crm-Input" id="new_name"
+                        type="text" attrformat="text" attrpriv="7" attrname="new_name" req="2" style="width: 30px">
+                    <label>年</label>
+                    <label style="margin:0px 0px 0px 140px">走行距離</label>
+                    <input tabindex="3" class="ms-crm-Input" id="Text1"
+                        type="text" attrformat="text" attrpriv="7" attrname="new_name" req="2" style="width: 90px">
+                    <label>km</label>
+                    <br />
+                    次回車検月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name="new_listboxtest" tabindex="1" class="ms-crm-SelectBox" 
+                                id="Select3" style="-ms-ime-mode: auto; width: 50px;" attrpriv="7" 
+                                attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="1">平成　</option>
+                        <option value="2">昭和　</option>
+                    </select>
+                    <input tabindex="3" class="ms-crm-Input" id="Text2"
+                        type="text" attrformat="text" attrpriv="7" attrname="new_name" req="2" style="width: 30px"><label>年</label>
+                    <input tabindex="3" class="ms-crm-Input" id="Text3"
+                        type="text" attrformat="text" attrpriv="7" attrname="new_name" req="2" style="width: 30px"><label>月</label>
+                </div>
+            </div>
+            <div id="question">
+                <div id="question-description">
+                    <h2>■主なご使用者様はどなたですか？</h2>
+                </div>
+                <div id="question-response">
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox26" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>ご本人</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox1" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>ご主人様</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox2" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>奥様</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox3" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>子供</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox4" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>親</label>
+                    </div>
+                    <br />
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox5" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>その他</label>
+                    </div>
+                </div>
+            </div>
+            <div id="question">
+                <div id="question-description">
+                    <h2>■どのようにお使いになられていますか？</h2>
+                </div>
+                <div id="question-response">
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox6" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>通勤</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox7" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>お買い物</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox8" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>ドライブ</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox9" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>趣味・レジャー</label>
+                    </div>
+                    <div id="question-choice">
+                        <input tabindex="14" class="ms-crm-CheckBox" id="Checkbox10" type="checkbox"
+                                attrpriv="7" attrname="new_checkboxtest" req="0"><label>仕事・業務用</label>
+                    </div>
+                </div>
+            </div>
+            <div id="question">
+                <div id="question-description">
+                    <h2>■新しいお車を購入される際は、現在お乗りのお車を下取に出されますか？</h2>
+                </div>
+                <div id="question-response">
+                    <div id="question-choice">
+                        <input name="radio1" tabindex="2" class="ms-crm-RadioButton" 
+                            id="radio1" style="margin-left: 0px;" type="radio" value="0" align="middle"><label>はい　　　　　　　　　　　　　</label>
+                    </div>
+                    <div id="question-choice">
+                        <input name="radio1" tabindex="2" class="ms-crm-RadioButton" 
+                            id="radio2" style="margin-left: 0px;" type="radio" value="0" align="middle"><label>いいえ　　　　　　　　　　　　</label>
+                    </div>
+                        <br />
+                    </div>
+            </div>
+        </div>
+        <div id="entry-submit">
+            <div id="submit-description">
+                <h2></h2>
+            </div>
+            <div id="submit-button">
+                <ul>
+                    <li>
+                        <table width="80%">
+                            <tr>
+                                <td title="name" class="FormSection_CellPadding ms-crm-Field-Normal" align="center" width="40%">
+                                    <button onclick='location.href = "Questionnaire_form5.html"' 
+                                        style="width: 100px; height: 30px;">もどる</button>
+                                </td>
+                                <td title="name" class="FormSection_CellPadding ms-crm-Field-Normal" align="center">
+                                    <button onclick='location.href = "Questionnaire_form7.html"' 
+                                        style="width: 100px; height: 30px;">つぎへ</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>査定情報選択画面</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+
+    <style>
+    </style>
+
+</head>
+    <script>
+        function openpage() {
+            var iWidth = 1280;
+            var iHeight = 650;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            var ihtml;
+            var ititle;
+
+
+            ihtml = "Quotation_Sub04-1-6-2.html";
+            ititle = "加装選択";
+
+
+
+            window.open(ihtml, ititle, "height=" + iHeight + ",width=" + iWidth + ",top=" + iTop + ",left=" + iLeft);
+        }
+    </script>
+<body style="width:1000px;height:600px; margin-top:20px;">
+
+            <div id="quotation-category" style="height:40px;">
+                <h2>
+                    ■下取査定車選択
+                    <span>
+                        <input type="submit" value="選択" class="quotation_button" style="height:25px; width:100px; float:right" />
+                        <input type="submit" value="残債額照会" class="quotation_button" style="height:25px; width:100px; float:right" />
+                    </span>
+                </h2>
+            </div>
+
+            <div id="shopoptionlist" style="width:1000px;height:250px;">
+                <table class="quotaiontable" style="margin-left:10px;">
+                    <tr>
+                        <th></th>
+                        <th scope="col" style="width:400px;">車名</th>
+                        <th scope="col" style="width:100px;">お客様名<br />（主使用者）</th>
+                        <th scope="col" style="width:100px;">査定番号</th>
+                        <th scope="col" style="width:100px;">査定日</th>
+                        <th scope="col" style="width:150px;">査定価格</th>
+                        <th scope="col" style="width:150px;">下取価格</th>
+                        <th scope="col" style="width:100px;">残価基準日 1<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;／残債額 1</th>
+                        <th scope="col" style="width:100px;">残価基準日 2<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;／残債額 2</th>
+                        <th scope="col" style="width:100px;">残価基準日 3<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;／残債額 3</th>
+                         <th scope="col" style="width:100px;">自動車税<br /> 未経過相当額</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:400px; text-align: left;">H17 スカイライン</td>
+                        <td style="width:100px;">山田　太郎</td>
+                        <td style="width:100px;"><a href="">XXXX00000</a></td>
+                        <td style="width:100px;text-align:center;">2014/6/20</td>
+                        <td style="width:150px;text-align:right;">￥257,000</td>
+                        <td style="width:150px;text-align:right;">￥<input type="number" style="text-align:right;"/></td>
+                        <td style="text-align: left;">
+                         <form>
+                                <input type="radio" name="loan_date" value="20140410" style="margin-right:5px">2014/4/10
+                                <p style="float:right">￥1,000,000</p>
+                        </td>
+                        <td style="text-align: left;">
+                            <input type="radio" name="loan_date" value="20140510" style="margin-right:5px">2014/5/10
+                            <p style="float:right">￥950,000</p>
+                        </td>
+                        <td style="text-align: left;">
+                            <input type="radio" name="loan_date" value="20140610" style="margin-right:5px">2014/6/10
+                            <p style="float:right">￥900,000</p>
+                        </td>
+                        <td>
+                            <select style="width:100px;">
+                                <option>含む</option>
+                            </select>
+                        </td>
+                      </form>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:400px; text-align: left;">H20 マークＸ</td>
+                        <td style="width:100px;">山田　太郎</td>
+                        <td style="width:100px;"><a href="">XXXX00000</a></td>
+                        <td style="width:100px;text-align:center;">2014/6/20</td>
+                        <td style="width:150px;text-align:right;"></td>
+                        <td style="width:150px;text-align:right;">￥<input type="number" style="text-align:right;"/></td>
+                        <td style="text-align: left;">
+                            <form>
+                                <input type="radio" name="loan_date" value="20140620" style="margin-right:5px">2014/6/20
+                                <p style="float:right">￥550,000</p>
+                        </td>
+                        <td style="text-align: left;">
+                            <input type="radio" name="loan_date" value="20140720" style="margin-right:5px">2014/7/20
+                            <p style="float:right">￥50,000</p>
+                        </td>
+                        <td style="text-align: left;">
+                            <input type="radio" name="loan_date" value="20140820" style="margin-right:5px">2014/8/20
+                            <p style="float:right">残債なし</p>
+                        </td>
+                       <td>
+                            <select style="width:100px;">
+                                <option>含む</option>
+                            </select>
+                        </td>
+                      </form>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:400px; text-align: left;">H20 マークＸ</td>
+                        <td style="width:100px;">山田　太郎</td>
+                        <td style="width:100px;"><a href="">XXXX00000</a></td>
+                        <td style="width:100px;text-align:center;">2014/4/20</td>
+                        <td style="width:150px;text-align:right;"></td>
+                        <td style="width:150px;text-align:right;">￥<input type="number" style="text-align:right;"/></td>
+                        <td style="text-align: left;">
+                            <form>
+                                <input type="radio" name="loan_date" value="0" style="margin-right:5px">残債なし
+                        </td>
+                        <td style="text-align: left;"></td>
+                        <td style="text-align: left;">
+                        </td>
+                       <td>
+                            <select style="width:100px;">
+                                <option>含む</option>
+                            </select>
+                        </td>
+                      </form>
+                    </tr>
+                   <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:400px; text-align: left;">H20 マークＸ</td>
+                        <td style="width:100px;">山田　三郎</td>
+                        <td style="width:100px;"><a href="">XXXX00000</a></td>
+                        <td style="width:100px;text-align:center;">2014/4/20</td>
+                        <td style="width:150px;text-align:right;"></td>
+                        <td style="width:150px;text-align:right;">￥<input type="number" style="text-align:right;"/></td>
+                        <td style="text-align: left;">
+                            <form>
+                                <input type="radio" name="loan_date" value="0" style="margin-right:5px">残債なし
+                        </td>
+                        <td style="text-align: left;"></td>
+                        <td style="text-align: left;">
+                        </td>
+                       <td>
+                            <select style="width:100px;">
+                                <option>含む</option>
+                            </select>
+                        </td>
+                      </form>
+                    </tr>
+
+                </table>
+            </div>
+            <div style="margin-left:50px;">
+                <h2>
+                    下取査定車リサイクル費用
+                </h2>
+            </div>
+            <div id="rycycle-expence-write-area">
+                <div>
+                    <form>
+                        <table>
+                            <tr>
+                                <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">預託状況</th>
+                                <td>
+                                    <select style="width:150px;">
+                                        <option>未預託</option>
+                                        <option>預託済み</option>
+                                        <option>預託不要</option>
+                                    </select>
+                                </td>
+                                <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">リサイクル券No.</th>
+                                <td colspan="2" style="width:250px;">
+                                    <input type="text" value="XXXX" style="width:50px;" />
+                                    <input type="text" value="XXXX" style="width:50px;" />
+                                    <input type="text" value="XXXX" style="width:50px;" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div id="quote-optionlist" style="height: 220px;float:left;">
+                    <div>
+                        <ul>
+                            <li style="height:25px;">
+                                <span>リサイクル基本費用</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <form>
+                            <table class="quotaiontable" style="height: auto;">
+                                <tr>
+                                    <th>費目</th>
+                                    <th>金額</th>
+                                </tr>
+                                <tr>
+                                    <td width="150px;">シュレッダーダスト</td>
+                                    <td width="150px;">￥<input type="text" value="5,000" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="150px;">エアバッグ類</td>
+                                    <td width="150px;">￥<input type="text" value="5,500" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="150px;">フロン類</td>
+                                    <td width="150px;">￥<input type="text" value="3,600" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="150px;">情報管理料</td>
+                                    <td width="150px;">￥<input type="text" value="800" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td width="150px;">資金管理料金</td>
+                                    <td width="150px;">￥<input type="text" value="360" class="numeric"/></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <div id="quote-optionlist" style="height: 200px;margin-left:400px; ">
+                    <div>
+                        <ul>
+                            <li style="height:25px;">
+                                <span style="margin-right:100px;">後装着等追加分</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <form>
+                            <table class="quotaiontable" style="height: auto;">
+                                <tr>
+                                    <th style="width:30px;">加算</th>
+                                    <th>費目</th>
+                                    <th>金額</th>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <input type="checkbox" id="select1"/>
+                                    </td>
+                                    <td width="150px;">エアバッグ</td>
+                                    <td width="150px;">￥<input type="text" value="000,000" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <input type="checkbox" id="select2"/>
+                                    </td>
+                                    <td width="150px;">フロン</td>
+                                    <td width="150px;">￥<input type="text" value="000,000" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <input type="checkbox" id="select3"/>
+                                    </td>
+                                    <td width="150px;">
+                                        架装
+                                    </td>
+                                     <td width="150px;">￥<input type="text" value="5,080" class="numeric"/></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td width="150px;">
+                                        ASR割引
+                                    </td>
+                                    <td width="150px;">￥<input type="text" value="000,000" class="numeric"/></td>
+                                </tr>
+                                </table>
+                                <lable>架装</lable>
+                                <button type="button" onclick="openpage();" value="code" class="quotation_button" style="height: auto;width:80px; margin-left: 230px; margin-top:10px">内容選択</button>
+                                <br/>
+                                <textarea rows="2" style="width: 350px; margin-top:10px;" disabled>貨物＿バン＿ウォークスルーバン＿</textarea>
+                                <br/>
+                                <lable style="margin-top:10px;">改造</lable>
+                                <select style="width:150px; margin-top:10px;">
+                                    <option>あり</option>
+                                    <option>なし</option>
+                                </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+</body>
+</html>

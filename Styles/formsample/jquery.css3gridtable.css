@@ -1,0 +1,83 @@
+﻿
+table.grid{
+	margin:50px auto 40px;
+	border-collapse:collapse;
+}
+
+table.grid th,
+table.grid td{
+	border:1px solid #eee;
+}
+table.grid th{
+	background-color:#69C;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #244386), color-stop(0.00, #4375a8));
+	background: -webkit-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -moz-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -ms-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -o-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: linear-gradient(top, #4375a8 0%, #244386 100%);
+	color:#fff;
+	padding:7px 20px;
+	border-top:none;
+	text-align:left;
+	font-weight: bold;
+}
+table.grid th span{
+	background:url(../Images/arrow.png) no-repeat 0 1px;
+	padding-left:12px;
+}
+table.grid th:hover{
+	color:#FFF;
+	cursor:pointer;
+}
+table.grid td{
+	padding:10px 20px;
+	line-height: 1;
+}
+
+/*角丸の制御*/
+table.grid thead tr th:first-child{
+	border-radius:3px 0 0 0;
+	border-left:none;
+}
+table.grid thead tr th:last-child{
+	border-radius:0 3px 0 0;
+	border-right:none;
+}
+
+/*偶数行の背景*/
+table.grid tbody tr:nth-child(2n){
+	background: rgba(239,239,239,0.5);
+}
+
+
+/*====ロールオーバー時について====*/
+table.grid td.over{
+	background: rgba(248,246,213,0.3);
+}
+
+/*====選択された列について====*/
+
+/*選択された列のセルの背景*/
+table.grid tbody tr td.active{
+	background: rgba(218,243,251,0.5);
+}
+
+/*選択された列のth*/
+table.grid thead tr th.active{
+	background-color: #4580ba;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #162c5a), color-stop(0.00, #3c6896));
+	background: -webkit-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -moz-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -ms-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -o-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	color:#fff;
+}
+table.grid thead tr th.asc span{
+	background:url(../Images/asc.png) no-repeat 0 5px;	/*上向き*/
+}
+table.grid thead tr th.desc span{
+	background:url(../Images/disc.png) no-repeat 0 5px;	/*下向き*/
+}
+

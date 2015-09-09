@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>外装見積選択</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var mydata = [
+                            { okyakusama: "ＸＸＸＸＸＸ", logoinno: "ＸＸＸＸＸXXXＸXXXX", syamei: "XXXXXXXXX1XXXXX", mitumorino: "XXXXXXXXX1X", sakuseihi: "平成 yy/mm/dd", kingaku: '99,999,999', kijyutu: "XXXXXXXXX1XXXXXXXXX2XXXXXXXXX3XXXXXXXXX4" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+                            { okyakusama: "", logoinno: "", syamei: "", mitumorino: "", sakuseihi: "", kingaku: '', kijyutu: "" },
+
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 361,
+                width: 892,
+                shrinkToFit: false,
+                colNames: ['お客様', '登録No', '通称車名', '外装見積No', '作成日', '金額', '記述'],
+                colModel: [
+               		        { name: 'okyakusama', index: 'okyakusama', width: 50, frozen: true },
+                            { name: 'logoinno', index: 'logoinno', width: 120, frozen: true },
+               		        { name: 'syamei', index: 'syamei', width: 115 },
+                            { name: 'mitumorino', index: 'mitumorino', width: 90 },
+                            { name: 'sakuseihi', index: 'sakuseihi', width: 85 },
+                            { name: 'kingaku', index: 'kingaku', width: 80, align: "right" },
+                            { name: 'kijyutu', index: 'kijyutu', width: 315 },
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+            });
+            jQuery("#list47").jqGrid('setFrozenColumns');
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:15px;">
+            <button id="Button1" type="button" style=" height:40px; margin-right:0px;">Esc<br />キャンセル</button>
+            <button id="Button2" type="button" style=" height:40px; margin-right:0px;">F3<br />再検索</button>
+            <button id="Button3" type="button" style=" height:40px; margin-right:0px;">F10<br />確定</button>
+        </div>
+        <div style="margin-top:15px; margin-left:3px; margin-bottom:5px;">
+            <label style="margin-left:10px; background-color: #add8e6; padding: 1px 5px; font-size:larger; font-style:inherit">外装見積No</label>
+            <input type="text" value="XXXXXXXXX1X" style="width:70px;  margin-left:0px; text-align:center"/>
+            <label style="margin-left:2px; font-size:larger; font-style:inherit">～</label>
+            <input type="text" value="XXXXXXXXX1X" style="width:70px; margin-left:0px; text-align:center"/>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 1px 18px; font-size:larger; font-style:inherit">作成日</label>
+            <select style="width: 57px;"></select>
+            <input type="text" value="yy/mm/dd" style="width:52px; margin-left:0px; text-align:center"/>
+            <label style="margin-left:2px; font-size:larger; font-style:inherit">～</label>
+            <select style="width: 57px;"></select>
+            <input type="text" value="yy/mm/dd" style="width:52px; margin-left:0px; text-align:center"/>
+        </div>
+        <div style="margin-top:5px; margin-left:1px; height:20px;">
+            <table id="list47"></table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+html {
+	height: 100%; overflow: hidden;
+}
+body {
+	height: 100%; overflow: hidden;
+}
+#outer {
+	height: 100%; min-height: 100%;
+}
+html > body #outer {
+	height: auto;
+}
+div.crmUserInfo {
+	top: 0px; height: 50px; text-align: right; overflow: hidden; vertical-align: top; position: fixed; -ms-text-overflow: ellipsis; max-width: 220px; align: right;
+}
+div.crmContentPanel {
+	top: 135px; width: 100%; bottom: 0px; display: block; position: absolute;
+}
+a.crmContentPanel {
+	position: fixed;
+}
+div.ms-crm-TopBarContainer {
+	left: 0px; top: 0px; width: 100%; position: fixed;
+}
+div.ms-crm-TopBarContainerGlobal {
+	background-repeat: no-repeat;
+}
+div.ms-crm-TopBarContainerForm {
+	background-repeat: repeat-x;
+}
+div.crmAppNav {
+	left: 0px; overflow: hidden; border-right-width: 1px; border-right-style: solid; display: block; position: fixed; z-index: 100;
+}
+div.crmRibbonErrorBody {
+	border-top-color: rgb(102, 147, 207); border-bottom-color: rgb(102, 147, 207); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+span.warningHeader {
+	color: rgb(153, 0, 0); font-family: Segoe UI,Tahoma,Arial; font-size: 22px; font-weight: bold;
+}
+span.warningDescription {
+	font-family: Segoe UI,Tahoma,Arial; font-size: 14px; font-weight: normal;
+}

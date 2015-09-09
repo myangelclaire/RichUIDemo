@@ -1,0 +1,276 @@
+ul.ms-crm-Nav-LeftBar {
+	list-style: none; margin: 0px; padding: 0px; width: 100%; height: 100%; position: relative; -ms-overflow-x: hidden; -ms-overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+li.ms-crm-Nav-Subarea {
+	margin: 0px; padding: 0px 0px 2px 6px;
+}
+li.ms-crm-Nav-Group {
+	margin: 0px; padding-bottom: 4px;
+}
+li.ms-crm-Nav-Group-HiddenFirst {
+	margin: 0px; padding: 0px; height: 0px; border-top-color: rgb(102, 147, 207); border-top-width: 1px; border-top-style: solid;
+}
+li.ms-crm-Nav-Group-Hidden {
+	margin: 0px; padding: 0px; height: 0px;
+}
+a.ms-crm-Nav-Subarea-Link {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subarea-Link:link {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subarea-Link:visited {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subarea-Link:active {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subarea-Link:hover {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link:link {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link:visited {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link:active {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link:hover {
+	padding: 1px 2px; width: 90%; height: 16px; text-align: left; display: inline-block; white-space: nowrap; cursor: pointer;
+}
+a.ms-crm-Nav-Subitem-Link {
+	margin-left: 22px;
+}
+a.ms-crm-Nav-Subitem-Link:link {
+	margin-left: 22px;
+}
+a.ms-crm-Nav-Subitem-Link:visited {
+	margin-left: 22px;
+}
+a.ms-crm-Nav-Subitem-Link:active {
+	margin-left: 22px;
+}
+a.ms-crm-Nav-Subitem-Link:hover {
+	margin-left: 22px;
+}
+a.ms-crm-Nav-Subarea-Selected {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subarea-Selected:link {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subarea-Selected:visited {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subarea-Selected:active {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subitem-Selected {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subitem-Selected:link {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subitem-Selected:visited {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subitem-Selected:active {
+	border-width: 1px; border-style: solid; padding: 0px 1px;
+}
+a.ms-crm-Nav-Subarea-Link:hover {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subarea-Selected:hover {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subarea-Hovered {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subitem-Link:hover {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subitem-Selected:hover {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subitem-Hovered {
+	border-width: 1px !important; border-style: solid; padding: 0px 1px !important; background-repeat: repeat-x;
+}
+a.ms-crm-Nav-Subarea-Disabled {
+	border-width: 0px !important; padding: 1px 2px !important; color: gray; cursor: default; background-image: none;
+}
+a.ms-crm-Nav-Subarea-Disabled:link {
+	border-width: 0px !important; padding: 1px 2px !important; color: gray; cursor: default; background-image: none;
+}
+a.ms-crm-Nav-Subarea-Disabled:visited {
+	border-width: 0px !important; padding: 1px 2px !important; color: gray; cursor: default; background-image: none;
+}
+a.ms-crm-Nav-Subarea-Disabled:active {
+	border-width: 0px !important; padding: 1px 2px !important; color: gray; cursor: default; background-image: none;
+}
+a.ms-crm-Nav-Subarea-Disabled:hover {
+	border-width: 0px !important; padding: 1px 2px !important; color: gray; cursor: default; background-image: none;
+}
+a.ms-crm-Nav-Group-Heading {
+	width: 100%; height: 19px; text-align: left; text-decoration: none; display: inline-block; cursor: pointer;
+}
+a.ms-crm-Nav-Group-Heading:link {
+	width: 100%; height: 19px; text-align: left; text-decoration: none; display: inline-block; cursor: pointer;
+}
+a.ms-crm-Nav-Group-Heading:visited {
+	width: 100%; height: 19px; text-align: left; text-decoration: none; display: inline-block; cursor: pointer;
+}
+a.ms-crm-Nav-Group-Heading:active {
+	width: 100%; height: 19px; text-align: left; text-decoration: none; display: inline-block; cursor: pointer;
+}
+a.ms-crm-Nav-Group-Heading:hover {
+	width: 100%; height: 19px; text-align: left; text-decoration: none; display: inline-block; cursor: pointer;
+}
+ul.ms-crm-Nav-Group-Subareas {
+	margin: 0px; width: 100%; display: none;
+}
+nobr.ms-crm-Nav-Subitem-Title {
+	margin-left: 28px;
+}
+nobr.ms-crm-Nav-Subarea-Title {
+	margin-left: 5px;
+}
+nobr.ms-crm-Nav-Subarea-Title {
+	width: 80%; font-size: 12px; display: inline-block;
+}
+nobr.ms-crm-Nav-Group-Title {
+	width: 80%; font-size: 12px; display: inline-block;
+}
+img.ms-crm-Nav-Subarea-Icon {
+	width: 16px; height: 16px; margin-left: 15px; vertical-align: top;
+}
+img.ms-crm-Nav-Group-RightIcon {
+	
+}
+a.ms-crm-FormSelector {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector:link {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector:visited {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector:hover {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector-Opened {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector-Opened:link {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector-Opened:visited {
+	height: 18px; padding-left: 4px;
+}
+a.ms-crm-FormSelector-Opened:hover {
+	height: 18px; padding-left: 4px;
+}
+div.ms-crm-FormSelector {
+	height: 18px; padding-left: 4px;
+}
+div.ms-crm-FormSelector {
+	margin-left: 4px;
+}
+a.ms-crm-FormSelector {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector:link {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector:visited {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector:hover {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector-Opened {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector-Opened:link {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector-Opened:visited {
+	margin-left: 3px; cursor: pointer;
+}
+a.ms-crm-FormSelector-Opened:hover {
+	margin-left: 3px; cursor: pointer;
+}
+nobr.ms-crm-FormSelector {
+	font-weight: bold; vertical-align: middle;
+}
+span.ms-crm-FormSelector {
+	width: 100%; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+img.ms-crm-FormSelector {
+	right: 0px; position: absolute;
+}
+ul.ms-crm-FormSelector {
+	padding-bottom: 2px; margin-left: 4px; border-bottom-color: rgb(214, 214, 214); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.refresh-form ul.ms-crm-FormSelector {
+	border-bottom-width: 0px; border-bottom-style: none;
+}
+.ms-crm-Form-Nav-Container {
+	left: 0px; top: 0px; bottom: 0px; margin-top: 5px; margin-bottom: 8px; vertical-align: top; position: absolute; background-color: rgb(243, 243, 243);
+}
+a.ms-crm-FormSelector-SubItem {
+	margin: 0px 1px; width: 99%; height: 18px; display: inline-block; cursor: pointer;
+}
+a.ms-crm-FormSelector-SubItem:link {
+	margin: 0px 1px; width: 99%; height: 18px; display: inline-block; cursor: pointer;
+}
+a.ms-crm-FormSelector-SubItem:visited {
+	margin: 0px 1px; width: 99%; height: 18px; display: inline-block; cursor: pointer;
+}
+a.ms-crm-FormSelector-SubItem-Selected {
+	border-width: 0px 1px; border-style: solid; margin: 0px;
+}
+a.ms-crm-FormSelector-SubItem-Selected:link {
+	border-width: 0px 1px; border-style: solid; margin: 0px;
+}
+a.ms-crm-FormSelector-SubItem-Selected:visited {
+	border-width: 0px 1px; border-style: solid; margin: 0px;
+}
+a.ms-crm-FormSelector-SubItem-Selected:active {
+	border-width: 0px 1px; border-style: solid; margin: 0px;
+}
+a.ms-crm-FormSelector-SubItem:hover {
+	border-width: 0px 1px !important; border-style: solid; margin: 0px 1px 0px 0px !important; width: 99%; cursor: pointer; background-repeat: repeat-x;
+}
+a.ms-crm-FormSelector-SubItem-Selected:hover {
+	border-width: 0px 1px !important; border-style: solid; margin: 0px 1px 0px 0px !important; width: 99%; cursor: pointer; background-repeat: repeat-x;
+}
+a.ms-crm-FormSelector-SubItem-Hovered {
+	border-width: 0px 1px !important; border-style: solid; margin: 0px 1px 0px 0px !important; width: 99%; cursor: pointer; background-repeat: repeat-x;
+}
+nobr.ms-crm-FormSelector-SubItem {
+	width: 80%; padding-left: 5px; display: inline-block;
+}
+div.ms-crm-FormSelector-SubItem {
+	width: 80%; overflow: hidden; -ms-text-overflow: ellipsis;
+}
+img.ms-crm-FormSelector-SubItem {
+	margin-left: 5px;
+}
+.ms-crm-FormLeftNav-StandardLayout {
+	height: 100%;
+}
+.onTop.ms-crm-FormLeftNav-StandardLayout {
+	position: relative; z-index: 2;
+}
+div.ms-crm-Nav-Subarea-Title {
+	width: 98%; overflow: hidden; -ms-text-overflow: ellipsis;
+}
+nobr.ms-crm-Nav-Subarea-Title {
+	line-height: 15px; display: inline-block;
+}

@@ -1,0 +1,441 @@
+.ms-crm-hidden-container-error {
+	text-align: left; display: none; white-space: normal; position: fixed; z-index: 1;
+}
+.ms-crm-Form-SubGrid-Layout-Lite .ms-crm-Inline-ErrorArrowIcon {
+	position: fixed;
+}
+.ms-crm-ListControl {
+	border-width: 0px 1px 1px; border-style: solid; background-color: rgb(255, 255, 255);
+}
+.ms-crm-ListControl-Lite {
+	border-width: 0px;
+}
+table.ms-crm-ListControl {
+	width: 100%; height: 100%; table-layout: fixed; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-ListControl {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+div.ms-crm-ListControl-Ex {
+	width: 100%;
+}
+div.ms-crm-grid-body {
+	left: 0px; top: 0px; right: 0px; position: absolute;
+}
+div.ms-crm-grid-databodycontainer {
+	left: 0px; right: 0px; position: absolute;
+}
+div.ms-crm-grid-Title-Data-Lite {
+	color: rgb(139, 139, 139); padding-left: 2px; margin-top: 8px;
+}
+.ms-crm-List-Data {
+	border: 0px currentColor; width: 100%; table-layout: fixed;
+}
+thead {
+	color: rgb(255, 255, 255);
+}
+.ms-crm-ListArea {
+	width: 100%; height: 100%; table-layout: fixed; background-color: rgb(255, 255, 255);
+}
+.ms-crm-ListArea-FixedRow {
+	width: 100%;
+}
+.ms-crm-ListArea-FixedRow-Lite {
+	width: 100%;
+}
+.ms-crm-ListAreaEx {
+	width: 100%; height: 100%; border-top-width: 1px; border-top-style: solid; table-layout: fixed; background-color: rgb(255, 255, 255);
+}
+.ms-crm-List-DataBody {
+	height: 100%;
+}
+.ms-crm-List-DataBody-Ex {
+	height: 100%;
+}
+.ms-crm-List-DataArea {
+	width: 100%; height: 100%; -ms-overflow-x: auto; -ms-overflow-y: auto;
+}
+.ms-crm-List-DataArea-Lite {
+	width: 100%; height: 100%; -ms-overflow-x: auto; -ms-overflow-y: auto;
+}
+.ms-crm-List-DataArea-Ex {
+	width: 100%; -ms-overflow-x: auto;
+}
+.ms-crm-List-RefreshButton {
+	top: 4px; width: 16px; height: 18px; right: 0px; display: none; position: absolute; z-index: 1; table-layout: fixed;
+}
+.ms-crm-List-QuickAddButton-FlyOut {
+	border-style: solid; border-color: black; background-color: white;
+}
+.ms-crm-List-ErrorStatusIcon-FlyOut {
+	margin: 0px; position: relative; background-color: white;
+}
+.ms-crm-List-ErrorStatusIcon {
+	width: 16px; height: 18px; margin-left: 10px; display: none; z-index: 1; table-layout: fixed; cursor: pointer;
+}
+img.ms-crm-add-button-icon {
+	width: 13px; height: 13px;
+}
+img.ms-crm-warning-icon {
+	width: 16px; height: 16px;
+}
+div.ms-crm-List-StatusBar {
+	left: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+div.ms-crm-grid-footer {
+	left: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+div.ms-crm-grid-footer-Ex {
+	height: 25px;
+}
+div.ms-crm-grid-footer {
+	height: 25px;
+}
+.ms-crm-Anchor-SideStrip {
+	height: 100%; display: block;
+}
+.ms-crm-TableCell-Max {
+	height: 100%;
+}
+.ms-crm-List-Paging {
+	text-align: right;
+}
+a.toolbarbutton {
+	border: currentColor; text-decoration: none;
+}
+a.toolbarbutton:active img {
+	border: currentColor; text-decoration: none;
+}
+a.toolbarbutton:hover img {
+	border: currentColor; text-decoration: none;
+}
+a.toolbarbutton:link img {
+	border: currentColor; text-decoration: none;
+}
+a.toolbarbutton:visited img {
+	border: currentColor; text-decoration: none;
+}
+td.ms-crm-List-Sortable {
+	overflow: hidden; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-List-Sortable-Lite {
+	overflow: hidden; font-size: 12px; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+img.ms-crm-List-Sortable {
+	vertical-align: middle; visibility: hidden;
+}
+table.ms-crm-List-UnSortable {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-List-Sortable {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+table.ms-crm-List-Sortable {
+	cursor: pointer;
+}
+a.ms-crm-List-Sortable {
+	cursor: pointer;
+}
+a.ms-crm-List-Sortable {
+	margin-left: 5px;
+}
+a.ms-crm-List-Sortable > nobr.ms-crm-DataCell {
+	padding-left: 5px;
+}
+label.ms-crm-List-Sortable {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.ms-crm-List-Header {
+	width: 100%; height: 21px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; table-layout: fixed; -ms-word-wrap: normal;
+}
+.ms-crm-List-Header-Lite {
+	width: 100%; height: 22px; border-bottom-color: rgb(214, 214, 214); border-bottom-width: 1px; border-bottom-style: solid; table-layout: fixed;
+}
+div.ms-crm-grid-titlecontainer {
+	text-align: right; position: relative; z-index: 1;
+}
+a.ms-crm-ImageStrip-addButtonDisable {
+	cursor: default;
+}
+a.ms-crm-ImageStrip-addButton {
+	cursor: pointer;
+}
+div.addImageButton {
+	top: 2px; right: 5px; position: absolute;
+}
+.ms-crm-List-StatusBar-Label {
+	padding-left: 10px;
+}
+.ms-crm-List-Title {
+	padding-right: 2px; padding-left: 8px;
+}
+tr.ms-crm-list-TitleFilter {
+	height: 30px; padding-left: 8px;
+}
+.ms-crm-list-Separator-line {
+	height: 1px;
+}
+.ms-crm-List-MultilineRow {
+	padding-top: 1px; margin-bottom: 1px; border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.ms-crm-List-Row {
+	padding-top: 1px; margin-bottom: 1px; border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.ms-crm-List-Row-Lite {
+	padding-top: 1px; margin-bottom: 1px; border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+.ms-crm-List-Row {
+	height: 21px;
+}
+.ms-crm-List-Row-Lite {
+	height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+tr.ms-crm-List-Row-Lite > td {
+	height: 20px; padding-top: 1px; padding-bottom: 1px; border-top-width: 0px; border-bottom-width: 0px; border-top-style: none; border-bottom-style: none;
+}
+.ms-crm-List-MultilineRow {
+	vertical-align: top;
+}
+div.ms-crm-Grid-TitleText {
+	overflow: hidden; vertical-align: top; display: inline-block; -ms-text-overflow: ellipsis;
+}
+div.ms-crm-Grid-Title {
+	left: 0px; text-align: left; right: 66px; padding-bottom: 5px; padding-left: 2px; font-family: segoe UI; font-size: 12px; font-weight: bold; float: left; white-space: nowrap; position: absolute; -ms-zoom: 1; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+input.ms-crm-HeaderCheckBox {
+	margin: 1px 0px; padding: 0px; width: 16px; height: 1.2em; cursor: pointer;
+}
+input.ms-crm-RowCheckBox {
+	margin: 1px 0px; padding: 0px; width: 16px; height: 1.2em; cursor: pointer;
+}
+input.ms-crm-HeaderCheckBox-Lite {
+	top: -9000px; width: 1px; position: absolute; z-index: -1000;
+}
+input.ms-crm-RowCheckBox-Lite {
+	top: -9000px; width: 1px; position: absolute; z-index: -1000;
+}
+input.ms-crm-HeaderCheckBox {
+	margin-right: 0px; margin-left: 1px;
+}
+.ms-crm-List-DataCell-DropDown-Chevron {
+	top: 2px; right: 0px; position: absolute;
+}
+.ms-crm-List-DataCell {
+	border: currentColor;
+}
+.ms-crm-List-NonDataCell {
+	border: currentColor;
+}
+.ms-crm-List-DataCell-Lite {
+	border: currentColor;
+}
+.ms-crm-List-DeleteContainer {
+	border: currentColor;
+}
+td.ms-crm-List-DataCell {
+	height: 20px; overflow: hidden; padding-top: 0px; padding-bottom: 0px; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-List-DataCell-Lite {
+	text-align: left; overflow: hidden; padding-right: 15px; font-size: 12px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+td.ms-crm-List-RoleDataCell-Lite {
+	padding-right: 0px;
+}
+td.ms-crm-List-Disabled {
+	color: rgb(153, 153, 153); border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; cursor: default;
+}
+td.ms-crm-List-NonDataCell {
+	height: 20px; padding-top: 0px; padding-bottom: 0px;
+}
+.ms-crm-List-ResizeBar {
+	cursor: col-resize;
+}
+div.ms-crm-List-StatusBar {
+	height: 22px;
+}
+div.ms-crm-List-StatusBar-Ex {
+	height: 22px;
+}
+div.ms-crm-List-StatusBar-Lite {
+	height: 22px; visibility: hidden;
+}
+div.ms-crm-List-StatusBar-Ex-Lite {
+	height: 22px; visibility: hidden;
+}
+tr.ms-crm-List-StatusBar {
+	height: 22px;
+}
+table.ms-crm-List-StatusBar {
+	width: 100%; height: 22px; border-top-width: 1px; border-top-style: solid; table-layout: fixed;
+}
+.ms-crm-List-Index {
+	width: 100%; height: 20px; text-align: center; padding-top: 4px; border-top-width: 1px; border-top-style: solid; white-space: nowrap; table-layout: fixed; cursor: pointer;
+}
+.ms-crm-List-Index > tbody > tr > td {
+	-ms-overflow-x: hidden;
+}
+.ms-crm-List-Message {
+	width: 100%; height: 100%; text-align: center; color: rgb(153, 153, 153); table-layout: fixed;
+}
+.ms-crm-List-Message-Lite {
+	width: 100%; height: 100%; text-align: left; color: rgb(139, 139, 139); margin-top: 8px; vertical-align: top; table-layout: fixed;
+}
+.ms-crm-List-MessageText {
+	top: 49%; width: 100%;
+}
+.ms-crm-List-MessageText-Lite {
+	top: 49%; width: 100%;
+}
+.ms-crm-List-MessageText-Lite {
+	text-align: left; color: rgb(139, 139, 139); padding-left: 2px; vertical-align: top;
+}
+td.ms-crm-List-ErrorMessageLite {
+	width: inherit; overflow: hidden; white-space: nowrap; -ms-word-wrap: normal; -ms-text-overflow: ellipsis;
+}
+td#GridLoadingMessage {
+	width: 100%;
+}
+a.ms-crm-List-LoadOnDemand {
+	text-align: center; color: rgb(0, 0, 255); text-decoration: underline; cursor: pointer;
+}
+.ms-crm-List-PreviewLabel {
+	overflow: hidden; vertical-align: top; -ms-text-overflow: ellipsis;
+}
+td.previewData {
+	overflow: hidden; vertical-align: top; -ms-text-overflow: ellipsis;
+}
+.ms-crm-List-Spacer {
+	width: 2px;
+}
+td.previewDataDatetime {
+	overflow: hidden; vertical-align: top; direction: ltr; -ms-text-overflow: ellipsis;
+}
+td.previewDataNum {
+	overflow: hidden; vertical-align: top; direction: ltr; -ms-text-overflow: ellipsis;
+}
+span.previewDirSpan {
+	direction: ltr;
+}
+.ms-crm-List-PreviewRow {
+	padding: 5px; height: auto;
+}
+.ms-crm-List-Preview {
+	width: 100%; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(153, 153, 153); border-left-color: rgb(204, 204, 204); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid;
+}
+img.ms-crm-PreviewImage {
+	cursor: pointer;
+}
+.ms-crm-List-PreviewCell {
+	padding: 0px 0px 2px 17px; border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid; cursor: default;
+}
+tr.ms-crm-List-HoveredMultilineRow {
+	color: rgb(0, 0, 0); padding-top: 1px; border-top-color: currentColor; border-bottom-color: rgb(219, 222, 225); border-top-width: medium; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+tr.ms-crm-List-SelectedMultilineRow {
+	color: rgb(0, 0, 0); padding-top: 1px; border-top-color: currentColor; border-bottom-color: rgb(219, 222, 225); border-top-width: medium; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+tr.ms-crm-List-HoveredRow {
+	color: rgb(0, 0, 0); padding-top: 1px; border-top-color: currentColor; border-bottom-color: rgb(219, 222, 225); border-top-width: medium; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+tr.ms-crm-List-SelectedRow {
+	color: rgb(0, 0, 0); padding-top: 1px; border-top-color: currentColor; border-bottom-color: rgb(219, 222, 225); border-top-width: medium; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+tr.ms-crm-List-SelectedRow-Lite {
+	color: rgb(0, 0, 0); padding-top: 1px; border-top-color: currentColor; border-bottom-color: rgb(219, 222, 225); border-top-width: medium; border-bottom-width: 1px; border-top-style: none; border-bottom-style: solid;
+}
+.ms-crm-List-Row {
+	height: 21px;
+}
+tr.ms-crm-List-HoveredRow {
+	height: 21px;
+}
+tr.ms-crm-List-SelectedRow {
+	height: 21px;
+}
+tr.ms-crm-List-SelectedRow-Lite {
+	height: 20px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+tr.ms-crm-List-SelectedRow-Lite > td {
+	height: 20px;
+}
+tr.ms-crm-List-SelectedRow-Lite-HighContrast > td {
+	padding-top: 0px; padding-bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+tr.ms-crm-List-HoveredMultilineRow {
+	vertical-align: top;
+}
+tr.ms-crm-List-SelectedMultilineRow {
+	vertical-align: top;
+}
+nobr.ms-crm-List-RowLine {
+	width: 100%; height: 18px; overflow: hidden; -ms-text-overflow: ellipsis;
+}
+a.ms-crm-List-Link:hover {
+	text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-gridurl:hover {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedRow a.ms-crm-list-Link {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedRow-Lite a.ms-crm-list-Link {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedMultilineRow a.ms-crm-list-Link {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedRow span.gridLui {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedRow-Lite span.gridLui {
+	text-decoration: underline; cursor: pointer;
+}
+tr.ms-crm-List-SelectedMultilineRow span.gridLui {
+	text-decoration: underline; cursor: pointer;
+}
+img.ms-crm-Lookup-Item {
+	margin-right: 5px; margin-left: 2px; vertical-align: middle;
+}
+img.ms-crm-Lookup-PresenceItem {
+	width: 12px; height: 12px; margin-top: 2px; margin-right: 5px; margin-left: 2px; vertical-align: top;
+}
+col.ms-crm-List-NonDataColumnHeader {
+	padding-left: 1px;
+}
+nobr.num {
+	direction: ltr;
+}
+nobr.datetime {
+	direction: ltr;
+}
+table.ms-crm-Grid-Control-Bar {
+	display: table;
+}
+.ms-crm-Grid-Control-Bar td:first-child {
+	padding-left: 5px;
+}
+.ms-crm-home-menucontainer {
+	height: 26px;
+}
+.ms-crm-home-querycontainer {
+	height: 34px;
+}
+.ms-crm-home-staticgridcontainer {
+	left: 0px; top: 60px; right: 0px; bottom: 0px; position: absolute;
+}
+.inner-grid-cellPadding {
+	padding-left: 10px;
+}
+td.ms-crm-List-Empty-Cell {
+	height: 1px; line-height: 1px; background-color: rgb(255, 255, 255);
+}
+.gridcellpadding {
+	width: auto; height: 19px; line-height: 19px; padding-left: 2px; display: block;
+}
+a.ms-crm-List-DeleteButton {
+	top: -2px; right: 0px; margin-top: 0px; position: absolute;
+}
+div.ms-crm-List-DeleteContainer-Div {
+	width: 100%; height: 16px; position: relative;
+}

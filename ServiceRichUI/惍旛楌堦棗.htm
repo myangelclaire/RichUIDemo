@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>整備歴一覧</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { 売上日: "2014/01/01", 受付拠点名: "ＸＸＸＸＸＸ", 納品書No: "XXXXXXXXX1X", 代表入庫: "ＸＸＸＸ", 受付担当: "ＸＸＸＸＸ", 作業担当: "ＸＸＸＸＸ", 走行距離: "999,999", 総額: "999,999",
+                              技術料値引: "99,999,999", 部品代値引: "99,999,999", 諸費用金額: "99,999,999", 一言メモ: "XXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                            }
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 150,
+                width: 752,
+                shrinkToFit: false,
+                colNames: ['売上日', '受付拠点名', '納品書No', '代表入庫', '受付担当', '作業担当', '走行距離', '総額', '技術料値引', '部品代値引', '諸費用金額', '一言メモ'],
+                colModel: [
+               		        { name: '売上日', index: '売上日', width: 70, frozen: true },
+                            { name: '受付拠点名', index: '受付拠点名', width: 70, frozen: true,align: "center" },
+               		        { name: '納品書No', index: '納品書No', width: 85, frozen: true,align: "center" },
+                            { name: '代表入庫', index: '代表入庫', width: 50, frozen: true,align: "center" },
+                            { name: '受付担当', index: '受付担当', width: 50,align: "center" },
+                            { name: '作業担当', index: '作業担当', width: 50,align: "center" },
+                            { name: '走行距離', index: '走行距離', width: 50,align: "right" },
+                            { name: '総額', index: '総額', width: 50,align: "right" },
+                            { name: '技術料値引', index: '技術料値引', width: 65,align: "right" },
+                            { name: '部品代値引', index: '部品代値引', width: 65,align: "right" },
+                            { name: '諸費用金額', index: '諸費用金額', width: 65,align: "right" },
+                            { name: '一言メモ', index: '一言メモ', width: 450,align: "center" }
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+            });
+            jQuery("#list47").jqGrid('setFrozenColumns');
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:10px;">
+            <button id="Button2" type="button" style=" height:35px; width:70px; margin-right:0px;">Esc<br />キャンセル</button>
+            <button id="Button3" type="button" style=" height:35px; width:70px; margin-right:0px;">F3<br />詳細印刷</button>
+            <button id="Button4" type="button" style=" height:35px; width:70px; margin-right:0px;">F8<br />サマリ印刷</button>
+            <button id="Button5" type="button" style=" height:35px; width:70px; margin-right:0px;">F10<br />確定</button>
+        </div>
+        <div style="margin-top:5px; margin-left:3px; height:20px;">
+            <table id="list47"></table>
+        </div>
+    </div>
+</body>
+</html>

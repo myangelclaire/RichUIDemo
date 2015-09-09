@@ -1,0 +1,994 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>仕掛伝票検索画面</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+               var mydata = [
+                                {
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+                                {
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                },
+								{
+								'入庫予約No': 'R000001',
+								'伝票No': '7890',
+								'後日': '〇',
+								'区分': '車検',
+								'売上/検収日': '2014/09/21',
+								'請求/発注/見積金額': '100,000',
+								'売/外': '売',
+								'商品名': '車検',
+								'ﾌｫﾛｰ': '',
+								'お客様': '前田　健太',
+								'車種名': 'アクセラ',
+								'登録No': '広島　111あ111',
+								'車両ST': '入庫済み',
+                                '伝票ST': '見積済',
+								'主': '主',
+								'入庫形態': '時間内予約',
+								'入庫予定日時': '2014/09/10',
+								'納車形態': '預かり',
+								'納車/引渡予定日時': '2014/09/17',
+								'代(車要否)': '無',
+								'保管': '',
+								'部品納期': '2014/10/10',
+								'外注(希望)納期': '2014/10/10',
+								'依頼元受付No': '000001',
+								'受付担当': 'XXXX',
+								'作業担当': 'XXXX',
+								'管理担当': 'XXXX',
+								'コンタクト': 'XXXX',
+								'手段': '',
+								'作予定h': '2.50',
+								'請求先/発注先': 'パリントン',
+								'受付拠点': 'エルドレッド',
+								'入力拠点': 'XXXX',
+								'入力担当': 'XXXX',
+								'更新担当': 'XXXX',
+								'住所': '広島市民球場',
+								'自宅TEL': '000-0000-0000',
+								'携帯TEL': '000-0000-0000',
+								'勤務先TEL': '000-0000-0000',
+								'初度登録': '2014/01/01',
+								'車検満了日': '2014/09/01',
+								'管理担当': 'XXXX',
+                                }
+                            ];
+
+            var width = $(window).width() -10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 246,
+                width: 1200,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+							 '入庫予約No',
+							 '伝票No',
+							 '後日',
+							 '区分',
+							 '売上/検収日',
+							 '請求/発注/見積金額',
+							 '売/外',
+							 '商品名',
+							 'ﾌｫﾛｰ',
+							 'お客様',
+							 '車種名',
+							 '登録No',
+							 '区分',
+							 '車両ST',
+							 '伝票ST',
+							 '主',
+							 '入庫形態',
+							 '入庫予定日時',
+							 '納車形態',
+							 '納車/引渡予定日時',
+							 '代(車要否)',
+							 '保管',
+							 '部品納期',
+							 '外注(希望)納期',
+							 '依頼元受付No',
+							 '受付担当',
+							 '作業担当',
+							 '管理担当',
+							 'コンタクト',
+							 '手段',
+							 '作予定h',
+							 '請求先/発注先',
+							 '受付拠点',
+							 '入力拠点',
+							 '入力担当',
+							 '更新担当',
+							 '住所',
+							 '自宅TEL',
+							 '携帯TEL',
+							 '勤務先TEL',
+							 '初度登録',
+							 '車検満了日',
+							 '管理担当'
+                           ],
+                colModel: [
+							{ name: '入庫予約No', index: '入庫予約No', width: 80, align: "left" },
+							{ name: '伝票No', index: '伝票No', width: 80, align: "left" },
+							{ name: '後日', index: '後日', width: 50, align: "left" },
+							{ name: '区分', index: '区分', width: 50, align: "left" },
+							{ name: '売上/検収日', index: '売上/検収日', width: 80, align: "left" },
+							{ name: '請求/発注/見積金額', index: '請求/発注/見積金額', width: 100, align: "left" },
+							{ name: '売/外', index: '売/外', width: 50, align: "left" },
+							{ name: '商品名', index: '商品名', width: 80, align: "left" },
+							{ name: 'ﾌｫﾛｰ', index: 'ﾌｫﾛｰ', width: 80, align: "left" },
+							{ name: 'お客様', index: 'お客様', width: 80, align: "left" },
+							{ name: '車種名', index: '車種名', width: 80, align: "left" },
+							{ name: '登録No', index: '登録No', width: 80, align: "left" },
+							{ name: '区分', index: '区分', width: 50, align: "left" },
+							{ name: '車両ST', index: '車両ST', width: 80, align: "left" },
+							{ name: '伝票ST', index: '伝票ST', width: 80, align: "left" },
+							{ name: '主', index: '主', width: 50, align: "left" },
+							{ name: '入庫形態', index: '入庫形態', width: 80, align: "left" },
+							{ name: '入庫予定日時', index: '入庫予定日時', width: 80, align: "left" },
+							{ name: '納車形態', index: '納車形態', width: 80, align: "left" },
+							{ name: '納車/引渡予定日時', index: '納車/引渡予定日時', width: 80, align: "left" },
+							{ name: '代(車要否)', index: '代(車要否)', width: 80, align: "left" },
+							{ name: '保管', index: '保管', width: 50, align: "left" },
+							{ name: '部品納期', index: '部品納期', width: 80, align: "left" },
+							{ name: '外注(希望)納期', index: '外注(希望)納期', width: 80, align: "left" },
+							{ name: '依頼元受付No', index: '外注(希望)納期', width: 80, align: "left" },
+							{ name: '受付担当', index: '受付担当', width: 80, align: "left" },
+							{ name: '作業担当', index: '作業担当', width: 80, align: "left" },
+							{ name: '管理担当', index: '管理担当', width: 80, align: "left" },
+							{ name: 'コンタクト', index: 'コンタクト', width: 80, align: "left" },
+							{ name: '手段', index: '手段', width: 50, align: "left" },
+							{ name: '作予定h', index: '作予定h', width: 80, align: "left" },
+							{ name: '請求先/発注先', index: '請求先/発注先', width: 80, align: "left" },
+							{ name: '受付拠点', index: '受付拠点', width: 80, align: "left" },
+							{ name: '入力拠点', index: '入力拠点', width: 80, align: "left" },
+							{ name: '入力担当', index: '入力担当', width: 80, align: "left" },
+							{ name: '更新担当', index: '更新担当', width: 80, align: "left" },
+							{ name: '住所', index: '住所', width: 80, align: "left" },
+							{ name: '自宅TEL', index: '自宅TEL', width: 90, align: "left" },
+							{ name: '携帯TEL', index: '携帯TEL', width: 90, align: "left" },
+							{ name: '勤務先TEL', index: '勤務先TEL', width: 90, align: "left" },
+							{ name: '初度登録', index: '初度登録', width: 80, align: "left" },
+							{ name: '車検満了日', index: '車検満了日', width: 80, align: "left" },
+							{ name: '管理担当', index: '管理担当', width: 80, align: "left" }
+               	        ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div style="margin-top:10px; margin-left:3px;">
+        <button style="height:50px; width:100px; font-size:13px;">検索</button>
+        <button style="height:50px; width:100px; font-size:13px;">受付台帳</button>
+        <button style="height:50px; width:100px; font-size:13px;">納引リスト</button>
+    </div>
+    <div style="margin-top:10px">
+        <fieldset title="基本情報">
+            <!--<legend style="font-size:12px; color:Blue">基本情報</legend>-->
+            <table style="height:70px;">
+                <tr>
+                    <td style="width:200px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>入庫予約No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table1" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>登録No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table3" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:45%;"><label>フリガナ</label></td>
+                                <td style="width:55%;">
+                                    <table class="ms-crm-Lookup" id="Table12" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>Car-No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table13" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>お客様No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table13" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>納品書No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table13" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>外注発注No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table14" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>外注納品書No.</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:45%;"><label>対象年月日from</label></td>
+                                <td style="width:55%;">
+                                    <table class="ms-crm-Lookup" id="Table6" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>対象年月日to</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>拠点コード</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:200px; padding-left: 30px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>拠点名称</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+			<table>
+				<tr>
+                    <td style="width:200px;">
+                        <table>
+                            <tr>
+                                <td style="width:40%;"><label>並べ替え</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table14" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="0" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">入庫予約No.</option>
+                                                        <option title="ItemB" value="1"></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:100px;">
+                        <table>
+                            <tr>
+                                <td style="width:100%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;width: 100px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;width:100%;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">昇順</option>
+                                                        <option title="ItemB" value="1">降順</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:150px;">
+                        <table>
+                            <tr>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">登録No.</option>
+                                                        <option title="ItemB" value="1"></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:100px;">
+                        <table>
+                            <tr>
+                                <td style="width:100%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;width:100%;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">昇順</option>
+                                                        <option title="ItemB" value="1">降順</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:150px;">
+                        <table>
+                            <tr>
+                                <td style="width:100%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">お客様名</option>
+                                                        <option title="ItemB" value="1"></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+					<td style="width:100px;">
+                        <table>
+                            <tr>
+                                <td style="width:100%;">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;width:100%;" tabindex="1110">
+                                                        <option selected="selected" title="ItemA" value="0">昇順</option>
+                                                        <option title="ItemB" value="1">降順</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+			</table>
+        </fieldset>
+    </div>
+    <div style="margin-top:20px; margin-left:3px; height:300px;">
+        <table id="list47"></table>
+        <div id="gridPager"></div>
+    </div>
+</div>
+</body>
+</html>

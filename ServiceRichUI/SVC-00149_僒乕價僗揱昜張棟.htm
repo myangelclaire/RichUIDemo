@@ -1,0 +1,1184 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>サービス伝票処理</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var mydata10 = [
+                            {
+                                '入庫区分': 'XXXXXXXXXXXXXXXXXX',
+                                '内外作区分': 'XXXXXXXXXXXXXXXXXX',
+                                'T': '部品',
+                                '作業/部品': '部品１',
+                                '行為': '受入',
+                                '工数': '6',
+                                '税抜単価': '￥120,000',
+                                '税抜金額': '￥120,000',
+                                '総額': '￥120,000',
+                                '常備品': '○',
+                                '自店舗在庫': 'XXXXXXXXXXXXXXXXXX',
+                                '在庫照会': 'XXXXXXXXXXXXXXXXXX',
+                                '備考': 'XXXXXXXXXXXXXXXXXX',
+                                '備考2': 'XXXXXXXXXXXXXXXXXX',
+                                'SRT': 'XXXXXXXXXXXXXXXXXX',
+                                'MC作業CD': 'XXXXXXXXXXXXXXXXXX',
+                                '請求先コード': 'XXXXXXXXXXXXXXXXXX',
+                                '割引率': '3%',
+                                '割引額': '￥120,000'
+                            }
+                         ];
+            var mydata20 = [
+                            {
+                                '推奨項目': 'XXXXXXXXXXXXXXXXXX',
+                                '推奨交換時期': 'XXXXXXXXXXXXXXXXXX',
+                                '推奨交換距離': 'XXXXXXXXXXXXXXXXXX',
+                                '推奨': 'XXXXXXXXXXXXXXXXXX',
+                                '前回交換時期': 'XXXXXXXXXXXXXXXXXX',
+                                '前回交換距離': 'XXXXXXXXXXXXXXXXXX',
+                                '提案情報': 'XXXXXXXXXXXXXXXXXX',
+                                '提案時金額': '￥120,000',
+                                '他': 'XXXXXXXXXXXXXXXXXX'
+                            }
+                         ];
+            var mydata30 = [
+              {
+                  '入庫区分': 'XXXXXXXXXXXXXXXXXX',
+                  '内外作区分': 'XXXXXXXXXXXXXXXXXX',
+                  'T': 'XXXXXXXXXXXXXXXXXX',
+                  '作業/部品': '部品',
+                  '行為': 'XXXXXXXXXXXXXXXXXX',
+                  '工数': '2',
+                  '税抜単価': '￥120,000',
+                  '税抜金額': '￥120,000',
+                  '総額': '￥120,000',
+                  '常備品': 'XXXXXXXXXXXXXXXXXX',
+                  '自店舗在庫': 'XXXXXXXXXXXXXXXXXX',
+                  '在庫照会': 'XXXXXXXXXXXXXXXXXX',
+                  '備考': 'XXXXXXXXXXXXXXXXXX',
+                  '備考2': 'XXXXXXXXXXXXXXXXXX',
+                  'SRT': 'XXXXXXXXXXXXXXXXXX',
+                  'MC作業CD': 'XXXXXXXXXXXXXXXXXX',
+                  '割引率': '8%',
+                  '割引額': '￥120,000'
+              }
+           ];
+
+            var mydata40 = [
+              {
+                  '商品コード': 'XXXXXXXXXXXXXXXXXX',
+                  'プランコード': 'XXXXXXXXXXXXXXXXXX',
+                  '入庫区分コード': 'XXXXXXXXXXXXXXXXXX',
+                  'ラベル': 'XXXXXXXXXXXXXXXXXX',
+                  '数量': '120',
+                  '税抜単価': '￥1,000',
+                  '税抜金額': '￥120,000',
+                  '総額': '￥120,000'
+              }
+           ];
+
+            var mydata50 = [
+              {
+                  '入庫区分': 'XXXXXX',
+                  '台数カウント': 'XXXXXX',
+                  '社内工賃': '￥120,000',
+                  '社内工賃原価': '￥120,000',
+                  '部品代': '￥120,000',
+                  '外注費': '￥120,000'
+              }
+           ];
+
+            var mydata60 = [
+              {
+                '諸費用コード': 'XXXXXXXXXXXXXXXXXX',
+                '諸費用名称': 'XXXXXXXXXXXXXXXXXX',
+                '諸費用金額': '￥120,000',
+                '税額': '￥120,000',
+                '課税': '￥120,000'
+              }
+           ];
+
+            var mydata70 = [
+              {
+                '前受金': '￥120,000',
+                '経理情報': 'XXXXXXXX'
+              }
+           ];
+
+            var mydata80 = [
+              {
+                '販社コード': 'XXXXX',
+                '見積No': 'XXXXX',
+                'クーポン': 'XXXXX',
+                'サービス・パッケージ契約': 'XXXXX',
+                'クーポン番号': 'XXXXX',
+                'サービス商品金額': '￥120,000'
+              }
+           ];
+
+
+            var width = $(window).width() - 10;
+
+            $("#list10").jqGrid({
+                data: mydata10,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                            '入庫区分',
+                            '内外作区分',
+                            'T',
+                            '作業/部品',
+                            '行為',
+                            '工数',
+                            '税抜単価',
+                            '税抜金額',
+                            '総額',
+                            '常備品',
+                            '自店舗在庫',
+                            '在庫照会',
+                            '備考',
+                            '備考2',
+                            'SRT',
+                            'MC作業CD',
+                            '請求先コード',
+                            '割引率',
+                            '割引額'
+                           ],
+                colModel: [
+                             { name: '入庫区分', index: '入庫区分', width: 90, align: "left" },
+                             { name: '内外作区分', index: '内外作区分', width: 90, align: "left" },
+                             { name: 'T', index: 'T', width: 90, align: "left" },
+                             { name: '作業/部品', index: '作業/部品', width: 90, align: "left" },
+                             { name: '行為', index: '行為', width: 90, align: "left" },
+                             { name: '工数', index: '工数', width: 90, align: "right" },
+                             { name: '税抜単価', index: '税抜単価', width: 90, align: "right" },
+                             { name: '税抜金額', index: '税抜金額', width: 90, align: "right" },
+                             { name: '総額', index: '総額', width: 90, align: "right" },
+                             { name: '常備品', index: '常備品', width: 90, align: "center" },
+                             { name: '自店舗在庫', index: '自店舗在庫', width: 90, align: "left" },
+                             { name: '在庫照会', index: '在庫照会', width: 90, align: "left" },
+                             { name: '備考', index: '備考', width: 90, align: "left" },
+                             { name: '備考2', index: '備考2', width: 90, align: "left" },
+                             { name: 'SRT', index: 'SRT', width: 90, align: "left" },
+                             { name: 'MC作業CD', index: 'MC作業CD', width: 90, align: "left" },
+                             { name: '請求先コード', index: '請求先コード', width: 90, align: "left" },
+                             { name: '割引率', index: '割引率', width: 90, align: "right" },
+                             { name: '割引額', index: '割引額', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager10",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list20").jqGrid({
+                data: mydata20,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                            '推奨項目',
+                            '推奨交換時期',
+                            '推奨交換距離',
+                            '推奨',
+                            '前回交換時期',
+                            '前回交換距離',
+                            '提案情報',
+                            '提案時金額',
+                            '他'
+                           ],
+                colModel: [
+                             { name: '推奨項目', index: '推奨項目', width: 90, align: "left" },
+                             { name: '推奨交換時期', index: '推奨交換時期', width: 90, align: "left" },
+                             { name: '推奨交換距離', index: '推奨交換距離', width: 90, align: "left" },
+                             { name: '推奨', index: '推奨', width: 90, align: "left" },
+                             { name: '前回交換時期', index: '前回交換時期', width: 90, align: "left" },
+                             { name: '前回交換距離', index: '前回交換距離', width: 90, align: "left" },
+                             { name: '提案情報', index: '提案情報', width: 90, align: "left" },
+                             { name: '提案時金額', index: '提案時金額', width: 90, align: "right" },
+                             { name: '他', index: '他', width: 90, align: "left" }
+               	        ],
+                pager: "#gridPager20",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list30").jqGrid({
+                data: mydata30,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '入庫区分',
+                        '内外作区分',
+                        'T',
+                        '作業/部品',
+                        '行為',
+                        '工数',
+                        '税抜単価',
+                        '税抜金額',
+                        '総額',
+                        '常備品',
+                        '自店舗在庫',
+                        '在庫照会',
+                        '備考',
+                        '備考2',
+                        'SRT',
+                        'MC作業CD',
+                        '割引率',
+                        '割引額'
+                           ],
+                colModel: [
+                             { name: '入庫区分', index: '入庫区分', width: 90, align: "left" },
+                             { name: '内外作区分', index: '内外作区分', width: 90, align: "left" },
+                             { name: 'T', index: 'T', width: 90, align: "left" },
+                             { name: '作業/部品', index: '作業/部品', width: 90, align: "left" },
+                             { name: '行為', index: '行為', width: 90, align: "left" },
+                             { name: '工数', index: '工数', width: 90, align: "right" },
+                             { name: '税抜単価', index: '税抜単価', width: 90, align: "right" },
+                             { name: '税抜金額', index: '税抜金額', width: 90, align: "right" },
+                             { name: '総額', index: '総額', width: 90, align: "right" },
+                             { name: '常備品', index: '常備品', width: 90, align: "left" },
+                             { name: '自店舗在庫', index: '自店舗在庫', width: 90, align: "left" },
+                             { name: '在庫照会', index: '在庫照会', width: 90, align: "left" },
+                             { name: '備考', index: '備考', width: 90, align: "left" },
+                             { name: '備考2', index: '備考2', width: 90, align: "left" },
+                             { name: 'SRT', index: 'SRT', width: 90, align: "left" },
+                             { name: 'MC作業CD', index: 'MC作業CD', width: 90, align: "left" },
+                             { name: '割引率', index: '割引率', width: 90, align: "right" },
+                             { name: '割引額', index: '割引額', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager30",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list40").jqGrid({
+                data: mydata40,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '商品コード',
+                        'プランコード',
+                        '入庫区分コード',
+                        'ラベル',
+                        '数量',
+                        '税抜単価',
+                        '税抜金額',
+                        '総額'
+                           ],
+                colModel: [
+                        { name: '商品コード', index: '商品コード', width: 90, align: "left" },
+                        { name: 'プランコード', index: 'プランコード', width: 90, align: "left" },
+                        { name: '入庫区分コード', index: '入庫区分コード', width: 90, align: "left" },
+                        { name: 'ラベル', index: 'ラベル', width: 90, align: "left" },
+                        { name: '数量', index: '数量', width: 90, align: "right" },
+                        { name: '税抜単価', index: '税抜単価', width: 90, align: "right" },
+                        { name: '税抜金額', index: '税抜金額', width: 90, align: "right" },
+                        { name: '総額', index: '総額', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager40",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list50").jqGrid({
+                data: mydata50,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '入庫区分',
+                        '台数カウント',
+                        '社内工賃',
+                        '社内工賃原価',
+                        '部品代',
+                        '外注費'
+                           ],
+                colModel: [
+                        { name: '入庫区分', index: '入庫区分', width: 90, align: "left" },
+                        { name: '台数カウント', index: '台数カウント', width: 90, align: "left" },
+                        { name: '社内工賃', index: '社内工賃', width: 90, align: "right" },
+                        { name: '社内工賃原価', index: '社内工賃原価', width: 90, align: "right" },
+                        { name: '部品代', index: '部品代', width: 90, align: "right" },
+                        { name: '外注費', index: '外注費', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager50",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list60").jqGrid({
+                data: mydata60,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '諸費用コード',
+                        '諸費用名称',
+                        '諸費用金額',
+                        '税額',
+                        '課税'
+                           ],
+                colModel: [
+                        { name: '諸費用コード', index: 'ラベル', width: 90, align: "left" },
+                        { name: '諸費用名称', index: 'ラベル', width: 90, align: "left" },
+                        { name: '諸費用金額', index: '数量', width: 90, align: "right" },
+                        { name: '税額', index: '税額', width: 90, align: "right" },
+                        { name: '課税', index: '数量', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager60",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list70").jqGrid({
+                data: mydata70,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '前受金',
+                        '経理情報'
+                           ],
+                colModel: [
+                        { name: '前受金', index: '前受金', width: 90, align: "right" },
+                        { name: '経理情報', index: '経理情報', width: 90, align: "left" }
+               	        ],
+                pager: "#gridPager70",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+            $("#list80").jqGrid({
+                data: mydata80,
+                datatype: "local",
+                height: 100,
+                width: 1100,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                colNames: [
+                        '販社コード',
+                        '見積No',
+                        'クーポン',
+                        'サービス・パッケージ契約',
+                        'クーポン番号',
+                        'サービス商品金額'
+                           ],
+                colModel: [
+                        { name: '販社コード', index: '販社コード', width: 90, align: "left" },
+                        { name: '見積No', index: '見積No', width: 90, align: "left" },
+                        { name: 'クーポン', index: 'クーポン', width: 90, align: "left" },
+                        { name: 'サービス・パッケージ契約', index: 'サービス・パッケージ契約', width: 90, align: "left" },
+                        { name: 'クーポン番号', index: 'クーポン番号', width: 90, align: "left" },
+                        { name: 'サービス商品金額', index: 'サービス商品金額', width: 90, align: "right" }
+               	        ],
+                pager: "#gridPager80",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+</head>
+<body>
+    <div style="height: 100%; overflow: auto;">
+        <div style="margin-top: 10px; margin-left: 3px;">
+            <table id="aa">
+                <tr>
+                    <td>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">保存</button>
+                        <button style="height: 50px; width: 96px; font-size: 13px;">保存して閉じる</button>
+                        <button style="height: 50px; width: 145px; font-size: 13px;">保存して閉じる新規作成</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">削除</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">簡単見積</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">作業取得</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">部品取得</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">後日保存</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">EPC</button>
+                        <button style="height: 50px; width: 96px; font-size: 13px;">在庫照会</button>
+                        <button style="height: 50px; width: 117px; font-size: 13px;">部品引当（自店舗）</button>
+                        <button style="height: 50px; width: 117px; font-size: 13px;">部品引当（他店舗）</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">自賠責算出</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">自賠責申込</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">明細値引</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">Ｒ・改情報</button>
+                        <button style="height: 50px; width: 90px; font-size: 13px;">消耗品</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="margin-top: 10px;">
+            <fieldset title="顧客車両情報">
+                <legend style="font-size: 12px; color: Blue">顧客車両情報</legend>
+                <table style="height: 70px;">
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            お客様</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table17" style="width: 365%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;" disabled="disabled"><font color="black">
+                                                                    XXXXX</font> </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            登録No.</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="new_lookuptestentity_lookupTable" style="width: 85%;
+                                            table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;" disabled="disabled"><font color="black">
+                                                                    XXXXX</font> </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 135px;">
+                                        <label>
+                                            車台番号</label>
+                                    </td>
+                                    <td style="width: 115px;">
+                                        <table class="ms-crm-Lookup" id="Table3" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;" disabled="disabled"><font color="black">
+                                                                    XXXXX</font> </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 135px;">
+                                        <label>
+                                            通称車名</label>
+                                    </td>
+                                    <td style="width: 115px; padding-left: 0px;">
+                                        <table class="ms-crm-Lookup" id="Table1" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;" disabled="disabled"><font color="black">
+                                                                    XXXXX</font> </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div style="margin-top: 10px">
+            <fieldset title="入庫予約情報">
+                <legend style="font-size: 12px; color: Blue">入庫予約情報</legend>
+                <table style="height: 70px;">
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収年月日</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table37" style="width: 365%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">2014/09/11</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img10"
+                                                            alt="Select date" src="../_imgs/btn_off_Cal.gif" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            外注検収No.</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table41" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">XXXXX</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            認証区分</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table42" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <select style="width: 100%;">
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            外注納品書No.</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table38" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">XXXXX</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収拠点</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table39" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="blue">朝日店</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                            id="Img11" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                            src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick=""
+                                                            href="#"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収者</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table40" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="blue">青木 勝</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                            id="Img12" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                            src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick=""
+                                                            href="#"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">見積明細</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list10">
+            </table>
+            <div id="gridPager10">
+            </div>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">PRP</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list20">
+            </table>
+            <div id="gridPager20">
+            </div>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">後日提案</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list30">
+            </table>
+            <div id="gridPager30">
+            </div>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">サービス商品選択</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list40">
+            </table>
+            <div id="gridPager40">
+            </div>
+        </div>
+        <div style="margin-top: 10px">
+            <fieldset title="有償">
+                <legend style="font-size: 12px; color: Blue">有償</legend>
+                <table style="height: 70px;">
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収年月日</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table5" style="width: 365%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">2014/09/11</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img1"
+                                                            alt="Select date" src="../_imgs/btn_off_Cal.gif" />
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            外注検収No.</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table6" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">XXXXX</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            認証区分</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table7" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <select style="width: 100%;">
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            外注納品書No.</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table8" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">XXXXX</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収拠点</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table9" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="blue">朝日店</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                            id="Img2" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                            src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick=""
+                                                            href="#"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            検収者</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table10" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="blue">青木 勝</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                            id="Img3" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                            src="../_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick=""
+                                                            href="#"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">無償</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list50">
+            </table>
+            <div id="gridPager50">
+            </div>
+        </div>
+        <div style="margin-top: 10px">
+            <fieldset title="無償合計">
+                <legend style="font-size: 12px; color: Blue">無償合計</legend>
+                <table style="height: 70px;">
+                    <tr>
+                        <td style="width: 250px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            合計_社内工賃</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table12" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">￥120,000</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            合計_社内工賃原価</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table13" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">￥120,000</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            合計_部品代</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table14" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">￥120,000</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 250px; padding-left: 100px;">
+                            <table>
+                                <tr>
+                                    <td style="width: 115px;">
+                                        <label>
+                                            合計_外注費</label>
+                                    </td>
+                                    <td style="width: 135px;">
+                                        <table class="ms-crm-Lookup" id="Table2" style="width: 85%; table-layout: fixed;"
+                                            cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                        <div class="ms-crm-Lookup">
+                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                <li style="display: inline; white-space: nowrap;"><font color="black">￥120,000</font>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">諸費用</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list60">
+            </table>
+            <div id="gridPager60">
+            </div>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">前受金</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list70">
+            </table>
+            <div id="gridPager70">
+            </div>
+        </div>
+        <div style="margin-top: 10px; margin-left: 7px; height: 1px;">
+            <tr>
+                <font color="Blue" style="font-size: 12px;">サービス商品契約充当</font>
+            </tr>
+        </div>
+        <div style="margin-top: 15px; margin-left: 3px; height: 160px;">
+            <table id="list80">
+            </table>
+            <div id="gridPager80">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

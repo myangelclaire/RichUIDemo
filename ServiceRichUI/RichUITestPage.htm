@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#Button1").on("click", function () {
+                var url = "PartAndWorksSelection.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "連携対象部品選択", "dialogHeight=440px");
+            });
+
+            $("#Button2").on("click", function () {
+                var url = "PartAndWorksSelection2.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "", "dialogHeight=340px; dialogWidth=718px");
+            });
+            $("#Button3").on("click", function () {
+                var url = "外注状況一覧.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "外注状況一覧", "dialogHeight=440px; dialogWidth:600px");
+            });
+            $("#Button4").on("click", function () {
+                var url = "Part Consumption.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "消耗品予定実績", "dialogHeight=484px; dialogWidth=780px");
+            });
+            $("#Button5").on("click", function () {
+                var url = "External Estimation Selection.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "外装見積選択", "dialogHeight=480px; dialogWidth=900px");
+            });
+
+            $("#Button6").on("click", function () {
+                var url = "DiscountFunction.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "小計値引", "dialogHeight:150px;dialogWidth:300px");
+            });
+            $("#Button7").on("click", function () {
+                var url = "入庫予約管理表(日別).htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "入庫予約管理表(日別)", "dialogHeight:495px;dialogWidth:900px");
+            });
+            $("#Button8").on("click", function () {
+                var url = "行移動設定.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "行移動設定", "dialogHeight:400px;dialogWidth:590px");
+            });
+            $("#Button9").on("click", function () {
+                var url = "顧客車両／入庫予約検索.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "顧客車両／入庫予約検索", "dialogHeight:495px;dialogWidth:800px");
+            });
+            $("#Button10").on("click", function () {
+                var url = "部品連携作業コード選択.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "部品連携作業コード選択", "dialogHeight:250px;dialogWidth:250px");
+            });
+            $("#Button11").on("click", function () {
+                var url = "部品取得.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "部品取得", "dialogHeight:220px;dialogWidth:370px");
+            });
+            $("#Button12").on("click", function () {
+                var url = "後日提案メンテナンス検索.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "後日提案メンテナンス検索", "dialogHeight:650px;dialogWidth:838px");
+            });
+            $("#Button13").on("click", function () {
+                var url = "整備歴一覧.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "整備歴一覧", "dialogHeight:250px;dialogWidth:780px");
+            });
+            $("#Button14").on("click", function () {
+                var url = "部品連携作業コード選択（更新）.htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "部品連携作業コード選択（更新）", "dialogHeight:250px;dialogWidth:350px");
+            });
+            $("#Button15").on("click", function () {
+                var url = "DiscountFunction(更新).htm?" + new Date().toLocaleTimeString();
+                var res = window.showModalDialog(url, "小計値引", "dialogHeight:150px;dialogWidth:300px");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div style="margin-top: 10px;">
+        <fieldset title="">
+            <legend style="font-size: 12px; color: Blue">ポップアップ画面</legend>
+            <input id="Button1" type="button" value="連携対象部品選択" />
+            <input id="Button2" type="button" value="部品連携作業コード選択" />
+            <input id="Button3" type="button" value="外注状況一覧" />
+            <input id="Button4" type="button" value="消耗品予定実績" />
+            <input id="Button5" type="button" value="外装見積選択" />
+            <input id="Button6" type="button" value="小計値引" />
+            <input id="Button7" type="button" value="入庫予約管理表(日別)" />
+            <input id="Button8" type="button" value="行移動設定" />
+            <input id="Button9" type="button" value="顧客車両／入庫予約検索" />
+            <input id="Button10" type="button" value="部品連携作業コード選択" />
+            <input id="Button11" type="button" value="部品取得" />
+            <input id="Button12" type="button" value="後日提案メンテナンス検索" />
+            <input id="Button13" type="button" value="整備歴一覧" />
+            <input id="Button14" type="button" value="部品連携作業コード選択（更新）" />
+            <input id="Button15" type="button" value="小計値引(更新)" />
+        </fieldset>
+    </div>
+    <div style="margin-top: 10px;">
+        <fieldset title="">
+            <legend style="font-size: 12px; color: Blue">リンク画面</legend>
+            <table style="height: 900px;">
+                <tr>
+                    <td style="width: 300px;">
+                        <ul>
+                            <li><b>部品</b></li></ul>
+                    </td>
+                    <td style="width: 300px;">
+                        <ul>
+                            <li><b>サービス</b></li></ul>
+                    </td>
+                    <td style="width: 300px;">
+                        <ul>
+                            <li><b>※※※</b></li></ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 300px;">
+                        <ul>
+                            <li><a href="Reservation Planning (Master).htm">入庫計画策定（月別）</a></li>
+                            <li><a href="仕入検収明細画面.htm">仕入検収明細画面</a></li>
+                            <li><a href="466DH41SV01.htm">入庫代車予約管理表</a></li>
+                            <li><a href="BackOrderInquiry.htm">BO照会画面</a></li>
+                            <li><a href="CarRentRecervationManagement.html">代車予約管理表</a></li>
+                            <li><a href="DH41ST01.htm">作業計画/進捗</a></li>
+                            <li><a href="DiscountFunction.htm">小計値引</a></li>
+                            <li><a href="External Estimation Selection.htm">外装見積選択</a></li>
+                            <li><a href="OtherStoreStockInquiry.htm">他店在庫照会画面</a></li>
+                            <li><a href="OtherStoreStockSelection.htm">他店舗在庫選択画面</a></li>
+                            <li><a href="OwnStoreStockInquiryScreen.htm">自店舗在庫照会画面</a></li>
+                            <li><a href="Part Consumption.htm">消耗品予定実績</a></li>
+                            <li><a href="PartAndWorksSelection.htm">連携対象部品選択</a></li>
+                            <li><a href="PartAndWorksSelection2.htm">部品連携作業コード選択</a></li>
+                            <li><a href="rowspan.htm">rowspan</a></li>
+                            <li><a href="外注状況一覧.htm">外注状況一覧</a></li>
+                            <li><a href="認証処理(外注).htm">認証処理(外注)</a></li>
+                            <li><a href="个别入力.html">延長保証申請入力画面</a></li>
+                            <li><a href="PartsTransferInOutboundUnreceived.htm">部品移動払出受入・未受入一覧</a></li>
+                            <li><a href="整備日報（月計）.htm">整備日報（月計）</a></li>
+                            <li><a href="常備部品提案データメンテナンス画面.htm">常備部品提案データメンテナンス画面</a></li>
+                            <li><a href="部品在庫照会一覧画面.htm">部品在庫照会一覧画面</a></li>
+                            <li><a href="発注登録画面.htm">発注登録画面</a></li>
+                            <li><a href="常備品発注案作成画面.htm">常備品発注案作成画面</a></li>
+                            <li><a href="入出庫履歴照会画面.htm">入出庫履歴照会画面</a></li>
+                            <li><a href="UnusedToBeSoldWIPPartsListScreen.htm">未売上 / 売上予定 / 仕掛一覧画面</a></li>
+                            <li><a href="一覧表示.htm">一覧表示画面</a></li>
+                            <li><a href="車両ステータス変更.htm">車両ステータス変更</a></li>
+                            <li><a href=" 部品移動受入入力画面.htm">部品移動受入入力画面</a></li>
+                            <li><a href=" デッド・委託・無償計配登録画面.htm">デッド・委託・無償計配登録画面</a></li>
+                            <li><a href="入庫計画策定(日別）.htm">入庫計画策定(日別）</a></li>
+                            <li><a href="お客様説明画面.htm">お客様説明画面</a></li>
+                            <li><a href="出庫実績登録AND未使用部品返却.htm">出庫実績登録AND未使用部品返却</a></li>
+                            <li><a href="部品棚移動.htm">部品棚移動</a></li>
+                            <li><a href="部品移動払出入力画面.htm">部品移動払出入力画面</a></li>
+                            <li><a href="電子カルテ_基本タブ.htm">電子カルテ_基本タブ</a></li>
+                            <li><a href="電子カルテ_入庫タブ.htm">電子カルテ_入庫タブ</a></li>
+                            <li><a href="電子カルテ_コンタクト.htm">電子カルテ_コンタクト</a></li>
+                            <li><a href="電子カルテ_車両.htm">電子カルテ_車両</a></li>
+                            <li><a href="電子カルテ_顧客.htm">電子カルテ_顧客</a></li>
+                            <li><a href="電子カルテ_お客様メモ.htm">電子カルテ_お客様メモ</a></li>
+                            <li><a href="整備売上実績データ再送信.htm">整備売上実績データ再送信</a></li>
+                            <li><a href="店舗日計・累計照会.htm">店舗日計・累計照会</a></li>
+                            <li><a href="月締め実施確認.htm">月締め実施確認</a></li>
+                            <li><a href="整備売上実績送信ログ明細照会.htm">整備売上実績送信ログ明細照会</a></li>
+                            <li><a href="月締め戻し実施確認.htm">月締め戻し実施確認</a></li>
+
+                        </ul>
+                    </td>
+                    <td style="width: 300px;margin-top:20px">
+                        <ul>
+                            <li><a href="SVC-00142_OutsourceWorkOrderReceipt.htm">外注検収</a></li>
+                            <li><a href="SVC-00149_サービス伝票処理.htm">サービス伝票処理</a></li>
+                        </ul>
+                    </td>
+                    <td style="width: 300px;">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

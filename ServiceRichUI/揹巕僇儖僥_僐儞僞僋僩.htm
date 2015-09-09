@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+    .quotation_button {
+        cursor: pointer;
+        font-size: 14px;
+        font-family: Arial;
+        font-weight: normal;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        border-radius: 9px;
+        border: 1px solid #337fed;
+        padding: 0px;
+        text-decoration: none;
+        background: -moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+        background: -ms-linear-gradient( top, #3d94f6 5%, #1e62d0 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #3d94f6), color-stop(100%, #1e62d0) );
+        background-color: #3d94f6;
+        color: #ffffff;
+        display: inline-block;
+        text-shadow: 1px 1px 1px #1570cd;
+        -webkit-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        -moz-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    };
+    </style>
+    
+
+
+</head>
+
+<body>
+
+
+
+               <div style="height: 40px; margin-left:80px">
+                                       <h2>
+                                        <span>
+                                            <a id="h2">
+                                                <b>■ フィルター条件</b>
+                                            </a>
+                                        </span>
+                                    </h2>
+             </div>
+  
+
+
+
+        <div>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label style="height:12px; width:60px; margin-left: 140px; margin-top:-20px">領域</label>
+                             <select style="height:20px; width:90px; margin-left:8px; margin-top:-30px">
+                                <option selected="selected">来店促進</option>
+                                <option>2WD</option>
+                            </select>
+
+                        </td>
+
+                        <td>
+                        <label style="height:12px; width:20px; margin-left: 30px; margin-top:-20px">種別</label>
+                             <select style="height:20px; width:80px; margin-left:12px; margin-top:-20px">
+                                <option selected="selected">車販</option>
+                                <option>2WD</option>
+                            </select>
+                        </td>
+
+                         <td>
+                        <label style="height:12px; width:60px; margin-left: 25px; margin-top:-20px">内容</label> 
+                            <input style="margin-left:12px; width:80px"/>
+                        </td>
+
+                        <td>
+                            <input type="button" value="絞込み" class="quotation_button" style="width:80px; margin-left:30px"/>
+                        
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+
+
+
+
+
+    <div style="height: 30px; margin-top:20px;margin-left:80px">
+            <h2>
+                <span>
+                    <a>
+                         <b>■ コンタクト情報・コメント一覧</b
+                    </a>
+                </span>
+            </h2>
+    </div>
+
+
+        <div style="height:196px; width:688px; overflow-y:scroll">
+                             <table style="width:530px; margin-top:20px;margin-left:140px"
+                                             border="1px" cellspacing="0px">
+                                                    <tr>
+                                                        <th style="width:30px; height:25px;background-color: #add8e6"><b></b></th>
+                                                        <th style="width:60px; text-align:center;background-color: #add8e6"><b>日時</b></th>
+                                                        <th style="width:60px; text-align:center;background-color: #add8e6"><b>領域</b></th>
+                                                        <th style="width:80px; text-align:center;background-color: #add8e6"><b>担当者</b></th>
+                                                        <th style="width:50px; text-align:center;background-color: #add8e6"><b>内容</b></th>
+                                                        <th style="width:5px; text-align:center;background-color: #add8e6"><b>種別</b></th>
+                                                        <th style="width:25px; text-align:center;background-color: #add8e6"><b>手段</b></th>
+                                                        <th style="width:185px; text-align:center;background-color: #add8e6"><b>結果</b></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <input type="radio" name="check1" style="width: 30px" checked />
+                                                        </td>
+                                                        <td style="width:50px;">2014/7/14</td>
+                                                        <td style="width:50px;">来店促進</td>
+                                                        <td style="width:50px;">松田　デミ男</td>
+                                                        <td style="width:50px;text-decoration:underline;color:blue;">展示会</td>
+                                                        <td style="width:50px;">車販</td>
+                                                        <td style="width:50px;">電話</td>
+                                                        <td style="width:50px;">キャンペーン告知した</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <label></label>
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/18</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;"></td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">電話不通のため継続フォロー</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/19</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">松田　デミ男</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">来店確約を取った</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/27</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">メモ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">お財布は奥さん</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/14</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">振り返り</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">価格がネック</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:20px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/21</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">店長コメ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">競合の見積り金額聞いて</td>
+                                                    </tr>
+                        
+                        </table>
+        </div>
+
+        <div>
+
+                <table style="margin-left:150px; width:300px; margin-top:25px">
+                       
+                    <tr>
+                        <td>
+                            <textarea style="width:350px"></textarea>
+                            
+                        </td>
+
+                        <td>
+                            <input type="button" value="コメント" style="width:80px; margin-left:40px" class="quotation_button"/>
+                        
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+
+
+</body>
+</html>

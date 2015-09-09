@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+<!--    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTab.js" type="text/javascript"></script>
+
+</head>
+<body style="width: 1000px; height: 350px;">
+    <div id="quote-optionlist" style="height: 30px;">
+        <ul>
+            <li style="height:30px;">
+                <span>■リサイクル費用入力</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="rycycle-expence-area">
+        <div>
+            <form>
+                <table>
+                    <tr>
+                        <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">預託状況</th>
+                        <td>
+                            <select style="width:150px;" disabled>
+                                <option>未預託</option>
+                                <option>預託済み</option>
+                                <option>預託不要</option>
+                            </select>
+                        </td>
+                        <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">リサイクル券No.</th>
+                        <td colspan="2" style="width:250px;">
+                            <input type="text" value="XXXX" style="width:50px;" disabled/>
+                            <input type="text" value="XXXX" style="width:50px;" disabled/>
+                            <input type="text" value="XXXX" style="width:50px;" disabled/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="quote-optionlist" style="height: 200px;float:left;">
+            <div>
+                <ul>
+                    <li style="height:25px;">
+                        <span>リサイクル基本費用</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <form>
+                    <table class="quotaiontable" style="height: auto;">
+                        <tr>
+                            <th>費目</th>
+                            <th>金額</th>
+                        </tr>
+                        <tr>
+                            <td width="150px;">シュレッダーダスト</td>
+                            <td width="150px;" class="numeric">￥5,000</td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">エアバッグ類</td>
+                            <td width="150px;" class="numeric">￥5,500</td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">フロン類</td>
+                            <td width="150px;" class="numeric">￥3,600</td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">情報管理料</td>
+                            <td width="150px;" class="numeric">￥800</td>
+                        </tr>
+                        <tr>
+                            <td width="150px;">資金管理料金</td>
+                            <td width="150px;" class="numeric">￥360</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <div id="quote-optionlist" style="height: 200px;margin-left:400px; ">
+            <div>
+                <ul>
+                    <li style="height:25px;">
+                        <span style="margin-right:100px;">後装着等追加分</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <form>
+                    <table class="quotaiontable" style="height: auto;">
+                        <tr>
+                            <th style="width:30px;">加算</th>
+                            <th>費目</th>
+                            <th>金額</th>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <input type="checkbox" />
+                            </td>
+                            <td width="150px;">エアバッグ</td>
+                            <td width="150px;" class="numeric">￥000,000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <input type="checkbox" />
+                            </td>
+                            <td width="150px;">フロン</td>
+                            <td width="150px;" class="numeric">￥000,000</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <input type="checkbox" />
+                            </td>
+                            <td width="150px;">
+                                架装
+                            </td>
+                            <td width="150px;" class="numeric">￥5,080</td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td width="150px;">
+                                ASR割引
+                            </td>
+                            <td width="150px;" class="numeric">￥000,000</td>
+                        </tr>
+                        </table>
+                        <lable>架装</lable>
+                        <br/>
+                        <textarea rows="2" style="width: 350px; margin-top:10px;" disabled>貨物＿バン＿ウォークスルーバン＿</textarea>
+                        <br/>
+                        <lable style="margin-top:10px;">改造</lable>
+                        <select style="width:150px; margin-top:10px;" disabled>
+                            <option>あり</option>
+                            <option>なし</option>
+                        </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

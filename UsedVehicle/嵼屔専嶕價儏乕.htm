@@ -1,0 +1,1666 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>コミュニケーションボード</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTab.js" type="text/javascript"></script>
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="tab" id="displayTabs">
+        <!--タブメニュー-->
+        <div id="results">
+            <!--在庫検索ビュー -->
+            <div class="content_wrap" id="t1_tc" style="height:1000px">
+                <div id="choice" suffix="_tc">
+                    <ul id="tab">
+                         <li id="t1" style="visibility: hidden;">検索1</li>
+                         <li id="t2">検索</li>
+                    </ul>
+                </div>
+                <div id="right-information" style="margin-left: 0px;">
+                    <div id="Div3" style="height: 30px; margin-bottom: 20px;">
+                        <h2>
+                            在庫検索ビュー</h2>
+                    </div>
+                    <div id="left-information-header" style="margin-bottom: 10px;">
+                        <ul>
+                            <li style="height: 25px;"><span>■検索条件</span> </li>
+                        </ul>
+                        <table style="width: 110%">
+                            <tr>
+                                <td width="8%" valign="top">
+                                    中古車No
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                                <td width="8%" valign="top">
+                                    車台型式
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                                <td width="8%" valign="top">
+                                    カーNo
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    メーカー名
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table7" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img13" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text7" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img14" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    車名
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table1" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img1" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text1" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img2" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    グレード名
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                                <td width="8%" valign="top">
+                                    ボディカラー
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table8" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img15" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text8" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img16" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="15%" valign="top">
+                                    年式（年号）（From）
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img7" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text4" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img8" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="15%" valign="top">
+                                    年式（年）（From）
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    年式（年号）（To）
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table9" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img17" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text9" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img18" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    年式（年）（To）
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    走行距離（From）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="new_wholenumbertest"
+                                        style="-ms-ime-mode: auto; width: 200px" type="text" min="-2147483648" max="2147483647"
+                                        attrpriv="7" attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                                <td width="8%" valign="top">
+                                    走行距離（To）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text10" style="-ms-ime-mode: auto;
+                                        width: 200px" type="text" min="-2147483648" max="2147483647" attrpriv="7" attrname="new_wholenumbertest"
+                                        req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    小売価格（From）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1130" class="ms-crm-Money ms-crm-Input" id="new_currencycustomtest"
+                                        style="-ms-ime-mode: auto; width: 200px" contenteditable="true" type="text" min="0.00"
+                                        max="1000000000.00" value="￥9,999,999" attrpriv="7" attrname="new_currencycustomtest"
+                                        req="0" dt="money" acc="4" presrc="0" isbasecur="0">
+                                </td>
+                                <td width="8%" valign="top">
+                                    小売価格（To）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1130" class="ms-crm-Money ms-crm-Input" id="Text11" style="-ms-ime-mode: auto;
+                                        width: 200px" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                        value="￥9,999,999" attrpriv="7" attrname="new_currencycustomtest" req="0"
+                                        dt="money" acc="4" presrc="0" isbasecur="0">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    認定U-car
+                                </td>
+                                <td width="50px">
+                                    <select name="new_listboxtest" tabindex="1110" class="ms-crm-SelectBox" id="new_listboxtest"
+                                        style="-ms-ime-mode: auto; width: 200px" attrpriv="7" attrname="new_listboxtest"
+                                        req="0" defaultselected="">
+                                        <option title="" selected="selected" value=""></option>
+                                        <option title="ItemA" value="0">０：－</option>
+                                        <option title="ItemB" value="1">１：認定</option>
+                                    </select>
+                                </td>
+                                <td width="8%" valign="top">
+                                    修復歴
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table10" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img19" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text12" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img20" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    車両扱い
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table11" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img21" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text13" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img22" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    ブロック
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table2" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img3" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text2" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img4" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    地区
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table12" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img23" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text14" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img24" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    在庫拠点
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table13" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img25" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text15" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img26" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    在庫状態
+                                </td>
+                                <td width="50px">
+                                    <input type="text" style="width: 200px" value="" />
+                                </td>
+                                <td width="8%" valign="top">
+                                    仕入区分
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table15" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img29" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text17" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img30" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    仕入日（From）
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container">
+                                                <input tabindex="4" class="ms-crm-Input" id="DateInputFrom" style="-ms-ime-mode: auto;
+                                                    width: 152px;" type="text" onclick="return DateInputFrom_onclick()">
+                                            </td>
+                                            <td>
+                                                <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="new_dateonlytestimg"
+                                                    alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    仕入日（To）
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container">
+                                                <input tabindex="4" class="ms-crm-Input" id="Text18" style="-ms-ime-mode: auto; width: 152px;"
+                                                    type="text" onclick="return DateInputFrom_onclick()">
+                                            </td>
+                                            <td>
+                                                <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img31"
+                                                    alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="17%" valign="top">
+                                    在庫拠点入庫日（From）
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="style3">
+                                                <input tabindex="4" class="ms-crm-Input" id="Text19" style="-ms-ime-mode: auto; width: 152px;"
+                                                    type="text" onclick="return DateInputFrom_onclick()">
+                                            </td>
+                                            <td class="style3">
+                                                <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img32"
+                                                    alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    在庫拠点入庫日（To）
+                                </td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="style3">
+                                                <input tabindex="4" class="ms-crm-Input" id="Text20" style="-ms-ime-mode: auto; width: 152px;"
+                                                    type="text" onclick="return DateInputFrom_onclick()">
+                                            </td>
+                                            <td class="style3">
+                                                <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="Img33"
+                                                    alt="Select date" src="../_imgs/btn_off_Cal.gif">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    仕訳区分
+                                </td>
+                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                    <table class="ms-crm-Lookup" id="Table16" style="width: 200px; table-layout: fixed;"
+                                        cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" style="width: 200px;">
+                                                        <li style="display: inline; white-space: nowrap;"><span class="ms-crm-Lookup-Item"
+                                                            contenteditable="false" onclick="" oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))"
+                                                            otypename="account" otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img34" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                            <span class="ms-crm-LookupItem-Name" wrapper="true">XXXXXXXX</span> </span></li>
+                                                    </div>
+                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text21" style="padding: 2px 0px 1px;
+                                                        height: 100%; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;"
+                                                        type="text" maxlength="100" ime-mode="auto">
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                        id="Img35" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif"
+                                                        attrpriv="7" attrname="new_lookuptestentity" req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}"
+                                                        savedquerytype="" isdisplayonly="false" resolveemailaddress="0" showproperty="1"
+                                                        disableviewpicker="0" disablequickfind="0" disablemru="0" allowfilteroff="1"
+                                                        autoresolve="1" defaulttype="1" lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                        lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td width="8%" valign="top">
+                                    掲載状況
+                                </td>
+                                <td width="50px">
+                                    <select name="new_listboxtest" tabindex="1110" class="ms-crm-SelectBox" id="Select1"
+                                        style="-ms-ime-mode: auto; width: 200px" attrpriv="7" attrname="new_listboxtest"
+                                        req="0" defaultselected="">
+                                        <option title="" selected="selected" value=""></option>
+                                        <option title="ItemA" value="0">未掲載</option>
+                                        <option title="ItemB" value="1">掲載送信済</option>
+                                        <option title="ItemB" value="2">掲載終了</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    画像枚数（From）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text22" style="-ms-ime-mode: auto;
+                                        width: 200px" type="text" min="-2147483648" max="2147483647" attrpriv="7" attrname="new_wholenumbertest"
+                                        req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                                <td width="8%" valign="top">
+                                    画像枚数（To）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text23" style="-ms-ime-mode: auto;
+                                        width: 200px" type="text" min="-2147483648" max="2147483647" attrpriv="7" attrname="new_wholenumbertest"
+                                        req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    コメント数（From）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text24" style="-ms-ime-mode: auto;
+                                        width: 200px" type="text" min="-2147483648" max="2147483647" attrpriv="7" attrname="new_wholenumbertest"
+                                        req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                                <td width="8%" valign="top">
+                                    コメント数（To）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text25" style="-ms-ime-mode: auto;
+                                        width: 200px" type="text" min="-2147483648" max="2147483647" attrpriv="7" attrname="new_wholenumbertest"
+                                        req="0" dt="int" acc="0" blockformsubmit="true">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    車両状態評価書表示対象
+                                </td>
+                                <td width="50px">
+                                    <select name="new_listboxtest" tabindex="1110" class="ms-crm-SelectBox" id="Select3"
+                                        style="-ms-ime-mode: auto; width: 200px" attrpriv="7" attrname="new_listboxtest"
+                                        req="0" defaultselected="">
+                                        <option title="" selected="selected" value=""></option>
+                                        <option title="ItemA" value="0">0.表示しない</option>
+                                        <option title="ItemB" value="1">1.AIS</option>
+                                        <option title="ItemB" value="2">2.V-CON</option>
+                                        <option title="ItemB" value="3">3.Goo</option>
+                                    </select>
+                                </td>
+                                <td width="8%" valign="top">
+                                    査定証No
+                                </td>
+                                <td width="50px">
+                                    <input type="checkbox" style="width: 20px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="23%" valign="top">
+                                    検収査定・仕入時＿削除確認者
+                                </td>
+                                <td width="50px">
+                                    <input type="checkbox" style="width: 20px;" />
+                                </td>
+                                <td width="15%" valign="top">
+                                    展示拠点＿削除確認者
+                                </td>
+                                <td width="50px">
+                                    <input type="checkbox" style="width: 20px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    自社名変
+                                </td>
+                                <td width="50px">
+                                    <input type="checkbox" style="width: 20px;" />
+                                </td>
+                                <td width="8%" valign="top">
+                                    営業情報入力
+                                </td>
+                                <td width="50px">
+                                    <input type="checkbox" style="width: 20px;" />
+                                </td>
+                                <td width="15%" valign="top">
+                                    Web掲載情報入力
+                                </td>
+                                <td width="50px">
+                                    <select name="new_listboxtest" tabindex="1110" class="ms-crm-SelectBox" id="Select2"
+                                        style="-ms-ime-mode: auto; width: 200px" attrpriv="7" attrname="new_listboxtest"
+                                        req="0" defaultselected="">
+                                        <option title="" selected="selected" value=""></option>
+                                        <option title="ItemA" value="0">0.未入力</option>
+                                        <option title="ItemB" value="1">1.入力中</option>
+                                        <option title="ItemB" value="2">2.入力済</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="8%" valign="top">
+                                    管理原価（From）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1130" class="ms-crm-Money ms-crm-Input" id="Text26" style="-ms-ime-mode: auto;
+                                        width: 200px" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                        value="￥9,999,999" attrpriv="7" attrname="new_currencycustomtest" req="0"
+                                        dt="money" acc="4" presrc="0" isbasecur="0">
+                                </td>
+                                <td width="8%" valign="top">
+                                    管理原価（To）
+                                </td>
+                                <td width="50px">
+                                    <input tabindex="1130" class="ms-crm-Money ms-crm-Input" id="Text27" style="-ms-ime-mode: auto;
+                                        width: 200px" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                        value="￥9,999,999" attrpriv="7" attrname="new_currencycustomtest" req="0"
+                                        dt="money" acc="4" presrc="0" isbasecur="0">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--在庫検索結果-->
+            <div class="content_wrap" id="t2_tc">
+                <div id="Div1" suffix="_tc">
+                    <ul id="Ul1">
+                        <button>
+                            在庫メンテナンス画面</button>
+                        <button>
+                            在庫画像取り込み画面</button>
+                        <button>
+                            在庫データエクスポート</button>
+                    </ul>
+                </div>
+                <div id="Div4" style="margin-left: 0px;">
+                    <div id="Div5" style="height: 30px; margin-bottom: 20px; margin-left: 0px;">
+                        <h2>
+                            在庫検索ビュー</h2>
+                    </div>
+                    <table class="opportunityprogress" style="height: auto; width: 1200px; margin-bottom: 10px;">
+                        <tr>
+                            <th width="100px;">
+                                中古車No
+                            </th>
+                            <th width="100px;">
+                                車台番号
+                            </th>
+                            <th width="100px;">
+                                メーカー名
+                            </th>
+                            <th width="100px;">
+                                通称車名
+                            </th>
+                            <th width="100px;">
+                                グレード名
+                            </th>
+                            <th width="100px;">
+                                ボディカラー
+                            </th>
+                            <th width="100px;">
+                                年式
+                            </th>
+                            <th width="100px;">
+                                走行距離
+                            </th>
+                            <th width="100px;">
+                                小売価格
+                            </th>
+                            <th width="100px;">
+                                認定U-car
+                            </th>
+                            <th width="100px;">
+                                修復歴
+                            </th>
+                            <th width="100px;">
+                                車両扱い
+                            </th>
+                            <th width="100px;">
+                                ブロック
+                            </th>
+                            <th width="100px;">
+                                地区
+                            </th>
+                            <th width="100px;">
+                                在庫拠点
+                            </th>
+                            <th width="100px;">
+                                在庫状態
+                            </th>
+                            <th width="100px;">
+                                仕入区分
+                            </th>
+                            <th width="100px;">
+                                仕入日
+                            </th>
+                            <th width="100px;">
+                                在庫拠点入庫日
+                            </th>
+                            <th width="100px;">
+                                仕訳区分
+                            </th>
+                            <th width="100px;">
+                                掲載状況
+                            </th>
+                            <th width="100px;">
+                                画像枚数
+                            </th>
+                            <th width="100px;">
+                                コメント数
+                            </th>
+                            <th width="100px;">
+                                車両状態評価書表示対象
+                            </th>
+                            <th width="100px;">
+                                査定証No
+                            </th>
+                            <th width="100px;">
+                                検収査定・仕入時＿削除確認者
+                            </th>
+                            <th width="100px;">
+                                展示拠点＿削除確認者
+                            </th>
+                            <th width="100px;">
+                                自社名変
+                            </th>
+                            <th width="100px;">
+                                営業情報入力
+                            </th>
+                            <th width="100px;">
+                                Web掲載情報入力
+                            </th>
+                            <th width="100px;">
+                                管理原価
+                            </th>
+                            <th width="100px;">
+                                親車登録予定日
+                            </th>
+                            <th width="100px;">
+                                親車登録実績日
+                            </th>
+                            <th width="100px;">
+                                親車納車予定日
+                            </th>
+                            <th width="100px;">
+                                親車納車実績日
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                未入力
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd</td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd</td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XXXXXXXX
+                            </td>
+                            <td>
+                                XXXXXXXXX-XXXXXXX
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮＮＮＮＮＮＮ
+                            </td>
+                            <td>
+                                平成 24
+                            </td>
+                            <td>
+                                999,999
+                            </td>
+                            <td>
+                                \999,999
+                            </td>
+                            <td>
+                                認定
+                            </td>
+                            <td>
+                                無
+                            </td>
+                            <td>
+                                商品車
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                在庫
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd</td>
+                            <td>
+                                直売
+                            </td>
+                            <td>
+                                掲載送信済
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                20
+                            </td>
+                            <td>
+                                1.AIS
+                            </td>
+                            <td>
+                                N999999999
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                ＮＮＮＮ
+                            </td>
+                            <td>
+                                済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                入力済
+                            </td>
+                            <td>
+                                \99,999,999
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                            <td>
+                                yyyy/mm/dd
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

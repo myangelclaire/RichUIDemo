@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/tabchange.js"></script>
+    <script src="/Scripts/dialog.js"></script>
+
+    <title>ショップオプション一覧</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/controls.css" />
+
+    <style>
+    </style>
+
+</head>
+<body style="margin-top:20px;margin-left:50px;">
+<!--ショップオプション一覧-->
+
+    <div id="quotation-category" style="height:40px;">
+        <h2>■ショップオプション一覧 
+            <span>
+                <input type="submit" value="一覧に追加" class="quotation_button" style="height:25px; width:100px; float:right;margin-right:120px;" />
+                <input type="submit" value="検索" class="quotation_button" style="height: 25px; width: 100px; float: right; " />
+            </span>
+        </h2>
+    </div>
+
+    <div id="optionsearchcondition" style="height:70px;">
+        <ul>
+            <li>
+                <label>カテゴリ</label>
+                <select name="subject" id="subject" style="width:150px;">
+                    <option value="1">エクステリア</option>
+                    <option value="2">インテリア</option>
+                    <option value="3">オーディオ</option>
+                    <option value="4">安全・快適</option>
+                    <option value="5">その他</option>
+                </select>
+
+                <select name="subject" id="subject" style="margin-left:10px; width:250px;">
+                    <option value="1">エアロパーツ</option>
+                    <option value="2">アルミホイール</option>
+                </select>
+
+                <label>用品名（カナ）</label>
+                <input type="text" style=" width:150px;" />
+
+                <label>過去分から検索</label>
+                <input type="checkbox" style="width:20px;" />
+
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <label>品番</label>
+                <input type="number" />
+
+                <label>MEDALコード</label>
+                <input type="number" />
+
+                <label>写真番号</label>
+                <input type="number" />
+            </li>
+        </ul>
+    </div>
+
+    <div id="shopoptionlist" style="height:280px;width:1100px;">
+        <table class="quotaiontable" style="margin-left:40px;">
+            <tr>
+                <th></th>
+                <th scope="col" style="width:320px;">用品名</th>
+                <th scope="col" style="width:120px;">MEDALコード</th>
+                <th scope="col" style="width:120px;">品番</th>
+                <th scope="col" style="width:120px;">写真番号</th>
+                <th scope="col" style="width:120px;">価格</th>
+                <th scope="col" style="width:120px;">取付費込価格</th>
+                <th scope="col" style="width:100px;">在庫状況</th>
+            </tr>
+            <tr>
+                <td><input type="radio"  name="rd1"/></td>
+                <td style="text-align: left;">オートエクゼ　アクセラ　エアロ（BK系）フロントバンパー</td>
+                <td>15320</td>
+                <td>AER12102</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥58,320</td>
+                <td style="text-align:right;">￥61,200</td>
+                <td style="text-align: center;">欠</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="rd1"/></td>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="shop-option-area">
+    <div style="height:40px;">
+        <h2>付随オプション一覧
+        </h2>
+    </div>
+     <div id="quotation-detail" style="height:180px">
+            <table class="quotaiontable">
+            <tr>
+                <th scope="col" style="width:300px;">用品名</th>
+                <th scope="col" style="width:100px;">MEDALコード</th>
+                <th scope="col" style="width:80px;">品番</th>
+                <th scope="col" style="width:80px;">写真番号</th>
+                <th scope="col" style="width:80px;">価格</th>
+                <th scope="col" style="width:100px;">取付費込価格</th>
+                <th scope="col" style="width:50px;">在庫状況</th>
+            </tr>
+            <tr>
+                <td style="text-align: left;">オートエクゼ　アクセラ　エアロ（BK系）フロントバンパー</td>
+                <td>15320</td>
+                <td>AER12102</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥58,320</td>
+                <td style="text-align:right;">￥61,200</td>
+                <td style="text-align: center;">欠</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">XXXXXXXXXXXXXX</td>
+                <td>00000</td>
+                <td>XXX00000</td>
+                <td>XXXXXX</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td style="text-align:right;">￥000,000</td>
+                <td></td>
+            </tr>
+            </table>
+        </div>
+        </div>          
+   
+</body>
+</html>

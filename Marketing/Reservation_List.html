@@ -1,0 +1,703 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/tabchange.js"></script>
+    <script src="../Scripts/dialog.js"></script>
+
+    <!--Grid Table-->
+    <script type="text/javascript" src="../Scripts/jquery-1.5.2.min.js"></script>
+    <script type="text/javascript" src="../Scripts/formsample/jquery.css3gridtable.js"></script>
+    <title>来店予約登録＆予約一覧（カレンダー）</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/reservation.css" />
+
+    <!--CSS-->
+    <!--
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/MsAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/accounting.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    -->
+    <style >
+    </style>
+
+</head>
+<body>  
+    <div style="padding:10px 10px 10px 10px; width:1240px; height:728px;" > 
+        <div id="targeting" style="margin-bottom:20px;">
+            <table width="100%">
+                <tr align="right">
+                    <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td16">
+                        <button style="width: 120px" tabindex="5">活動結果登録</button>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="target-list" style="height: 200px; margin: 10px 0px; overflow-y: scroll;">
+                <table class="grid" >
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:3%;"></th>
+                            <th scope="col" style="width:15%;">お客様名</th>
+                            <th scope="col" style="width:10%;">ご提案種別</th>
+                            <th scope="col" style="width:10%;">対象月</th>
+                            <th scope="col" style="width:15%;">電話番号</th>
+                            <th scope="col" style="width:7%;">連絡手段</th>
+                            <th scope="col" style="width:10%;">連絡可能曜日</th>
+                            <th scope="col" style="width:10%;">連絡可能時間帯</th>
+                            <th scope="col" style="width:10%;">前回来店日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                            <td style="width:15%; text-decoration:underline;">山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)</td>
+                            <td style="width:10%;">車販</td>
+                            <td style="width:10%;">14/06</td>
+                            <td style="width:15%;">090-XXXX-XXXX</td>
+                            <td style="width:7%;">電話</td>
+                            <td style="width:10%;">平日</td>
+                            <td style="width:10%;">18:00～20:00</td>
+                            <td style="width:10%;">2014/04/01</td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                            <td style="width:15%; text-decoration:underline;">山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)</td>
+                            <td style="width:10%;">車検</td>
+                            <td style="width:10%;">14/08</td>
+                            <td style="width:15%;">090-XXXX-XXXX</td>
+                            <td style="width:7%;">電話</td>
+                            <td style="width:10%;">平日</td>
+                            <td style="width:10%;">18:00～20:00</td>
+                            <td style="width:10%;">2014/04/01</td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                            <td style="width:15%; text-decoration:underline;">山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)</td>
+                            <td style="width:10%;">保険</td>
+                            <td style="width:10%;">14/10</td>
+                            <td style="width:15%;">090-XXXX-XXXX</td>
+                            <td style="width:7%;">電話</td>
+                            <td style="width:10%;">平日</td>
+                            <td style="width:10%;">18:00～20:00</td>
+                            <td style="width:10%;">2014/04/01</td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                            <td style="width:15%; text-decoration:underline;">村山　花子(ﾑﾗﾔﾏ ﾊﾅｺ)</td>
+                            <td style="width:10%;">車販</td>
+                            <td style="width:10%;">14/06</td>
+                            <td style="width:15%;">090-XXXX-XXXX</td>
+                            <td style="width:7%;">電話</td>
+                            <td style="width:10%;">平日</td>
+                            <td style="width:10%;">18:00～20:00</td>
+                            <td style="width:10%;">2014/04/01</td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;"><input type="checkbox" style="width:20px;" /></td>
+                            <td style="width:15%; text-decoration:underline;">村山　花子(ﾑﾗﾔﾏ ﾊﾅｺ)</td>
+                            <td style="width:10%;">点検</td>
+                            <td style="width:10%;">14/06</td>
+                            <td style="width:15%;">090-XXXX-XXXX</td>
+                            <td style="width:7%;">電話</td>
+                            <td style="width:10%;">平日</td>
+                            <td style="width:10%;">18:00～20:00</td>
+                            <td style="width:10%;">2014/04/01</td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div id="reservation">
+            <table width="100%">
+                <tr align="right">
+                    <td class="FormSection_CellPadding ms-crm-Field-Normal">
+                        <button style="width: 120px" tabindex="5">追加</button>
+                        &nbsp;
+                        <button style="width: 120px" tabindex="5">保存</button>
+                    </td>
+                </tr>
+            </table>
+            <div id="appointment-list" style="height: 300px; margin: 5px 0px; overflow-y: scroll;">
+                <table class="grid"  style="height:300px;">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:3%;"></th>
+                            <th scope="col" style="width:8%;">来店予定日時</th>
+                            <th scope="col" style="width:10%;">お客様名</th>
+                            <th scope="col" style="width:5%;">ご使用車</th>
+                            <th scope="col" style="width:12%;">登録番号</th>
+                            <th scope="col" style="width:6%;">ご来店目的</th>
+                            <th scope="col" style="width:5%;">担当領域</th>
+                            <th scope="col" style="width:6%;">商談No.</th>
+                            <th scope="col" style="width:6%;">担当者</th>
+                            <th scope="col" style="width:3%;">手段</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:3%;">
+                                <input type="checkbox" style="width:20px;" />
+                            </td>
+                            <td style="width:10%;">
+                                <input type="datetime" value="2014/02/01 11:00" style="width:120px;" />
+                            </td>
+                            <td style="width:10%; text-decoration:underline;">
+                                <input type="text" value="山田 太郎(ﾔﾏﾀﾞ ﾀﾛｳ)" style="width:160px;">
+                            </td>
+                            <td style="width:5%;">
+                                <input type="text" value="デミオ">
+                            </td>
+                            <td style="width:12%;">
+                                <input type="text" value="尾張小牧" style="width:60px;">
+                                <input type="text" value="50" style="width:30px;">
+                                <input type="text" value="ん" style="width:30px;">
+                                <input type="text" value="1111" style="width:50px;">
+                            </td>
+                            <td style="width:6%;">
+                                <select>
+                                    <option selected="selected">お車のご検討</option>
+                                </select>
+                            </td>
+                            <td style="width:5%;">
+                                <select>
+                                    <option selected="selected" style="width:80px;">新車</option>
+                                </select>
+                            </td>
+                            <td style="width: 6%; text-decoration: underline;">
+                                <input type="text" value="OP-111111">
+                            </td>
+                            <td style="width:6%; text-decoration: underline;">
+                                <input type="text" value="松田 デミ男">
+                            </td>
+                            <td style="width:3%;">
+                                <select>
+                                    <option selected="selected">TC</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

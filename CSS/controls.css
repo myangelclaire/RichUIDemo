@@ -1,0 +1,966 @@
+body[contentEditable=true] p {
+	margin: 12px 0px;
+}
+body[contentEditable=true] div {
+	margin: 12px 0px;
+}
+body[contentEditable=true] blockquote {
+	margin-top: 0px; margin-bottom: 0px;
+}
+textarea {
+	width: 100%; overflow: auto; resize: none;
+}
+input {
+	width: 100%;
+}
+input.radio {
+	height: 20px;
+}
+textarea.ms-crm-ReadOnly {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+input[type=text].ms-crm-ReadOnly {
+	margin: 0px; padding: 0px; border: 0px currentColor;
+}
+.ms-crm-Input {
+	margin: 0px; padding: 0px; border: 0px;
+}
+input.ms-crm-ReadOnlyDateTime {
+	margin: 0px; padding: 0px; border: 0px currentColor; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);
+}
+.ms-crm-hidden-container {
+	display: none;
+}
+.ms-crm-Input-Container {
+	border-width: 1px; border-style: solid; padding: 1px; background-color: rgb(255, 255, 255);
+}
+.focus.ms-crm-Input-Container {
+	outline-width: 5px;
+}
+.ms-crm-Input:focus {
+	
+}
+.ms-crm-DateTime-Container-Input {
+	padding-left: 5px;
+}
+table.ms-crm-DateTime .ms-crm-DateTime-Container {
+	overflow: hidden;
+}
+.ms-crm-Input-Container-ReadOnly {
+	border-top-color: rgb(105, 105, 105); border-left-color: rgb(105, 105, 105); border-top-width: 2px; border-left-width: 2px;
+}
+td.DateTimeUI_RenderDateControl_td textarea.ms-crm-ReadOnly {
+	width: 90%; padding-bottom: 2px; margin-right: 4px;
+}
+td.DateTimeUI_RenderDateControl_td input.ms-crm-ReadOnly {
+	width: 90%; padding-bottom: 2px; margin-right: 4px;
+}
+td.DateTimeUI_RenderDateControl_td .ms-crm-ReadOnly {
+	width: 90%; padding-bottom: 2px; margin-right: 4px;
+}
+.ms-crm-IE7-Texarea-Container {
+	height: 100%; position: relative;
+}
+.ms-crm-IE7-Texarea {
+	padding: 0px; left: 0px; top: 0px; right: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-IE7-td-Texarea-Container {
+	left: 3px; top: 3px; right: 2px; bottom: 2px; position: absolute;
+}
+input.ms-crm-RadioButton {
+	border: 0px currentColor; width: 15px; margin-top: 0px; margin-right: 3px; margin-left: 8px; vertical-align: middle; cursor: pointer;
+}
+div.ms-crm-RadioButton {
+	
+}
+input.ms-crm-Email-Address {
+	text-decoration: underline; direction: ltr;
+}
+input.ms-crm-LiveId-Email-Address {
+	text-decoration: underline; direction: ltr;
+}
+input.ms-crm-Ticker {
+	color: rgb(0, 0, 255); text-decoration: underline;
+}
+input.ms-crm-CheckBox {
+	width: 16px; margin-top: 1px;
+}
+input.ms-crm-Url {
+	text-decoration: underline;
+}
+input.ms-crm-Number {
+	
+}
+input.ms-crm-Money {
+	border-left-width: 0px; direction: ltr;
+}
+button.ms-crm-Button {
+	width: auto; overflow: visible; white-space: nowrap; min-width: 84px;
+}
+table.ms-crm-DateTime {
+	
+}
+table.ms-crm-DateTime tr {
+	vertical-align: middle;
+}
+table.ms-crm-Money {
+	
+}
+input.ms-crm-Text {
+	
+}
+div.ms-crm-IL-MRU-Header {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+div.ms-crm-IL-Header {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+div.ms-crm-IL-MRU-Footer {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+.ms-crm-Inline-Value {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+.ms-crm-Inline-Edit input.ms-crm-Input {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+.emptyValue.processStep .bit .ms-crm-Inline-Value {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+.ms-crm-Inline-Validation {
+	font-family: Segoe UI, Arial, sans-serif;
+}
+div.ms-crm-IL-MRU-Header {
+	height: 11px; color: rgb(102, 102, 102); padding-top: 5px; padding-bottom: 5px; padding-left: 6px; font-size: 11px; border-top-color: rgb(198, 198, 198); border-right-color: rgb(198, 198, 198); border-left-color: rgb(198, 198, 198); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-Header {
+	height: 11px; color: rgb(102, 102, 102); padding-top: 5px; padding-bottom: 5px; padding-left: 6px; font-size: 11px; border-top-color: rgb(198, 198, 198); border-right-color: rgb(198, 198, 198); border-left-color: rgb(198, 198, 198); border-top-width: 1px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-MRU-Footer {
+	height: 11px; text-align: center; color: rgb(102, 102, 102); padding-top: 5px; padding-bottom: 5px; font-size: 11px; border-right-color: rgb(198, 198, 198); border-left-color: rgb(198, 198, 198); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-IL-Footer {
+	padding: 0px 6px; height: 22px; border-right-color: rgb(198, 198, 198); border-bottom-color: rgb(198, 198, 198); border-left-color: rgb(198, 198, 198); border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; background-color: rgb(255, 255, 255);
+}
+ul.ms-crm-InlineLookupEdit {
+	width: 100%; text-align: left; font-size: 12px; float: left; -ms-overflow-x: hidden;
+}
+td.ms-crm-InlineLookupEdit-Box {
+	width: 6px;
+}
+img.ms-crm-InlineLookupEdit {
+	height: 18px !important; padding-top: 1px; padding-bottom: 1px; vertical-align: middle; border-top-color: rgb(198, 198, 198); border-right-color: rgb(198, 198, 198); border-bottom-color: rgb(198, 198, 198); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; cursor: pointer;
+}
+div.ms-crm-InlineLookupEdit {
+	height: 15px !important; padding-top: 2px; padding-bottom: 3px; padding-left: 5px; -ms-overflow-y: hidden !important;
+}
+input.ms-crm-InlineLookupEdit {
+	height: 15px !important; margin-left: -1px;
+}
+.processStepValue div.ms-crm-InlineLookupEdit {
+	height: 16px !important; padding-top: 1px; padding-bottom: 1px; -ms-overflow-y: hidden !important;
+}
+.processStepValue input.ms-crm-InlineLookupEdit {
+	height: 16px !important;
+}
+.processStepValue img.ms-crm-InlineLookupEdit {
+	height: 18px !important; padding-top: 0px; padding-bottom: 0px;
+}
+div.ms-crm-InlineLookup-FooterSection-TopResults {
+	padding: 4px 0px; width: 45%; text-align: left; color: rgb(68, 68, 68); float: left;
+}
+div.ms-crm-InlineLookup-FooterSection-AddNew {
+	padding: 4px 2px 0px 4px; width: 45%; text-align: right; float: right;
+}
+img.ms-crm-InlineLookup-FooterSection-AddImage {
+	width: 10px; height: 10px; padding-right: 4px;
+}
+a.ms-crm-InlineLookup-FooterSection-AddAnchor {
+	color: rgb(38, 38, 38);
+}
+a.ms-crm-InlineLookup-FooterSection-AddAnchor-Selected {
+	background-color: rgb(215, 235, 249);
+}
+span.ms-crm-Lookup-Item {
+	margin-top: -1px; margin-right: 1px; margin-left: 1px; cursor: pointer;
+}
+a.ms-crm-List-Link:hover {
+	text-decoration: underline;
+}
+.ms-crm-SubGrid-InlineEdit-Anchor {
+	text-decoration: none;
+}
+.ms-crm-SubGrid-InlineEdit-Span {
+	text-decoration: none;
+}
+div.ms-crm-SubGrid-InlineEdit {
+	margin: 0px; padding: 0px; position: relative;
+}
+div.ms-crm-SubGrid-InlineEdit-Nobr-Div {
+	overflow: hidden; -ms-text-overflow: ellipsis;
+}
+div.ms-crm-SubGrid-InlineEdit:hover {
+	background-color: white;
+}
+span.ms-crm-Lookup-DialogItem {
+	color: rgb(0, 0, 0); margin-top: -1px; margin-right: 1px; margin-left: 1px; cursor: pointer;
+}
+span.ms-crm-Lookup-SelectedDialogItem {
+	color: rgb(0, 0, 0); margin-top: -1px; margin-right: 1px; margin-left: 1px; cursor: pointer; background-color: rgb(167, 205, 240);
+}
+span.ms-crm-Lookup-SelectedDialogItem-NoFocus {
+	color: rgb(0, 0, 0); margin-top: -1px; margin-right: 1px; margin-left: 1px; cursor: pointer; background-color: rgb(205, 205, 205);
+}
+span.ms-crm-Lookup-Item-NonEntity {
+	color: rgb(0, 0, 0); padding-left: 1px; text-decoration: none; margin-top: -1px; cursor: default; -ms-word-break: break-all;
+}
+span.ms-crm-Lookup-Ambiguous {
+	color: rgb(255, 0, 0); text-decoration: underline; cursor: pointer;
+}
+span.ms-crm-Lookup-PartyItem-NoAddress {
+	color: rgb(255, 0, 0); text-decoration: underline; cursor: pointer;
+}
+span.ms-crm-Lookup-PartyItem-Unresolved {
+	color: rgb(255, 0, 0); text-decoration: underline; cursor: pointer;
+}
+span.ms-crm-Lookup-Unresolved {
+	color: rgb(255, 0, 0); text-decoration: underline; cursor: pointer;
+}
+span.ms-crm-Inline-LookupItem-Ambiguous-Name {
+	text-decoration: underline;
+}
+img.ms-crm-Lookup-Item {
+	margin-right: 5px; margin-left: 2px; vertical-align: middle;
+}
+.partylist div.ms-crm-InlineLookupEdit {
+	-ms-overflow-y: auto !important;
+}
+.partylist img.ms-crm-Lookup-Item {
+	margin-top: -4px;
+}
+img.ms-crm-Lookup-PresenceItem {
+	width: 12px; height: 12px; margin-top: 1px; margin-right: 5px; margin-left: 2px; vertical-align: middle;
+}
+div.ms-crm-FloatLookup {
+	height: 50px !important; position: absolute;
+}
+input.ms-crm-LookupNormal {
+	margin-top: -1px; margin-bottom: -1px;
+}
+div.ms-crm-Lookup {
+	background: window; width: 100%; height: 18px; -ms-overflow-x: hidden; -ms-overflow-y: auto; -ms-word-wrap: break-word;
+}
+div.ms-crm-Lookup-Party {
+	background: window; width: 100%; height: 20px; padding-top: 2px; -ms-overflow-y: auto; -ms-word-wrap: break-word;
+}
+div.ms-crm-Lookup-DisplayOnly {
+	height: 80px;
+}
+table.ms-crm-Lookup {
+	
+}
+div.ms-crm-ReadOnly {
+	border-color: rgb(197, 197, 197); width: 100%; height: 18px; -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-Lookup-Required {
+	
+}
+div.ms-crm-Lookup-Recommended {
+	
+}
+img.ms-crm-Lookup {
+	cursor: pointer;
+}
+img.ms-crm-Lookup-Party {
+	cursor: pointer;
+}
+img.ms-crm-Lookup-TransactionCurrency {
+	cursor: pointer;
+}
+img.ms-crm-DateTime {
+	cursor: pointer;
+}
+iframe.ms-crm-Custom {
+	border-width: 1px; border-style: solid; width: 99.5%; height: 100%;
+}
+iframe.ms-crm-Email-Body {
+	border-width: 0px; width: 100%; height: 100%; overflow: auto; background-color: rgb(255, 255, 255);
+}
+td.ms-crm-Email-Body {
+	border-width: 1px; border-style: solid;
+}
+table.ms-crm-Email-Body {
+	
+}
+table.ms-crm-Email-Body-Error {
+	border: 1px solid rgb(197, 197, 197); width: 100%; padding-top: 20px; padding-bottom: 20px; table-layout: fixed; background-color: rgb(255, 255, 174);
+}
+span.ms-crm-DataSlugBody {
+	border: 1px solid rgb(197, 197, 197); -ms-overflow-y: auto; background-color: rgb(255, 255, 255);
+}
+span.ms-crm-DataSlugBodySingleSlug {
+	border: 1px solid rgb(197, 197, 197); overflow: hidden; background-color: rgb(255, 255, 255);
+}
+span.ms-crm-DataSlug {
+	height: 15px; overflow: hidden; padding-top: 1px; padding-right: 2px; padding-left: 2px; margin-bottom: 0px; vertical-align: middle; background-color: rgb(255, 255, 51);
+}
+span.ms-crm-DataSlug:focus {
+	outline: rgb(241, 202, 126) solid 2px;
+}
+span.ms-crm-DataSlugBody p {
+	margin: 0px;
+}
+td.ms-crm-Money-CurrencySymbol {
+	border-width: 1px 0px 1px 1px; border-style: solid inset solid solid; border-color: rgb(171, 173, 179) rgb(226, 227, 234) rgb(226, 227, 234); width: 1px; text-align: center; white-space: nowrap;
+}
+td.ms-crm-CurrencySymbol-Refresh {
+	width: 1px; text-align: center; padding-right: 2px; padding-left: 2px; white-space: nowrap; -ms-word-wrap: normal;
+}
+.ms-crm-CurrencyTable-Refresh {
+	width: 100%; white-space: nowrap;
+}
+.ms-crm-Money .ms-crm-Input-Container {
+	padding-left: 0px; border-left-width: 0px;
+}
+span.ms-crm-Money-CurrencySymbol {
+	padding-right: 1px;
+}
+div.ms-crm-CheckBoxList {
+	width: 100%; height: 100%; overflow: auto;
+}
+div.ms-crm-NextButton {
+	padding: 5px;
+}
+img.ms-crm-NextButton {
+	vertical-align: middle;
+}
+span.ms-crm-NextButton {
+	color: rgb(21, 66, 139); padding-left: 10px;
+}
+a.ms-crm-NextButton-Disabled {
+	cursor: default;
+}
+table.ms-crm-ReportControl {
+	border-width: 2px 1px 1px; border-style: solid; border-color: rgb(104, 147, 207) rgb(104, 147, 207) rgb(102, 153, 204); background-color: rgb(255, 255, 255);
+}
+button#btnRemoveValue {
+	width: auto;
+}
+.crm-divLeft {
+	width: 48%; text-align: left; padding-top: 1%; padding-bottom: 1%; padding-left: 2%; float: left;
+}
+.crm-divRight {
+	width: 48%; text-align: left; padding-top: 1%; padding-bottom: 1%; padding-left: 2%; float: right;
+}
+input[type='text']:disabled {
+	color: rgb(102, 102, 102);
+}
+textarea:disabled {
+	color: rgb(102, 102, 102);
+}
+select:disabled {
+	color: rgb(102, 102, 102);
+}
+option:disabled {
+	color: rgb(102, 102, 102);
+}
+input:disabled.ms-crm-SelectBox {
+	color: rgb(102, 102, 102);
+}
+td.AppAttachment_Render_td6 {
+	text-align: left; padding-left: 3px;
+}
+td.AppAttachment_Render_td5 {
+	text-align: left; padding-left: 3px;
+}
+.RTE_list_style_position {
+	list-style-position: inside;
+}
+.RTE_list_style_position li > :first-child {
+	display: inline;
+}
+input.ms-crm-ReadOnly.ms-crm-Url {
+	color: rgb(102, 102, 102);
+}
+input.ms-crm-ReadOnly.ms-crm-Email-Address {
+	color: rgb(102, 102, 102);
+}
+input.ms-crm-Phone {
+	border-left-width: 0px; direction: ltr;
+}
+.ms-crm-Inline-Chrome {
+	width: 100%; position: relative;
+}
+.ms-crm-Inline-Chrome:focus {
+	
+}
+.ms-crm-Inline-Chrome *:focus {
+	
+}
+.ms-crm-Inline-Lookup.ms-crm-Inline-Edit {
+	margin-right: -1px;
+}
+#lost-competitor .ms-crm-Inline-Lookup.ms-crm-Inline-Edit {
+	margin-right: 6px;
+}
+#_lost_revenue .ms-crm-Inline-Currency.ms-crm-Inline-Edit {
+	margin-right: 14px;
+}
+#_won_revenue .ms-crm-Inline-Currency.ms-crm-Inline-Edit {
+	margin-right: 14px;
+}
+#_lost_closedate .ms-crm-Inline-Edit {
+	margin-right: 7px;
+}
+#_won_closedate .ms-crm-Inline-Edit {
+	margin-right: 7px;
+}
+#_lost_statusreason .ms-crm-Inline-Edit {
+	margin-right: 9px;
+}
+.ms-crm-Inline-DateTimeSpacer {
+	padding-right: 9px;
+}
+.processStepValue .ms-crm-Inline-Value {
+	padding-top: 1px; padding-bottom: 1px;
+}
+.processStepValue .ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	padding-top: 1px; padding-bottom: 1px;
+}
+.processStepValue .ms-crm-Inline-Value span.ms-crm-Lookup-Item-Read {
+	height: 16px;
+}
+.processStepValue .ntext .ms-crm-Inline-Value {
+	height: 16px;
+}
+.processStepValue .ms-crm-Inline-Value span.ms-crm-Lookup-Item-Read img {
+	margin-top: -1px;
+}
+.processStepValue .ms-crm-Inline-Edit ul.ms-crm-InlineLookupEdit img {
+	margin-top: -1px;
+}
+.ms-crm-Inline-Value {
+	padding-top: 2px; padding-right: 0px; padding-bottom: 3px;
+}
+.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	padding-top: 2px; padding-right: 0px; padding-bottom: 3px;
+}
+.ms-crm-Inline-Value {
+	text-align: left; overflow: hidden; padding-left: 0px; margin-left: 23px; white-space: nowrap;
+}
+.ntext .ms-crm-Inline-Value {
+	white-space: normal;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-Value {
+	margin-left: 0px;
+}
+.ms-crm-Inline-EditHintState.ms-crm-Inline-Value {
+	box-shadow: 1px 1px 2px #ccc;
+}
+.ms-crm-Inline-EditHintState.ms-crm-Inline-Value {
+	padding-right: 5px; padding-left: 5px;
+}
+.ms-crm-Inline-Value a {
+	display: inline-block;
+}
+.ms-crm-Inline-Value span {
+	display: inline-block;
+}
+.ms-crm-Inline-Edit {
+	margin-right: 7px; margin-left: 23px;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-OptionSet.ms-crm-Inline-Edit {
+	margin-left: 0px;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-Edit {
+	margin-left: 0px;
+}
+.datetime .ms-crm-Inline-Edit {
+	margin-right: 0px;
+}
+.ms-crm-Duration .ms-crm-Inline-Edit {
+	margin-right: 0px;
+}
+.ms-crm-QuickAdd-FlyOut-Lookup-Control {
+	margin-left: 0px;
+}
+.ms-crm-Inline-Value {
+	color: rgb(0, 0, 0); font-size: 12px; font-weight: 500;
+}
+.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	color: rgb(0, 0, 0); font-size: 12px; font-weight: 500;
+}
+.ms-crm-Inline-Edit input.ms-crm-Input {
+	color: rgb(0, 0, 0); font-size: 12px; font-weight: 500;
+}
+.ms-crm-Inline-Lookup.ms-crm-Inline-Value span.ms-crm-Lookup-Item-Read {
+	color: rgb(0, 0, 0);
+}
+.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	padding-left: 5px;
+}
+.ms-crm-Inline-OptionSet.ms-crm-Inline-Edit {
+	height: 23px; margin-right: 2px; margin-left: 21px;
+}
+:root .ms-crm-Inline-OptionSet.ms-crm-Inline-Edit {
+	margin-right: 1px;
+}
+div.ms-crm-FieldLabel-LeftAlign {
+	color: rgb(68, 68, 68);
+}
+.ms-crm-InlineEditLabel {
+	color: rgb(102, 102, 102); overflow: hidden; display: block; white-space: nowrap; position: relative;
+}
+.ms-crm-InlineEditLabel .ms-crm-Inline-RequiredLevel {
+	position: absolute; z-index: 10;
+}
+.ms-crm-Inline-Value {
+	border: 1px solid transparent;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Value {
+	margin: 0px 6px; padding: 0px; height: 20px; color: rgb(0, 0, 0); overflow: hidden; font-size: 15px;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Value .ms-crm-Lookup-Item-Read img.ms-crm-Lookup-Item {
+	display: none;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Value .ms-crm-Lookup-Item-Read {
+	display: inline-block;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit .Lookup_RenderButton_td img {
+	background-color: rgb(255, 255, 255);
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin: 2px 7px 0px 2px;
+}
+:root .ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin: 1px 7px 0px 2px;
+}
+.datetime .ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin: -1px 2px 0px;
+}
+.ms-crm-Inline-Lookup.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin: -2px 1px 0px 3px;
+}
+.ms-crm-Inline-OptionSet.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin: 0px 2px;
+}
+.noScroll.ms-crm-Inline-OptionSet.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	overflow: visible;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit select.ms-crm-SelectBox {
+	margin: 0px;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	border: currentColor; padding-top: 1px; padding-bottom: 2px;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit input.ms-crm-InlineLookupEdit.ms-crm-InlineInput {
+	padding: 3px 2px 2px; border: 1px solid rgb(204, 204, 204);
+}
+.ms-crm-Inline-HasError.ms-crm-HeaderTile.ms-crm-Inline-Value {
+	margin-left: 23px;
+}
+.ms-crm-Inline-HasError.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin-left: 23px;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-HasError.ms-crm-Inline-Value {
+	margin-left: 23px;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-HasError.ms-crm-Inline-Edit {
+	margin-left: 23px;
+}
+.ms-crm-Inline-DynamicGutter .ms-crm-Inline-Locked.ms-crm-Inline-Value {
+	margin-left: 23px;
+}
+.ms-crm-Inline-Locked.ms-crm-HeaderTile.ms-crm-Inline-Value {
+	margin-left: 23px;
+}
+.ms-crm-Inline-HasError.ms-crm-Inline-Currency.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin-left: 23px;
+}
+.datetime .ms-crm-Inline-HasError.ms-crm-HeaderTile.ms-crm-Inline-Edit {
+	margin-left: 23px;
+}
+.ms-crm-HeaderTileLabel {
+	margin: 4px 7px 0px; color: rgb(68, 68, 68); font-size: 12px;
+}
+.ms-crm-HeaderTilesWrapperElement .ms-crm-HeaderTitleShowLabel {
+	margin-top: 20px;
+}
+textarea.ms-crm-InlineInput {
+	margin: 0px; padding: 2px 5px 3px; border: 1px solid rgb(204, 204, 204); width: auto; font-size: 12px; font-weight: 500; display: block;
+}
+.ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	margin: 0px; border: 1px solid rgb(204, 204, 204);
+}
+.ms-crm-InlineInput::-ms-clear {
+	display: none;
+}
+.ms-crm-Inline-Edit select.ms-crm-SelectBox {
+	margin: 1px 0px 0px 2px; border: 1px solid rgb(204, 204, 204); width: 100%; font-size: 12px;
+}
+.ms-crm-Inline-EmptyValue {
+	font-weight: 500;
+}
+.emptyValue.processStep .bit .ms-crm-Inline-Value {
+	font-weight: 500;
+}
+.ms-crm-Inline-EmptyValue {
+	color: rgb(0, 0, 0); font-size: 12px;
+}
+.ms-crm-HeaderTileElement .ms-crm-Inline-EmptyValue {
+	color: rgb(68, 68, 68); font-style: normal;
+}
+.processStepValue .ms-crm-Inline-EmptyValue {
+	color: rgb(17, 96, 183); text-transform: lowercase; font-style: italic;
+}
+.disabled .processStepValue .ms-crm-Inline-EmptyValue {
+	color: rgb(177, 177, 177); font-style: normal;
+}
+.processStepValue .deactivated .ms-crm-Inline-EmptyValue {
+	color: rgb(177, 177, 177); font-style: normal;
+}
+.ms-crm-Inline-EditHintState {
+	border: 1px solid rgb(204, 204, 204); background-color: rgb(243, 241, 241);
+}
+.ms-crm-Inline-toggleclickState {
+	border: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255);
+}
+.ms-crm-Form-SubGrid-Layout-Lite .ms-crm-Inline-Validation {
+	margin-top: 9px; position: static;
+}
+.ms-crm-Inline-Validation {
+	border: 1px solid rgb(214, 214, 214); width: 300px; color: rgb(38, 38, 38); padding-top: 2px; padding-bottom: 2px; padding-left: 5px; font-size: 12px; position: absolute; z-index: 1500; background-color: rgb(255, 255, 255);
+}
+.ms-crm-Inline-WarningIcon {
+	background: none; margin: 0px; padding: 0px; position: absolute; z-index: 10;
+}
+.ms-crm-Inline-LockIcon {
+	background: none; margin: 0px; padding: 0px; position: absolute; z-index: 10;
+}
+.ms-crm-Inline-WarningIcon {
+	left: 5px; top: 3px; height: 16px;
+}
+.processStepValue .ms-crm-Inline-WarningIcon {
+	bottom: -1px;
+}
+.ms-crm-Inline-LockIcon {
+	left: 9px; top: 3px;
+}
+#accountcquickform_name .ms-crm-Inline-LockIcon {
+	top: 6px;
+}
+#contactcquickform_fullname .ms-crm-Inline-LockIcon {
+	top: 6px;
+}
+.processStepValue .ms-crm-Inline-LockIcon {
+	bottom: 0px;
+}
+.ms-crm-HeaderTileElement .ms-crm-Inline-WarningIcon {
+	left: 5px; bottom: 0px;
+}
+.ms-crm-HeaderTileElement .ms-crm-Inline-LockIcon {
+	left: 7px; bottom: 0px;
+}
+.ms-crm-Inline-ErrorArrowIcon {
+	width: 12px; height: 11px; margin-top: 4px; position: absolute; z-index: 1500; background-color: transparent;
+}
+.ms-crm-VerticalFlip {
+	transform: scaleY(-1); -webkit-transform: scaleY(-1); -moz-transform: scaleY(-1); -o-transform: scaleY(-1);
+}
+.ms-crm-VerticalFlipMargin {
+	margin-top: -1px;
+}
+.ms-crm-Inline-ErrorArrowIcon img {
+	display: block;
+}
+@media screen and (max-width:769px)
+{
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTileElementPosition1.ms-crm-HeaderTileElement {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTileElementPosition2.ms-crm-HeaderTileElement {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTileElementPosition3.ms-crm-HeaderTileElement {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .headertile-collapse-button {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	width: 560px;
+}
+.ms-crm-HeaderTileTabletContainer .collapsed.ms-crm-HeaderTilesTitleWrapperElement {
+	width: 180px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement {
+	width: 147px;
+}
+}
+@media screen and (max-width:1025px) and (min-width:769px)
+{
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTileElementPosition3.ms-crm-HeaderTileElement {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .headertile-collapse-button {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	width: 570px;
+}
+.ms-crm-HeaderTileTabletContainer .collapsed.ms-crm-HeaderTilesTitleWrapperElement {
+	width: 400px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement {
+	width: 395px;
+}
+}
+@media screen and (max-width:1025px)
+{
+.ms-crm-HeaderTileTabletContainer .collapsed .headertile-collapse-button {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .expanded .headertile-collapse-button {
+	display: block;
+}
+.ms-crm-HeaderTileTabletContainer .collapsed .headertile-expand-button {
+	display: block;
+}
+.ms-crm-HeaderTileTabletContainer .expanded .headertile-expand-button {
+	display: none;
+}
+}
+@media screen and (min-width:1025px)
+{
+.ms-crm-HeaderTileTabletContainer .headertile-collapse-button {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .headertile-expand-button {
+	display: none;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	width: 600px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement {
+	width: 519px;
+}
+}
+@media screen and (min-width:1536px)
+{
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	width: 950px;
+}
+}
+.ms-crm-HeaderTileTabletContainer {
+	overflow: hidden;
+}
+.ms-crm-HeaderTileTabletContainer .expanded .ms-crm-HeaderTileElementPosition1.ms-crm-HeaderTileElement {
+	display: block;
+}
+.ms-crm-HeaderTileTabletContainer .expanded .ms-crm-HeaderTileElementPosition2.ms-crm-HeaderTileElement {
+	display: block;
+}
+.ms-crm-HeaderTileTabletContainer .expanded .ms-crm-HeaderTileElementPosition3.ms-crm-HeaderTileElement {
+	display: block;
+}
+.ms-crm-HeaderTileTabletContainer .expanded.ms-crm-HeaderTilesWrapperLayoutElement {
+	width: 519px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	min-width: 0px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement .ms-crm-HeaderTilesActionsContainer {
+	float: left;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement .headertile-expand-button {
+	background: rgb(244, 216, 157); width: 23px; height: 30px; color: black; padding-top: 12px; padding-left: 5px; margin-left: 4px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement .headertile-collapse-button {
+	background: rgb(244, 216, 157); width: 23px; height: 30px; color: black; padding-top: 12px; padding-left: 5px; margin-left: 4px;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesWrapperLayoutElement {
+	float: right; position: static;
+}
+.ms-crm-HeaderTileTabletContainer .ms-crm-HeaderTilesTitleWrapperElement {
+	float: left;
+}
+.ms-crm-HeaderTileElement {
+	background: rgb(244, 216, 157); width: 120px; height: 42px; overflow: hidden; margin-left: 4px; float: left;
+}
+.noScroll.ms-crm-HeaderTileElement {
+	overflow: visible;
+}
+.ms-crm-Inline-EditHintState.ms-crm-HeaderTileElement {
+	background: rgb(233, 172, 48); border: currentColor;
+}
+.ms-crm-HeaderTilesWrapperElement {
+	height: 42px; right: 0px; position: absolute;
+}
+.ms-crm-HeaderTilesWrapperLayoutElement {
+	height: 42px; margin-top: -56px; margin-bottom: 14px; margin-left: 418px; position: relative;
+}
+.ms-crm-HeaderTilesTitleWrapperElement {
+	padding-right: 496px; min-width: 408px;
+}
+.inEdit .ms-crm-Inline-Chrome textarea {
+	width: 195px; height: 150px; overflow: auto; position: relative; z-index: 10; -ms-word-wrap: break-word;
+}
+.ie7 .inEdit .ms-crm-Inline-Chrome textarea {
+	width: 135px;
+}
+.processStepValue .ms-crm-Inline-Value {
+	white-space: nowrap;
+}
+.emptyValue.processStep .ms-crm-Inline-Value {
+	color: rgb(17, 96, 183); font-style: italic;
+}
+.emptyValue.processStep .locked.bit .ms-crm-Inline-Value {
+	color: rgb(68, 68, 68); font-style: normal;
+}
+.readonly .emptyValue.processStep .bit .ms-crm-Inline-Value {
+	color: rgb(68, 68, 68); font-style: normal;
+}
+.ms-crm-Inline-HideByZeroHeight.ms-crm-Inline-OptionSet.ms-crm-Inline-Edit {
+	height: 0px; overflow: hidden;
+}
+.ms-crm-Inline-HideByZeroHeight {
+	height: 0px; overflow: hidden;
+}
+select.ms-crm-Inline-HideByZeroHeight-Ie7 {
+	
+}
+.ms-crm-InlineEditLabel div.ms-crm-Inline-GradientMask {
+	right: 0px;
+}
+div.ms-crm-Inline-EditIcon {
+	border: 1px solid rgb(198, 198, 198); top: 0px; right: 0px; bottom: 0px; display: none; position: absolute; z-index: 2; background-color: rgb(255, 255, 255);
+}
+img.ms-crm-EditLookup-Image {
+	border-width: 0px; margin-top: 1px; vertical-align: middle;
+}
+img.ms-crm-EditLookup-Process-Image {
+	border-width: 0px; margin-top: 0px; vertical-align: top;
+}
+.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	right: 1px;
+}
+.ms-crm-InlineEditLabel div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(255, 255, 255) 25%, rgba(255, 255, 255, 0) 100%); top: 1px; width: 15px; height: 20px; position: absolute; z-index: 1;
+}
+.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(255, 255, 255) 25%, rgba(255, 255, 255, 0) 100%); top: 1px; width: 15px; height: 20px; position: absolute; z-index: 1;
+}
+.ms-crm-InlineEditLabel div.ms-crm-Inline-GradientMask {
+	top: 0px;
+}
+.money .ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	
+}
+.money .ms-crm-Inline-EmptyValue.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	
+}
+.ms-crm-Inline-Lookup.ms-crm-Inline-Value.ms-crm-HeaderTile .ms-crm-Inline-EditIcon {
+	top: -2px; right: 2px; bottom: 2px;
+}
+.ms-crm-HeaderTileElement .money .ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	
+}
+.ms-crm-Inline-EditHintState.ms-crm-HeaderTileElement .money .ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	
+}
+.ms-crm-HeaderTileElement .money .ms-crm-Inline-EmptyValue.ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	background: rgba(244, 216, 157, 0.15);
+}
+.ms-crm-Inline-EditHintState.ms-crm-HeaderTileElement .money .ms-crm-Inline-EmptyValue.ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	background: rgba(233, 172, 48, 0.15);
+}
+.ms-crm-HeaderTileElement .ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	top: 0px; width: 40px; height: 24px; right: 7px; position: absolute; z-index: 1;
+}
+.ms-crm-HeaderTileElement .ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(244, 216, 157) 15%, rgba(244, 216, 157, 0) 100%);
+}
+.ms-crm-HeaderTileElement .ms-crm-InlineEditLabel div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(244, 216, 157) 15%, rgba(244, 216, 157, 0) 100%);
+}
+.ms-crm-Inline-EditHintState.ms-crm-HeaderTileElement .ms-crm-HeaderTile.ms-crm-Inline-Value div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(233, 172, 48) 15%, rgba(233, 172, 48, 0) 100%);
+}
+.ms-crm-Inline-EditHintState.ms-crm-HeaderTileElement .ms-crm-InlineEditLabel div.ms-crm-Inline-GradientMask {
+	background: -ms-linear-gradient(right, rgb(233, 172, 48) 15%, rgba(233, 172, 48, 0) 100%);
+}
+.ms-crm-InlineDateTime {
+	width: 100%; border-collapse: collapse; table-layout: fixed;
+}
+.ms-crm-InlineDateTime-HiddenCell {
+	display: none;
+}
+.ms-crm-InlineDateTime-IconCell {
+	border: 1px solid rgb(204, 204, 204); line-height: 0; font-size: 0px;
+}
+.ms-crm-InlineDuration-IconCell {
+	border: 1px solid rgb(204, 204, 204); line-height: 0; font-size: 0px;
+}
+.ms-crm-HeaderTile.ms-crm-Inline-Edit .ms-crm-InlineDateTime-IconCell {
+	background-color: rgb(255, 255, 255);
+}
+.ms-crm-InlineDateTime-Icon {
+	border: 1px solid transparent;
+}
+.ms-crm-InlineDuration-Icon {
+	border: 1px solid transparent;
+}
+.ms-crm-InlineDateTime-Icon:hover {
+	border: 1px solid rgb(133, 156, 194);
+}
+.ms-crm-InlineDuration-Icon:hover {
+	border: 1px solid rgb(133, 156, 194);
+}
+.ms-crm-InlineDateTime-TimeCell {
+	border: 1px solid rgb(204, 204, 204);
+}
+.ms-crm-InlineDuration-InputTable {
+	width: 100%; border-collapse: collapse; table-layout: fixed;
+}
+.ms-crm-InlineDuration-Icon {
+	cursor: pointer;
+}
+.ms-crm-InlineDuration-InputTable .ms-crm-Select-Input-Container {
+	border: 1px solid rgb(204, 204, 204);
+}
+.ms-crm-InlineDuration-InputTable .ms-crm-InlineDuration-IconCell {
+	border: 1px solid rgb(204, 204, 204);
+}
+.ms-crm-InlineDateTime .ms-crm-Select-Input-Container {
+	border: 0px currentColor;
+}
+.ms-crm-InlineDateTime .ms-crm-InlineDuration-IconCell {
+	border: 0px currentColor;
+}
+.ms-crm-Select-Input-Container {
+	
+}
+.ms-crm-InlineDateTime .ms-crm-InlineDuration-InputTable .ms-crm-InlineDuration-IconCell {
+	border-left-color: rgb(204, 204, 204); border-left-width: 1px; border-left-style: solid;
+}
+.ms-crm-Inline-OptionSet-AutoOpen {
+	position: relative; z-index: 10000;
+}
+.won-lost-inline-edit-control .ms-crm-Inline-Edit input.ms-crm-Input {
+	font-weight: 500;
+}
+.won-lost-inline-edit-control .ms-crm-Inline-Edit input.ms-crm-InlineInput {
+	font-weight: 500;
+}
+.won-lost-inline-edit-control textarea.ms-crm-InlineInput {
+	font-weight: 500;
+}
+.ms-crm-Inline-Value.ms-crm-HeaderTile {
+	font-weight: 500;
+}
+.ms-crm-InlineDateTime-TimeCell input.ms-crm-SelectBox {
+	font-weight: 500;
+}

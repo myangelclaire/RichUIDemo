@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <!--title-->
+    <title>小計値引</title>
+    <!--Meta-->
+    <meta content="IE=8.0000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="" ie="8">
+    <meta name="DownloadOptions" content="noopen">
+    <!--favicon-->
+    <link href="../favicon.ico" rel="SHORTCUT ICON">
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+   
+    <!--    
+    <link href="CSS/appgrid.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/CompositeControl.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/cui.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/menu.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/miniCal.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/nav.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/notectrl.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/notifications.css" rel="stylesheet" type="text/css" />
+    -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/MsAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/accounting.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var parameters = location.search.substr(1).replace("{", "").replace("}", "").split(",");
+            if (parameters != "") {
+                for (var i in parameters) {
+                    alert(parameters[i]);
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+    <form name="crmForm" class="ms-crm-Form" id="crmForm" formtype="2" setinitialfocus="true">
+    <div class="ms-crm-modalDialog" id="Dialog_new_datetimetestTimeselectPopup" style="border: 1px solid rgb(0, 0, 0);
+        width: 126px; height: 150px; display: none; position: absolute; z-index: 2035;"
+        rendering="false" displayed="true">
+    </div>
+    <div class="ms-crm-InlineTabContainer" id="crmFormTabContainer" isquickform="False">
+        <div class="ms-crm-InlineTab" id="tab0" isviewporttab="0">
+            <table class="ms-crm-InlineTabHeader ms-crm-InlineTabBorder" id="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}_Header"
+                cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="ms-crm-InlineTabBody" cellspacing="0" cellpadding="0">
+                <colgroup>
+                    <col width="100%">
+                    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="ms-crm-FormSection-Container">
+                                    <table height="1%" class="ms-crm-FormSection" id="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}"
+                                        style="table-layout: fixed;" cellspacing="0" cellpadding="3" columns="2" valign="top"
+                                        label="General" isviewportsection="0">
+                                        <colgroup>
+                                            <col width="50">
+                                            <col width="40">
+                                            <col width="60">
+                                            <col width="115">
+                                            <col />
+                                            <tbody>
+                                                <tr height="5">
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <!--Whole Number Test-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="Td7">
+                                                        <label for="new_wholenumbertest" style="font-family:黑体">
+                                                            技術料</label>
+                                                    </td>
+                                                    <td id="Td8" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text4"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="100" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="99"></div>
+                                                    </td>
+                                                    <td>
+                                                    <div class="ms-crm-FieldLabel-LeftAlign" ><label>%
+                                                    </label></div>
+                                                    </td>
+                                                    <td id="Td1" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text1"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="1000000000" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="999,999,999"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                                    <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="Td2">
+                                                        <label for="new_wholenumbertest" style="font-family:黑体">
+                                                            部品代</label>
+                                                    </td>
+                                                    <td id="Td3" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text2"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="100" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="99"></div>
+                                                    </td>
+                                                    <td>
+                                                    <div class="ms-crm-FieldLabel-LeftAlign" ><label>%
+                                                    </label></div>
+                                                    </td>
+                                                    <td id="Td4" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text3"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="1000000000" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="999,999,999"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                                    <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="Td5">
+                                                        <label for="new_wholenumbertest" style="font-family:黑体">
+                                                            外注費</label>
+                                                    </td>
+                                                    <td id="Td6" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text5"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="100" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="99"></div>
+                                                    </td>
+                                                    <td>
+                                                    <div class="ms-crm-FieldLabel-LeftAlign" ><label>%
+                                                    </label></div>
+                                                    </td>
+                                                    <td id="Td9" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="Text6"
+                                                                style="-ms-ime-mode: auto;text-align:right;" type="text" min="0" max="1000000000" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true" value="999,999,999"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr valign="top">
+
+                                                    <td id="new_singlelinetexttest_d" style="overflow: hidden; height:40px" colspan="3" formxmlcolspan="1">
+                                                        <button style=" height:40px;">
+                                                            <b>Esc</b><br />キヤンセル</button>
+                                                    </td>
+                                                    <td>
+                                                        <button style=" height:40px;">
+                                                            <b>F10</b><br />確定</button>
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                                <!--Link Test-->
+  
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

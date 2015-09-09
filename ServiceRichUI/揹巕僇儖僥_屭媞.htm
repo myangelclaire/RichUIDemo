@@ -1,0 +1,1006 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>電子カルテ_顧客</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+        .style1
+        {
+            height: 22px;
+        }
+        .style3
+        {
+            height: 47px;
+        }
+        .blue
+        {
+            font-size: 12px;
+            color:Blue;
+            }
+        
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '登録番号': '',
+                                '車台番号': '',
+                                '通称車名カナ': '',
+                                '初度登録日': '',
+                                '車検満了日': '',
+                                '管理拠点名': '',
+                                '管理担当名': '',
+                                '購入者': '',
+                                '主使用者': '',
+                                '副使用者１': '',
+                                '副使用者２': '',
+                                '所有者（車検証）': '',
+                                '使用者（車検証）': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '登録番号',
+                             '車台番号',
+                             '通称車名カナ',
+                             '初度登録日',
+                             '車検満了日',
+                             '管理拠点名',
+                             '管理担当名',
+                             '購入者',
+                             '主使用者',
+                             '副使用者１',
+                             '副使用者２',
+                             '所有者（車検証）',
+                             '使用者（車検証）'
+                           ],
+                colModel: [
+               		        { name: '登録番号', index: '登録番号', width: 60, align: "left" },
+               		        { name: '車台番号', index: '車台番号', width: 60, align: "left" },
+               		        { name: '通称車名カナ', index: '通称車名カナ', width: 80, align: "left" },
+               		        { name: '初度登録日', index: '初度登録日', width: 90, align: "left" },
+               		        { name: '車検満了日', index: '車検満了日', width: 50, align: "right" },
+               		        { name: '管理拠点名', index: '管理拠点名', width: 120, align: "right" },
+               		        { name: '管理担当名', index: '管理担当名', width: 120, align: "right" },
+                            { name: '購入者', index: '購入者', width: 80, align: "right" },
+                            { name: '主使用者', index: '主使用者', width: 80, align: "left" },
+                            { name: '副使用者１', index: '副使用者１', width: 80, align: "left" },
+                            { name: '副使用者２', index: '副使用者２', width: 80, align: "left" },
+                            { name: '所有者（車検証）', index: '所有者（車検証）', width: 100, align: "right" },
+                            { name: '使用者（車検証）', index: '使用者（車検証）', width: 100, align: "right" }
+               	        ],
+                pager: "#gridPager1",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'カード種別': '',
+                                '保有ポイント': '',
+                                '年度末期限切れポイント': '',
+                                'ポイント有効期限': '',
+                                '残高情報取得日': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list48").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'カード種別',
+                             '保有ポイント',
+                             '年度末期限切れポイント',
+                             'ポイント有効期限',
+                             '残高情報取得日'
+                           ],
+                colModel: [
+               		        { name: 'カード種別', index: 'カード種別', width: 100, align: "left" },
+               		        { name: '保有ポイント', index: '保有ポイント', width: 100, align: "left" },
+               		        { name: '年度末期限切れポイント', index: '年度末期限切れポイント', width: 170, align: "left" },
+               		        { name: 'ポイント有効期限', index: 'ポイント有効期限', width: 170, align: "left" },
+               		        { name: '残高情報取得日', index: '残高情報取得日', width: 150, align: "left" }
+               	        ],
+                pager: "#gridPager2",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '管理担当名': '',
+                                '管理担当変更理由': '',
+                                '管理担当変更日': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list49").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '管理担当名',
+                             '管理担当変更理由',
+                             '管理担当変更日'
+                           ],
+                colModel: [
+               		        { name: '管理担当名', index: '管理担当名', width: 150, align: "left" },
+               		        { name: '管理担当変更理由', index: '管理担当変更理由', width: 200, align: "left" },
+               		        { name: '管理担当変更日', index: '管理担当変更日', width: 150, align: "left" }
+               	        ],
+                pager: "#gridPager3",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+</head>
+<body>
+<div style="overflow:auto; height:760px">
+     <div style="margin-top:13px; margin-left:10px;">
+        <label style="height:10px; width:100px; margin-left: 50px;">お客様No</label>
+        <label style="height:12px; width:76px; margin-left: 9px; margin-top:10px;">2345678901</label>
+        <label style="height:10px; width:100px; margin-left: 350px;">お客様氏名</label>
+        <label style="height:12px; width:76px; margin-left: 9px; margin-top:10px;">通称 樹木</label>
+        <label style="height:10px; width:100px; margin-left: 200px;">お客様区分</label>
+
+    </div>
+
+    <div style="margin-top:20px">
+        <fieldset title="基本情報" style="width:1203px; height:460px">
+            <legend style="font-size:12px; color:Blue; height:20px">基本情報</legend>
+               <tr style="margin-top:20px; height:80px">
+                <label style="height:12px; width:100px; margin-left: 5px;">氏名(姓)<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                <input style="height:12px; width:130px; margin-left: 58px; " value="松田" disabled="disabled"/>
+                <label style="height:12px; width:100px; margin-left: 61px;">(名)</label>
+                <input style="height:12px; width:151px; margin-left: 86px;" value="樹木" disabled="disabled"/>
+               </tr>
+               <tr>
+               </tr>
+               <br />
+               <tr style="margin-top:100px;">
+                <td style="margin-top:20px">
+                <label style="height:12px; width:100px; margin-left: 5px;">フリガナ<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                <input style="height:12px; width:130px; margin-left: 58px; margin-top: 6px;" value="フリガナ" disabled="disabled"/>
+                </td>
+                    <td>
+                     <label style="height:12px; width:100px; margin-left: 62px;">敬称</label>
+                     <select style="width:157px; margin-left: 80px;height: 17px;" 
+                     disabled="disabled">
+                     <option></option>
+                   </select>
+                </td>
+               </tr>
+               <br />
+               <tr style="margin-top:100px;">
+                <label style="height:10px; width:100px; margin-left: 5px; margin-top:100px">社内用名称</label>
+                <input style="height:12px; width:130px; margin-left: 51px; margin-top: 8px;" value="フリガナ" disabled="disabled"/>
+                <label style="height:10px; width:100px; margin-left: 60px;">性別<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                <select style="width:158px; margin-left: 70px;" disabled="disabled">
+                    <option>男性</option>
+                </select>
+               </tr>
+               <br />
+
+
+               <tr>
+                <label style="height:8px; width:100px; margin-left: 5px;">生年月日</label>
+
+                   <input style="height:12px; width:132px; margin-left: 61px; margin-top: 8px;" disabled="disabled"/>
+
+
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img3" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+                   <td>
+                      <input style="height:12px; width:151px; margin-left: 51px;" value="樹木" disabled="disabled"/>
+                   
+                   </td>
+                </tr>
+             <br />
+               <tr style="margin-top:80px;">
+                <label style="height:10px; width:100px; margin-left: 5px; margin-top:100px">年齢</label>
+                <input style="height:12px; width:130px; margin-left: 86px; margin-top: 8px;" value="フリガナ" disabled="disabled"/>
+              </tr>
+
+             <br />
+               <tr style="margin-top:80px;">
+                <label style="height:10px; width:100px; margin-left: 5px; margin-top:100px">カテゴリー</label>
+                <input style="height:12px; width:130px; margin-left: 57px; margin-top: 8px;" value="フリガナ" disabled="disabled"/>
+                <input style="height:12px; width:255px; margin-left: 53px; margin-top: 8px;" value="フリガナ" disabled="disabled"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img4" 
+                                 style=" margin-left:-21px; margin-bottom:-6px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+              </tr>
+              <br />       
+
+               <fieldset title="各区分情報" style="width: 580px; margin-top:8px; height:135px">
+                <legend style="font-size:12px;height:20px; width:60px; margin-left:0px">各区分情報</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                    <label style="height:20px; width:200px; margin-left: 0px">第三者提供区分<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                     <select style="height:20px; width:140px; margin-left: 10px" disabled="disabled">
+                        <option>0:同意</option>
+                     
+                     </select>   
+                    <label style="height:20px; width:200px; margin-left: 49px">法人認定コード</label>
+                     <input style="height:12px; width:150px; margin-left: 56px; margin-left:28px" value="フリガナ" disabled="disabled"/>
+                   </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 1px;">
+                    <label style="height:20px; width:200px; margin-left: 0px">発生区分</label>
+                     <select style="height:20px; width:140px; margin-left: 56px" disabled="disabled">
+                     </select>   
+                    <label style="height:20px; width:200px; margin-left: 50px">直販・業販区分</label>
+                     <select style="height:20px; width:160px; margin-left: 28px">
+                     </select> 
+                   </td>
+                 </tr>
+
+                 <tr>
+                    <td style="margin-top: 1px;" class="style1">
+                    <label style="height:20px; width:200px; margin-left: 0px">個人保険加入区分</label>
+                     <select style="height:20px; width:140px; margin-left: 8px" disabled="disabled">
+                     </select>   
+                    <label style="height:100px; width:10px; margin-left: 50px">ロードサービス加入</label>
+                     <select style="height:20px; width:160px; margin-left: 8px" disabled="disabled">
+                     </select> 
+                   </td>
+                 </tr>
+
+
+                  <tr>
+                    <td>
+                    <label style="height:5px; width:200px; margin-left: 300px; margin-top:3px">区分</label>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td>
+                    <label style="height:5px; width:200px; margin-left: 300px; margin-top:50px">￥確認</label>
+                    <input type="checkbox"  style="margin-left: 70px;" disabled="disabled"/>
+           </td>
+                 </tr>
+ 
+              </table>   
+            </fieldset>
+
+               <fieldset title="管理拠点/担当" style="width:580px; margin-top:-303px; height:65px; margin-left:600px;">
+                <legend style="font-size:12px;height:20px; width:80px;">管理拠点/担当</legend>
+                  <table>
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">管理拠点コード</label>
+                         <input style="height:12px; width:130px; margin-left: 30px; " value="松田" disabled="disabled"/>
+                         <label style="height:12px; width:100px; margin-left: 35px;">管理拠点名<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                        <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img26" 
+                                 style=" margin-left:45px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/ico_18_10.gif" />
+
+                         <input style="height:12px; width:131px; margin-left: -1px; color:Blue" value="MZ-TOKYO"  />
+
+                            <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img9" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">管理担当コード</label>
+                         <input style="height:12px; width:130px; margin-left: 30px; " value="松田" disabled="disabled"/>
+                         <label style="height:12px; width:100px; margin-left: 35px;">管理担当名<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"  
+                                 style=" margin-left:45px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/ico_lrg_customEntity.gif" />
+                         <input style="height:12px; width:135px; margin-left: -5px; color:Blue" value="担当者A" class="blue"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img10" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                     </td>
+                    </tr>
+                  </table>
+            </fieldset>
+
+
+           <fieldset title="自宅" style="width: 580px; margin-top:10px; height:215px; margin-left:600px;">
+                <legend style="font-size:12px;height:12px; width:30px;">自宅</legend>
+                  <table>
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">郵便番号</label>
+                         <input style="height:12px; width:130px; margin-left: 55px; " value="松田" disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img11" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                         <label style="height:12px; width:100px; margin-left: 40px;">郵便番号（手入力）</label>
+                         <input style="height:12px; width:151px; margin-left: 20px;" value="樹木" disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">住所コード</label>
+                         <input style="height:12px; width:130px; margin-left: 50px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img12" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">住所</label>
+                         <input style="height:12px; width:456px; margin-left: 80px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">丁目</label>
+                         <input style="height:12px; width:456px; margin-left: 80px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">建物名　部屋番号</label>
+                         <input style="height:12px; width:456px; margin-left: 12px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">TEL</label>
+                         <input style="height:12px; width:60px; margin-left: 35px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">FAX</label>
+                         <input style="height:12px; width:60px; margin-left: 32px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">E-mail</label>
+                         <input style="height:12px; width:510px; margin-left: 20px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">携帯mail</label>
+                         <input style="height:12px; width:510px; margin-left: 6px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                  </table>
+            </fieldset>
+
+
+
+              <fieldset title="フリーラベル（顧客）" style="width: 580px; margin-top:20px; height:117px">
+                <legend style="font-size:12px;height:20px; width:100px; margin-left:0px">フリーラベル（顧客）</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 0px;">
+                         <input style="height:12px; width:170px; margin-left:0px;"disabled="disabled"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img1" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+
+                         <input style="height:12px; width:378px; margin-left: 8px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 0px;">
+                         <input style="height:12px; width:170px; margin-left:0px;"disabled="disabled"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img2" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+
+                         <input style="height:12px; width:378px; margin-left: 8px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 0px;">
+                         <input style="height:12px; width:170px; margin-left:0px;"disabled="disabled"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img5" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+
+                         <input style="height:12px; width:378px; margin-left: 8px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 0px;">
+                         <input style="height:12px; width:170px; margin-left:0px;"disabled="disabled"/>
+
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img6" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+
+                         <input style="height:12px; width:378px; margin-left: 8px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+              </table>   
+            </fieldset>
+
+
+
+  <div >
+
+              <fieldset title="勤務先" style="width: 1200px; margin-top:20px; height:160px; margin-left:3px">
+                <legend style="font-size:12px;height:20px; width:40px; color:Blue">勤務先</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">職業</label>
+                         <input style="height:12px; width:120px; margin-left: 45px; "disabled="disabled"/>  
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img17" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+
+                         <label style="height:12px; width:120px; margin-left: 403px;">郵便番号</label>
+                         <input style="height:12px; width:140px; margin-left: 40px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img18" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                         <label style="height:12px; width:120px; margin-left:60px;">郵便番号（手入力）</label>
+                         <input style="height:12px; width:140px; margin-left: 30px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                     <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">勤務先名</label>
+                         <input style="height:12px; width:480px; margin-left: 20px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 46px;">住所コード</label>
+                         <input style="height:12px; width:140px; margin-left: 35px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img20" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                         <label style="height:12px; width:120px; margin-left:60px;">エリアコード</label>
+                         <input style="height:12px; width:140px; margin-left: 65px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">所属部署</label>
+                         <input style="height:12px; width:180px; margin-left: 20px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 50px;">役職</label>
+                         <input style="height:12px; width:195px; margin-left: 20px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 46px;">勤務先住所_1</label>
+                         <input style="height:12px; width:482px; margin-left: 17px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">TEL</label>
+                         <input style="height:12px; width:60px; margin-left: 52px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 235px;">勤務先住所_2</label>
+                         <input style="height:12px; width:482px; margin-left: 17px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">FAX</label>
+                         <input style="height:12px; width:60px; margin-left: 49px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 235px;">勤務先住所_3</label>
+                         <input style="height:12px; width:482px; margin-left: 17px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">E-mail</label>
+                         <input style="height:12px; width:480px; margin-left: 37px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+              </table>   
+            </fieldset>
+  
+  </div>
+
+  <div>
+
+              <fieldset title="第2連絡先"  style="width: 1200px; margin-top:20px; height:130px; margin-left:3px">
+                <legend style="font-size:12px;height:20px; width:90px; color:Blue">第2連絡先</legend>
+                <table>
+                  <tr>
+
+
+                     <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">宛名</label>
+                         <input style="height:12px; width:480px; margin-left: 45px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 45px;">郵便番号</label>
+                         <input style="height:12px; width:140px; margin-left: 42px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img21" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                         <label style="height:12px; width:120px; margin-left:60px;">郵便番号（手入力）</label>
+                         <input style="height:12px; width:140px; margin-left: 30px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                     <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">TEL</label>
+                         <input style="height:12px; width:60px; margin-left: 52px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 235px;">住所コード</label>
+                         <input style="height:12px; width:140px; margin-left: 35px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img22" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                         <label style="height:12px; width:120px; margin-left:60px;">エリアコード</label>
+                         <input style="height:12px; width:140px; margin-left: 65px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">FAX</label>
+                         <input style="height:12px; width:60px; margin-left: 49px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 10px;">-</label>
+                         <input style="height:12px; width:60px; margin-left: 30px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 235px;">住所</label>
+                         <input style="height:12px; width:482px; margin-left: 64px; "disabled="disabled"/>
+                     </td>
+                 </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">E-mail</label>
+                         <input style="height:12px; width:482px; margin-left: 35px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 47px;">丁目</label>
+                         <input style="height:12px; width:482px; margin-left: 64px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left:606px;">建物名　部屋番号</label>
+                         <input style="height:12px; width:482px; margin-left: -3px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+              </table>   
+            </fieldset>
+  </div>
+
+
+
+    <div>
+
+              <fieldset title="請求先"  style="width: 1200px; margin-top:28px; height:65px; margin-left:3px">
+                <legend style="font-size:12px;width:40px; color:Blue">請求先</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">支払月区分</label>
+                          <select style="height:20px; width:140px; margin-left: 21px">
+                         </select>
+                         <label style="height:12px; width:120px; margin-left: 70px;">支払日</label>
+                         <input style="height:12px; width:140px; margin-left: 40px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left:80px;">請求書発行区分</label>
+                          <select style="height:20px; width:140px; margin-left: 21px">
+                         </select>
+                         <label style="height:12px; width:120px; margin-left: 50px;">部品割引率（％）</label>
+                         <input style="height:12px; width:170px; margin-left: 20px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 297px;">請求締日</label>
+                         <input style="height:12px; width:140px; margin-left: 28px; "disabled="disabled"/>
+                         <label style="height:12px; width:120px; margin-left: 80px;">代金支払区分</label>
+                          <select style="height:20px; width:140px; margin-left: 33px">
+                         </select>
+                         <label style="height:12px; width:120px; margin-left:50px;">工賃割引率（％）</label>
+                         <input style="height:12px; width:170px; margin-left: 20px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+              </table>   
+            </fieldset>
+  </div>
+
+
+  <div style="margin-top:25px; margin-left:3px; height:2px; width:1210px">
+       <fieldset title="保有車両"  >
+        <legend style="font-size:12px; color:Blue">保有車両</legend>
+           <table id="list47"></table>
+           <div id="gridPager1"></div>
+       </fieldset>
+  </div>
+
+
+
+
+  <div >
+              <fieldset title="コンタクト" style="width: 1200px; margin-top:200px; height:205px; margin-left:3px">
+                <legend style="font-size:12px;height:20px; width:48px; color:Blue">コンタクト</legend>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:130px; margin-left: 0px; ">優先連絡先<b style="text-align:justify; color:Red; font-size:10px">＊</b></label>
+                         <select style="height:20px; width:140px; margin-left: 30px">
+                        </select> 
+                         <label style="height:12px; width:120px; margin-left: 358px;">連絡手段メモ</label>
+                         <input style="height:12px; width:482px; margin-left: 25px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+                 <br />
+                  <tr>
+                    <td style="margin-top: 5px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">連絡先宛名</label>
+                         <input style="height:12px; width:450px; margin-left: 40px; margin-top: 5px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+
+                    <br />
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">連絡先郵便番号</label>
+                         <input style="height:12px; width:450px; margin-left: 16px; margin-top: 5px; "disabled="disabled"/>
+                    </td>
+                 </tr>
+                 <br />
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">連絡先住所</label>
+                         <input style="height:12px; width:450px; margin-left: 40px; margin-top: 5px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+                   <br />
+                    <tr>
+                      <td>
+                         <label style="height:12px; width:120px; margin-left: 0px;">連絡先TEL</label>
+                         <input style="height:12px; width:450px; margin-left: 48px; margin-top: 5px; "disabled="disabled"/>
+                     </td>
+                    </tr>
+                    <br />
+
+               <fieldset title="コンタクト可能曜曰" style="width: 580px; margin-top:5px; height:61px; margin-left:0px">
+                <legend style="font-size:12px;width:95px;">コンタクト可能曜曰</legend>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <label style="margin-left:30px;">月</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px;">火</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 50px;">水</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px; margin-top:10px">木</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                        </tr>
+
+                         <tr>
+                            <td>
+                                <label style="margin-left:30px;">金</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px;">土</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 50px;">日</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px; margin-top:10px">祝</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                        </tr>
+                    </table>
+            </fieldset>
+
+            <fieldset title="連絡先不可区分" style="width: 580px; margin-top:-165px; height:60px; margin-left:600px">
+                <legend style="font-size:12px;width:85px;">連絡先不可区分</legend>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <label style="margin-left:30px;">自宅TEL</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px;">携帯TEL</label>
+                                <input type="checkbox" style="margin-left: 28px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 50px;">勤務先TEL</label>
+                                <input type="checkbox" style="margin-left: 28px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px; margin-top:10px">E-mail</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                        </tr>
+
+                         <tr>
+                            <td>
+                                <label style="margin-left:30px;">DM</label>
+                                <input type="checkbox" style="margin-left: 42px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 40px;">自宅訪問</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                            <td>
+                                <label style="margin-left: 50px;">勤務先訪問</label>
+                                <input type="checkbox" style="margin-left: 20px;" />
+                            </td>
+                        </tr>
+                    </table>
+            </fieldset>
+
+
+             <tr>
+                  <td>
+                      <label style="margin-left:606px;">コンタクト可能時間</label>
+                      <input style="height:12px; width:140px; margin-left: 2px; margin-top: 5px; "disabled="disabled"/>
+                  </td>
+            </tr>
+         </fieldset>
+  </div>
+
+
+  <div style="margin-top:15px; margin-left:3px; height:2px; width:1210px">
+       <fieldset title="会員カード" >
+        <legend style="font-size:12px; color:Blue">会員カード</legend>
+           <table id="list48"></table>
+           <div id="gridPager2"></div>
+
+
+        <table>
+             <tr>
+                  <td>
+
+                      <input style="height:12px; width:180px; margin-left: 5px; margin-top: 5px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img23" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                      <input type="radio" value="1"  style="margin-left:30px" />未所有
+                      <input type="radio" value="0" checked="checked" style="margin-left:10px" />所有
+                      <label style="margin-left:70px;">有効期限</label>
+                      <input style="height:12px; width:140px; margin-left: 20px; margin-top: 5px; "disabled="disabled"/>
+                      <label style="margin-left:50px;">インターネット会員No</label>
+                      <input style="height:12px; width:192px; margin-left: 10px; margin-top: 5px; "disabled="disabled"/>
+                  </td>
+            </tr>
+        
+        
+        </table>
+       </fieldset>
+  </div>
+
+
+
+
+  <div>
+       <fieldset title="担当者履歴"  style="margin-top:200px; margin-left:3px">
+        <legend style="font-size:12px; color:Blue">担当者履歴</legend>
+           <table id="list49"></table>
+           <div id="gridPager3"></div>
+       </fieldset>
+  </div>
+
+
+  <div>
+
+              <fieldset title="お客様つながり"  style="width: 1200px; margin-top:21px; height:45px; margin-left:3px">
+                <legend style="font-size:12px;width:80px; color:Blue">お客様つながり</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">主顧客</label>
+                         <input style="height:12px; width:160px; margin-left: 36px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img24" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                    </td>
+                 </tr>
+              </table>   
+            </fieldset>
+  </div>
+
+  <div>
+
+              <fieldset title="メモ"  style="width: 1200px; margin-top:22px; height:80px; margin-left:3px">
+                <legend style="font-size:12px;width:20px; color:Blue">メモ</legend>
+                <table>
+                  <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="height:12px; width:120px; margin-left: 0px;">抹消理由</label>
+                         <input style="height:12px; width:160px; margin-left: 25px; "disabled="disabled"/>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img25" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                    </td>
+                 </tr>
+                 <tr>
+                    <td style="margin-top: 1px;">
+                         <label style="margin-left: 0px;">メモ</label>
+                    </td>
+                    <td>
+                        <div>
+                          <textarea style="margin-left:-175px; width:550px">
+                          </textarea>
+                        </div>
+                    </td>
+                 </tr>
+
+              </table>   
+            </fieldset>
+  </div>
+</div>
+
+<div>
+       <table   style="margin-top:1450px">
+            <tr>
+                <td >
+                    <label style="height:12px; width:120px; margin-left: 0px; font-size:10px;" disabled="disabled">ステータス</label>
+                </td>
+                <td class="style7" >
+                    <label style="height:12px; width:120px; margin-left: 260px; font-size:10px;" disabled="disabled" >有効/効無区分</label>
+
+                </td>
+                <td class="style5" >
+                    <label style="height:12px; width:120px; margin-left: 50px;">Active</label>
+
+                </td>
+
+            </tr>
+
+
+             <tr style="margin-top:20px">
+                <td class="style3" >
+                    <label style="height:47px; width:120px; margin-left: 40px; font-size:15px;" >BU</label>
+                </td>
+                <td class="style3" >
+                    <label style="height:47px; width:120px; margin-left: 250px; font-size:15px;" >販社</label>
+
+                </td>
+                <td class="style3" >
+                    <label style="height:47px; width:120px; margin-left: 160px; font-size:15px;" >店舗</label>
+
+                </td>
+                <td class="style3" >
+                    <label style="height:47px; width:120px; margin-left: 250px; font-size:15px;" >拠点</label>
+
+                </td>
+
+            </tr>
+
+      </table>
+</div>
+
+
+</body>
+</html>

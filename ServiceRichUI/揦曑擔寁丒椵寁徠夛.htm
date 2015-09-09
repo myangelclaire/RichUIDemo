@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>店舗日計・累計照会</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫区分': '車検',
+                                '台数': '1',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '車検業者',
+                                '台数': '1',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '小計',
+                                '台数': '2',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '有償計',
+                                '台数': '2',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '保証',
+                                '台数': '1',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '小計',
+                                '台数': '1',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '無償計',
+                                '台数': '1',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            },
+                            {
+                                '入庫区分': '総合計',
+                                '台数': '3',
+                                '売上_技術料': '999,999,999',
+                                '売上_部品代': '999,999,999',
+                                '売上_外注合計': '999,999,999',
+                                '売上_内外注部品': '999,999,999',
+                                '売上_合計': '3,999,999,996',
+                                '原価_技術料': '999,999,999',
+                                '原価_部品代': '999,999,999',
+                                '原価_外注合計': '999,999,999',
+                                '原価_内外注部品': '999,999,999',
+                                '原価_合計': '999,999,999',
+                                '粗利益合計': '3,999,999,996',
+                                '売上台当り': '999,999,999',
+                                '粗利益台当': '999,999,9991',
+                                '値引計': '999,999,999',
+                                '前受金': '999,999,999',
+                                'パック': '999,999,999'
+                            }
+                         ];
+                         
+            var width = $(window).width() - 10;
+
+            var mydata1 = [
+                            {
+                                '空': '有償',
+                                '台数': '1',
+                                '売上': '7,999,999,999',
+                                '原価': '3,999,999,999',
+                                '粗利益': '4,999,999,999'
+                            },
+                            {
+                                '空': '無償',
+                                '台数': '2',
+                                '売上': '7,999,999,999',
+                                '原価': '3,999,999,999',
+                                '粗利益': '4,999,999,999'
+                            },
+                            {
+                                '空': '合計',
+                                '台数': '3',
+                                '売上': '7,999,999,999',
+                                '原価': '3,999,999,999',
+                                '粗利益': '4,999,999,999'
+                            }
+                         ];
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 250,
+                width: width < 1024 ? 1024 : width,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                autowidth: true,
+                //rowList: [10],
+                colNames: [
+                            '入庫区分',
+                            '台数',
+                            '売上<br/>(技術料)',
+                            '(部品)',
+                            '(外注計)',
+                            '(内外注部品)',
+                            '(合計)',
+                            '原価<br/>(技術料)',
+                            '(部品)',
+                            '(外注計)',
+                            '(内外注部品)',
+                            '(合計)',
+                            '粗利益合計',
+                            '売上台当り',
+                            '粗利益台当',
+                            '値引計',
+                            '前受金',
+                            'パック'
+                           ],
+                colModel: [
+               		        { name: '入庫区分', index: '入庫区分', width: 80, frozen: true },
+               		        { name: '台数', index: '台数', width: 50, frozen: true },
+               		        { name: '売上_技術料', index: '売上_技術料', width: 100, align: "right" },
+               		        { name: '売上_部品代', index: '売上_部品代', width: 100, align: "right" },
+               		        { name: '売上_外注合計', index: '売上_外注合計', width: 100, align: "right" },
+               		        { name: '売上_内外注部品', index: '売上_内外注部品', width: 100, align: "right" },
+               		        { name: '売上_合計', index: '売上_合計', width: 100, align: "right" },
+                            { name: '原価_技術料', index: '原価_技術料', width: 100, align: "right" },
+                            { name: '原価_部品代', index: '原価_部品代', width: 100, align: "right" },
+                            { name: '原価_外注合計', index: '原価_外注合計', width: 100, align: "right" },
+                            { name: '原価_内外注部品', index: '原価_内外注部品', width: 100, align: "right" },
+                            { name: '原価_合計', index: '原価_合計', width: 100, align: "right" },
+                            { name: '粗利益合計', index: '粗利益合計', width: 100, align: "right" },
+                            { name: '売上台当り', index: '売上台当り', width: 100, align: "right" },
+                            { name: '粗利益台当', index: '粗利益台当', width: 100, align: "right" },
+                            { name: '値引計', index: '値引計', width: 100, align: "right" },
+                            { name: '前受金', index: '前受金', width: 100, align: "right" },
+                            { name: 'パック', index: 'パック', width: 100, align: "right" }
+               	        ],
+               // pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true
+            });
+
+
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+            $("#cb_list47").hide();
+            jQuery("#list47").setCell(3, 0, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 1, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 2, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 3, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 4, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 5, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 6, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 7, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 8, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 9, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 10, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 11, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 12, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 13, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 14, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 15, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 16, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(3, 17, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 0, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 1, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 2, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 3, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 4, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 5, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 6, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 7, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 8, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 9, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 10, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 11, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 12, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 13, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 14, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 15, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 16, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(4, 17, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 0, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 1, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 2, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 3, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 4, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 5, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 6, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 7, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 8, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 9, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 10, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 11, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 12, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 13, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 14, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 15, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 16, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(6, 17, '', { 'background': '#bebebe' });
+
+
+            jQuery("#list47").setCell(7, 0, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 1, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 2, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 3, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 4, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 5, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 6, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 7, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 8, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 9, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 10, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 11, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 12, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 13, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 14, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 15, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 16, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(7, 17, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 0, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 1, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 2, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 3, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 4, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 5, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 6, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 7, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 8, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 9, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 10, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 11, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 12, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 13, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 14, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 15, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 16, '', { 'background': '#bebebe' });
+            jQuery("#list47").setCell(8, 17, '', { 'background': '#bebebe' });
+            jQuery("#list47").jqGrid('setFrozenColumns');
+            $("#list48").jqGrid({
+                data: mydata1,
+                datatype: "local",
+                height: 70,
+                width: 425,
+                shrinkToFit: false,
+                autoScroll: false,
+                rowNum: 10,
+                colNames: ['',
+                            '台数',
+                            '売上',
+                            '原価',
+                            '粗利益'
+                           ],
+                colModel: [
+               		        { name: '空', index: '1', width: 50 },
+               		        { name: '台数', index: '台数', width: 50 },
+               		        { name: '売上', index: '売上', width: 100, align: "right" },
+               		        { name: '原価', index: '原価', width: 100, align: "right" },
+               		        { name: '粗利益', index: '粗利益', width: 100, align: "right" }
+               	        ],
+                // pager: "#gridPager1",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: false
+            });
+
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div style="margin-top:5px; margin-left:3px;">
+        <table>
+        <tbody>
+        <tr>
+        <td>
+            <button id="Button3" type="button" style="width:80px; height: 40px; margin-right:0px">F1<br/>終了</button>
+        </td>
+        <td>
+            <button id="Button1" type="button" style="width:80px; height: 40px; margin-right:0px">F9<br/>実行</button>
+        </td>
+        <td>
+            <button id="Button2" type="button" style="width:80px; height: 40px; margin-right:0px">End<br/>ヘルプ</button>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top:10px;margin-left:3px;"">
+        <table border="0px">
+        
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>対象年月日:</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table4" style="width: 70%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text4"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:70px;"><label>～</label></td>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:100%;">
+                                    <table class="ms-crm-Lookup" id="Table6" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text5"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:500px;" rowspan="3">
+                            <table id="list48"></table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:90;"><label>拠点:</label></td>
+                                <td style="width:210;padding-right: 60px;">
+                                     <input type="text" value="333" style="width: 30px;margin-left:68px" />
+                                     <input type="text" value="ＮＮＮＮＮＮ" style="width: 80px;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:70px;"></td>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"></td>
+                                <td style="width:60%;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;">
+                                    <table class="ms-crm-Lookup" id="Table1" style="width: 70%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input type="checkbox" name="allSelect" value="all"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="width:60%;"><label>全拠点選択</label></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:70px;"></td>
+                    <td style="width:300px;"></td>
+                </tr>
+
+            </table>
+    </div>
+
+    <div style="margin-top:10px; margin-left:3px; height:320px;">
+        <table id="list47"></table>
+        <div id="gridPager"></div>
+    </div>
+</div>
+</body>
+</html>

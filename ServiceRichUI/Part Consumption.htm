@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>消耗品予定実績</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { code: "002", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "003", himei: "エアーエレメント", jikaiyoteihi: "2011/03/01", jikaikyori: '35,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "130", himei: "タイヤ", jikaiyoteihi: "2011/03/01", jikaikyori: '', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "008", himei: "ミッションオイル", jikaiyoteihi: "2011/04/01", jikaikyori: '', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "001", himei: "エンジンオイル", jikaiyoteihi: "2011/08/31", jikaikyori: '40,000', zenkaikoukan: "2004/09/30", zenkaikyori: '35,000', nyukokubun: "21 一般", tasya: "" },
+                            { code: "004", himei: "オートマチックオイル", jikaiyoteihi: "2011/10/01", jikaikyori: '10,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "012", himei: "ブレーキオイル", jikaiyoteihi: "2011/10/01", jikaikyori: '12,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "013", himei: "ラジエターキャップ", jikaiyoteihi: "2011/10/01", jikaikyori: '12,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "014", himei: "ワイバプーレードラバー", jikaiyoteihi: "2011/10/01", jikaikyori: '10,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "018", himei: "ウォッシャー液", jikaiyoteihi: "2011/10/01", jikaikyori: '', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "005", himei: "パッテリー", jikaiyoteihi: "2012/10/01", jikaikyori: '', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "006", himei: "Vベルト", jikaiyoteihi: "2012/10/01", jikaikyori: '30,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "007", himei: "スパークフラグ", jikaiyoteihi: "2012/10/01", jikaikyori: '20,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "009", himei: "冷却水（LLC）", jikaiyoteihi: "2012/10/01", jikaikyori: '20,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "010", himei: "ディスク・バット", jikaiyoteihi: "2012/10/01", jikaikyori: '30,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "011", himei: "エアコンフィルター", jikaiyoteihi: "2012/10/01", jikaikyori: '20,000', zenkaikoukan: "2004/10/01", zenkaikyori: '', nyukokubun: "00 初期", tasya: "" },
+                            { code: "015", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" },
+                            { code: "016", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" },
+                            { code: "017", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" },
+                            { code: "018", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" },
+                            { code: "019", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" },
+                            { code: "020", himei: "オイルフィルター", jikaiyoteihi: "2011/01/01", jikaikyori: '25,000', zenkaikoukan: "2004/10/01", zenkaikyori: '35,000', nyukokubun: "00 初期", tasya: "" }
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 368,
+                cellEdit: true,
+                autoScroll: true,
+                shrinkToFit: false,
+                cellsubmit: 'clientArray',
+                colNames: ['コード', '消耗品名', '次回予定日', '次回距離', '前回交換', '前回距離', '入庫区分', '他社'],
+                colModel: [
+               		        { name: 'code', index: 'code', width: 50, editable: true, key: true },
+                            { name: 'himei', index: 'himei', width: 240 },
+               		        { name: 'jikaiyoteihi', index: 'yoteihi', width: 65, editable: true },
+                            { name: 'jikaikyori', index: 'jikaikyori', width: 65, editable: true, align: "right" },
+                            { name: 'zenkaikoukan', index: 'zenkaikoukan', width: 65, editable: true },
+                            { name: 'zenkaikyori', index: 'zenkaikyori', width: 65, editable: true, align: "right" },
+                            { name: 'nyukokubun', index: 'nyukokubun', width: 80, editable: true },
+                            { name: 'tasya', index: 'tasya', width: 30, align: 'center', formatter: cboxFormatter }
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                multiselect: true,
+                pgbuttons: true,
+                //rowNum: 20,
+                //rownumWidth: 35,
+                //sortname: 'code',
+                beforeSelectRow: function (rowid, e) {
+                    if ($(e.target).is(":checkbox")) {
+                        var id = $(e.target).closest("tr.jqgrow").attr("id");
+                        var $td = $(e.target).closest("tr td");
+                        var icol = $.jgrid.getCellIndex($td[0]);
+                        var colModel = $("#list47").jqGrid("getGridParam", "colModel");
+
+                        var ind = $("#list47").getInd(rowid);
+                        var rowNum = $("#list47").getGridParam('rowNum');
+                        var page = $("#list47").getGridParam('page');
+                        if (page > 1) {
+                            ind += (page - 1) * rowNum;
+                        }
+
+                        if ($(e.target).is(":checked")) {
+                            $("#list47").jqGrid('setCell', rowid, 'jikaikyori', '12,000');
+                            $("#list47").jqGrid('getLocalRow', ind).jikaikyori = '12,000';
+                        }
+                        else {
+                            $(e.target).closest("tr").find("td:eq(5)").html('');
+                            $("#list47").jqGrid('getLocalRow', ind).jikaikyori = '';
+                        }
+                        //var rowData = jQuery("#list47").getRowData(rowid);
+                        //var rowData = $("#list47").jqGrid('getRowData', rowid);
+                        //alert(rowData.himei);
+                        //                    alert(colModel[icol].name);
+
+                        //                    if ($(e.target).is(":checkbox"))
+                        //                        alert($(e.target).is(":checked"));
+                    }
+                }
+            });
+
+            $("#cb_list47").hide();
+
+            $("#btn_esc").on("click", function () {
+
+            });
+
+            function cboxFormatter(cellvalue, options, rowObject) {
+                var rowId = options.rowId;
+                var ind = $("#list47").getInd(rowId);
+                var rowData = $("#list47").jqGrid('getRowData', ind);
+                //var rowData = jQuery("#list47").getRowData(rowId);
+                return '<input type="checkbox"' + 'onchange="alert(\'' + rowObject.himei + '\')"/>';
+                //                return '<input type="checkbox"' + 'onchange="changed(e)"/>';
+            }
+            function changed(e) {
+                //                var id = $(this).closest("tr.jqgrow").attr("id");
+            }
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:15px;">
+            <button id="Button1" type="button" style=" height:40px; margin-right:43px;">Esc<br />キャンセル</button>
+            <button id="Button2" type="button" style=" height:40px; margin-right:43px;">F6<br />行挿入</button>
+            <button id="Button3" type="button" style=" height:40px; margin-right:43px;">F7<br />行削除</button>
+            <button id="Button4" type="button" style=" height:40px; margin-right:43px;">F8<br />交換リスト</button>
+            <button id="Button5" type="button" style=" height:40px; margin-right:43px;">F9<br />提案シート</button>
+            <button id="Button6" type="button" style=" height:40px; margin-right:43px;">F10<br />確定</button>
+        </div>
+        <div style="margin-top:15px; margin-left:3px; margin-bottom:5px;">
+            <label style="margin-left:10px; background-color: #add8e6; font-size:larger; font-style:inherit">月間/予想　走行距離</label>
+            <input type="text" value="493km/36,482km" style="width:100px; padding: 1px 1px; margin-left:0px; text-align:center" disabled="disabled"/>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 1px 1px; font-size:larger; font-style:inherit">車検満了日</label>
+            <input type="text" value="平成 22/10/10" style="width:75px; margin-left:0px; text-align:center" disabled="disabled"/>
+        </div>
+        <div style="margin-top:5px; margin-left:1px; height:20px;">
+            <table id="list47"></table>
+            <div id="gridPager"></div>
+        </div>
+    </div>
+</body>
+</html>

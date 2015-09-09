@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>未売上 / 売上予定 / 仕掛一覧画面</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫予約No.': 'XXXXXXXXXXXXXXXXXX',
+                                'お客様No.': 'XXXXXXXXXXXXXXXXXX',
+                                'お客様名': '広島お客様',
+                                '入庫予定日': '2014/05/20',
+                                '発注No.': 'XXXXXXXXXXXXXXXXXX',
+                                '納品書No.': 'XXXXXXXXXXXXXXXXXX',
+                                '仕掛': 'XXXXXXXXXXXXXXXXXX',
+                                '部品No.': 'XXXXXXXXXXXXXXXXXX',
+                                '部品名': '部品名１',
+                                '数量': '1',
+                                '原単価': '999,999',
+                                '金額': '999,999',
+                                '発注日': '2014/05/21',
+                                '発注担当': '平野　カ',
+                                '仕入日': '2014/05/21',
+                                '出庫日': '2014/05/21',
+                                '作業担当': '田中一郎',
+                                '店舗コード': '００１',
+                                '店舗名': '向陽マツダ'
+                            }, 
+                            {
+                                '入庫予約No.': 'XXXXXXXXXXXXXXXXXX',
+                                'お客様No.': 'XXXXXXXXXXXXXXXXXX',
+                                'お客様名': '広島お客様',
+                                '入庫予定日': '2014/05/20',
+                                '発注No.': 'XXXXXXXXXXXXXXXXXX',
+                                '納品書No.': 'XXXXXXXXXXXXXXXXXX',
+                                '仕掛': 'XXXXXXXXXXXXXXXXXX',
+                                '部品No.': 'XXXXXXXXXXXXXXXXXX',
+                                '部品名': '部品名２',
+                                '数量': '2',
+                                '原単価': '999,999',
+                                '金額': '999,999',
+                                '発注日': '2013/05/20',
+                                '発注担当': '平野　カ',
+                                '仕入日': '2014/05/21',
+                                '出庫日': '2014/05/21',
+                                '作業担当': '田中次郎',
+                                '店舗コード': '００２',
+                                '店舗名': '向陽マツダ'
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 346,
+                width: width < 1024 ? 1024 : width,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                //rowList: [10],
+                colNames: [
+                            '入庫予約No.',
+                            'お客様No.',
+                            'お客様名',
+                            '入庫予定日',
+                            '発注No.',
+                            '納品書No.',
+                            '仕掛',
+                            '部品No.',
+                            '部品名',
+                            '数量',
+                            '原単価',
+                            '金額',
+                            '発注日',
+                            '発注担当',
+                            '仕入日',
+                            '出庫日',
+                            '作業担当',
+                            '店舗コード',
+                            '店舗名'
+                           ],
+                colModel: [
+               		        { name: '入庫予約No.', index: '入庫予約No.', width: 200 },
+               		        { name: 'お客様No.', index: 'お客様No.', width: 200 },
+               		        { name: 'お客様名', index: 'お客様名', width: 100 },
+               		        { name: '入庫予定日', index: '入庫予定日', width: 90 },
+               		        { name: '発注No.', index: '発注No.', width: 90 },
+               		        { name: '納品書No.', index: '納品書No.', width: 60 },
+               		        { name: '仕掛', index: '仕掛', width: 200 },
+                            { name: '部品No.', index: '部品No.', width: 200 },
+                            { name: '部品名', index: '部品名', width: 130},
+                            { name: '数量', index: '数量', width: 120, align: "right" },
+                            { name: '原単価', index: '原単価', width: 130, align: "right" },
+                            { name: '金額', index: '金額', width: 150, align: "right" },
+                            { name: '発注日', index: '発注日', width: 150 },
+                            { name: '発注担当', index: '発注担当', width: 150 },
+                            { name: '仕入日', index: '仕入日', width: 150 },
+                            { name: '出庫日', index: '出庫日', width: 200 },
+                            { name: '作業担当', index: '作業担当', width: 150 },
+                            { name: '店舗コード', index: '店舗コード', width: 150 },
+                            { name: '店舗名', index: '店舗名', width: 150 }
+               	        ],
+               // pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+
+
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+            $("#cb_list47").hide();
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div style="margin-top:5px; margin-left:3px;">
+        <table>
+        <tbody>
+        <tr>
+        <td>
+            <button id="Button1" type="button" style="width:80px; height: 40px; margin-right:0px">実行</button>
+        </td>
+        <td>
+            <button id="Button2" type="button" style="width:80px; height: 40px; margin-right:0px">印刷</button>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top:10px;margin-left:3px;"">
+        <fieldset title="基本情報">
+        <legend style="font-size:12px; color:Blue">基本情報</legend>
+        <table>
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>出力対象:</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="new_lookuptestentity_lookupTable" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <select id="new_listboxtest" attrname="new_listboxtest" attrpriv="7" 
+                                                        class="ms-crm-SelectBox" defaultselected="" name="new_listboxtest" req="0" 
+                                                        style="-ms-ime-mode: auto;" tabindex="1110">
+                                                        <option selected="selected" title="" value=""></option>
+                                                        <option title="ItemA" value="0">未売上部品リスト</option>
+                                                        <option title="ItemB" value="1">売上予定部品リスト</option>
+                                                        <option title="ItemC" value="2">部品仕掛リスト</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"></td>
+                                <td style="width:60%;"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px"></td>
+                </tr>
+
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>販社:</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table1" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="ico_16_1" alt="" src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                <span class="ms-crm-LookupItem-Name">向洋マツダ</span>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <input tabindex="1030" class="ms-crm-Hidden-NoBehavior" id="new_lookuptestentity_ledit"
+                                                        style="padding: 2px 0px 1px; height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="new_lookuptestentity" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                        src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick="" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>店舗:</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table5" style="width: 100%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                    <div class="ms-crm-Lookup">
+                                                        <ul style="width: 100%; text-align: left; float: left;">
+                                                            <li style="display: inline; white-space: nowrap;"><span title="Fourth Coffee (sample)"
+                                                                class="ms-crm-Lookup-Item" onclick="" >
+                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img1" alt="" src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                <span class="ms-crm-LookupItem-Name">向洋店</span>
+                                                            </span></li>
+                                                        </ul>
+                                                    </div>
+                                                    <input tabindex="1030" class="ms-crm-Hidden-NoBehavior" id="Text1"
+                                                        style="padding: 2px 0px 1px; height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                                <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img2" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                        src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                        <a tabindex="-1" title="Click to select a value for LookupTestEntity." onclick="" href="#"></a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px"></td>
+                </tr>
+
+                <tr>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>入庫予定日:</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table2" style="width: 70%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text2"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px;">
+                        <table>
+                            <tr>
+                                <td style="width:30%;"><label>~</label></td>
+                                <td style="width:60%;">
+                                    <table class="ms-crm-Lookup" id="Table3" style="width: 70%;
+                                        table-layout: fixed;" cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td valign="top" style="padding-right: 100px;">
+                                                    <input tabindex="1030" id="Text3"
+                                                        style="height: 100%;
+                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px;"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div style="margin-top:10px; margin-left:3px; height:320px;">
+    
+        <fieldset title="明細情報">
+        <legend style="font-size:12px; color:Blue">明細情報</legend>
+        <table id="list47"></table>
+        </fieldset>
+        <div id="gridPager"></div>
+    </div>
+</div>
+</body>
+</html>

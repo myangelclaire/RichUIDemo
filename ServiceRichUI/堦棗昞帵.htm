@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>一覧表示</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+<!--    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>-->
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                { S: "对象台数", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "入庫見込み", W1: "0", W2: "0", W3: "0", W4: "0", W5: "0", W6: "0", W7: "0", W8: "0" },
+                { S: "入庫確約", W1: "1", W2: "0", W3: "1", W4: "0", W5: "0", W6: "0", W7: "0", W8: "0" },
+                { S: " \n自店舗入庫", W1: "0", W2: "0", W3: "0", W4: "0", W5: "0", W6: "0", W7: "0", W8: "0" },
+                { S: "自社代替", W1: "0", W2: "1", W3: "0", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "他店舗入庫", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "他社入庫", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "コンタクト中", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "転出・廃車", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "不明・未コンタクト", W1: "1", W2: "1", W3: "1", W4: "1", W5: "1", W6: "1", W7: "1", W8: "1" },
+                { S: "コンタクト率", W1: "100.0%", W2: "100.0%", W3: "100.0%", W4: "100.0%", W5: "100.0%", W6: "100.0%", W7: "100.0%", W8: "100.0%" },
+                { S: "防衛率", W1: "0.0%", W2: "100.0%", W3: "100.0%", W4: "0.0%", W5: "100.0%", W6: "100.0%", W7: "100.0%", W8: "100.0%" },
+                { S: "獲得率", W1: "0.0%", W2: "0.0%", W3: "0.0%", W4: "0.0%", W5: "0.0%", W6: "0.0%", W7: "0.0%", W8: "0.0%" }
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 320,
+                width: 700,
+
+                colNames: ['営業スタッフ', '鈴木村田　小太郎', '斉藤　次郎', '担当者４', '担当者５', '担当者６', '担当者７', '担当者８', '担当者９'],
+                colModel: [
+               		        { name: 'S', index: 'S', width: 80, sortable: false, frozen: true, align: 'left' },
+                            { name: 'W1', index: 'W1', width: 100, sortable: false, align: 'right' },
+                            { name: 'W2', index: 'W2', width: 100, sortable: false, align: 'right' },
+                            { name: 'W3', index: 'W3', width: 100, sortable: false, align: 'right' },
+                            { name: 'W4', index: 'W4', width: 100, sortable: false, align: 'right' },
+                            { name: 'W5', index: 'W5', width: 100, sortable: false, align: 'right' },
+                            { name: 'W6', index: 'W6', width: 100, sortable: false, align: 'right' },
+                            { name: 'W7', index: 'W7', width: 100, sortable: false, align: 'right' },
+                            { name: 'W8', index: 'W8', width: 100, sortable: false, align: 'right' },
+
+               	        ],
+                pager: "#gridPager",
+                autowidth: false,
+                //autoheight:true,
+                viewrecords: true,
+                loadonce: true,
+                shrinkToFit: false
+                //rownumbers: true,
+                //multiselect: true,
+                //pgbuttons: true
+            });
+
+            var mydata = [
+                { Sum: "3" },
+                { Sum: "0" },
+                { Sum: "2" },
+                { Sum: "A\n0",'': "B\n0" },
+                { Sum: "3" },
+                { Sum: "3" },
+                { Sum: "3" },
+                { Sum: "3" },
+                { Sum: "3" },
+                { Sum: "3" },
+                { Sum: "100.0%" },
+                { Sum: "50.0%" },
+                { Sum: "0.0%" }
+                        ];
+
+            $("#list48").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 320,
+                width: 100,
+
+                colNames: ['合计', ''],
+                colModel: [
+                            { name: 'Sum', index: 'Sum', width: 100, sortable: false, align: 'right',
+                              cellattr: function (rowId) {
+                                    if (Number(rowId) != 4) {
+                                        return 'colspan=2'
+                                    }
+                                    //  else if (Number(rowId) = 4) { 
+
+                                    // }
+                                }
+                            },
+                            { name: '', index: '', width: 100, sortable: false, align: 'right' }
+               	        ],
+                pager: "#gridPager"
+            }); jQuery("#list47").jqGrid('setFrozenColumns');
+        })  
+    </script>
+    <style type="text/css">
+        .style1
+        {
+            width: 136px;
+        }
+        .style2
+        {
+            height: 17px;
+        }
+        .style3
+        {
+            width: 136px;
+            height: 17px;
+        }
+        .style4
+        {
+            height: 74px;
+        }
+        .style5
+        {
+            width: 136px;
+            height: 74px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:700px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:10px; margin-left:3px;">
+        <button id="Button1" type="button" style=" height:35px; width:60px; margin-right:0px;">F1<br />終了</button>
+        <button id="Button2" type="button" style=" height:35px; width:60px; margin-right:0px;">F9<br />実行</button>
+        <button id="Button14" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+9<br />印刷</button>
+    　　</div>
+        <div style="margin-top:5px; margin-left:3px; margin-bottom:5px;">
+        <label>H17年05月度　　【車検】　　予約進捗管理表</label>
+        </div>
+        <div  style="height: 390px; width: 700px; margin-left:3px; overflow:auto; background-color: #CCCCCC;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="border: 1px solid #00CC99; height: 60px; width: 100px; background-color: #FFFFFF;" 
+                                frame="above"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="border-style: solid; border-color: #00FFFF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="border-style: solid; border-color: #00FF00; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="border-style: solid; border-color: #00FFFF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="border-style: solid; border-color: #FF00FF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="border-style: solid; border-color: #FF00FF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="position: static; left: 280px;">
+                        <table style="border-style: solid; border-color: #FF00FF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="position: static; left: 380px;">
+                        <table style="border-style: solid; border-color: #0000FF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 86px">
+                            <table style="border-style: solid; border-color: #00FF00; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                            <table style="border-style: solid; border-color: #00FF00; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="border-style: solid; border-color: #00FF00; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                        <td style="padding-left: 0px">
+                        <table style="border-style: solid; border-color: #0000FF; height: 60px; width: 100px; background-color: #FFFFFF;"><tr><td style="text-align:center;">松田  零六</td></tr>
+                            <tr><td style="text-align:center;">RX-06</td></tr>
+                            <tr><td style="text-align:center;">広島999う0006</td></tr>
+                            <tr><td style="text-align:center;">H16.01.06</td></tr></table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="width:800px;">
+           <div>
+              <table style="width:100%">
+                <tr>
+                   <td style="border-style: none; border-width: thin; width:700px">
+                      <div style="width:100%">
+                        <table id="list47"></table>
+                      </div>
+                   </td>
+                   <td style="border-style: none; border-width: 0px; width:100px; padding-left: 0px;">
+                      <div style="width:100%">
+                        <table id="list48"></table>
+                      </div>
+                   </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,828 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>受注登録納車回収管理表（複数行）</title>
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/AfterOrder_StatusConfirmation.css" />
+
+    <!--<link rel="stylesheet" type="text/css" href="../dropdown/jquery.multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="../dropdown/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="../dropdown/assets/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../dropdown/assets/prettify.js"></script>
+    <script type="text/javascript" src="../dropdown/src/jquery.multiselect.js"></script>-->
+    <!--<script type="text/javascript">
+        $(function () {
+            $("select").multiselect(
+                {
+                    selectedList: 4 // 0-based index
+                }
+                );
+        });
+    </script>-->
+
+    <style></style>
+
+</head>
+<body id="test" style="width:1280px;height:768px; margin:0px; padding:0px;"><!--onload="prettyPrint();"-->
+    <!--ログシート-->
+    <div id="logsheet-content">
+        <h2>受注登録納車回収管理表（複数行）</h2>
+        <!--検索条件-->
+        <div style="width:1240px;height:728px;">
+            <div id="logsheet-search-condition">
+                <form>
+                    <table>
+                        <tr>
+                            <th width="100px">店舗</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                        </tr>
+
+
+                        <tr>
+                            <th width="100px">検索日付</th>
+                            <td width="250px" colspan="4">
+                                <input type="radio" value="1" /><label>成約日</label>
+                                <input type="radio" value="1" /><label>受注日</label>
+                                <input type="radio" value="1" /><label>登録予定日</label>
+                            </td>
+                            <td width="120px" colspan="6">
+                                <input type="date" name="name" id="name" />～
+                                <input type="date" name="name" id="name" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th width="100px">担当者</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                            <th width="100px">新中区分</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">新車</option>
+                                    <option value="Option2">中古車</option>
+                                    <option value="Option3">新車/中古車</option>
+                                </select>
+                            </td>
+
+                            <th width="100px">完了フラグ</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">アクティブ</option>
+                                    <option value="Option2">完了</option>
+                                    <option value="Option3">キャンセル</option>
+                                    <option value="Option4">すべて</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+            </div>
+            <div id="entry-submit" style="margin-bottom:10px;height:30px;">
+                <input type="submit" value="検索" class="blue_btn_class" style="float: right; padding: 2px; height: 25px; width: 120px; margin-left: 10px;" />
+            </div>
+
+            <div id="logsheet-search-result">
+                <form>
+                    <table class="afiterorder-result-multiline">
+                        <thead>
+                            <!--ラベル-->
+                            <tr >
+                                <th rowspan="1" colspan="8">商談・成約</th>
+                                <th rowspan="4">受注<br />区分</th>
+                                <th rowspan="1" colspan="9">注文・生産・センター出荷</th>
+                                <th rowspan="1" colspan="3">登録</th>
+                                <th rowspan="1" colspan="2">納車</th>
+                                <th rowspan="1" colspan="3">回収</th>
+                                <th rowspan="4">完了</th>
+                                <th rowspan="2" colspan="5">つながり商品加入状況<br />（成約以降含む）</th>                                
+                            </tr>
+                            <tr>
+                                <th rowspan="3">新中<br />区分</th>
+                                <th rowspan="2">事業部</th>
+                                <th rowspan="2">店舗</th>
+                                <th rowspan="2">お客様</th>
+                                <th rowspan="3">顧客<br />新他</th>
+                                <th rowspan="1">車種</th>
+                                <th rowspan="1">注文書No</th>
+                                <th rowspan="3">成約日</th>
+                                <th rowspan="2">受注日</th>
+                                <th rowspan="2">オーダー<br />日・方法</th>
+                                <th rowspan="2">中古車Mo</th>
+                                <th rowspan="2">生産・保管<br />場所</th>
+                                <th rowspan="2">出荷日</th>
+                                <th rowspan="2">引取<br />オーダー<br />完備</th>
+                                <th rowspan="2">センター<br />入庫日</th>
+                                <th rowspan="2">センター<br />加装<br />終了日</th>
+                                <th rowspan="2">配送先</th>
+                                <th rowspan="3">予定月</th>
+                                <th rowspan="1">希望日</th>
+                                <th rowspan="2">登録書類</th>
+                                <th rowspan="1">希望日</th>
+                                <th rowspan="2">保険<br />ステータス</th>
+                                <th rowspan="2">現金<br />支払額</th>
+                                <th rowspan="1">クレジット<br />元金</th>
+                                <th rowspan="1">下取額</th>
+                            </tr>
+
+                            <tr>
+                                <th rowspan="1">グレード</th>
+                                <th rowspan="1">売上</th>
+                                <th rowspan="1">予定日</th>
+                                <th rowspan="1">予定日</th>
+                                <th rowspan="1">OK<br />ナンバー</th>
+                                <th rowspan="1">下取合意</th>
+                                <th rowspan="2">PDM</th>
+                                <th rowspan="2">延長<br />保障</th>
+                                <th rowspan="2">JAF</th>
+                                <th rowspan="2">保険</th>
+                                <th rowspan="2">サポ<br />プラ</th>
+                            </tr>
+
+                            <tr>
+                                <th rowspan="1" colspan="2">担当</th>
+                                <th rowspan="1">商談案件番号</th>
+                                <th rowspan="1">ボディーカラー</th>
+                                <th rowspan="1">利益</th>
+                                <th rowspan="1" colspan="2">車体No</th>
+                                <th rowspan="1">中古車<br />登録区分</th>
+                                <th rowspan="1">生産日</th>
+                                <th rowspan="1">引取<br />オーダー日</th>
+                                <th rowspan="1">最遅用品<br />到着日</th>
+                                <th rowspan="1">センター加装<br />開始日</th>
+                                <th rowspan="1">センター<br />出庫日</th>
+                                <th rowspan="1">店舗着<br />予定日</th>
+                                <th rowspan="1">登録日</th>
+                                <th rowspan="1">希望No</th>
+                                <th rowspan="1">納車日</th>
+                                <th rowspan="1">任意保険<br />車両入管日</th>
+                                <th rowspan="1">現金<br />支払残高</th>
+                                <th rowspan="1">クレジット<br />ステータス</th>
+                                <th rowspan="1">下取り<br />ステータス</th>
+
+                            </tr>
+                        </thead>
+                        <!--データ-->
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">新車</td>
+                                <td rowspan="2">Ａ事業部</td>
+                                <td rowspan="2">広島店</td>
+                                <td rowspan="2">山田 太郎様</td>
+                                <td rowspan="3">顧客</td>
+                                <td rowspan="1">AXSELA SPORTS</td>
+                                <td rowspan="1">XXXXXXXX</td>
+                                <td rowspan="3">2014/5/16</td>
+                                <td rowspan="3">自契<br>自登</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">手配中</td>
+                                <td rowspan="2">-</td>
+                                <td rowspan="2">防府</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2">2014/5/16</td>
+                                <td rowspan="2"></td>
+                                <td rowspan="3">3月</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">○</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="2">提案中</td>
+                                <td rowspan="2">200,000</td>
+                                <td rowspan="1">2,800,000</td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">○</td>
+                                <td rowspan="3">×</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">20S Touring Lpackage</td>
+                                <td rowspan="1">3,000,000</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">ク000000</td>
+                                <td rowspan="1">1台</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" colspan="2">松田　デミ男</td>
+                                <td rowspan="1">OP12345678</td>
+                                <td rowspan="1">ディープクリスタルブルーマイン</td>
+                                <td rowspan="1">200,000</td>
+                                <td rowspan="1" colspan="2"></td>
+                                <td rowspan="1">-</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1">33-33</td>
+                                <td rowspan="1">2014/5/16</td>
+                                <td rowspan="1"></td>
+                                <td rowspan="1">100,000</td>
+                                <td rowspan="1">承認</td>
+                                <td rowspan="1">未入荷</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

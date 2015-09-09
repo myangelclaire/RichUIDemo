@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>整備日報（月計）</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        .head-table td
+        {
+            border: 2px
+        }
+        .tab-contnet
+        {
+            border: 3px solid #ccc;
+        }
+        
+        .tab-contnet1
+        {
+            border: 2px solid #ccc;
+        }
+        
+        
+        .label-White
+        {
+            background-color:White;
+            border: 2px;
+            text-align: left;
+        }
+        .label-back
+        {
+            background-color: #ccc;
+            border: 1px solid #e6e6fa;
+            text-align: left;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                               nyuukokubun: "入庫区分01", daisuu: "90001", uriage_gijyutsu: "100000002", uriage_bihin: "100000003", uriage_gaichu: "100000004",
+                               uriage_uchigaichubihin: "100000005", uriage_goukei: "1000000006", genka_gijyutsu: "200000001", genka_bihin: "200000002", genka_gaichu: "200000003",
+                               genka_uchigaichubihin: "200000004", genka_goukei: "200000005", arariekigoukei: "3000000001", uriageutenatouri: "400000001", nebiki: "500000001",
+                               zenukekana: "600000001", senbisushouhin: "700000001"
+                           },
+                           {
+                               nyuukokubun: "入庫区分02", daisuu: "90001", uriage_gijyutsu: "100000002", uriage_bihin: "100000003", uriage_gaichu: "100000004",
+                               uriage_uchigaichubihin: "100000005", uriage_goukei: "1000000006", genka_gijyutsu: "200000001", genka_bihin: "200000002", genka_gaichu: "200000003",
+                               genka_uchigaichubihin: "200000004", genka_goukei: "200000005", arariekigoukei: "3000000001", uriageutenatouri: "400000001", nebiki: "500000001",
+                               zenukekana: "600000001", senbisushouhin: "700000001"
+                           }, 
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 276,
+                width: 980,
+                sortable: false,
+                cellEdit: false,
+                autoScroll: true,
+                shrinkToFit: false,
+                cellsubmit: 'clientArray',
+                colNames: ['入庫区分', '台数', '売上(技術料)', '(部品)', '(外注)', '（内外注部品)', '(合計)', '原価(技術料)', '(部品)',
+                           '(外注)', '内外注部品)', '(合計)', '粗利益合計', '売上台当り', '値引計', '前受金', 'サービス商品'],        
+                colModel: [
+               		        { name: 'nyuukokubun', index: 'nyuukokubun', sortable: false, width: 100},
+                            { name: 'daisuu', index: 'daisuu', width: 50, align: "right" },
+               		        { name: 'uriage_gijyutsu', index: 'uriage_gijyutsu', width: 90, align: "right" },
+               		        { name: 'uriage_bihin', index: 'uriage_bihin', width: 90, key: true, align: "right" },
+                            { name: 'uriage_gaichu', index: 'uriage_gaichu', width: 90, align: "right" },
+               		        { name: 'uriage_uchigaichubihin', index: 'uriage_uchigaichubihin', width: 90, align: "right" },
+               		        { name: 'uriage_goukei', index: 'uriage_goukei', width: 100, key: true, align: "right" },
+                            { name: 'genka_gijyutsu', index: 'genka_gijyutsu', width: 90, align: "right" },
+               		        { name: 'genka_bihin', index: 'genka_bihin', width: 90, align: "right" },
+               		        { name: 'genka_gaichu', index: 'genka_gaichu', width: 90, key: true, align: "right" },
+                            { name: 'genka_uchigaichubihin', index: 'genka_uchigaichubihin', width: 90, align: "right" },
+                            { name: 'genka_goukei', index: 'genka_goukei', width: 90, align: "right" },
+               		        { name: 'arariekigoukei', index: 'arariekigoukei', width: 90, align: "right" },
+               		        { name: 'uriageutenatouri', index: 'uriageutenatouri', width: 90, key: true, align: "right" },
+                            { name: 'nebiki', index: 'nebiki', width: 90, align: "right" },
+               		        { name: 'zenukekana', index: 'zenukekana', width: 90, key: true, align: "right" },
+                            { name: 'senbisushouhin', index: 'senbisushouhin', width: 90, align: "right" },
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                pgbuttons: true
+            });
+
+            $("#cb_list47").hide();
+
+            $("#btn_esc").on("click", function () {
+
+            });
+        })
+    </script>
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                          {   id: '1',
+                              w: "有償",
+                              daisuu: "10001",
+                              uriage: "1000000002",
+                              genka: "1000000003",
+                              ararieki: "1000000004"
+                          },
+                          {     id: '2',
+                                w: "無償",
+                                daisuu: "10001",
+                                uriage: "1000000002",
+                                genka: "1000000003",
+                                ararieki: ""
+                          },
+                          {     id: '3',
+                                w: "合計",
+                                daisuu: "10001",
+                                uriage: "1000000002",
+                                genka: "1000000003",
+                                ararieki: ""
+                          },
+                        ];
+
+            $("#list48").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 70,
+                width: 425,
+                sortable: false,
+               // autoScroll: false,
+                shrinkToFit: false,
+                cellsubmit: 'clientArray',
+                colNames: ['', '台数', '売上', '原価', '粗利益'],
+                colModel: [
+               		        { name: 'w', index: 'w', width: 50, sortable: false, align: "center"},
+               		        { name: 'daisuu', index: 'daisuu', width: 50, align: "right" },
+                            { name: 'uriage', index: 'uriage', width: 100, sortable: false, align: "right" },
+               		        { name: 'genka', index: 'genka', width: 100, sortable: false, align: "right" },
+               		        { name: 'ararieki', index: 'ararieki', width: 100, sortable: false, align: "right" },
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                pgbuttons: true
+            });
+
+            $("#cb_list48").hide();
+
+            $("#btn_esc").on("click", function () {
+
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <div style="height:10px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:15px;">
+            <button id="Button1" type="button" style=" height:40px;">F1<br/>終了</button>
+            <button id="Button2" type="button" style=" height:40px;">F8<br/>再入力</button>
+            <button id="Button3" type="button" style=" height:40px;">F9<br/>実行</button>
+            <button id="Button4" type="button" style=" height:40px;">F3<br/>印刷</button>
+            <button id="Button5" type="button" style=" height:40px;" disabled="disabled">F4<br/>前拠点</button>
+            <button id="Button6" type="button" style=" height:40px;" disabled="disabled">F5<br/>次拠点</button>
+            <button id="Button7" type="button" style=" height:40px;">F6<br/>条件変更</button>
+        </div>
+        <div class="tab-contnet" style="margin-top:10px; height:190px; width: 958px;">
+                    <table class="head-table">
+                        <tbody>
+                            <tr>
+                                <td class="label-White"; style="width: 180px; background-color: yellow;" >対象年月</td>
+                                <td>
+                                    <input type="text" value="YYYY/MM" style="width: 50px;" />
+                                    <input type="text" value="" style="width: 688px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px; background-color: yellow;" >対象範囲</td>
+                                <td>
+                                    <input type="text" value="1" style="width: 10px;"/>
+                                    <input type="text" value="  1 : 販 社   2 : ブ ロ ック  3 : 地 区  4 : 拠 点 " style="width: 728px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px;" >ブロック</td>
+                                <td>
+                                    <input type="text" value="11111" style="width: 35px;" />
+                                    <input type="text" value="ＮＮＮＮＮＮＮＮＮＮ" style="width: 95px;" disabled="disabled"/>
+                                    <input type="text" value="" style="width: 598px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px;" >地区</td>
+                                <td>
+                                    <input type="text" value="22222" style="width: 35px;" />
+                                    <input type="text" value="ＮＮＮＮＮＮＮＮＮＮ" style="width: 95px;" disabled="disabled"/>
+                                    <input type="text" value="" style="width: 598px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                             <tr>
+                                <td class="label-White"; style="width: 180px;" >拠点</td>
+                                <td>
+                                    <input type="text" value="333" style="width: 20px;" />
+                                    <input type="text" value="ＮＮＮＮＮＮ" style="width: 60px;" disabled="disabled"/>
+                                    <input type="text" value="" style="width: 648px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px; background-color: yellow;" >小計単位</td>
+                                <td>
+                                    <input type="text" value="2" style="width: 10px;" />
+                                    <input type="text" value="  1 : 集 計 1 区 分 （標 準）　2 : MC 集 計 区 分 " style="width: 728px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px; background-color: yellow;" >締めﾀｲﾐﾝｸﾞ</td>
+                                <td>
+                                    <input type="text" value="3" style="width: 10px;" />
+                                    <input type="text" value="  1 :10 日 ま で　2 : 20 日 ま で 　3 ： 25 日 ま で 　4 : 月 末 計 " style="width: 728px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label-White"; style="width: 180px; background-color: yellow;" >集計単位</td>
+                                <td>
+                                    <input type="text" value="2" style="width: 10px;" />
+                                    <input type="text" value="  1 : 拠 点　2 : 合 計  " style="width: 728px; background-color:#e6e6fa;" disabled="disabled"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+
+        <div style="margin-top:8px; margin-left:0px; height:20px;">
+            <table id="list48"></table>
+        </div>
+        <div   class="tab-contnet1"; style="margin-top:-18px; margin-left:740px; height:85px;  width: 220px;">
+           <table class="head-table">
+                <tbody>
+                     <tr>
+                         <td class="label-White"; style="width: 1px;" >最終売上日</td>
+                         <td>
+                                <input type="text" value="YYYY/MM/DD" style="width: 80px;" />
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="label-White"; style="width: 100px;" >締めタイミング</td>
+                         <td class="label-White";>
+                                <input type="text" value="1000000002" style="width: 80px;" />
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="label-White"; style="width: 80px;" >月締め</td>
+                         <td class="label-White";>
+                                <input type="text" value="1" style="width: 10px;" />
+                                <input type="text" value="" style="width: 60px; background-color:#e6e6fa;" disabled="disabled" />
+                         </td>
+                     </tr>
+                </tbody>
+           </table>
+        </div>
+        <div style="margin-top:12px; margin-left:1px; height:20px;">
+            <table id="list47" style="width:50"></table>
+        </div>
+    </div>
+</body>
+</html>

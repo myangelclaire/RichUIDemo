@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/tabchange.js"></script>
+    <script src="../Scripts/dialog.js"></script>
+
+    <title>商談への関連付け(来店情報）</title>
+    
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />
+
+    <style>
+    </style>
+
+</head>
+<body>
+
+    <!--ヘッダー-->
+    <label class="title" style="font-size:24px; style=" width:120px;">来店登録(直接来店に対するアンケートからの反映）</label>
+    <br />
+    <br />
+    <div id="customer-information">
+        <ul>
+            <li>
+                <label class="title" style="width:400px;">お客様名</label>
+                <label class="data" style="width: 90px;">山田　敬介</label>
+            </li>
+        </ul>
+    </div>
+   <div>
+        <ul>
+            <li>
+                <table width="100%">
+                    <tr>
+                        <td colspan="2">
+                            <label>該当するお客様の来店情報が存在する場合、該当するデータをチェックして「次へ」を押して下さい。</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="90%">
+                            <label>※チェックがない場合、「次へ」を押すと来店情報を新規登録します。</label>
+                        </td>
+                        <td id="new_singlelinetexttest_d" style="overflow: hidden;" formxmlcolspan="1">
+                            <button onclick='location.href = "Opportunity.html"' style="width: 100px">次へ</button>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+    <!--一覧-->
+    <label style="font-weight:bold;">お客様に関連する来店予定一覧</label>     
+    <div id="communicationboard-detail">
+            <form>
+                <table class="sample1" style="height:auto;">
+                    <tr>
+                        <th scope="col" style="width:10px;"><span></span></th>
+                        <th width="200px;">予定日時</th>
+                        <th width="200px;">実績日時</th>
+                        <th width="200px;">予約状況</th>
+                        <th width="200px;">お客様名</th>
+                        <th width="200px;">ご使用車</th>
+                        <th width="200px;">登録番号</th>
+                        <th width="200px;">目的</th>
+                        <th width="200px;">担当領域</th>
+                        <th width="200px;">来店/訪問状況</th>
+                        <th width="200px;">商談案件</th>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>20014/5/23</td>
+                        <td>　</td>
+                        <td>確約</td>
+                        <td>山田　敬介</td>
+                        <td>デミオ</td>
+                        <td>広島500し2525</td>
+                        <td>お車のご検討</td>
+                        <td>新車</td>
+                        <td>来店/訪問予約</td>
+                        <td>OP-111111</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>20014/3/6</td>
+                        <td>　</td>
+                        <td>確約</td>
+                        <td>山田　敬介</td>
+                        <td>デミオ</td>
+                        <td>広島500し2525</td>
+                        <td>一般整備のご入庫</td>
+                        <td>サービス</td>
+                        <td>キャンセル</td>
+                        <td>　</td>
+                    </tr>
+                    <tr>
+                        <td style="width:auto;"><input type="checkbox" style="width:20px;" /></td>
+                        <td>2002/12/20</td>
+                        <td>2002/12/20</td>
+                        <td>確約</td>
+                        <td>山田　敬介</td>
+                        <td>デミオ</td>
+                        <td>広島500し2525</td>
+                        <td>ご納車</td>
+                        <td>新車</td>
+                        <td>退店/退去</td>
+                        <td>OP-111112</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+</body>
+</html>

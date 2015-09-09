@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>部品連携作業コード選択</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { 部品: "AAA", 選択チェック: "",  作業CD: "123"},
+                            { 部品: "AAA", 選択チェック: "",  作業CD: "234"},
+                            { 部品: "BBB", 選択チェック: "",  作業CD: "555"},
+                            { 部品: "BBB", 選択チェック: "",  作業CD: "552"},
+                            { 部品: "BBB", 選択チェック: "",  作業CD: "553"},
+                            { 部品: "CCC", 選択チェック: "",  作業CD: "442"},
+                            { 部品: "CCC", 選択チェック: "",  作業CD: "443"}
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 161,
+                width: 175,
+                cellEdit: true,
+                autoScroll: true,
+                shrinkToFit: false,
+                cellsubmit: 'clientArray',
+                colNames: ['部品', '', '作業CD'],
+                colModel: [
+               		        { name: '部品', index: '部品', width: 40 ,align: "center" },
+                            { name: '', index: '選択チェック', width: 40 ,align: "center" ,formatter: cboxFormatter},
+               		        { name: '作業CD', index: '作業CD', width: 50 ,align: "center" }
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true,
+                beforeSelectRow: function (rowid, e) {
+                    if ($(e.target).is(":checkbox")) {
+                        var id = $(e.target).closest("tr.jqgrow").attr("id");
+                        var $td = $(e.target).closest("tr td");
+                        var icol = $.jgrid.getCellIndex($td[0]);
+                        var colModel = $("#list47").jqGrid("getGridParam", "colModel");
+
+                        var ind = $("#list47").getInd(rowid);
+                        var rowNum = $("#list47").getGridParam('rowNum');
+                        var page = $("#list47").getGridParam('page');
+                        if (page > 1) {
+                            ind += (page - 1) * rowNum;
+                        }
+
+                        if ($(e.target).is(":checked")) {
+                            $("#list47").jqGrid('setCell', rowid, 'jikaikyori', '12,000');
+                            $("#list47").jqGrid('getLocalRow', ind).jikaikyori = '12,000';
+                        }
+                        else {
+                            $(e.target).closest("tr").find("td:eq(5)").html('');
+                            $("#list47").jqGrid('getLocalRow', ind).jikaikyori = '';
+                        }
+                    }
+                }
+            });
+
+            function cboxFormatter(cellvalue, options, rowObject) {
+                var rowId = options.rowId;
+                var ind = $("#list47").getInd(rowId);
+                var rowData = $("#list47").jqGrid('getRowData', ind);
+                return '<input type="checkbox"' + 'onchange="alert(\'' + rowObject.himei + '\')"/>';
+            }
+            function changed(e) {
+            }
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:10px;">
+            <button id="Button2" type="button" style=" height:35px; width:60px; margin-right:0px;">確定</button>
+            <button id="Button3" type="button" style=" height:35px; width:70px; margin-right:0px;">キャンセル</button>
+        </div>
+        <div style="margin-top:5px; margin-left:1px; height:20px;">
+            <table id="list47"></table>
+        </div>
+    </div>
+</body>
+</html>

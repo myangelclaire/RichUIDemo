@@ -1,0 +1,2935 @@
+body.ms-crm-Setting-Context-top
+{
+    -ms-scrollbar-base-color: rgb(233, 237, 241);
+    -ms-scrollbar-face-color: rgb(215, 220, 226);
+    -ms-scrollbar-3dlight-color: rgb(165, 172, 181);
+    -ms-scrollbar-shadow-color: rgb(233, 237, 241);
+    -ms-scrollbar-highlight-color: rgb(233, 237, 241);
+    -ms-scrollbar-darkshadow-color: rgb(165, 172, 181);
+    -ms-scrollbar-arrow-color: rgb(59, 59, 59);
+    -ms-scrollbar-track-color: rgb(227, 232, 237);
+    background-color: rgb(233, 237, 241);
+}
+body
+{
+    -ms-scrollbar-base-color: rgb(233, 237, 241);
+    -ms-scrollbar-face-color: rgb(215, 220, 226);
+    -ms-scrollbar-3dlight-color: rgb(165, 172, 181);
+    -ms-scrollbar-shadow-color: rgb(233, 237, 241);
+    -ms-scrollbar-highlight-color: rgb(233, 237, 241);
+    -ms-scrollbar-darkshadow-color: rgb(165, 172, 181);
+    -ms-scrollbar-arrow-color: rgb(59, 59, 59);
+    -ms-scrollbar-track-color: rgb(227, 232, 237);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-TopBarContainerGlobal
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/Masthead.png?ver=60076166");
+    background-color: rgb(255, 255, 255);
+}
+div.ms-crm-TopBarContainerForm
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/form_masthead.png?ver=60076166");
+}
+a.ms-crm-MastHead-UserInfo-Other
+{
+    color: rgb(255, 255, 255);
+}
+span.ms-crm-MastHead-UserInfo-Other
+{
+    color: rgb(255, 255, 255);
+}
+a.ms-crm-MastHead-UserInfo-Record
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-MastHead-UserInfo-Record
+{
+    color: rgb(0, 0, 0);
+}
+a.ms-crm-MastHead-UserInfo-SignOut
+{
+    color: rgb(255, 255, 255);
+}
+span.ms-crm-MastHead-UserInfo-SignOut
+{
+    color: rgb(255, 255, 255);
+}
+a.ms-crm-MastHead-UserInfo-Record-SignOut
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-MastHead-UserInfo-Record-SignOut
+{
+    color: rgb(0, 0, 0);
+}
+table.htmlBar
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(239, 242, 246);
+}
+span.htmlBtnHideable
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-AdvFind-TitleArea
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-AdvFind-EmptyField
+{
+    border-color: rgb(198, 203, 210);
+}
+div.ms-crm-AdvFind-SelectedFilterField
+{
+    border-color: rgb(198, 203, 210);
+}
+div.ms-crm-Context-cell
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-ContextHeader-Title
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-Setting-ContextHeader-Title
+{
+    border-color: rgb(165, 172, 181);
+}
+table.home_import_table
+{
+    border-color: rgb(165, 172, 181);
+}
+td.homepage_menubar
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-appgridmenubar
+{
+    border-color: rgb(165, 172, 181);
+}
+.homepage_table
+{
+    border-color: rgb(165, 172, 181);
+}
+div.feFilterEditor
+{
+    border-color: rgb(165, 172, 181);
+}
+.feAFControls
+{
+    border-color: rgb(165, 172, 181);
+}
+table.ms-crm-AdvFind-Title-table-WithTopBorder
+{
+    border-color: rgb(165, 172, 181);
+}
+table.ms-crm-AdvFind-Title-table
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-AdvFindControl
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-menutopborder
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-PaneControl-LeftRight-footer
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-PaneControl-TopDown-footer
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-CC-splitter
+{
+    border-color: rgb(165, 172, 181);
+}
+div.dashboard-brdr
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-control-SideStrip
+{
+    border-color: rgb(165, 172, 181);
+}
+table.ms-crm-control-strip-table
+{
+    border-color: rgb(165, 172, 181);
+}
+iframe.ms-crm-Email-Body
+{
+    border-color: rgb(165, 172, 181);
+}
+iframe.ms-crm-Custom
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-DataField
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-ToolBar-Shadow
+{
+    border-color: rgb(165, 172, 181);
+}
+td.ms-crm-control-SideStrip-LeftRight
+{
+    border-color: rgb(165, 172, 181);
+}
+td.ms-crm-visualizationpane-paneTD
+{
+    border-color: rgb(165, 172, 181);
+}
+td.ms-crm-Cal-Day-Time
+{
+    background-color: rgb(239, 242, 246);
+}
+div.ms-crm-Home-Cal-Body
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+div.ms-crm-Home-Cal-CreateNew-Title
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-Home-Cal-Header
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-Home-Cal-Views-Title
+{
+    border-color: rgb(219, 222, 225);
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-Cal-Week-Header
+{
+    border-color: rgb(219, 222, 225);
+}
+td.ms-crm-Cal-Month-Nav
+{
+    border-color: rgb(219, 222, 225);
+    background-color: rgb(233, 237, 241);
+}
+ul.ms-crm-Home-Cal-CreateNew-Items
+{
+    border-color: rgb(219, 222, 225);
+    color: rgb(0, 0, 0);
+}
+body.ms-crm-Cal-Body
+{
+    border-color: rgb(219, 222, 225);
+    color: rgb(0, 0, 0);
+}
+td.ganttHeaderRowBottom
+{
+    border-color: rgb(198, 203, 210);
+}
+div.ganttHeaderTop
+{
+    border-color: rgb(198, 203, 210);
+}
+div.ganttContainer
+{
+    border-color: rgb(198, 203, 210);
+}
+div.gridSpacer
+{
+    border-color: rgb(198, 203, 210);
+}
+hr.separator
+{
+    color: rgb(198, 203, 210);
+}
+div#ganttPageBodyTable
+{
+    background-color: rgb(239, 242, 246);
+}
+div.calendarPane
+{
+    background-color: rgb(239, 242, 246);
+}
+div.gridSpacer
+{
+    background-color: rgb(246, 248, 250);
+}
+div.ganttSheetHeader
+{
+    background-color: rgb(246, 248, 250);
+}
+td.bottomSpacerBar
+{
+    background-color: rgb(246, 248, 250);
+}
+table.ms-crm-Cal-Month-DayOfWeek-Header
+{
+    background-color: rgb(239, 242, 246);
+}
+td.ms-crm-Cal-Month-Day-NotCurrent
+{
+    background-color: rgb(192, 192, 192);
+}
+td.ms-crm-Cal-Month-Day
+{
+    border-color: rgb(198, 203, 210);
+}
+td.ms-crm-Cal-Month-DayOfWeek
+{
+    border-color: rgb(198, 203, 210);
+}
+div.ms-crm-MenuBar
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/form_toolbar_back.png?ver=60076166");
+}
+div#rofContainer
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+div#readFormNavContainer
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+div#rofContainer div.ms-crm-Form-Container
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+ul.ms-crm-MenuList
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/RightClickMenuChannel.png?ver=60076166");
+}
+div.ms-crm-Standard-Popup
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/RightClickMenuChannel.png?ver=60076166");
+}
+span.ms-crm-Menu-Group
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/RightClickMenuChannel.png?ver=60076166");
+}
+span.ms-crm-Menu-Group-Opened
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/RightClickMenuChannel.png?ver=60076166");
+}
+span.ms-crm-Menu-Group-Hovered
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/RightClickMenuChannel.png?ver=60076166");
+}
+button
+{
+
+}
+button.ms-crm-Button-Hover
+{
+    border-color: rgb(51, 102, 153);
+    background-image: url("/_imgs/theme/Outlook14Silver/ButtonSelectedGradient.png?ver=60076166");
+}
+div.feEntityHeadingBar
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-PaneControl-LeftRight-footer
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-PaneControl-TopDown-footer
+{
+    background-color: rgb(233, 237, 241);
+}
+td.ms-crm-gridPaneSepMotionHorTD
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-gridPaneSepMotionHorDiv
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-gridPaneSepDivVer
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-WizardForm-Main
+{
+    background-color: rgb(233, 237, 241);
+}
+table.ms-crm-Form-Title
+{
+    background-color: rgb(233, 237, 241);
+}
+table.ms-crm-Form-Title-NoNav
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-Form-Layout
+{
+    background-color: rgb(233, 237, 241);
+}
+table.ms-crm-Form-Layout
+{
+    background-color: rgb(233, 237, 241);
+}
+span.ms-crm-Form-Entity-Name
+{
+    color: rgb(59, 59, 59);
+    vertical-align: bottom;
+}
+.ms-crm-Form-Breadcrumb
+{
+    color: rgb(59, 59, 59);
+}
+h1.ms-crm-Form
+{
+    color: rgb(59, 59, 59);
+}
+h1.ms-crm-FormMenuBarHeader
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-FormMenuBarBreadcrumb
+{
+    color: rgb(0, 0, 0);
+}
+h2.ms-crm-Form
+{
+    color: rgb(18, 97, 225);
+}
+h3.ms-crm-Form
+{
+    color: rgb(102, 102, 102);
+}
+.refresh-form h2.ms-crm-Form
+{
+    color: rgb(102, 102, 102);
+}
+td.noteSubjectField
+{
+    color: rgb(59, 59, 59);
+}
+td.ms-crm-Form-SectionBar
+{
+    border-bottom-color: rgb(192, 192, 192);
+}
+div.ms-crm-Form-SectionBar
+{
+    border-bottom-color: rgb(192, 192, 192);
+}
+body.NotesData hr
+{
+    color: rgb(192, 192, 192);
+    background-image: url("/_imgs/theme/Outlook14Silver/app_back.png?ver=60076166");
+    background-color: rgb(192, 192, 192);
+}
+.noteHeaderSelected
+{
+    background-color: rgb(72, 206, 241);
+}
+.noteTextAreaSelected
+{
+    background-color: rgb(72, 206, 241);
+}
+td.ms-crm-Field-Recommended
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-Field-Recommended
+{
+    color: rgb(59, 59, 59);
+}
+td.ms-crm-Field-Normal
+{
+    color: rgb(59, 59, 59);
+}
+td.ms-crm-ReadField-Normal
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-ReadField-Normal
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Form-HeaderContainer
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+div.ms-crm-InlineTabContainer-Read
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-Form-Page
+{
+    border-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/FormHeaderGradientTop.png?ver=60076166");
+    background-color: rgb(246, 248, 250);
+}
+table.headerContainerTable .ms-crm-Field-Label-Print
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-Field-Normal
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Field-Required
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-Form-HeaderContainer
+{
+    color: rgb(249, 250, 251);
+}
+a.ms-crm-Masthead-LaunchMobileExpress
+{
+    color: rgb(249, 250, 251);
+}
+.ms-crm-Form-FooterContainer td.ms-crm-Field-Label-Print
+{
+    color: rgb(101, 102, 105);
+}
+.ms-crm-Form-Title-Label
+{
+    color: rgb(101, 102, 105);
+}
+table.headerContainerTable .ms-crm-Field-Data-Print
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Form-FooterContainer td.ms-crm-Field-Data-Print
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-Form-Title-Data
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-Form-Title-Data h1
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-LookupItemText-Color
+{
+    color: rgb(0, 0, 0);
+}
+td.RelatedInformationTitle
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-Field-Label-Print
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Field-Data-Print
+{
+    color: rgb(0, 0, 0);
+}
+a.ms-crm-List-Message-Link-Lite
+{
+    color: rgb(0, 0, 255);
+}
+input.ms-crm-Email-Address
+{
+    color: rgb(0, 0, 255);
+}
+input.ms-crm-LiveId-Email-Address
+{
+    color: rgb(0, 0, 255);
+}
+span.ms-crm-Lookup-Item
+{
+    color: rgb(0, 0, 255);
+}
+input.ms-crm-Url
+{
+    color: rgb(0, 0, 255);
+}
+span.ms-crm-Lookup-Item span.ms-crm-LookupItem-Name
+{
+    color: rgb(0, 0, 255);
+}
+div.ms-crm-Form-Information-Title
+{
+    border-bottom-color: rgb(161, 165, 170);
+    background-color: rgb(239, 242, 246);
+}
+.ms-crm-Dashboard-Background
+{
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-Form-Dashboard
+{
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-Dashboard-Body
+{
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-NRForm-Main-Container
+{
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-Form-AreaContainer-qrk
+{
+    background-color: rgb(246, 248, 250);
+}
+body.NotesData
+{
+    background-color: rgb(246, 248, 250);
+}
+div.ms-crm-InlineTab
+{
+    background-color: rgb(246, 248, 250);
+}
+ul.ms-crm-TabBar
+{
+    border-left-color: rgb(165, 172, 181);
+}
+li.ms-crm-Tab
+{
+    border-color: rgb(165, 172, 181) rgb(165, 172, 181) rgb(165, 172, 181) rgb(246, 248, 250);
+    background-image: url("/_imgs/theme/Outlook14Silver/TabGradient.gif?ver=60076166");
+}
+li.ms-crm-Tab-Selected
+{
+    border-bottom-color: rgb(246, 248, 250);
+    background-image: none;
+    background-color: rgb(246, 248, 250);
+}
+div.ms-crm-TabS
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-Tab
+{
+    border-color: rgb(165, 172, 181);
+}
+div.ms-crm-MiniCal-TodayBar
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-TodayBar
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-DayOfWeek
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-Week-Number
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-Day
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-Header
+{
+    background-color: rgb(246, 248, 250);
+}
+td.ms-crm-MiniCal-Day-Today
+{
+    border: 1px solid rgb(255, 0, 0);
+}
+td.ms-crm-MiniCal-Month
+{
+    border-color: rgb(219, 222, 225);
+}
+td.ms-crm-MiniCal-TodayBar
+{
+    border-color: rgb(219, 222, 225);
+}
+td.ms-crm-MiniCal-TodayBar-Hovered
+{
+    border-color: rgb(219, 222, 225);
+}
+div.ms-crm-MiniCal-TodayBar
+{
+    border: 1px solid rgb(255, 0, 0);
+}
+td.ms-crm-MiniCal-Day-NotCurrent
+{
+    color: rgb(204, 204, 204);
+}
+.ms-crm-MiniCal-Border
+{
+    border: 1px solid rgb(198, 198, 198);
+}
+div.ms-crm-Home-Cal-MiniCal
+{
+    border: 1px solid rgb(198, 198, 198);
+}
+tr.ms-crm-MiniCal-Nav
+{
+    color: rgb(0, 0, 0);
+}
+td.ms-crm-MiniCal-Day-Hilited-Current
+{
+    background-color: rgb(167, 205, 240);
+}
+td.ms-crm-MiniCal-Day-Hovered
+{
+    color: rgb(102, 147, 207);
+}
+td.ms-crm-MiniCal-Month-Hovered
+{
+    color: rgb(102, 147, 207);
+}
+td.ms-crm-MiniCal-Nav-Button-Hovered
+{
+    color: rgb(102, 147, 207);
+}
+td.ms-crm-MiniCal-TodayBar-Hovered
+{
+    color: rgb(102, 147, 207);
+}
+.ms-crm-Form-Background
+{
+}
+div.ms-crm-Form-FormFrameBkgd
+{
+    background-color: rgb(246, 248, 250);
+}
+tr.ms-crm-Form-FormFrameBkgd
+{
+    background-color: rgb(246, 248, 250);
+}
+tr.ms-crm-TitleRowBkgd
+{
+    background-color: rgb(210, 213, 217);
+}
+div.crmAppNav
+{
+    border-right-color: rgb(165, 172, 181);
+    border-left-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/app_back.png?ver=60076166");
+    background-color: rgb(207, 212, 218);
+}
+div.tree_container
+{
+    border-right-color: rgb(165, 172, 181);
+    border-left-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/app_back.png?ver=60076166");
+    background-color: rgb(207, 212, 218);
+}
+.ms-cui-tabBody
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/rbgbbg.png?ver=60076166");
+}
+li.ms-crm-NavBar-Subarea-Selected
+{
+    border: 1px solid rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-navtree-group-heading-selected
+{
+    border: 1px solid rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-navtree-subarea-link-selected
+{
+    border: 1px solid rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+li.ms-crm-NavBar-Subarea-Selected-Hovered
+{
+    border: 1px solid rgb(97, 166, 228);
+    background-color: rgb(167, 205, 240);
+}
+tr.ms-crm-Form-FieldAlternateFieldBkgd
+{
+    background-color: rgb(255, 255, 255);
+}
+td.BizRolesedit_td_u
+{
+    border-right-color: rgb(192, 192, 192);
+    border-left-color: rgb(192, 192, 192);
+}
+td.BizRolesedit_td_r
+{
+    border-right-color: rgb(192, 192, 192);
+    border-left-color: rgb(192, 192, 192);
+}
+.ms-crm-ChartText
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-StatusLabel
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subarea-Link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subarea-Link:link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subarea-Link:visited
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subarea-Link:active
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Group-Heading
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Group-Heading:link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Group-Heading:visited
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Group-Heading:active
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Group-Heading:hover
+{
+    color: rgb(59, 59, 59);
+}
+nobr.ms-crm-Nav-Group-Heading
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Form-HeaderContainer
+{
+    border-bottom-color: rgb(165, 172, 181);
+}
+.ms-crm-Form-FooterContainer
+{
+    border-top-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/FormFooterGradient.png?ver=60076166");
+}
+li.ms-crm-ImageStrip-wunderbar_sel
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+}
+li.ms-crm-ImageStrip-wunderbar_hover
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+}
+li.ms-crm-ImageStrip-wunderbar_sel nobr.ms-crm-NavBar-Area-Title
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+}
+li.ms-crm-ImageStrip-wunderbar_hover nobr.ms-crm-NavBar-Area-Title
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+}
+nobr.ms-crm-NavBar-Area-Title
+{
+    color: rgb(55, 55, 55);
+}
+.ms-crm-ImageStrip-wunderbar_sel
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/wunderbar_sel.png?ver=60076166");
+}
+.ms-crm-ImageStrip-wunderbar_hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/wunderbar_hover.png?ver=60076166");
+}
+.ms-crm-ImageStrip-wunderbar_rest
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/wunderbar_rest.png?ver=60076166");
+}
+.associatedGrid_viewRow
+{
+    background-color: rgb(176, 233, 253);
+}
+div.ms-crm-Category-List
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+div.CategoryBody
+{
+    border-color: rgb(165, 172, 181);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+li.ms-crm-POPUP-MenuItem
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-POPUP-MenuItem-Anchor
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+div.ms-crm-POPUP-MenuItem-Separator-h
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+li.ms-crm-AVS-MenuItem
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+li.ms-crm-VS-MenuItem
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-CM-MenuItem-Icon-Rest-qrk
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-RS-MenuItem-Anchor
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-VS-MenuItem-Anchor
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-MS-MenuItem-Anchor-qrk
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+div.ms-crm-VS-MenuItem-Separator-h
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-CMsub-MenuItem-Sep-Rest
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+nobr.ms-crm-CMsub-MenuItem-Title-Rest
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-CMsub-MenuItem-Icon-Rest
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-CMsub-MenuItem-Aux-Rest
+{
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-Menu-FilterImgWrapper-Open
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+span.ms-crm-Menu-Label-Opened
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+div.ms-crm-Menu-FilterImgWrapper-Open
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+div.ms-crm-Menu-Label-Opened
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+a.ms-cui-ctl-menu-on
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+span.ms-crm-Menu-FilterImgWrapper-Hover
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+span.ms-crm-Menu-Label-Hovered
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+div.ms-crm-Menu-FilterImgWrapper-Hover
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+div.ms-crm-Menu-Label-Hovered
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+a.ms-cui-ctl-menu:hover
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+div.ms-crm-Standard-Item-Glow
+{
+    border-color: rgb(97, 166, 228);
+}
+span.ms-crm-View-Name-hover
+{
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-View-Name-select
+{
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name:hover
+{
+    border-color: rgb(97, 166, 228);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-hover:link
+{
+    border-color: rgb(97, 166, 228);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-hover:hover
+{
+    border-color: rgb(97, 166, 228);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name:active
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-hover:active
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-hover:visited
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-select
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-select:link
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-select:visited
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-select:hover
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+a.ms-crm-View-Name-select:active
+{
+    border-color: rgb(35, 124, 205);
+    background-color: rgb(255, 255, 255);
+}
+span.ms-crm-CMsub-MenuItem-Aux-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CMsub-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CMsub-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+nobr.ms-crm-CMsub-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-in-CM-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-in-CM-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+nobr.ms-crm-in-CM-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CM-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CM-MenuItem-Icon-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CM-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-CM-MenuItem-Sep-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+nobr.ms-crm-CM-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+nobr.ms-crm-CM-MenuItem-Title-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_18.png?ver=60076166");
+}
+span.ms-crm-POPUP-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-AVS-MenuItem-Aux-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-POPUP-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-POPUP-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+div.ms-crm-Standard-Item-Glow
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-SVS-MenuItem-Title-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-BVS-MenuItem-Title-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-TVS-MenuItem-Title-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-AVS-MenuItem-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+tr.ms-crm-DE-PreviewSelector
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-RV-MenuItem-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-RV-view-item-MenuItem-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+a.ms-crm-RV-MenuItem-Aux-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+a.ms-crm-RV-view-item-MenuItem-Aux-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-MS-MenuItem-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+a.ms-crm-MS-MenuItem-Aux-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+a.ms-crm-MS-MenuItem-Anchor-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-AVS-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-AVS-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-AVS-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-VS-MenuItem-Icon-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-VS-MenuItem-Sep-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-VS-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+a.ms-crm-RS-MenuItem-Anchor-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-FS-MenuItem-Title-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+nobr.ms-crm-FS-MenuItem-Title-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-LK-MenuItem-Hover
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-LK-MenuItem-Selected
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-LK-MenuItem-Hover-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+li.ms-crm-LK-MenuItem-Selected-qrk
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/contextmenu_hover_20.png?ver=60076166");
+}
+span.ms-crm-POPUP-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-AVS-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-CMsub-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-CMsub-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+a.ms-crm-RS-MenuItem-Anchor-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-in-CM-MenuItem-Icon-Rest
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-view-item-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+a.ms-crm-RV-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+a.ms-crm-RV-view-item-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+li.ms-crm-MS-MenuItem-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+a.ms-crm-MS-MenuItem-Aux-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+a.ms-crm-MS-MenuItem-Anchor-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-AVS-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-VS-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-in-CM-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-CM-MenuItem-Icon-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+span.ms-crm-CM-MenuItem-Icon-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+    border-left-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-POPUP-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-AVS-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-CMsub-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Opened
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-MenuItem-Label-Hovered
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-VS-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+a.ms-crm-RS-MenuItem-Anchor-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-view-item-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+a.ms-crm-RV-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+a.ms-crm-RV-view-item-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+li.ms-crm-MS-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+a.ms-crm-MS-MenuItem-Aux-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+a.ms-crm-MS-MenuItem-Anchor-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-in-CM-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-CM-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-CM-MenuItem-Title-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-right-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-POPUP-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-AVS-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-AVS-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+nobr.ms-crm-CMsub-MenuItem-Title-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-CMsub-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-VS-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+li.ms-crm-RV-view-item-MenuItem-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-in-CM-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-CM-MenuItem-Sep-Hover
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-CM-MenuItem-Sep-Hover-qrk
+{
+    border-top-color: rgb(97, 166, 228);
+    border-bottom-color: rgb(97, 166, 228);
+}
+span.ms-crm-POPUP-MenuItem-Separator-hm
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-POPUP-MenuItem-Separator-hl
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-POPUP-header-MenuItem-Sep
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-POPUP-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CMsub-MenuItem-Sep
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-AVS-MenuItem-Separator-hm
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-AVS-MenuItem-Separator-hl
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-AVS-header-MenuItem-Sep-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-AVS-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-VS-MenuItem-Separator-hm
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-VS-MenuItem-Separator-hl
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-TVS-MenuItem-Sep-Hover-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-BVS-MenuItem-Sep-Hover-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-SVS-MenuItem-Sep-Hover-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-VS-header-MenuItem-Sep
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-SVS-MenuItem-Sep-Rest-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-BVS-MenuItem-Sep-Rest-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-TVS-MenuItem-Sep-Rest-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-VS-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-MenuItem-Separator-hl
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-header-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-header-MenuItem-Sep-Hover
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-in-CM-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-MenuItem-Sep-Rest
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-MenuItem-Sep-Rest-qrk
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-CM-MenuItem-Separator-hm
+{
+    background-color: rgb(226, 228, 231);
+}
+span.ms-crm-POPUP-MenuItem-Icon-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+nobr.ms-crm-POPUP-MenuItem-Title-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-POPUP-MenuItem-Sep-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+li.ms-crmAVS-MenuItem-Selected-qrk
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+li.ms-crmAVS-MenuItem-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+td.ms-crm-CalendarView-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+li.ms-crm-CalendarView-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-CMsub-MenuItem-Sep-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+nobr.ms-crm-CMsub-MenuItem-Title-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-CMsub-MenuItem-Icon-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-CMsub-MenuItem-Aux-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-AVS-MenuItem-Icon-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+nobr.ms-crm-AVS-MenuItem-Title-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-AVS-MenuItem-Sep-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-VS-MenuItem-Icon-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+nobr.ms-crm-VS-MenuItem-Title-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+span.ms-crm-VS-MenuItem-Sep-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-RS-MenuItem-Anchor-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+.ms-crm-FS-Menu a.ms-crm-FS-MenuItem-Anchor-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-FS-MenuItem-Anchor-Selected-qrk
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subitem-Link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subitem-Link:link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subitem-Link:visited
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subitem-Link:active
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Nav-Subarea-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subarea-Selected:link
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subarea-Selected:visited
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subarea-Selected:active
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subitem-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subitem-Selected:link
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subitem-Selected:visited
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-Nav-Subitem-Selected:active
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+li.ms-crm-NavBar-Subarea-Hovered
+{
+    border-color: rgb(97, 166, 228);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+a.ms-crm-Nav-Subarea-Hovered
+{
+    border-color: rgb(97, 166, 228);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+ul.ms-crm-Home-Cal-Views-Items li:hover
+{
+    border-color: rgb(97, 166, 228);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+ul.ms-crm-Home-Cal-CreateNew-Items li:hover
+{
+    border-color: rgb(97, 166, 228);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+a.ms-crm-Nav-Subitem-Hovered
+{
+    border-color: rgb(59, 59, 59);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+a.ms-crm-Nav-Subitem-Link:hover
+{
+    border-color: rgb(59, 59, 59);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+a.ms-crm-Nav-Subitem-Selected:hover
+{
+    border-color: rgb(59, 59, 59);
+    background-image: url("/_imgs/theme/Outlook14Silver/nav_hover_highlight.png?ver=60076166");
+}
+td.ms-crm-Dialog-Header
+{
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(255, 255, 255);
+}
+div.ms-crm-Dialog-Header
+{
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(255, 255, 255);
+}
+table.ms-crm-MiniCampaign-Header
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(255, 255, 255);
+}
+tr.ms-crm-MiniCampaign-Header
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(255, 255, 255);
+}
+.ms-crm-WizardForm-Header-Title h2
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-Dialog-Header-Title
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-StrictDialog-Header-Desc
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-Dialog-Header-Desc
+{
+    color: rgb(0, 0, 0);
+}
+td.ms-crm-MiniCampaign-Main
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-WizardForm-Main
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+td.ms-crm-Dialog-Main
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-Dialog-Main
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-DialogStrict-Main
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-DialogStrict-Main-HeaderLess
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+body.ms-crm-ErrorDialog
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+body.ms-crm-Dialog-Body
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(164, 171, 178);
+    background-color: rgb(233, 237, 241);
+}
+td.ms-crm-Dialog-Buttons
+{
+    border-top-color: rgb(255, 255, 255);
+    background-color: rgb(233, 237, 241);
+}
+td.ms-crm-Dialog-Footer
+{
+    border-top-color: rgb(255, 255, 255);
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-Dialog-Footer
+{
+    border-top-color: rgb(255, 255, 255);
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-DialogFooter
+{
+    border-top-color: rgb(255, 255, 255);
+    background-color: rgb(233, 237, 241);
+}
+div.wizHead
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(239, 242, 246);
+}
+div.ms-crm-GridActionBar
+{
+    border-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/GridToolbarBkgd.png?ver=60076166");
+}
+div.ms-crm-ActionBar
+{
+    border-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/GridToolbarBkgd.png?ver=60076166");
+}
+.ms-crm-List-Index
+{
+    color: rgb(30, 57, 91);
+    border-top-color: rgb(192, 192, 192);
+    background-color: rgb(241, 243, 245);
+}
+.ms-crm-ListControl
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-List-IndexItem
+{
+    color: rgb(21, 66, 139);
+}
+.ms-crm-List-SelectedIndex
+{
+    color: rgb(21, 66, 139);
+}
+span.ms-crm-Menu-FilterImgWrapper
+{
+    border-color: rgb(192, 192, 192);
+}
+div.ms-crm-Menu-FilterImgWrapper
+{
+    border-color: rgb(192, 192, 192);
+}
+table.ms-crm-List-StatusBar
+{
+    border-top-color: rgb(165, 172, 181);
+    border-bottom-color: rgb(192, 192, 192);
+    background-color: rgb(241, 243, 245);
+}
+.ms-crm-List-StatusBar-Label
+{
+    color: rgb(0, 0, 0);
+    border-top-color: rgb(165, 172, 181);
+    border-bottom-color: rgb(192, 192, 192);
+}
+.ms-crm-List-Paging
+{
+    color: rgb(102, 102, 102);
+    border-top-color: rgb(165, 172, 181);
+    border-bottom-color: rgb(192, 192, 192);
+}
+.ms-crm-List-DataArea
+{
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.ms-crm-List-DataAreaEx
+{
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.ms-crm-List-DataAreaEx-Lite
+{
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+.ms-crm-List-Data
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-List-Data a.ms-crm-List-Link
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-List-Data a.ms-crm-gridurl
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-List-Data a.ms-crm-Phone
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-List-DeleteContainer
+{
+    border-bottom-color: rgb(219, 222, 225);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.ms-crm-List-DataCell
+{
+    border-bottom-color: rgb(219, 222, 225);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.ms-crm-List-Row
+{
+    border-bottom-color: rgb(219, 222, 225);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+.ms-crm-ListAreaEx
+{
+    border-top-color: rgb(165, 172, 181);
+}
+.ms-crm-List-Header
+{
+    border-top-color: rgb(165, 172, 181);
+    border-bottom-color: rgb(165, 172, 181);
+    background-image: url("/_imgs/theme/Outlook14Silver/GridColumnGradient.png?ver=60076166");
+    background-color: rgb(246, 248, 250);
+}
+.ms-crm-List-Title
+{
+    background-color: rgb(239, 242, 246);
+}
+.ms-crm-list-TitleFilter
+{
+    background-color: rgb(217, 222, 228);
+}
+.ms-crm-list-Separator-line
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/GridTitleBarHorzLine.png?ver=60076166");
+}
+table#AppGridFilterContainer
+{
+    border-top-color: rgb(161, 165, 170);
+    background-color: rgb(217, 222, 228);
+}
+tr.ms-crm-List-SelectedMultilineRow
+{
+    background-color: rgb(167, 205, 240);
+}
+tr.ms-crm-List-SelectedRow
+{
+    background-color: rgb(167, 205, 240);
+}
+tr.ms-crm-List-SelectedRow-Lite
+{
+    background-color: rgb(167, 205, 240);
+}
+tr.ms-crm-List-SelectedRow-Lite-HighContrast > td
+{
+    border-color: rgb(167, 205, 240);
+}
+tr.ms-crm-List-Row-Lite:hover
+{
+    background-color: rgb(215, 235, 249);
+}
+tr.ms-crm-List-HoveredMultilineRow
+{
+    background-color: rgb(206, 227, 246);
+}
+tr.ms-crm-List-HoveredRow
+{
+    background-color: rgb(206, 227, 246);
+}
+div.ms-crm-Grid-Title
+{
+    color: rgb(102, 102, 102);
+}
+div.ms-crm-grid-Title-Data-Lite
+{
+    color: rgb(102, 102, 102);
+}
+.ms-crm-DataCell-Lite
+{
+    color: rgb(153, 153, 153);
+}
+span.ms-crm-Viz-Name
+{
+    color: rgb(59, 59, 59);
+}
+span.ms-crm-View-Entity-Name
+{
+    color: rgb(59, 59, 59);
+}
+span.ms-crm-View-Name
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-View-Name-hover
+{
+    background-color: rgb(255, 255, 255);
+}
+col.ms-crm-List-SortedColumn
+{
+    background-color: rgb(239, 242, 246) !important;
+}
+td.home_camps_td_Label
+{
+    color: rgb(0, 0, 0);
+}
+td.home_cases_td_Label
+{
+    color: rgb(0, 0, 0);
+}
+td.home_minicamps_td_Label
+{
+    color: rgb(0, 0, 0);
+}
+td.home_reports_td_ViewSelector
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-Form-AreaContainer-qrk
+{
+    border-top-color: rgb(165, 172, 181);
+    border-right-color: rgb(165, 172, 181);
+    border-left-color: rgb(165, 172, 181);
+}
+.ms-crm-Form-LeftBar
+{
+    border-top-color: rgb(165, 172, 181);
+    border-right-color: rgb(165, 172, 181);
+    border-left-color: rgb(165, 172, 181);
+}
+div.linkhelp
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Link:hover
+{
+}
+a.ms-crm-Link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Link:link
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Link:visited
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-Link:active
+{
+    color: rgb(59, 59, 59);
+}
+.ms-crm-Setting-ContextHeader-Title
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(219, 222, 225);
+    background-color: rgb(239, 242, 246);
+}
+.ms-crm-NavHeader-Title
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(219, 222, 225);
+    background-color: rgb(239, 242, 246);
+}
+.ms-crm-ContextHeader-Title
+{
+    color: rgb(0, 0, 0);
+    border-bottom-color: rgb(219, 222, 225);
+    background-color: rgb(239, 242, 246);
+}
+.content
+{
+    border-color: rgb(165, 172, 181);
+    background-color: rgb(255, 255, 255);
+}
+.navigationsubtitle
+{
+    color: rgb(59, 59, 59);
+    border-bottom-color: rgb(192, 192, 192);
+}
+div.RelatedInformationPane-qrk
+{
+    border-color: rgb(233, 237, 241);
+    background-color: rgb(233, 237, 241);
+}
+div.RelatedInformationPane
+{
+    border-color: rgb(233, 237, 241);
+    background-color: rgb(233, 237, 241);
+}
+a.ms-crm-FormSelector
+{
+    color: rgb(59, 59, 59);
+}
+div.ms-crm-FormSelector
+{
+    color: rgb(59, 59, 59);
+}
+a.ms-crm-FormSelector
+{
+    border: 1px solid rgb(170, 179, 189);
+}
+a.ms-crm-FormSelector:link
+{
+    border: 1px solid rgb(170, 179, 189);
+}
+a.ms-crm-FormSelector:visited
+{
+    border: 1px solid rgb(170, 179, 189);
+}
+a.ms-crm-FormSelector:hover
+{
+    border: 1px solid rgb(244, 174, 19);
+    background-color: rgb(255, 246, 215);
+}
+a.ms-crm-FormSelector-Opened
+{
+    border: 1px solid rgb(244, 174, 19);
+    background-color: rgb(255, 220, 99);
+}
+a.ms-crm-FormSelector-Opened:link
+{
+    border: 1px solid rgb(244, 174, 19);
+    background-color: rgb(255, 220, 99);
+}
+a.ms-crm-FormSelector-Opened:visited
+{
+    border: 1px solid rgb(244, 174, 19);
+    background-color: rgb(255, 220, 99);
+}
+a.ms-crm-FormSelector-Opened:hover
+{
+    border: 1px solid rgb(244, 174, 19);
+    background-color: rgb(255, 220, 99);
+}
+nobr.ms-crm-FormSelector-SubItem
+{
+    color: rgb(18, 97, 225);
+}
+a.ms-crm-FormSelector-SubItem-Selected
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-FormSelector-SubItem-Selected:link
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-FormSelector-SubItem-Selected:visited
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-FormSelector-SubItem-Selected:active
+{
+    border-color: rgb(167, 205, 240);
+    background-color: rgb(167, 205, 240);
+}
+a.ms-crm-FormSelector-SubItem-Hovered
+{
+    border-color: rgb(97, 166, 228);
+    background-image: url("/_imgs/theme/Outlook14Silver/FormTabLinkGradient.png?ver=60076166");
+}
+ul.ms-crm-Nav-LeftBar
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-Form-Container
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-FormLeftNav-TabLinksRow
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-Form-LeftBar-Header
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-Form-LeftBar
+{
+    background-color: rgb(233, 237, 241);
+}
+div.ms-crm-FormLeftNav-RelatedRow
+{
+    border-top-color: rgb(165, 172, 181);
+}
+div.ms-crm-RS-Header-Title
+{
+    color: rgb(55, 55, 55);
+    background-color: rgb(241, 243, 244);
+}
+li.ms-crm-RS-MenuItem
+{
+    border-bottom-color: rgb(219, 222, 225);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+ul.ms-crm-RS-Menu
+{
+    border: 1px solid rgb(193, 200, 208);
+}
+div.ms-crm-RS-Column-Title
+{
+    border-top-color: rgb(193, 200, 192);
+    border-right-color: rgb(193, 200, 192);
+    border-left-color: rgb(193, 200, 192);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: rgb(248, 248, 248);
+}
+div.ms-crm-RecordSelector-Header
+{
+    border-right-color: rgb(198, 198, 198);
+    border-left-color: rgb(198, 198, 198);
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: rgb(241, 243, 244);
+}
+div.ms-crm-RS-Menu
+{
+    border-right-color: rgb(198, 198, 198);
+    border-left-color: rgb(198, 198, 198);
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: rgb(241, 243, 244);
+}
+div.ms-crm-RecordSelector-Footer
+{
+    border-right-color: rgb(198, 198, 198);
+    border-left-color: rgb(198, 198, 198);
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: rgb(241, 243, 244);
+}
+div.ms-crm-RecordSelector-Header
+{
+    border-top-color: rgb(198, 198, 198);
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+div.ms-crm-RecordSelector-Footer
+{
+    color: rgb(59, 59, 59);
+    border-top-color: rgb(241, 243, 244);
+    border-top-width: 1px;
+    border-top-style: solid;
+    background-color: rgb(241, 243, 244);
+}
+.ms-crm-Form-Nav-Container
+{
+    background-color: rgb(233, 237, 241);
+}
+a.recnav-up
+{
+    border-color: rgb(170, 179, 189);
+}
+a.recnav-down
+{
+    border-color: rgb(170, 179, 189);
+}
+a.recnav-dropdown
+{
+    border-color: rgb(170, 179, 189);
+}
+a.linktitle
+{
+    color: rgb(0, 0, 0);
+}
+a.linktitle:link
+{
+    color: rgb(0, 0, 0);
+}
+a.linktitle:visited
+{
+    color: rgb(0, 0, 0);
+}
+a.linktitle:active
+{
+    color: rgb(0, 0, 0);
+}
+a.linktitle:hover
+{
+    color: rgb(0, 0, 0);
+}
+div.ms-crm-Splitter-Fixed
+{
+    color: rgb(192, 192, 192);
+    background-image: url("/_imgs/theme/Outlook14Silver/app_back.png?ver=60076166");
+    background-color: rgb(207, 212, 218);
+}
+div.ms-crm-RecentlyViewed-Header
+{
+    border-top-color: rgb(161, 165, 170);
+    border-right-color: rgb(161, 165, 170);
+    border-left-color: rgb(161, 165, 170);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    background-color: rgb(248, 249, 250);
+}
+nobr.ms-crm-RV-Header-Title
+{
+    color: rgb(0, 0, 0);
+}
+nobr.ms-crm-RS-Column-Title
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-RV-MenuItem-Title
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-FS-MenuItem-Title
+{
+    color: rgb(0, 0, 0);
+}
+span.ms-crm-RV-view-header-MenuItem-Title
+{
+    color: rgb(21, 66, 139);
+}
+span.ms-crm-RS-MenuItem-Title
+{
+    color: rgb(21, 66, 139);
+}
+span.ms-crm-RV-view-item-MenuItem-Title
+{
+    color: rgb(21, 66, 139);
+}
+div.ms-crm-RV-Menu
+{
+    border: 1px solid rgb(161, 165, 170);
+}
+div.ms-crm-VS-Menu
+{
+    border: 1px solid rgb(161, 165, 170);
+}
+div.ms-crm-modalDialog-shadow
+{
+    background-color: rgb(136, 136, 136);
+}
+span.ms-crm-RV-MenuItem-Separator-vm
+{
+    background-color: rgb(182, 185, 189);
+}
+a img.ms-crm-MastHead-Button:hover
+{
+    border-color: rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+a img.ms-crm-MastHead-Button-Selected
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+a img.ms-crm-MastHead-Button-Selected:hover
+{
+    border-color: rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+span.ms-crm-NavBar-Title-Icon a.ms-crm-NavBar-Title-Icon-Hovered
+{
+    border: 1px solid rgb(241, 196, 63);
+    background-color: rgb(253, 238, 179);
+}
+span.ms-crm-NavBar-Title-Icon a.ms-crm-NavBar-Title-Icon-Selected
+{
+    border: 1px solid rgb(194, 130, 27);
+    background-color: rgb(255, 216, 108);
+}
+div.ms-crm-NavBar-Title
+{
+    border-bottom-color: rgb(165, 172, 181);
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+}
+div.ms-crm-NavBar-Areas
+{
+    border-top-color: rgb(165, 172, 181);
+    border-bottom-color: rgb(165, 172, 181);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+label.ms-crm-List-Sortable
+{
+    color: rgb(0, 0, 0);
+}
+.ms-crm-List-MessageText
+{
+    color: rgb(153, 153, 153);
+    background-color: rgb(255, 255, 255);
+}
+.ms-crm-List-MessageText-Lite
+{
+    color: rgb(153, 153, 153);
+    background-color: rgb(255, 255, 255);
+}
+nobr.ms-crm-NavBar-Subarea-Title
+{
+    color: rgb(59, 59, 59);
+}
+nobr.ms-crm-navtree-subarea-title
+{
+    color: rgb(59, 59, 59);
+}
+nobr.ms-crm-navtree-node-title
+{
+    color: rgb(59, 59, 59);
+}
+tr.ms-crm-Form-SubGrid-viewRow
+{
+    background-color: rgb(128, 219, 252);
+}
+.ms-crm-Form-SubGrid-Layout
+{
+    border: 1px solid rgb(161, 165, 170);
+}
+.ms-crm-Input-Container
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(171, 173, 179) rgb(226, 227, 234) rgb(226, 227, 234);
+}
+div.ms-crm-Lookup-Party
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(171, 173, 179) rgb(226, 227, 234) rgb(226, 227, 234);
+}
+div.ms-crm-Lookup
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(171, 173, 179) rgb(226, 227, 234) rgb(226, 227, 234);
+}
+input.ms-crm-Dialog-Lookup-QuickFind
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(171, 173, 179) rgb(226, 227, 234) rgb(226, 227, 234);
+}
+select.ms-crm-SelectBox
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(132, 130, 132) rgb(214, 211, 206) rgb(214, 211, 206) rgb(132, 130, 132);
+}
+iframe.noteData
+{
+    border: 1px solid rgb(165, 172, 181);
+    background-color: rgb(246, 248, 250);
+}
+td.noteCreatedField
+{
+    color: rgb(17, 17, 17);
+}
+td.noteEditedField
+{
+    color: rgb(17, 17, 17);
+}
+input.ms-crm-ReadOnly
+{
+    color: rgb(102, 102, 102);
+}
+textarea.ms-crm-ReadOnly
+{
+    color: rgb(102, 102, 102);
+}
+div.ms-crm-ReadOnly
+{
+    color: rgb(102, 102, 102);
+}
+span.ms-crm-ReadOnly
+{
+    color: rgb(102, 102, 102);
+}
+a.newNoteButton
+{
+    color: rgb(0, 0, 255);
+}
+a.newNoteButton:link
+{
+    color: rgb(0, 0, 255);
+}
+a.newNoteButton:visited
+{
+    color: rgb(0, 0, 255);
+}
+a.newNoteButton:hover
+{
+    color: rgb(0, 0, 255);
+}
+newNoteButton
+{
+    color: rgb(0, 0, 255);
+}
+a.newNoteButton:active
+{
+    color: rgb(0, 0, 255);
+}
+a.newNoteButtonSelected
+{
+    color: rgb(0, 0, 255);
+}
+.ms-cui-jewel-label
+{
+    text-transform: none;
+}
+.ms-cui-tt-span
+{
+    text-transform: none;
+}
+.ms-cui-cg-t-i
+{
+    text-transform: none;
+}
+.ms-cui-tt-a
+{
+    color: rgb(108, 110, 112) !important;
+}
+.ms-cui-tt-s > .ms-cui-tt-a
+{
+    color: rgb(35, 39, 44) !important;
+}
+.ms-cui-tt-s .ms-cui-tt-a:hover
+{
+    color: rgb(35, 39, 44) !important;
+}
+.ms-cui-tt-a:hover
+{
+    color: rgb(35, 39, 44) !important;
+}
+.ms-cui-cg-s .ms-cui-tt-a
+{
+    color: rgb(35, 39, 44) !important;
+}
+.ms-cui-cg-s .ms-cui-tt-a:hover
+{
+    color: rgb(35, 39, 44) !important;
+}
+.ms-cui-tt-a:hover
+{
+    border-color: rgb(211, 214, 217);
+}
+.ms-cui-cg-lb .ms-cui-tt-a:hover
+{
+    background-color: rgb(227, 245, 247);
+}
+.ms-cui-cg-s.ms-cui-cg-lb .ms-cui-tt-s .ms-cui-tt-a:hover
+{
+    background-color: rgb(227, 245, 247);
+}
+.ms-crm-msgbar_button_cold
+{
+    background-color: rgb(255, 241, 157);
+}
+.ms-crm-msgbar_button_hover
+{
+    background-color: rgb(255, 243, 181);
+}
+.ms-crm-msgbar_button_click
+{
+    background-color: rgb(255, 235, 123);
+}
+.ms-crm-control-SideStrip-Hovered
+{
+    background-color: rgb(253, 238, 179);
+}
+.ms-crm-recnav-hover
+{
+    background-color: rgb(253, 238, 179);
+}
+.ms-crm-recnav-selected
+{
+    background-color: rgb(255, 216, 108);
+}
+.ms-crm-control-SideStrip
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-CompCntrlBrdr
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-CC-splitter
+{
+    background-image: url("/_imgs/theme/Outlook14Silver/app_back.png?ver=60076166");
+    background-color: rgb(192, 192, 192);
+}
+#crmInAppContent
+{
+    border: 1px solid rgb(219, 222, 225);
+}
+.ms-crm-SelectOn
+{
+    background-color: rgb(167, 205, 240);
+}
+.ms-crm-GlowOn
+{
+    background-color: rgb(196, 221, 255);
+}
+span.CategoryHeadingText
+{
+    color: rgb(0, 0, 0);
+}
+.ms-cui-ctl-large:hover
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl-light-hoveredOver
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl-medium:hover
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl:hover
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl-light-hoveredOver.ms-cui-mrusb-selecteditem a
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl-thin:hover
+{
+    border-color: rgb(241, 196, 63) !important;
+    background-color: rgb(253, 238, 179);
+}
+.ms-cui-ctl-on
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-ctl-dark-highlight
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-ctl-dark-highlight.ms-cui-ctl-a2:hover
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-ctl-dark-highlight.ms-cui-ctl-a1:hover
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-mrusb-selecteditem a:hover
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-ctl-hoveredOver
+{
+    border-color: rgb(194, 130, 27) !important;
+    background-color: rgb(255, 216, 108);
+}
+.ms-cui-ctl-split-hover
+{
+    border-color: rgb(177, 186, 196) !important;
+    background-color: rgb(244, 246, 247);
+}
+.ms-cui-ctl-split-hover.ms-cui-mrusb-selecteditem > *
+{
+    border-color: rgb(177, 186, 196) !important;
+    background-color: rgb(244, 246, 247);
+}
+.ms-cui-ctl-mousedown
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-large:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-medium:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-a1:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-a2:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-thin:active
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-cui-ctl-on:hover
+{
+    border-color: rgb(194, 138, 48) !important;
+    background-color: rgb(246, 200, 103) !important;
+}
+.ms-crm-stripLeftRight
+{
+    color: rgb(0, 0, 0);
+}
+nobr.ms-crm-FS-MenuItem-Title-Hover
+{
+    border: 1px solid rgb(97, 166, 228);
+}
+nobr.ms-crm-FS-MenuItem-Title-Hover-qrk
+{
+    border: 1px solid rgb(97, 166, 228);
+}
+div.listEdit_valuelist
+{
+    border: 1px solid rgb(255, 255, 255);
+}
+div.editPage
+{
+    border-color: rgb(165, 172, 181);
+}
+td.ms-crm-Email-Body
+{
+    border-color: rgb(165, 172, 181);
+}
+div.editor
+{
+    border-color: rgb(165, 172, 181);
+}
+.ms-crm-WizardForm-Footer
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-WizardForm-Main
+{
+    background-color: rgb(233, 237, 241);
+}
+body.ms-crm-workflow-template-page
+{
+    background-color: rgb(233, 237, 241);
+}
+body.ms-crm-solution-wizard
+{
+    background-color: rgb(233, 237, 241);
+}
+tr.ms-crm-solution-wizard
+{
+    background-color: rgb(233, 237, 241);
+}
+.ms-crm-lightbox
+{
+    background-color: rgb(165, 172, 181);
+}
+.jstree-default .jstree-hovered
+{
+    background-color: rgb(215, 235, 249);
+}
+img.ms-crm-GridRefreshImage
+{
+    background-color: rgb(246, 248, 250);
+}

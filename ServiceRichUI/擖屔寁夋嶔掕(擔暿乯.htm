@@ -1,0 +1,801 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <script src="../JQGrid/scripts/json2.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+        th {text-align: center;}
+        body {height: 100%; overflow: auto;}
+        .ui-jqgrid TR.jqgrow TD{padding-left:0px; padding-right:0px;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                id: "1",
+                                name: "広サ　三郎",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: ["ｶﾄｳ", "Purple", ""],
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "0",
+                                店休: "4"
+                            },
+                            {
+                                id: "2",
+                                name: "木元　稔",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "休",
+                                M9_13: "",
+                                M9_14: "休",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "",
+                                M9_22: "休",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "3",
+                                店休: "4"
+                            },
+                            {
+                                id: "3",
+                                name: "上部　酎雲",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "休",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "研",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "2",
+                                店休: "4"
+                            },
+                            {
+                                id: "4",
+                                name: "林　幹雄",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "休",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "1",
+                                店休: "4"
+                            },
+                            {
+                                id: "5",
+                                name: "佐藤　優美",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "休",
+                                M9_6: "",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "休",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "休",
+                                M9_19: "",
+                                M9_20: "休",
+                                M9_21: "",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "4",
+                                店休: "4"
+                            },
+                            {
+                                id: "6",
+                                name: "張　山",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "",
+                                M9_7: "休",
+                                M9_8: "",
+                                M9_9: "休",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "2",
+                                店休: "4"
+                            },
+                            {
+                                id: "7",
+                                name: "李　靖",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "",
+                                M9_22: "休",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "1",
+                                店休: "4"
+                            },
+                            {
+                                id: "8",
+                                name: "藤　幹雄",
+                                M9_1: "",
+                                M9_2: "",
+                                M9_3: "",
+                                M9_4: "",
+                                M9_5: "",
+                                M9_6: "",
+                                M9_7: "",
+                                M9_8: "",
+                                M9_9: "",
+                                M9_10: "",
+                                M9_11: "",
+                                M9_12: "",
+                                M9_13: "",
+                                M9_14: "",
+                                M9_15: "",
+                                M9_16: "",
+                                M9_17: "",
+                                M9_18: "",
+                                M9_19: "",
+                                M9_20: "",
+                                M9_21: "休",
+                                M9_22: "",
+                                M9_23: "",
+                                M9_24: "",
+                                M9_25: "",
+                                M9_26: "",
+                                M9_27: "",
+                                M9_28: "",
+                                M9_29: "",
+                                M9_30: "",
+                                M9_31: "",
+                                不在: "1",
+                                店休: "4"
+                            }
+                         ];
+
+
+            $("#MyGrid_Y").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 190,
+                width: 1338,
+                shrinkToFit: false,
+                autoScroll: true,
+                sortable: false,
+                toolbar: [true, "bottom"],
+                cellsubmit: 'clientArray',
+                colNames: ['', '01日', '02月', '03火', '04水', '05木', '06金', '07土', '08日','09月','10火','11水','12木','13金','14土','15日','16月','17火','18水','19木',
+                           '20金','21土','22日','23月','24火','25水','26木','27金','28土','29日','30月','','不在','店休'],
+                colModel: [
+                            { name: 'name', index: 'name', width: 65, sortable: false },
+                            { name: 'M9_1', index: 'M9_1', width: 33, align: "center", sortable: false },
+                            { name: 'M9_2', index: 'M9_2', width: 33, align: "center", sortable: false },
+                            { name: 'M9_3', index: 'M9_3', width: 33, align: "center", sortable: false },
+                            { name: 'M9_4', index: 'M9_4', width: 33, align: "center", sortable: false },
+                            { name: 'M9_5', index: 'M9_5', width: 33, align: "center", sortable: false },
+                            { name: 'M9_6', index: 'M9_6', width: 33, align: "center", sortable: false },
+                            { name: 'M9_7', index: 'M9_7', width: 33, align: "center", sortable: false },
+                            { name: 'M9_8', index: 'M9_8', width: 33, align: "center", sortable: false },
+                            { name: 'M9_9', index: 'M9_9', width: 33, align: "center", sortable: false },
+                            { name: 'M9_10', index: 'M9_10', width: 33, align: "center", sortable: false },
+                            { name: 'M9_11', index: 'M9_11', width: 33, align: "center", sortable: false },
+                            { name: 'M9_12', index: 'M9_12', width: 33, align: "center", sortable: false },
+                            { name: 'M9_13', index: 'M9_13', width: 33, align: "center", sortable: false },
+                            { name: 'M9_14', index: 'M9_14', width: 33, align: "center", sortable: false },
+                            { name: 'M9_15', index: 'M9_15', width: 33, align: "center", sortable: false },
+                            { name: 'M9_16', index: 'M9_16', width: 33, align: "center", sortable: false },
+                            { name: 'M9_17', index: 'M9_17', width: 33, align: "center", sortable: false },
+                            { name: 'M9_18', index: 'M9_18', width: 33, align: "center", sortable: false },
+                            { name: 'M9_19', index: 'M9_19', width: 33, align: "center", sortable: false },
+                            { name: 'M9_20', index: 'M9_20', width: 33, align: "center", sortable: false },
+                            { name: 'M9_21', index: 'M9_21', width: 33, align: "center", sortable: false },
+                            { name: 'M9_22', index: 'M9_22', width: 33, align: "center", sortable: false },
+                            { name: 'M9_23', index: 'M9_23', width: 33, align: "center", sortable: false },
+                            { name: 'M9_24', index: 'M9_24', width: 33, align: "center", sortable: false },
+                            { name: 'M9_25', index: 'M9_25', width: 33, align: "center", sortable: false },
+                            { name: 'M9_26', index: 'M9_26', width: 33, align: "center", sortable: false },
+                            { name: 'M9_27', index: 'M9_27', width: 33, align: "center", sortable: false },
+                            { name: 'M9_28', index: 'M9_28', width: 33, align: "center", sortable: false },
+                            { name: 'M9_29', index: 'M9_29', width: 33, align: "center", sortable: false },
+                            { name: 'M9_30', index: 'M9_30', width: 33, align: "center", sortable: false },
+                            { name: 'M9_31', index: 'M9_31', width: 33, align: "center", sortable: false },
+                            { name: '不在', index: '不在', width: 40, align: "right", sortable: false },
+                            { name: '店休', index: '店休', width: 40, align: "right", sortable: false }
+                          ],
+                viewrecords: true,
+                loadonce: true
+            });
+            jQuery("#MyGrid_Y").setCell (1,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (2,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (3,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (4,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (5,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (6,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (7,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (8,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (1,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (2,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (3,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (4,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (5,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (6,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (7,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (8,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (1,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (2,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (3,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (4,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (5,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (6,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (7,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (8,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (1,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (2,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (3,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (4,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (5,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (6,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (7,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (8,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_Y").setCell (1,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (2,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (3,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (4,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (5,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (6,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (7,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (8,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (1,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (2,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (3,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (4,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (5,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (6,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (7,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (8,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (1,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (2,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (3,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (4,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (5,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (6,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (7,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_Y").setCell (8,33,'',{'background':'#FFCC00'});
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                id: "1",
+                                name: "車検",
+                                M9_1: "1",
+                                M9_2: "1",
+                                M9_3: "",
+                                M9_4: "1",
+                                M9_5: "1",
+                                M9_6: "1",
+                                M9_7: "1",
+                                M9_8: "1",
+                                M9_9: "1",
+                                M9_10: "",
+                                M9_11: "2",
+                                M9_12: "1",
+                                M9_13: "2",
+                                M9_14: "1",
+                                M9_15: "1",
+                                M9_16: "2",
+                                M9_17: "",
+                                M9_18: "1",
+                                M9_19: "2",
+                                M9_20: "1",
+                                M9_21: "1",
+                                M9_22: "1",
+                                M9_23: "1",
+                                M9_24: "",
+                                M9_25: "1",
+                                M9_26: "1",
+                                M9_27: "1",
+                                M9_28: "1",
+                                M9_29: "1",
+                                M9_30: "1",
+                                M9_31: "",
+                                合計: "30",
+                                目標: "30"
+                            },
+                            {
+                                id: "2",
+                                name: "6点検",
+                                M9_1: "1",
+                                M9_2: "1",
+                                M9_3: "",
+                                M9_4: "1",
+                                M9_5: "1",
+                                M9_6: "1",
+                                M9_7: "1",
+                                M9_8: "1",
+                                M9_9: "1",
+                                M9_10: "",
+                                M9_11: "2",
+                                M9_12: "1",
+                                M9_13: "2",
+                                M9_14: "1",
+                                M9_15: "1",
+                                M9_16: "2",
+                                M9_17: "",
+                                M9_18: "1",
+                                M9_19: "2",
+                                M9_20: "1",
+                                M9_21: "1",
+                                M9_22: "1",
+                                M9_23: "1",
+                                M9_24: "",
+                                M9_25: "1",
+                                M9_26: "1",
+                                M9_27: "1",
+                                M9_28: "1",
+                                M9_29: "1",
+                                M9_30: "1",
+                                M9_31: "",
+                                合計: "30",
+                                目標: "30"
+                            },
+                            {
+                                id: "3",
+                                name: "12点検",
+                                M9_1: "0",
+                                M9_2: "1",
+                                M9_3: "",
+                                M9_4: "1",
+                                M9_5: "0",
+                                M9_6: "0",
+                                M9_7: "0",
+                                M9_8: "0",
+                                M9_9: "0",
+                                M9_10: "",
+                                M9_11: "1",
+                                M9_12: "0",
+                                M9_13: "1",
+                                M9_14: "0",
+                                M9_15: "0",
+                                M9_16: "1",
+                                M9_17: "",
+                                M9_18: "0",
+                                M9_19: "1",
+                                M9_20: "0",
+                                M9_21: "0",
+                                M9_22: "0",
+                                M9_23: "1",
+                                M9_24: "",
+                                M9_25: "1",
+                                M9_26: "1",
+                                M9_27: "1",
+                                M9_28: "0",
+                                M9_29: "0",
+                                M9_30: "0",
+                                M9_31: "",
+                                合計: "10",
+                                目標: "10"
+                            }
+                         ];
+
+
+            $("#MyGrid_X").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1338,
+                shrinkToFit: false,
+                autoScroll: true,
+                sortable: false,
+                toolbar: [true, "bottom"],
+                cellsubmit: 'clientArray',
+                colNames: ['', '01日', '02月', '03火', '04水', '05木', '06金', '07土', '08日','09月','10火','11水','12木','13金','14土','15日','16月','17火','18水','19木',
+                           '20金','21土','22日','23月','24火','25水','26木','27金','28土','29日','30月','','合計','目標'],
+                colModel: [
+                            { name: 'name', index: 'name', width: 65, sortable: false },
+                            { name: 'M9_1', index: 'M9_1', width: 33, align: "right", sortable: false },
+                            { name: 'M9_2', index: 'M9_2', width: 33, align: "right", sortable: false },
+                            { name: 'M9_3', index: 'M9_3', width: 33, align: "right", sortable: false },
+                            { name: 'M9_4', index: 'M9_4', width: 33, align: "right", sortable: false },
+                            { name: 'M9_5', index: 'M9_5', width: 33, align: "right", sortable: false },
+                            { name: 'M9_6', index: 'M9_6', width: 33, align: "right", sortable: false },
+                            { name: 'M9_7', index: 'M9_7', width: 33, align: "right", sortable: false },
+                            { name: 'M9_8', index: 'M9_8', width: 33, align: "right", sortable: false },
+                            { name: 'M9_9', index: 'M9_9', width: 33, align: "right", sortable: false },
+                            { name: 'M9_10', index: 'M9_10', width: 33, align: "right", sortable: false },
+                            { name: 'M9_11', index: 'M9_11', width: 33, align: "right", sortable: false },
+                            { name: 'M9_12', index: 'M9_12', width: 33, align: "right", sortable: false },
+                            { name: 'M9_13', index: 'M9_13', width: 33, align: "right", sortable: false },
+                            { name: 'M9_14', index: 'M9_14', width: 33, align: "right", sortable: false },
+                            { name: 'M9_15', index: 'M9_15', width: 33, align: "right", sortable: false },
+                            { name: 'M9_16', index: 'M9_16', width: 33, align: "right", sortable: false },
+                            { name: 'M9_17', index: 'M9_17', width: 33, align: "right", sortable: false },
+                            { name: 'M9_18', index: 'M9_18', width: 33, align: "right", sortable: false },
+                            { name: 'M9_19', index: 'M9_19', width: 33, align: "right", sortable: false },
+                            { name: 'M9_20', index: 'M9_20', width: 33, align: "right", sortable: false },
+                            { name: 'M9_21', index: 'M9_21', width: 33, align: "right", sortable: false },
+                            { name: 'M9_22', index: 'M9_22', width: 33, align: "right", sortable: false },
+                            { name: 'M9_23', index: 'M9_23', width: 33, align: "right", sortable: false },
+                            { name: 'M9_24', index: 'M9_24', width: 33, align: "right", sortable: false },
+                            { name: 'M9_25', index: 'M9_25', width: 33, align: "right", sortable: false },
+                            { name: 'M9_26', index: 'M9_26', width: 33, align: "right", sortable: false },
+                            { name: 'M9_27', index: 'M9_27', width: 33, align: "right", sortable: false },
+                            { name: 'M9_28', index: 'M9_28', width: 33, align: "right", sortable: false },
+                            { name: 'M9_29', index: 'M9_29', width: 33, align: "right", sortable: false },
+                            { name: 'M9_30', index: 'M9_30', width: 33, align: "right", sortable: false },
+                            { name: 'M9_31', index: 'M9_31', width: 33, align: "right", sortable: false },
+                            { name: '合計', index: '合計', width: 40, align: "right", sortable: false },
+                            { name: '目標', index: '目標', width: 40, align: "right", sortable: false }
+                          ],
+                viewrecords: true,
+                loadonce: true
+            });
+
+            jQuery("#MyGrid_X").setCell (1,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (2,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (3,3,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (1,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (2,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (3,10,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (1,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (2,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (3,17,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (1,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (2,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (3,24,'',{'background':'#CCCCCC'});
+            jQuery("#MyGrid_X").setCell (1,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (2,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (3,0,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (1,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (2,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (3,32,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (1,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (2,33,'',{'background':'#FFCC00'});
+            jQuery("#MyGrid_X").setCell (3,33,'',{'background':'#FFCC00'});
+
+            var totalHtml =
+            [
+                '<table width="1338px;" border="0">',
+                    '<tr class="ui-widget-content jqgrow ui-row-ltr">',
+                        '<td style="width:65px;background-color: #FFCC00">合計</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">3</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #FFCC00">2</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:40px; text-align:right;background-color: #FFCC00">70</td>',
+                        '<td style="width:40px; text-align:right;background-color: #FFCC00">70</td>',
+                    '</tr>',
+                    '<tr  class="ui-widget-content jqgrow ui-row-ltr">',
+                        '<td style="width:65px;background-color: #FFCC00">AD数</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">4</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">4</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;">6</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                    '</tr>',
+                    '<tr   class="ui-widget-content jqgrow ui-row-ltr">',
+                        '<td style="width:65px;background-color: #FFCC00">EN数</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">4</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">4</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">3</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">3</td>',
+                        '<td style="width:33px; text-align:right;">4</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;">5</td>',
+                        '<td style="width:33px; text-align:right;background-color: #CCCCCC"></td>',
+                    '</tr>',
+                '</table>'
+            ];
+            $('#t_MyGrid_X').html(totalHtml.join("")).attr("style", "height:75px;");
+        })
+    </script>
+
+</head>
+<body>
+
+<div style="width:1208px;">
+
+    <div id="button_list" style="margin-left:3px; margin-top:5px;">
+
+        <button style="height:50px; width:72px;">
+            F9<br />
+            実行</button>
+
+        <button style="height:50px; width:72px;">
+            F12<br />
+            自動計算</button>
+
+    </div>
+
+    <div style="height:20px; margin-top:5px; margin-left:3px;">
+           <tr>
+               <label style="background-color: #add8e6; font-size:larger; padding: 1px 20px; font-style:inherit">対象年月</label>
+               <input type="text" value="2013/09" style="width:60px; margin-left:0px; text-align:center;" disabled="disabled"/>
+           <tr>
+    </div>
+
+    <div>
+        <table width="100%" border="0">
+            <tr>
+                <td style="text-align:left; vertical-align:top;">
+                    <div style="margin-top:5px; margin-left:3px; margin-bottom:10px;">
+                        <label style="font-size:larger; font-style:inherit">■出勤状況　　出勤状況を設定し、"自動計算"ボタンを押下してください。下記に入庫計画台数が表示されます。</label>
+                        <table id="MyGrid_Y"></table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left; vertical-align:top;">
+                    <div style="margin-top:5px; margin-left:3px; margin-bottom:10px;">
+                        <label style="font-size:larger; font-style:inherit">■入庫計画/予約枠数　　直接入力、または、出勤状況の変更により、計画の微調整を行い、"実行"ボタンを押下してください。</label>
+                        <table id="MyGrid_X"></table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="height:50px; margin-top:5px; margin-left:3px;">
+           <tr>
+               <input type="text" value="m061011" style="width:200px; margin-left:50px; text-align:left" disabled="disabled"/>
+               <input type="text" value="R9E0MCR" style="width:200px; margin-left:0px; text-align:left" disabled="disabled"/>
+               <input type="text" value="0.0.0.0" style="width:200px; margin-left:0px; text-align:left" disabled="disabled"/>
+               <input type="text" value="2013/10/10 13:26" style="width:200px; margin-left:0px; text-align:left" disabled="disabled"/>
+           <tr>
+    </div>
+</div>
+
+</body>
+</html>

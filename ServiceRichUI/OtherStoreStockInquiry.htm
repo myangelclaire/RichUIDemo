@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>他店在庫照会画面</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { id: "1", 店舗コード: "100", 店舗名: "东京店", 引当可能数: "1", 在庫数: "3", 引当数: "2" },
+                            { id: "2", 店舗コード: "200", 店舗名: "大阪店", 引当可能数: "0", 在庫数: "1", 引当数: "5" }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 235,
+                width: 715,
+                shrinkToFit: false,
+                autoScroll: true,
+                rowNum: 10,
+                cellEdit: true,
+                cellsubmit: 'clientArray',
+                colNames: ['店舗コード', '店舗名', '引当可能数', '在庫数'],
+                colModel: [
+               		        { name: '店舗コード', index: '店舗コード', width: 150, sorttype: "string" },
+               		        { name: '店舗名', index: '店舗名', width: 200 },
+               		        { name: '引当可能数', index: '引当可能数', width: 150, align: "right" },
+               		        { name: '在庫数', index: '在庫数', width: 150, align: "right" }
+               	        ],
+                //pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true
+            });
+
+
+            //$("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+            $("#cb_list47").hide();
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div style="margin-top:5px; margin-left:3px;">
+        <!--<button style="height:50px; font-size:13px; width:100px;">検索</button>-->
+    </div>
+
+    <div style="margin-top:10px;">
+        <fieldset title="検索条件">
+            <legend style="font-size:12px; color:Blue">検索条件</legend>
+            <table>
+
+                <tr>
+                    <td style="width:500px;">
+                        <table>
+                            <tr>
+                                <td style="width:15%;"><label>部品No:</label></td>
+                                <td style="width:40%;">
+                                    <input type="text" />
+                                </td>
+                                <td style="width:40%;">
+                                    <input type="text" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px;">
+                    </td>
+                    <td style="width:80px;"></td>
+                    <td style="width:300px"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div style="margin-top:10px; margin-left:3px; height:320px;">
+        <table id="list47"></table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>ログシート</title>
+
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/logsheet.css" />
+    <!--CSS-->
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/MsAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/accounting.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    
+    </head>
+<body> <!--onload="prettyPrint();-->
+    <!--ログシート-->
+    <div>
+        <h1>レコード検索</h1>
+        <!--検索条件-->
+        <div id="search-condition">
+            <table width="80%">
+            <tr>
+                <td class="ms-crm-FieldLabel-RightAlign  FormSection_CellPadding ms-crm-Field-Normal" colspan="4">
+                    <label for="name">保存されている検索条件の使用</label>
+                </td>
+                <td id="Td5" formxmlcolspan="1" width="15%">
+                    <table class="ms-crm-Lookup" id="Table3" style="width: 100%;
+                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                        <tbody>
+                            <tr>
+                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                        <li style="display: inline; white-space: nowrap;">
+                                            <span title="Fourth Coffee (sample)"
+                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img4" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                            <span class="ms-crm-LookupItem-Name" wrapper="true">検索条件</span>
+                                            </span>
+                                        </li>
+                                    </div>
+                                    <input tabindex="9" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text3"
+                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                        ime-mode="auto">
+                                </td>
+                                <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                        id="Img7" style="-ms-ime-mode: auto;" src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                        lookuptypes="1" forcesubmit="false">
+                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                </td>
+                <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td12" align="right">
+                    <button style="width: 80px" tabindex="3">上書保存</button>
+                    &nbsp;
+                    <button style="width: 100px" tabindex="3">名前を付けて保存</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                    <label for="name">and/or</label>
+                </td>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                    <label for="name">エンティティ</label>
+                </td>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                    <label for="name">項目</label>
+                </td>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                    <label for="name">値</label>
+                </td>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                    <label for="name">演算子</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                </td>
+                <td id="Td17" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select3" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">お客様情報</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td3" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select4" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">年齢</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td1" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select1" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">30</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td2" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select2" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">より小さい</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="Td14" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select13" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">and</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td4" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select5" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">お客様車種</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td6" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select6" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">最新入庫日</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td7" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select7" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">2014/3/31</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td8" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select8" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected">以後</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td id="Td15" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select14" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td9" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select9" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td10" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select10" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td11" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select11" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+                <td id="Td13" formxmlcolspan="1" width="10%">
+                    <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                        id="Select12" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="" selected="selected"></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div>
+            <table width="80%">
+                <thead>
+                <tr>
+                    <td id="new_checkboxtest_d" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="new_checkboxtest" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">お客様名</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">フリガナ</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">区分</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">車種</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">ご意向確認</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">満足伺う</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">リコール</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">車両販売</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">車検</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">点検</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="6%">
+                        <label for="name">満期</label>
+                    </td>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="12%">
+                        <label for="name">後日提案/キャンペーン</label>
+                    </td>
+                </tr>
+                <tr bgcolor="White">
+                    <td id="Td16" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox1" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td>
+                        前田　莉寧
+                    </td>
+                    <td>
+                        マエダ</td>
+                    <td>
+                        顧客</td>
+                    <td>
+                        CX-5</td>
+                    <td align="center">
+                        ○</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        ○
+                    </td>
+                </tr>
+                <tr bgcolor="White">
+                    <td id="Td18" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox2" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td>
+                        大島　親友</td>
+                    <td>
+                        オオシマ</td>
+                    <td>
+                        ストック</td>
+                    <td>
+                        デミオ</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        ○
+                    </td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                </tr>
+                <tr bgcolor="White">
+                    <td id="Td19" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox3" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td>
+                        木村　真一</td>
+                    <td>
+                        キムラ</td>
+                    <td>
+                        ストック</td>
+                    <td>
+                        デミオ</td>
+                    <td align="center">
+                        ○
+                    </td>
+                    <td align="center">
+                        ○
+                    </td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        ○
+                    </td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        ○
+                    </td>
+                    <td align="center">
+                        &nbsp;</td>
+                </tr>
+                <tr bgcolor="White">
+                    <td id="Td20" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox4" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td>
+                        渡部　有利</td>
+                    <td>
+                        ワタベ</td>
+                    <td>
+                        顧客</td>
+                    <td>
+                        デミオ</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                </tr>
+                <tr bgcolor="White">
+                    <td id="Td21" style="overflow: hidden;" formxmlcolspan="1" width="2%">
+                        <input tabindex="1120" class="ms-crm-CheckBox" id="Checkbox5" type="checkbox"
+                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                    </td>
+                    <td>
+                        佐原　伸一</td>
+                    <td>
+                        サハラ</td>
+                    <td>
+                        顧客</td>
+                    <td>
+                        デミオ</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                    <td align="center">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="3">1-5/5(０個選択済み)</td>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div>
+            <table width="80%">
+                <tr>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal" width="20%">
+                        <label for="name">追加先リスト（ご提案種別）</label>
+                    </td>
+                    <td id="Td22" formxmlcolspan="1" width="10%">
+                        <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                            id="Select15" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="" selected="selected">後日提案/キャンペーン</option>
+                            <option value="" selected="selected"></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal">
+                        <label for="name">ご提案詳細名</label>
+                    </td>
+                    <td id="Td23" formxmlcolspan="1">
+                        <select name="new_listboxtest" tabindex="13" class="ms-crm-SelectBox" 
+                            id="Select16" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                            attrname="new_listboxtest" req="0" defaultselected="">
+                            <option value="" selected="selected">デミオ　展示会</option>
+                            <option value="" selected="selected"></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="FormSection_CellPadding ms-crm-Field-Normal" id="Td24" align="right">
+                        <button style="width: 80px" tabindex="3">追加</button>
+                        &nbsp;
+                        <button style="width: 100px" tabindex="3">キャンセル</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

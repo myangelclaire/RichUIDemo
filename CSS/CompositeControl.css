@@ -1,0 +1,738 @@
+.ms-crm-CompositeControl {
+	width: 99.9%; height: 100%; overflow: hidden; position: relative;
+}
+.ms-crm-CompCntrlBrdr {
+	border-width: 1px; border-style: solid; left: 0px; top: 0px; width: auto !important; height: auto !important; right: 0px; bottom: 0px; position: absolute;
+}
+.ms-crm-visualizationpane-contentarea {
+	width: 100%; height: 100%; -ms-overflow-x: auto; -ms-overflow-y: hidden; background-color: rgb(255, 255, 255);
+}
+.ms-crm-emptyvizpane {
+	height: 100%;
+}
+span.ms-crm-removeSeriesBtnSpan {
+	
+}
+.ms-crm-visualizationpane-contentarea-topborder {
+	border-top-color: currentColor; border-top-width: 1px; border-top-style: solid;
+}
+.ms-crm-PaneControl-LeftRight-footer {
+	height: 43px; border-top-width: 1px; border-top-style: solid;
+}
+.ms-crm-PaneControl-TopDown-footer {
+	height: 21px; border-top-width: 1px; border-top-style: solid;
+}
+label.ms-crm-drillDown-info {
+	width: 100%; text-align: justify; overflow: hidden; padding-left: 5px; white-space: nowrap; cursor: default; -ms-text-overflow: ellipsis;
+}
+table.ms-crm-FixedTableLayout {
+	width: 100%; height: 100%; table-layout: fixed;
+}
+.ms-crm-visualization-list-row {
+	width: 100%; height: 21px; overflow: hidden; padding-left: 3px; background-color: rgb(255, 255, 255);
+}
+.ms-crm-chartLabel {
+	width: 50px; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.ms-crm-control-strip-table {
+	border: 1px solid currentColor; table-layout: fixed; cursor: pointer;
+}
+td.ms-crm-control-SideStrip-LeftRight {
+	width: 22px; height: 100%;
+}
+.ms-crm-CC-GridSS-All-0-LR {
+	left: 0px; width: 22px; height: 100%; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-1-LR {
+	left: 0px; width: 22px; height: 100%; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-2-LR {
+	left: 0px; width: 22px; height: 100%; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-4-LR {
+	left: 0px; width: 22px; height: 100%; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-3-LR {
+	left: 0px; width: 22px; height: 100%; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-2-LR {
+	display: inline-block !important;
+}
+.ms-crm-CC-PaneSS-All-0-LR {
+	width: 22px; height: 100%; right: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-1-LR {
+	width: 22px; height: 100%; right: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-2-LR {
+	width: 22px; height: 100%; right: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-4-LR {
+	width: 22px; height: 100%; right: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-3-LR {
+	width: 22px; height: 100%; right: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-0-LR {
+	display: inline-block !important;
+}
+.ms-crm-CC-splitter-Chart-0-LR {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-1-LR {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-2-LR {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-4-LR {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-3-LR {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-0-TB {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-1-TB {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-2-TB {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-4-TB {
+	display: none;
+}
+.ms-crm-CC-splitter-Chart-3-TB {
+	display: none;
+}
+.ms-crm-CC-splitter-All-0-LR {
+	top: 0px; width: 3px; right: 0px; bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; display: none; position: absolute; cursor: col-resize;
+}
+.ms-crm-CC-splitter-All-1-LR {
+	top: 0px; width: 3px; right: 0px; bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; display: none; position: absolute; cursor: col-resize;
+}
+.ms-crm-CC-splitter-All-2-LR {
+	top: 0px; width: 3px; right: 0px; bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; display: none; position: absolute; cursor: col-resize;
+}
+.ms-crm-CC-splitter-All-4-LR {
+	top: 0px; width: 3px; right: 0px; bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; display: none; position: absolute; cursor: col-resize;
+}
+.ms-crm-CC-splitter-All-3-LR {
+	top: 0px; width: 3px; right: 0px; bottom: 0px; border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; display: none; position: absolute; cursor: col-resize;
+}
+.ms-crm-CC-splitter-All-0-LR {
+	right: 22px; display: inline-block !important;
+}
+.ms-crm-CC-splitter-All-1-LR {
+	left: auto; right: 32%; display: inline-block !important;
+}
+.ms-crm-CC-splitter-All-2-LR {
+	left: 22px; right: auto; display: inline-block !important;
+}
+.ms-crm-CC-splitter-All-3-LR {
+	display: inline-block;
+}
+.ms-crm-CC-grid-Grid-4-LR {
+	width: 100%; height: 100%;
+}
+.ms-crm-CC-pane-Chart-2-LR {
+	width: 100%; height: 100%;
+}
+.ms-crm-CC-pane-Chart-2-TB {
+	width: 100%; height: 100%;
+}
+.ms-crm-CC-PaneSS-Chart-0-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-PaneSS-Chart-0-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-PaneSS-Chart-4-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-PaneSS-Chart-0-LR {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-PaneSS-Chart-4-LR {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-1-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-2-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-3-TB {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-1-LR {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-2-LR {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-pane-Chart-3-LR {
+	width: 100%; height: 100%; display: block;
+}
+.ms-crm-CC-PaneSS-Chart-1-TB {
+	display: none;
+}
+.ms-crm-CC-PaneSS-Chart-2-TB {
+	display: none;
+}
+.ms-crm-CC-PaneSS-Chart-3-TB {
+	display: none;
+}
+.ms-crm-CC-PaneSS-Chart-1-LR {
+	display: none;
+}
+.ms-crm-CC-PaneSS-Chart-2-LR {
+	display: none;
+}
+.ms-crm-CC-PaneSS-Chart-3-LR {
+	display: none;
+}
+.ms-crm-CC-pane-Chart-0-TB {
+	display: none;
+}
+.ms-crm-CC-pane-Chart-0-LR {
+	display: none;
+}
+.ms-crm-CC-pane-Chart-4-TB {
+	display: none;
+}
+.ms-crm-CC-pane-Chart-4-LR {
+	display: none;
+}
+.ms-crm-CC-pane-0-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-pane-All-1-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-pane-All-2-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-pane-All-3-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-grid-All-0-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-grid-All-1-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-grid-All-2-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-grid-All-3-LR {
+	height: 100%; display: inline-block; position: absolute;
+}
+.ms-crm-CC-grid-All-4-LR {
+	height: 100%; display: block;
+}
+.ms-crm-CC-pane-All-4-LR {
+	height: 100%; display: block;
+}
+.ms-crm-CC-grid-All-1-LR {
+	left: 0px; width: 68%;
+}
+.ms-crm-CC-grid-All-0-LR {
+	left: 0px; right: 25px;
+}
+.ms-crm-CC-grid-All-2-LR {
+	display: none;
+}
+.ms-crm-CC-grid-All-4-LR {
+	width: 100%;
+}
+.ms-crm-CC-grid-All-3-LR {
+	left: 0px; right: auto;
+}
+.ms-crm-CC-pane-All-1-LR {
+	width: 32%; right: 0px;
+}
+.ms-crm-CC-pane-All-0-LR {
+	display: none;
+}
+.ms-crm-CC-pane-All-2-LR {
+	left: 25px; right: 0px;
+}
+.ms-crm-CC-pane-All-4-LR {
+	display: none;
+}
+.ms-crm-CC-pane-All-3-LR {
+	left: auto; right: 0px;
+}
+.ms-crm-CC-GridSS-All-0-TB {
+	width: 100%; height: 22px; bottom: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-1-TB {
+	width: 100%; height: 22px; bottom: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-2-TB {
+	width: 100%; height: 22px; bottom: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-4-TB {
+	width: 100%; height: 22px; bottom: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-3-TB {
+	width: 100%; height: 22px; bottom: 0px; display: none; position: absolute;
+}
+.ms-crm-CC-GridSS-All-2-TB {
+	display: block !important;
+}
+.ms-crm-CC-PaneSS-All-0-TB {
+	top: 0px; width: 100%; height: 22px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-1-TB {
+	top: 0px; width: 100%; height: 22px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-2-TB {
+	top: 0px; width: 100%; height: 22px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-4-TB {
+	top: 0px; width: 100%; height: 22px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-3-TB {
+	top: 0px; width: 100%; height: 22px; display: none; position: absolute;
+}
+.ms-crm-CC-PaneSS-All-0-TB {
+	display: block !important;
+}
+.ms-crm-CC-splitter-All-0-TB {
+	left: 0px; top: 0px; height: 3px; right: 0px; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; display: none; position: absolute; cursor: row-resize;
+}
+.ms-crm-CC-splitter-All-1-TB {
+	left: 0px; top: 0px; height: 3px; right: 0px; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; display: none; position: absolute; cursor: row-resize;
+}
+.ms-crm-CC-splitter-All-2-TB {
+	left: 0px; top: 0px; height: 3px; right: 0px; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; display: none; position: absolute; cursor: row-resize;
+}
+.ms-crm-CC-splitter-All-4-TB {
+	left: 0px; top: 0px; height: 3px; right: 0px; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; display: none; position: absolute; cursor: row-resize;
+}
+.ms-crm-CC-splitter-All-3-TB {
+	left: 0px; top: 0px; height: 3px; right: 0px; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; display: none; position: absolute; cursor: row-resize;
+}
+.ms-crm-CC-splitter-All-0-TB {
+	top: 22px; bottom: auto; display: block !important;
+}
+.ms-crm-CC-splitter-All-1-TB {
+	top: 50%; bottom: auto; display: block !important;
+}
+.ms-crm-CC-splitter-All-2-TB {
+	top: auto; bottom: 22px; display: block !important;
+}
+.ms-crm-CC-splitter-All-3-TB {
+	left: 0px; width: auto !important; right: 0px; display: block;
+}
+.ms-crm-CC-pane-0-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-pane-All-1-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-pane-All-2-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-pane-All-4-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-pane-All-3-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-0-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-1-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-2-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-4-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-3-TB {
+	width: 100%; display: block; position: absolute;
+}
+.ms-crm-CC-grid-All-1-TB {
+	bottom: 0px;
+}
+.ms-crm-CC-grid-All-0-TB {
+	top: 25px; bottom: 0px;
+}
+.ms-crm-CC-grid-All-2-TB {
+	display: none;
+}
+.ms-crm-CC-grid-All-4-TB {
+	height: 100%;
+}
+.ms-crm-CC-grid-All-3-TB {
+	top: auto; bottom: 0px;
+}
+.ms-crm-CC-pane-All-1-TB {
+	top: 0px; height: 50%;
+}
+.ms-crm-CC-pane-All-0-TB {
+	display: none;
+}
+.ms-crm-CC-pane-All-2-TB {
+	top: 0px; bottom: 25px;
+}
+.ms-crm-CC-pane-All-4-TB {
+	display: none;
+}
+.ms-crm-CC-pane-All-3-TB {
+	top: 0px; bottom: auto;
+}
+td.ms-crm-gridPaneSepVerTD {
+	border-right-color: currentColor; border-left-color: currentColor; border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid;
+}
+div.ms-crm-gridPaneSepDivVer {
+	width: 100%; height: 3px; position: fixed;
+}
+.ms-crm-control-SideStrip-BottomUp {
+	height: 22px;
+}
+.ms-crm-control-SideStrip {
+	height: 100%; overflow: hidden;
+}
+.ms-crm-control-SideStrip-Hovered {
+	height: 100%; overflow: hidden;
+}
+.ms-crm-stripRotateClockwise {
+	margin-left: 14px; position: relative; transform: rotate(90deg); -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);
+}
+.ms-crm-stripRotateCounterClockwise {
+	margin-right: 14px; position: relative; transform: rotate(-90deg); -webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg); -o-transform: rotate(-90deg);
+}
+.ms-crm-stripLabelLeftRight {
+	height: 100%; font-weight: 600; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.ms-crm-stripNavBarLeftRight {
+	margin-left: -20px; display: inline-block; transform: rotate(270deg); -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -o-transform: rotate(270deg);
+}
+.ms-crm-stripNavBarCommon {
+	color: rgb(102, 102, 102); font-family: Segoe UI; font-size: 12px; font-weight: bold; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.ms-crm-stripNavBarEA {
+	margin-left: 0px !important; display: block !important; transform: rotate(90deg) !important; -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -o-transform: rotate(90deg);
+}
+.ms-crm-stripNavBarLabelLeftRight {
+	height: 14px; text-align: center; overflow: visible; background-color: rgb(243, 243, 243);
+}
+.visualizationImageTable:hover .ms-crm-stripNavBarLabelLeftRight {
+	background-color: rgb(214, 235, 255);
+}
+label.ms-crm-stripNavBarLabelLeftRight:hover {
+	color: rgb(0, 114, 198); cursor: pointer;
+}
+.ms-crm-stripChartLabelLeftRight {
+	height: 14px; text-align: left; overflow: visible; display: block;
+}
+.ms-crm-stripGridLabelLeftRight {
+	height: 14px; text-align: right; overflow: visible; display: block;
+}
+.ms-crm-stripLabelBottomUp {
+	overflow: hidden; font-weight: bold; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+table.ms-crm-VisualizationPaneDesigner-Table {
+	width: 100%; height: 100%;
+}
+a.ms-crm-VisualizationPaneDesigner-NewChartLink {
+	color: rgb(21, 66, 139); font-size: 12px; text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-VisualizationPaneDesigner-NewChartLink:link {
+	color: rgb(21, 66, 139); font-size: 12px; text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-VisualizationPaneDesigner-NewChartLink:visited {
+	color: rgb(21, 66, 139); font-size: 12px; text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-VisualizationPaneDesigner-NewChartLink:active {
+	color: rgb(21, 66, 139); font-size: 12px; text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-VisualizationPaneDesigner-NewChartLink:hover {
+	color: rgb(0, 0, 255); font-size: 12px; text-decoration: underline;
+}
+a.ms-crm-VisualizationPaneDesigner-ShowHideLabel {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ShowHideLabel:link {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ShowHideLabel:visited {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ShowHideLabel:active {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ShowHideLabel:hover {
+	color: blue; text-decoration: underline; cursor: pointer;
+}
+a.ms-crm-VisualizationPaneDesigner-ClearLabel {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ClearLabel:link {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ClearLabel:visited {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ClearLabel:active {
+	text-decoration: none;
+}
+a.ms-crm-VisualizationPaneDesigner-ClearLabel:hover {
+	color: blue; text-decoration: underline; cursor: pointer;
+}
+label.ms-crm-VisualizationPaneDesigner-NameHint {
+	padding: 4px 5px; height: 20px; color: rgb(126, 126, 126); overflow: hidden; display: none; position: absolute;
+}
+input.ms-crm-VisualizationPaneDesigner-Name {
+	padding: 2px 0px; background-color: rgb(255, 255, 255);
+}
+.ms-crm-VisualizationPaneDesigner-ImageContainer {
+	border: 1px solid silver; text-align: center; background-color: rgb(255, 255, 255);
+}
+.ms-crm-VisualizationPaneDesigner-ImageTable {
+	width: 100%; height: 100%; position: relative; background-color: rgb(255, 255, 255);
+}
+.ms-crm-VisualizationPaneDesigner-ImageTable {
+	margin: auto; width: 295px;
+}
+div.ms-crm-VisualizationPaneDesigner {
+	height: 100%; position: relative; -ms-overflow-y: auto;
+}
+td.ms-crm-VisualizationPaneDesigner-AdvanceOptionTd {
+	text-align: right;
+}
+label.ms-crm-VisualizationPaneDesigner-AdvanceOptionLabel {
+	text-align: right; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+label.ms-crm-VisualizationPaneDesigner-SeriesLabel {
+	text-align: left; overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+label.ms-crm-VisualizationPaneDesigner-topLeftLabel {
+	height: 140px; text-align: center; color: rgb(126, 126, 126); overflow: hidden; padding-left: 10px; white-space: nowrap; -ms-writing-mode: tb-rl; -ms-text-overflow: ellipsis;
+}
+label.VD-filter {
+	transform: scale(-1);
+}
+label.ms-crm-VisualizationPaneDesigner-topRightLabel {
+	height: 140px; text-align: center; color: rgb(126, 126, 126); overflow: hidden; padding-left: 10px; display: none; white-space: nowrap; -ms-writing-mode: tb-rl; -ms-text-overflow: ellipsis; transform: scale(-1);
+}
+label.ms-crm-VisualizationPaneDesigner-bottomLabel {
+	width: 200px; color: rgb(126, 126, 126); padding-left: 5px;
+}
+img.ms-crm-VisualizationPaneDesigner-StaticTopImg {
+	position: absolute; opacity: 0.3;
+}
+img.ms-crm-VisualizationPaneDesigner-StaticBottomImg {
+	opacity: 0.3;
+}
+.ms-crm-VisualizationPaneDesigner-TDSeriesSelector {
+	text-align: left; margin-bottom: 4px;
+}
+.ms-crm-VisualizationPaneDesigner-TDSeriesSelector input {
+	width: auto; height: auto;
+}
+.ms-crm-VisualizationPaneDesigner-TDSeriesSelector span {
+	vertical-align: top;
+}
+.ms-crm-VisualizationPaneDesigner-TDSeriesSelector span select {
+	margin-top: 2px; margin-bottom: 2px;
+}
+span select.ms-crm-VisualizationPaneDesigner-SeriesSelector {
+	width: 38%;
+}
+span select.ms-crm-VisualizationPaneDesigner-SelectAggregate {
+	width: 28%; margin-left: 3px;
+}
+select.ms-crm-VisualizationPaneDesigner-GroupingSelector {
+	margin-left: 3px; display: none;
+}
+td.ms-crm-VPD-Desc {
+	padding-bottom: 5px;
+}
+#tdVisualizationDescription div {
+	width: 100%; margin-left: 20px;
+}
+#tdVisualizationDescription {
+	padding-right: 40px;
+}
+tr.ms-crm-VisualizationPaneDesigner-row {
+	cursor: pointer;
+}
+input.ms-crm-VisualizationPaneDesigner-Inputbox {
+	background-color: rgb(230, 230, 230);
+}
+table.ms-crm-VisualizationPaneDesigner-AdvancedOptions {
+	border: 1px solid currentColor; width: 100%; padding-left: 6px; background-color: rgb(230, 230, 230);
+}
+table.ms-crm-VisualizationPaneDesigner-InnerAdvancedOptions {
+	border: 1px solid currentColor; width: 100%;
+}
+label.ms-crm-Info-Label {
+	color: rgb(153, 153, 153); padding-left: 5px; cursor: default;
+}
+.ms-crm-visualizationpane-toolbar {
+	top: 0px; width: 100%; height: 20px; text-align: right; right: 6px; margin-top: 20px; margin-bottom: 7px; position: absolute; z-index: 1; background-color: rgb(255, 255, 255);
+}
+.ms-crm-visualizationpane-toolbar-scrollbar-offset.ms-crm-visualizationpane-toolbar {
+	right: 25px;
+}
+span.ms-crm-visualizationpane-toolbar-buttons {
+	margin-right: 6px;
+}
+.ms-crm-visualizationpane-greyout {
+	left: 0px; top: 0px; width: 100%; height: 100%; visibility: visible; position: fixed; z-index: 101; background-color: rgb(230, 225, 225);
+}
+.ms-crm-visualizationpane-enlarge {
+	left: 0px; top: 0px; padding-top: 30px; padding-bottom: 30px; visibility: visible; position: fixed; z-index: 102;
+}
+.ms-crm-visualizationpane-enlarge #paneContent {
+	border: 1px solid rgb(0, 118, 163);
+}
+.ms-crm-visualizationpane-close-enlarge {
+	top: 20px; right: 20px; position: absolute; z-index: 103;
+}
+.ms-crm-visualizationpane-close-enlarge a:link {
+	color: rgb(21, 66, 139); text-decoration: underline; cursor: pointer;
+}
+iframe.ms-crm-visualizationpane-close-enlarge {
+	z-index: 102;
+}
+input.ms-crm-visualizationpane-radio {
+	width: 10px;
+}
+input.ms-crm-visualizationpane-textbox {
+	position: absolute; size: 30;
+}
+table.ms-crm-visualization-error-table {
+	margin-right: auto; margin-left: auto; cursor: auto;
+}
+table.ms-crm-Visualization-Table {
+	margin-right: auto; margin-left: auto; cursor: auto;
+}
+table.ms-crm-DrillDown-Table {
+	border: 1px solid rgb(192, 192, 192);
+}
+div.ms-crm-drillDownBox {
+	display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-inlineActionsBox {
+	display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-inlineChartActionsBox {
+	display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-inlineTopBottomActionsBox {
+	display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+div.ms-crm-drillDownBox {
+	width: 194px;
+}
+.ms-crm-VisualizationPaneDesigner-TableAttributesSelector {
+	padding-top: 5px; position: relative;
+}
+div.ms-crm-inlineChartActionsBox {
+	border: 1px solid rgb(174, 178, 183); width: 211px; height: 26px; padding-left: 4px;
+}
+div.ms-crm-inlineTopBottomActionsBox {
+	border: 1px solid rgb(174, 178, 183); width: 111px; height: 26px; padding-left: 4px;
+}
+div.ms-crm-Designer-AddButton {
+	text-align: left; margin-top: 12px; margin-bottom: 15px; margin-left: 20px;
+}
+div.ms-crm-Designer-Label {
+	text-align: left; margin-bottom: 5px; margin-left: 20px;
+}
+span.ms-crm-AddSeries-Button {
+	padding: 3px 3px 1px; border: 1px solid transparent; display: inline-block; cursor: pointer; background-color: transparent;
+}
+span.ms-crm-AddSeries-Button-hover {
+	padding: 3px 3px 1px; border: 1px solid rgb(241, 196, 63); display: inline-block; cursor: pointer; background-color: rgb(253, 238, 179);
+}
+.ms-crm-AddSeries-Button * {
+	display: inline-block; cursor: pointer;
+}
+.ms-crm-AddSeries-Button-hover * {
+	display: inline-block; cursor: pointer;
+}
+.ms-crm-AddSeries-Button span {
+	margin-left: 8px; vertical-align: top;
+}
+.ms-crm-AddSeries-Button-hover span {
+	margin-left: 8px; vertical-align: top;
+}
+tr.ms-crm-drillDownBox-Row {
+	margin: 1px; height: 22px;
+}
+td.ms-crm-drillDownBox-ButtonsCell {
+	text-align: left;
+}
+td.ms-crm-drillDownBox-OKCell {
+	text-align: right;
+}
+td.ms-crm-drillDownBox-Button {
+	margin-right: 1px; margin-bottom: 1px;
+}
+img.ms-crm-inlineBox-Button {
+	margin-top: 1px; margin-right: 4px; margin-bottom: 1px;
+}
+td.ms-crm-drillDownBox-Button {
+	height: 22px;
+}
+div.ms-crm-updateDiv {
+	width: 100px; padding-right: 5px; padding-left: 5px; margin-right: 10px; margin-left: 10px; display: none; position: absolute;
+}
+table.ms-crm-errorDiv {
+	width: 99%; height: 99%; color: rgb(153, 153, 153); table-layout: fixed;
+}
+img.ms-crm-errorImg {
+	vertical-align: bottom;
+}
+label.ms-crm-Error-Label {
+	margin: 5px; color: red; cursor: default;
+}
+label.ms-crm-DrillDown-Label {
+	width: 200px; overflow: hidden; padding-left: 5px; white-space: nowrap; cursor: default; -ms-text-overflow: ellipsis;
+}
+label.ms-crm-DrillDown-Header {
+	width: 200px; overflow: hidden; padding-left: 5px; font-weight: bold; white-space: nowrap; cursor: default; -ms-text-overflow: ellipsis;
+}
+button.ms-crm-Drilldown-Dialog-Buttons {
+	overflow: hidden; -ms-text-overflow: ellipsis;
+}
+a.ms-crm-DrillDown-back-disabled {
+	color: rgb(103, 103, 103); font-size: 12px; font-weight: bold; margin-left: 3px; cursor: default;
+}
+a.ms-crm-DrillDown-back-Link {
+	color: rgb(21, 66, 139); font-size: 12px; font-weight: bold; margin-left: 3px;
+}
+a.ms-crm-DrillDown-back-Link:link {
+	color: rgb(21, 66, 139); font-size: 12px; font-weight: bold; margin-left: 3px;
+}
+a.ms-crm-DrillDown-back-Link:visited {
+	color: rgb(21, 66, 139); font-size: 12px; font-weight: bold; margin-left: 3px;
+}
+a.ms-crm-DrillDown-back-Link:active {
+	color: rgb(21, 66, 139); font-size: 12px; font-weight: bold; margin-left: 3px;
+}
+a.ms-crm-DrillDown-back-Link:hover {
+	color: rgb(0, 0, 255); font-size: 12px; font-weight: bold; text-decoration: underline; margin-left: 3px;
+}
+img.ms-crm-DrillDown-back-imageDisabled {
+	width: 11px; height: 11px; opacity: 0.4;
+}
+img.ms-crm-DrillDown-back-imageEnabled {
+	width: 11px; height: 11px;
+}
+.flipImage {
+	
+}
+.paneControl {
+	position: relative;
+}

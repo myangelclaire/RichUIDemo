@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>後日提案メンテナンス検索</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '後日保存日': '2014/09/22',
+                                'お客様': '検証   てすと',
+                                '登録No.': '広島せ310の4521',
+                                '保存担当': '東京一郎',
+                                '保存金額': '15,670',
+                                'ﾌｫﾛｰ年月': '2014/09',
+                                'ﾌｫﾛｰ担当': '管理一郎',
+                                'ﾌｫﾛｰ入庫区分': '一般',
+                                'ｽﾃｰﾀｽ': '未見提'
+                            },
+                            {
+                                '後日保存日': '2014/09/23',
+                                'お客様': '検証   てすと',
+                                '登録No.': '広島せ310の4522',
+                                '保存担当': '東京二郎',
+                                '保存金額': '15,671',
+                                'ﾌｫﾛｰ年月': '2014/10',
+                                'ﾌｫﾛｰ担当': '管理二郎８',
+                                'ﾌｫﾛｰ入庫区分': 'ＭＳＣ',
+                                'ｽﾃｰﾀｽ': '未見提'
+                            },
+                            {
+                                '後日保存日': '2014/09/24',
+                                'お客様': '検証   てすと',
+                                '登録No.': '広島せ310の4523',
+                                '保存担当': '東京二郎',
+                                '保存金額': '15,672',
+                                'ﾌｫﾛｰ年月': '2014/11',
+                                'ﾌｫﾛｰ担当': '管理二郎８',
+                                'ﾌｫﾛｰ入庫区分': 'ＭＳＣ',
+                                'ｽﾃｰﾀｽ': '未見提'
+                            },
+                            {
+                                '後日保存日': '2014/09/25',
+                                'お客様': '検証   てすと',
+                                '登録No.': '広島せ310の4524',
+                                '保存担当': '東京二郎',
+                                '保存金額': '15,673',
+                                'ﾌｫﾛｰ年月': '2014/12',
+                                'ﾌｫﾛｰ担当': '管理二郎８',
+                                'ﾌｫﾛｰ入庫区分': 'ＭＳＣ',
+                                'ｽﾃｰﾀｽ': '未見提'
+                            },
+                            {
+                                '後日保存日': '2014/09/26',
+                                'お客様': '検証   てすと',
+                                '登録No.': '広島せ310の4525',
+                                '保存担当': '東京二郎',
+                                '保存金額': '15,674',
+                                'ﾌｫﾛｰ年月': '2015/01',
+                                'ﾌｫﾛｰ担当': '管理二郎８',
+                                'ﾌｫﾛｰ入庫区分': 'ＭＳＣ',
+                                'ｽﾃｰﾀｽ': '未見提'
+                            },
+                         ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height:500,
+                width:823,
+                shrinkToFit: false,
+                colNames: [
+                            '後日保存日',
+                            'お客様',
+                            '登録No.',
+                            '保存担当',
+                            '保存金額',
+                            'ﾌｫﾛｰ年月',
+                            'ﾌｫﾛｰ担当',
+                            'ﾌｫﾛｰ入庫区分',
+                            'ｽﾃｰﾀｽ'
+                           ],
+                colModel: [
+               		        { name: '後日保存日', index: '後日保存日', width: 70,  align: "left" },
+                            { name: 'お客様', index: 'お客様', width: 130,  align: "left" },
+               		        { name: '登録No.', index: '登録No.', width: 130, align: "left" },
+                            { name: '保存担当', index: '保存担当', width: 70, align: "left" },
+                            { name: '保存金額', index: '保存金額', width: 70,  align: "right" },
+                            { name: 'ﾌｫﾛｰ年月', index: 'ﾌｫﾛｰ年月', width: 60, align: "left" },
+                            { name: 'ﾌｫﾛｰ担当', index: 'ﾌｫﾛｰ担当', width: 70, align: "left" },
+                            { name: 'ﾌｫﾛｰ入庫区分', index: 'ﾌｫﾛｰ入庫区分', width: 80, align: "left" },
+                            { name: 'ｽﾃｰﾀｽ', index: 'ｽﾃｰﾀｽ', width: 50, align: "left" },
+               	          ],
+                pager: "#gridPager",
+                autowidth: false,
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+            });
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div style="margin-top:10px;">
+            <button id="Button1" type="button" style=" height:35px; width:70px; margin-right:0px;">F1<br />終了</button>
+            <button id="Button2" type="button" style=" height:35px; width:70px; margin-right:0px;">F9<br />実行</button>
+            <button id="Button3" type="button" style=" height:35px; width:70px; margin-right:0px;">Ctrl+6<br />削除</button>
+        </div>
+        <div style="margin-top:15px; margin-left:3px; margin-bottom:5px;">
+
+            <label style="margin-left:91px; background-color: #add8e6; padding: 0px 15px; font-size:larger; ">登録No.</label>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 0px 15px; font-size:larger; ">フリガナ</label>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 0px 15px; font-size:larger; ">CAR_No.</label>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 0px 15px; font-size:larger; ">お客様No.</label>
+            <label style="margin-left:10px; background-color: #add8e6; padding: 0px 4px; font-size:larger; ">後日保存日</label>
+            <br />
+            <label style="margin-left:0px; background-color: #add8e6; padding: 0px 19px; font-size:larger; ">検索キー</label>
+            <input type="text"  style="width:50px; margin-left:0px; text-align:left" />
+            <input type="text" value="ｹﾝﾐｮｳ" style="width:70px; margin-left:30px; text-align:left" />
+            <input type="text"  style="width:75px; margin-left:8px; text-align:left" />
+            <input type="text"  
+                style="width:84px; margin-left:11px; text-align:left; margin-top: 0px;" />
+            <input type="text" value="______/____/__" 
+                style="width:70px; margin-left:8px; text-align:left; margin-top: 8px;" />
+
+        </div>
+        <div style=" margin-top:15px; margin-left:1px; height:200px;">
+            <table id="list47"></table>
+        </div>
+    </div>
+</body>
+</html>

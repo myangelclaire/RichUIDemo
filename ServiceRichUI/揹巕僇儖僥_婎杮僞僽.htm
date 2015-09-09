@@ -1,0 +1,1934 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'サービス商品名': '振替あり',
+                                '契約状態': '発注済み',
+                                '申込日': '2015/06/23',
+                                '有効期限': '18',
+                                '残回数/残量': '1000002',
+                                '残高': '2000000000000000000002'
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list53").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'サービス商品名',
+                             '契約状態',
+                             '申込日',
+                             '有効期限',
+                             '残回数/残量',
+                             '残高'
+                           ],
+                colModel: [
+               		        { name: 'サービス商品名', index: 'サービス商品名', width: 200, align: "left" },
+               		        { name: '契約状態', index: '契約状態', width: 200, align: "left" },
+               		        { name: '申込日', index: '申込日', width: 200, align: "left" },
+               		        { name: '有効期限', index: '有効期限', width: 200, align: "left" },
+               		        { name: '残回数/残量', index: '残回数/残量', width: 200, align: "left" },
+               		        { name: '残高', index: '残高', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager7",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '商品名': '振替あり',
+                                '契約状態': '発注済み',
+                                '開始日': '2015/06/23',
+                                '有効期限': '18'
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list54").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '商品名',
+                             '契約状態',
+                             '開始日',
+                             '有効期限'
+                           ],
+                colModel: [
+               		        { name: '商品名', index: '商品名', width: 200, align: "left" },
+               		        { name: '契約状態', index: '契約状態', width: 200, align: "left" },
+               		        { name: '開始日', index: '開始日', width: 200, align: "left" },
+               		        { name: '有効期限', index: '有効期限', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager8",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '証明書番号': '',
+                                '保険期間（始期）': '',
+                                '損保会社名': '',
+                                '保険期間（終期）': '',
+                                '自己契約区分': '',
+                                '自動車種別': '',
+                                '特殊車用途': '',
+                                '使用本拠地': '',
+                                '料率区分（離島区分）': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list55").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '証明書番号',
+                             '保険期間（始期）',
+                             '損保会社名',
+                             '保険期間（終期）',
+                             '自己契約区分',
+                             '自動車種別',
+                             '特殊車用途',
+                             '使用本拠地',
+                             '料率区分（離島区分）'
+                           ],
+                colModel: [
+               		        { name: '証明書番号', index: '証明書番号', width: 120, align: "left" },
+               		        { name: '保険期間（始期）', index: '保険期間（始期）', width: 120, align: "left" },
+               		        { name: '損保会社名', index: '損保会社名', width: 120, align: "left" },
+               		        { name: '保険期間（終期）', index: '保険期間（終期）', width: 120, align: "left" },
+               		        { name: '自己契約区分', index: '自己契約区分', width: 120, align: "left" },
+               		        { name: '自動車種別', index: '自動車種別', width: 120, align: "left" },
+               		        { name: '特殊車用途', index: '特殊車用途', width: 120, align: "left" },
+               		        { name: '使用本拠地', index: '使用本拠地', width: 120, align: "left" },
+               		        { name: '料率区分（離島区分）', index: '料率区分（離島区分）', width: 150, align: "left" }
+               	        ],
+                pager: "#gridPager9",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'リース区分': '',
+                                'リース開始日': '',
+                                'リース満了日': '',
+                                'リース総額': '',
+                                'リースメンテナンス料': '',
+                                'リース形態コード': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list56").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'リース区分',
+                             'リース開始日',
+                             'リース満了日',
+                             'リース総額',
+                             'リースメンテナンス料',
+                             'リース形態コード'
+                           ],
+                colModel: [
+               		        { name: 'リース区分', index: 'リース区分', width: 150, align: "left" },
+               		        { name: 'リース開始日', index: 'リース開始日', width: 120, align: "left" },
+               		        { name: 'リース満了日', index: 'リース満了日', width: 120, align: "left" },
+               		        { name: 'リース総額', index: 'リース総額', width: 180, align: "left" },
+               		        { name: 'リースメンテナンス料', index: 'リースメンテナンス料', width: 200, align: "left" },
+               		        { name: 'リース形態コード', index: 'リース形態コード', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager10",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'カード種別': '',
+                                '保有ポイント': '',
+                                '年度末期限切れポイント': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list57").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'カード種別',
+                             '保有ポイント',
+                             '年度末期限切れポイント'
+                           ],
+                colModel: [
+               		        { name: 'カード種別', index: 'カード種別', width: 200, align: "left" },
+               		        { name: '保有ポイント', index: '保有ポイント', width: 200, align: "left" },
+               		        { name: '年度末期限切れポイント', index: '年度末期限切れポイント', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager11",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'カード種別': '',
+                                '保有ポイント': '',
+                                '年度末期限切れポイント': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list57").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'カード種別',
+                             '保有ポイント',
+                             '年度末期限切れポイント'
+                           ],
+                colModel: [
+               		        { name: 'カード種別', index: 'カード種別', width: 200, align: "left" },
+               		        { name: '保有ポイント', index: '保有ポイント', width: 200, align: "left" },
+               		        { name: '年度末期限切れポイント', index: '年度末期限切れポイント', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager11",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'Test1': '',
+                                'Test2': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list61").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'Test1',
+                             'Test2'
+                           ],
+                colModel: [
+               		        { name: 'Test1', index: 'Test1', width: 150, align: "left" },
+               		        { name: 'Test2', index: 'Test2', width: 150, align: "left" }
+               	        ],
+                pager: "#gridPager21",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'Test1': '',
+                                'Test2': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list62").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'Test1',
+                             'Test2'
+                           ],
+                colModel: [
+               		        { name: 'Test1', index: 'Test1', width: 150, align: "left" },
+               		        { name: 'Test2', index: 'Test2', width: 150, align: "left" }
+               	        ],
+                pager: "#gridPager22",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'DM送付依頼日': '',
+                                'DM内容': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list58").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'DM送付依頼日',
+                             'DM内容'
+                           ],
+                colModel: [
+               		        { name: 'DM送付依頼日', index: 'DM送付依頼日', width: 200, align: "left" },
+               		        { name: 'DM内容', index: 'DM内容', width: 200, align: "left" }
+               	        ],
+                pager: "#gridPager12",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'サービス商品名': '',
+                                '契約状態': '',
+                                '契約開始日': '',
+                                '契約満了日': '',
+                                '残数': '',
+                                '残高': '',
+                                '自他区分': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list71").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'サービス商品名',
+                             '契約状態',
+                             '契約開始日',
+                             '契約満了日',
+                             '残数',
+                             '残高',
+                             '自他区分'
+                           ],
+                colModel: [
+               		        { name: 'サービス商品名', index: 'サービス商品名', width: 150, align: "left" },
+               		        { name: '契約状態', index: '契約状態', width: 100, align: "left" },
+               		        { name: '契約開始日', index: '契約開始日', width: 150, align: "left" },
+               		        { name: '契約満了日', index: '契約満了日', width: 150, align: "left" },
+               		        { name: '残数', index: '残数', width: 60, align: "left" },
+               		        { name: '残高', index: '残高', width: 60, align: "left" },
+               		        { name: '自他区分', index: '自他区分', width: 100, align: "left" }
+               	          ],
+                pager: "#gridPager31",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '保証契約名称': '',
+                                '契約状態': '',
+                                '契約開始日': '',
+                                '契約満了日': '',
+                                '保証距離': '',
+                                '自他区分': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list72").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '保証契約名称',
+                             '契約状態',
+                             '契約開始日',
+                             '契約満了日',
+                             '保証距離',
+                             '自他区分'
+                           ],
+                colModel: [
+               		        { name: '保証契約名称', index: '保証契約名称', width: 150, align: "left" },
+               		        { name: '契約状態', index: '契約状態', width: 100, align: "left" },
+               		        { name: '契約開始日', index: '契約開始日', width: 150, align: "left" },
+               		        { name: '契約満了日', index: '契約満了日', width: 150, align: "left" },
+               		        { name: '保証距離', index: '保証距離', width: 60, align: "left" },
+               		        { name: '自他区分', index: '自他区分', width: 100, align: "left" }
+               	          ],
+                pager: "#gridPager32",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '代表入庫区分コード': '',
+                                '入庫予定日時': '',
+                                '予約受付No.': ''
+                            }
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list73").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 80,
+                width: 1190,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '代表入庫区分コード',
+                             '入庫予定日時',
+                             '予約受付No.'
+                           ],
+                colModel: [
+               		        { name: '代表入庫区分コード', index: '代表入庫区分コード', width: 200, align: "left" },
+               		        { name: '入庫予定日時', index: '入庫予定日時', width: 160, align: "left" },
+               		        { name: '予約受付No.', index: '予約受付No.', width: 160, align: "left" }
+               	          ],
+                pager: "#gridPager33",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+
+        <style type="text/css">
+    .quotation_button {
+        cursor: pointer;
+        font-size: 14px;
+        font-family: Arial;
+        font-weight: normal;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        border-radius: 9px;
+        border: 1px solid #337fed;
+        padding: 0px;
+        text-decoration: none;
+        background: -moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+        background: -ms-linear-gradient( top, #3d94f6 5%, #1e62d0 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #3d94f6), color-stop(100%, #1e62d0) );
+        background-color: #3d94f6;
+        color: #ffffff;
+        display: inline-block;
+        text-shadow: 1px 1px 1px #1570cd;
+        -webkit-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        -moz-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    };
+    </style>
+
+
+</head>
+
+
+
+<body>     
+    <div style=" height:800px; overflow:auto; width:1250px">
+
+
+
+            <div>
+                <tr>
+                    <td>
+                        <input type="button"  value="重要メモ修正" style=" width:100px; margin-left:1115px; margin-top:30px; height:40px; " class="quotation_button"/>
+                    
+                    
+                    </td>
+                </tr>
+            </div>
+
+
+            <div style="margin-left:20px; width:1200px ; margin-top:10px">
+                    <div style="height: 200px">
+                                       <h2>
+                                        <span>
+                                            <a id="A13" style="display:none">
+                                                ▼重要メモ情報
+                                            </a>
+                                            <a id="A14">
+                                                ▼重要メモ情報
+                                            </a>
+                                        </span>
+                                    </h2>
+
+
+                    </div>
+
+                    <div style="height:200px; width: 200px" >
+                             <table style="width:530px; margin-top:-170px;margin-left:15px; "
+                                             border="1px" cellspacing="0px" >
+                                        <tr>
+                                             <td>
+                                               <textarea style="width:1100px; height:40px; margin-left:0px"></textarea>
+                            
+                                             </td>
+                                        </tr>
+                        </table>
+                    </div>
+            </div>
+
+
+
+        <!--車両情報-->
+            <div style="margin-left:20px; width:550px; float:left; margin-top:-150px">
+                    <div style="height: 20px">
+                                       <h2>
+                                        <span>
+                                            <a id="A15" style="display:none">
+                                                ▼顧客情報
+                                            </a>
+                                            <a id="A16">
+                                                ▼顧客情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div>
+                       <table style="width:300px; margin-top:8px;margin-left:15px"
+                                              cellspacing="0px">
+                    <tr>
+                            <td style="width:50px; "><label>優先連絡先</label></td>
+                            <td style="width:30px;"><select style=" width:135px; margin-left: 21px"></select> </td>
+                    
+                    </tr>
+                        </table>
+                    </div>
+
+                    <div>
+                    <table style= "margin-left:10px; margin-top:20px">
+                    <tr>
+                        <td>
+                            <label><b>第一連絡先</b></label>
+                       </td>
+                    </tr>
+                    </table>
+                    </div>
+                    
+
+                    <div style="height:400px; width: 585px;" id="Div8">
+                             <table style="width:300px; margin-top:5px;margin-left:15px; height:150px"
+                                             >
+                                                                <tr>
+                                                                    <td style="width:30px; height:2px"><label style="height:10px">お客様氏名</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px"><label>お客様No</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>性別</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><label>生年月日</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><label>郵便番号</label></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="width:20px;  height:55px; text-align:left; vertical-align:top"><label>住所</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><label>自宅TEL</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><label>E-mail</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>携帯TEL</label></td>
+                                                                </tr>
+
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>携帯mail</label></td>
+                                                                </tr>
+
+                             </table>
+                             <table style="width:260px; margin-top:-270px;margin-left:85px; height:260px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                            <td style="width:30px;"><select style=" width:160px"></select> </td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img3" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img1" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:60px;">
+                                                                    <td style="width:150px"><input type="text" style=" height:52px; margin-top:-2px"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+
+                        </table>
+                    </div>
+
+
+
+                    <div>
+                    <table style= "margin-left:400px; margin-top:-425px;">
+                    <tr>
+                        <td>
+                            <label><b>勤務先</b></label>
+                       </td>
+                    </tr>
+                    </table>
+                    </div>
+                    
+
+                    <div style="height:360px; width: 585px;" id="Div9";>
+
+                             <table style="width:300px; margin-top:5px;margin-left:400px; height:150px">
+                                                                <tr>
+                                                                    <td style="width:30px;"><label>職業</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px"><label>勤務先名</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>所属部署</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><label>役職</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><label>郵便番号</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:60px;">
+                                                                    <td style="width:150px;  height:20px; vertical-align:top"><label>勤務先住所</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><label>勤務先TEL</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><label>E-mail</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>勤務先FAX</label></td>
+                                                                </tr>
+
+                        </table>
+
+                             <table style="width:260px; margin-top:-245px;margin-left:470px; height:240px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px"><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img2" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px"><input type="text"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img4" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:55px;">
+                                                                    <td style="width:150px"><input type="text" style=" height:52px; margin-top:-2px"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+
+                        </table>
+                    </div>
+
+
+
+
+                    <div>
+                    <table style= "margin-left:800px; margin-top:-385px; width:80px">
+                    <tr>
+                        <td>
+                            <label><b>第2連絡先</b></label>
+                       </td>
+                    </tr>
+                    </table>
+                    </div>
+                    
+
+                    <div style="height:300px; width: 585px;" id="Div10";>
+
+                             <table style="width:300px; margin-top:5px;margin-left:800px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><label>宛名</label></td>
+
+                                                                </tr>
+                                </table>
+                             <table style="width:153px; margin-top:-25px;margin-left:890px; height:20px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px"><input type="text"></td>
+
+                                                                </tr>
+                                </table>
+
+
+
+                             <table style="width:300px; margin-top:62px;margin-left:800px"
+                                             >
+
+                                                                <tr style="height:20px">
+                                                                    <td style="width:30px; "><label>郵便番号</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:60px;">
+                                                                    <td style="width:150px;  height:20px;vertical-align:top"><label>住所</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><label>第2連絡先TEL</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><label>E-mail</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; height:20px"><label>第2連絡先FAX</label></td>
+                                                                </tr>
+
+                        </table>
+
+                             <table style="width:240px; margin-top:-155px;margin-left:890px; height:156px"
+                                             >
+
+                                                                <tr style="height:20px">
+                                                                    <td style="width:50px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img5" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:60px;">
+                                                                    <td style="width:150px"><input type="text" style=" height:53px; margin-top:-2px"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+
+                        </table>
+
+                    </div>
+            </div>
+
+
+
+
+
+        <!--車両情報-->
+            <div style="margin-left:20px; width:550px; margin-top:260px">
+                    <div style="height: 20px">
+                                       <h2>
+                                        <span>
+                                            <a id="s5" style="display:none">
+                                                ▼車両情報
+                                            </a>
+                                            <a id="h5">
+                                                ▼車両情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+
+
+                    <div style="height:400px; width: 585px;" id="Div12">
+
+                             <table style="width:400px; margin-top:5px;margin-left:15px; height:45px"
+                                             >
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:20px; "><label>車両情報タブ</label></td>
+
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:30px; "><label>通称車名カナ</label></td>
+
+                                                                </tr>
+                                                                <tr  style=" width:30px; height:20px">
+                                                                    <td style="width:150px;  height:20px"><label>車両グレード名</label></td>
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:30px; "><label>外装色</label></td>
+
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:30px; "><label>登録番号</label></td>
+
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:150px;  height:20px"><label>車台番号</label></td>
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:30px; "><label>初年度登録(ggmm)</label></td>
+
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:30px; "><label>登録年月日(西暦)</label></td>
+
+                                                                </tr>
+                                                                <tr style=" width:30px; height:20px">
+                                                                    <td style="width:150px;  height:20px"><label>満了年月日(西暦)</label></td>
+                                                                </tr>
+                        </table>
+
+
+                             <table style="width:400px; margin-top:-208px;margin-left:130px; height:100px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:50px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img6" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                </tr>
+                        </table>
+
+                    </div>
+            </div>
+
+
+
+
+                    <div style="height: 20px; margin-top:-180px; margin-left:22px">
+                                       <h2>
+                                        <span>
+                                            <a id="A23" style="display:none">
+                                                ▼リース情報
+                                            </a>
+                                            <a id="A24">
+                                                ▼リース情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+
+
+
+
+  <div>
+
+
+
+
+
+
+
+
+       <fieldset title="リース情報"  style="margin-top:10px; margin-left:20px; width:1200px">
+        <legend style="font-size:12px; color:Blue">リース情報</legend>
+           <table id="list56"></table>
+           <div id="gridPager10"></div>
+       </fieldset>
+  </div>
+
+
+          <!--車両管理情報-->
+            <div style="margin-left:20px; width:700px; float:left; margin-top:20px">
+                    <div style="height: 100px">
+                                       <h2>
+                                        <span>
+                                            <a id="A19" style="display:none">
+                                                ▼車両管理情報
+                                            </a>
+                                            <a id="A20">
+                                                ▼車両管理情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div style="height:100px; width:650px;" id="Div11">
+                             <table style="width:300px; margin-top:-70px;margin-left:15px;"
+                                            >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px;"><label>車両管理情報タブ</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>管理担当名</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>管理拠点名</label></td>
+
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>サービス拠点名</label></td>
+
+                                                                </tr>
+                        
+                        </table>
+
+
+                             <table style="width:180px; margin-top:-92px;margin-left:130px; height:70px"
+                                            >
+                                                                <tr style="height:15px; width:30px">
+                                                                    <td style="width:30px; "><input type="text"></td>
+
+                                                                </tr>
+                                                                <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img7" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img8" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img9" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                        
+                        </table>
+
+                             <table style="width:300px; margin-top:-92px;margin-left:400px;"
+                                             >
+                                               <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>車両区分</label></td>
+                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>引継区分</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:150px; "><label>固定化区分</label></td>
+                                                                </tr>
+                        
+                        </table>
+
+                             <table style="width:180px; margin-top:-70px;margin-left:480px; height:53px"
+                                             >
+                                               <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img10" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                </tr>
+                                                                <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img11" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr style="height:15px;">
+                                                                    <td style="width:150px; "><input type="text"></td>
+                                                                    <td>
+                       <img title="Click to select a value for LookupTestEntity." 
+                                  class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup" id="Img12" 
+                                 style=" margin-left:-21px; margin-bottom:-5px" alt="Click to select a value for LookupTestEntity."
+                                  src="/_imgs/imagestrips/transparent_spacer.gif" />
+                                                                    </td>
+                                                                </tr>
+                        
+                        </table>
+                    </div>
+            </div>
+
+
+
+        <!--売掛金-->
+            <div style="margin-left:20px; width:550px; float:left; margin-top:0px">
+                    <div style="height: 20px">
+                                       <h2>
+                                        <span>
+                                            <a id="A11" style="display:none">
+                                                ▼売掛金
+                                            </a>
+                                            <a id="A12">
+                                                ▼売掛金                                            
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>  
+
+                    <div style="height:80px; width: 585px;" id="Div6">
+
+                             <table style="width:400px; margin-top:10px;margin-left:3px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:40px;  font-size:20px;  background-color: #add8e6"><label><b>売掛金残高</b></label></td>
+                                                                    <td style="width:40px;  font-size:20px;"><input value="1,120,620"  style="font-size:20px; text-align:right"/></td>
+                                                                    <td style="width:40px; font-size:20px;"><label><b>＊</b></label></td>
+                                                                </tr>
+                        </table>
+                    </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        <!--ｍ’ｚカード情報-->
+  <div>
+                <table style="width:150px; margin-top:275px; margin-left:-300px">
+                                       <h2>
+                                        <span>
+                                            <a  style="margin-left:-550px">
+                                                ▼ｍ'ｚカード情報
+                                            </a> 
+                                        </span>
+                                    </h2>
+                </table>
+  
+
+       <fieldset title="ｍ’ｚカード情報"  style="margin-top:10px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px; color:Blue">ｍ’ｚカード情報</legend>
+           <table id="list57"></table>
+           <div id="gridPager11"></div>
+       </fieldset>
+  </div>
+
+
+          <!--JAF-->
+            <div style="margin-left:20px; width:550px; float:left; margin-top:30px">
+                    <div style="height: 20px">
+                                       <h2>
+                                        <span>
+                                            <a id="A9" style="display:none">
+                                                ▼JAF
+                                            </a>
+                                            <a id="A10">
+                                                ▼JAF
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div style="height:60px; width: 585px;" id="Div5">
+
+                             <table style="width:400px; margin-top:20px;margin-left:3px"
+                                             >
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:60px; font-size:12px" ><label>ロードサービス加入区分</label></td>
+                                                                    <td style="width:80px; font-size:12px;"><input value="ＪＡＦ加入" style="font-size:15px;"/></td>
+
+                                                                </tr>
+                        </table>
+                    </div>
+            </div>
+
+
+        <!--ターゲティングリスト-->
+
+            <div style="margin-left:20px; width:550px ; margin-top:150px">
+                    <div style="height: 200px">
+                                       <h2>
+                                        <span>
+                                            <a id="s1" style="display:none">
+                                                ▼ターゲティング情報
+                                            </a>
+                                            <a id="h1">
+                                                ▼ターゲティング情報
+                                            </a>
+                                        </span>
+                                    </h2>
+
+
+                    </div>
+
+                    <div style="height:200px; width: 200px" >
+                             <table style="width:600px; margin-top:-170px;margin-left:3px; "
+                                             border="1px" cellspacing="0px" >
+                                        <tr>
+                                            <th style="width:35px;  height:20px; background-color: #add8e6" ><b></b></th>
+                                            <td style="width:60px;text-align:center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                        </tr>
+                                        <br />
+                                        <tr>
+                                            <th  style="width: 35px;  height:20px; background-color: #add8e6"><b>対象月</b></th>
+                                            <td   style="width: 60px;">当月</td>
+                                            <td style="width: 60px;">当月</td>
+                                            <td style="width: 60px;">当月</td>
+                                            <td style="width:60px;">次月</td>
+                                            <td style="width:60px;">次月</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px; height:20px; background-color: #add8e6"><b>種別</b></th>
+                                            <td style="width:60px;">車検</td>
+                                            <td style="width:60px;">保険</td>
+                                            <td style="width:60px;">車検</td>
+                                            <td style="width:60px;">点検</td>
+                                            <td style="width:60px;">保険</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px; height:20px; background-color: #add8e6"><b>車種</b></th>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">アクセラ</td>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">アクセラ</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px; height:20px; background-color: #add8e6"><b>ｽﾃｰﾀｽ</b></th>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select style="width:75px">
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select style="width:75px">
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select style="width:75px">
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select style="width:75px">
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select style="width:75px">
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                        </table>
+                    </div>
+            </div>
+
+        <!--コンタクト情報-->
+            <div style="margin-left:20px; width:550px; margin-top:-20px">
+                    <div style="height: 100px">
+                                       <h2>
+                                        <span>
+                                            <a id="s2" style="display:none">
+                                                ▼コンタクト情報
+                                            </a>
+                                            <a id="h2">
+                                                ▼コンタクト情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div style="height:200px; width: 700px;  id="content21">
+                             <table style="width:700px; margin-top:-50px;margin-left:3px;boder-collapse:collapse"
+                                             border="1px" cellspacing="0px">
+                                                    <tr>
+                                                        <th style="width:30px; height:25px;background-color: #add8e6"><b></b></th>
+                                                        <th style="width:60px; text-align:center;background-color: #add8e6"><b>日時</b></th>
+                                                        <th style="width:60px; text-align:center;background-color: #add8e6"><b>領域</b></th>
+                                                        <th style="width:80px; text-align:center;background-color: #add8e6"><b>担当者</b></th>
+                                                        <th style="width:50px; text-align:center;background-color: #add8e6"><b>内容</b></th>
+                                                        <th style="width:5px; text-align:center;background-color: #add8e6"><b>種別</b></th>
+                                                        <th style="width:25px; text-align:center;background-color: #add8e6"><b>手段</b></th>
+                                                        <th style="width:185px; text-align:center;background-color: #add8e6"><b>結果</b></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px; height:25px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:50px;">2014/7/14</td>
+                                                        <td style="width:50px;">来店促進</td>
+                                                        <td style="width:50px;">松田　デミ男</td>
+                                                        <td style="width:50px;text-decoration:underline;color:blue;">展示会</td>
+                                                        <td style="width:50px;">車販</td>
+                                                        <td style="width:50px;">電話</td>
+                                                        <td style="width:50px;">キャンペーン告知した</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/18</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">松田　デミ男</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">電話不通のため継続フォロー</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/19</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">松田　デミ男</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">来店確約を取った</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/27</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">メモ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">お財布は奥さん</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/14</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">振り返り</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">価格がネック</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="radio" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/21</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">店長コメ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">競合の見積り金額聞いて</td>
+                                                    </tr>
+                        
+                        </table>
+                    </div>
+            </div>
+
+
+        <!--DM情報-->
+
+  <div>
+
+             <div style="height: 50px; margin-left:15px">
+                                       <h2>
+                                        <span>
+                                            <a id="A17" style="display:none">
+                                                ▼DM情報
+                                            </a>
+                                            <a id="A18">
+                                                ▼DM情報
+                                            </a>
+                                        </span>
+                                    </h2>
+              </div>
+
+
+
+       <fieldset title="DM情報"  style="margin-top:-13px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px; color:Blue">DM情報</legend>
+           <table id="list58"></table>
+           <div id="gridPager12"></div>
+       </fieldset>
+  </div>
+
+
+   <div style="margin-top:50px">
+             <div style="height: 100px; margin-left:15px">
+                                       <h2>
+                                        <span>
+                                            <a id="A7" style="display:none">
+                                                ▼連絡手段
+                                            </a>
+                                            <a id="A8">
+                                                ▼連絡手段
+                                            </a>
+                                        </span>
+                                    </h2>
+              </div>
+
+
+       <fieldset title="連絡手段(優先順位1位)"  style="margin-top:-60px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px">連絡手段(優先順位1位)</legend>
+        <table style="margin-left:3px">
+                                                        <tr style="height:20px; width:30px">
+                                                           <td style="width:120px; "><label style="background-color: #add8e6">ｺﾝﾀｸﾄ可能曜日</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>月</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>火</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>水</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>木</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>金</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>土</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>日</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:30px; "><label>祝</label></td>
+                                                           <td style="width:150px; "><label style="background-color: #add8e6">ｺﾝﾀｸﾄ可能時間</label></td>
+                                                           <td style="width:150px; "><input style=" width:220px" ></td>
+                                                        </tr>
+
+
+                                                        <tr style="height:20px; width:30px">
+                                                           <td style="width:79px; "><label style="background-color: #add8e6">連絡不可区分</label></td>
+                                                           <td style="width:30px; "><input type="checkbox" ></td>
+                                                           <td style="width:40px; "><label>DM</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:40px; "><label>E-mail</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:80px; "><label>自宅TEL</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:80px; "><label>携帯TEL</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:100px; "><label>勤務先TEL</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:80px; "><label>自宅訪問</label></td>
+                                                           <td style="width:40px; "><input type="checkbox" ></td>
+                                                           <td style="width:90px; "><label>勤務先訪問</label></td>
+                                                      </tr>
+               
+
+
+
+</table>
+
+<table style="margin-left:3px">
+               
+
+
+                                                        <tr style="height:20px; width:30px">
+                                                           <td style="width:150px; "><label style="background-color: #add8e6">連絡手段メモ</label></td>
+                                                           <td style="width:500px; color:Blue; "><input style=" margin-left:-50px"/ ></td>
+                                                        </tr>
+
+</table>
+
+       </fieldset>
+  </div>
+
+
+
+
+
+        <!--入庫情報-->
+            <div style="margin-left:20px; width:550px; margin-top:40px">
+                    <div style="height: 60px; margin-top:50px">
+                                       <h2>
+                                        <span>
+                                            <a id="s8" style="display:none">
+                                                ▼入庫情報（最新入庫予定）
+                                            </a>
+                                            <a id="h8">
+                                                ▼入庫情報（最新入庫予定）
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+  <div style="height:80px; width: 900px; margin-top:-50px" >
+       <fieldset title="入庫情報"  style="margin-top:25px; margin-left:3px; width:1200px">
+        <legend style="font-size:12px; color:Blue">入庫情報</legend>
+           <table id="list73"></table>
+           <div id="gridPager33"></div>
+       </fieldset>
+  </div>
+
+
+
+            </div>
+
+
+        <!--リコール情報-->
+            <div style="margin-left:20px; width:550px; float:left; margin-top:100px; height:30px">
+                    <div style="height: 40px">
+                                       <h2>
+                                        <span>
+                                            <a id="A5" style="display:none">
+                                                ▼リコール情報
+                                            </a>
+                                            <a id="A6">
+                                                ▼リコール情報
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div style="height:200px; width: 420px;" id="Div4">
+
+                             <table style="width:600px; margin-top:-5px;margin-left:3px"
+                                             border="1px" cellspacing="0px">
+                                                        <tr style="height:20px; width:200px">
+                                                           <td style="width:150px;  font-size:20px; background-color: #add8e6"><label><b>R・改情報</b></label></td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                           <td style="width:40px; color:Blue"><input  style="width:40px; height:25px"/>　</td>
+                                                        </tr>
+                        </table>
+                    </div>
+            </div>
+
+
+        <!--メンテナンス契約-->
+            <div style="margin-left:20px; width:700px; margin-top:240px">
+                    <div style="height: 60px; margin-top:50px">
+                                       <h2>
+                                        <span>
+                                            <a id="A1" style="display:none">
+                                                ▼メンテナンス契約
+                                            </a>
+                                            <a id="A2">
+                                                ▼メンテナンス契約
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div>
+                           <table style="width:400px; margin-top:-20px">
+                                <tr>
+                                     <td>
+                                        <label>総件数</label>
+
+                                     </td>
+                                     <td>
+                                        <input  type="text"/>
+                                     </td>
+                                
+                                </tr>
+                            </table>
+                    </div>
+
+  <div style="height:80px; width: 900px; margin-top:-10px" >
+       <fieldset title="メンテナンス契約"  style="margin-top:25px; margin-left:3px; width:1200px">
+        <legend style="font-size:12px; color:Blue">メンテナンス契約</legend>
+           <table id="list71"></table>
+           <div id="gridPager31"></div>
+       </fieldset>
+  </div>
+
+            </div>
+
+
+
+
+        <!--保証契約-->
+            <div style="margin-left:20px; width:550px; margin-top:120px">
+                    <div style="height: 60px; margin-top:50px">
+                                       <h2>
+                                        <span>
+                                            <a id="A3" style="display:none">
+                                                ▼保証契約
+                                            </a>
+                                            <a id="A4">
+                                                ▼保証契約
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                    <div>
+                           <table style="width:400px; margin-top:-20px">
+                                <tr>
+                                     <td>
+                                        <label>総件数</label>
+
+                                     </td>
+                                     <td>
+                                        <input  type="text"/>
+                                     </td>
+                                
+                                </tr>
+                            </table>
+                    </div>
+
+
+  <div style="height:80px; width: 900px; margin-top:-10px" >
+       <fieldset title="保証契約"  style="margin-top:25px; margin-left:3px; width:1200px">
+        <legend style="font-size:12px; color:Blue">保証契約</legend>
+           <table id="list72"></table>
+           <div id="gridPager32"></div>
+       </fieldset>
+  </div>
+            </div>
+
+
+
+      <div>
+       <fieldset title="自賠責情報"  style="margin-top:100px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px; color:Blue">自賠責情報</legend>
+           <table id="list55"></table>
+           <div id="gridPager9"></div>
+       </fieldset>
+     </div>
+
+
+      <div>
+       <fieldset title="任意保険情報"  style="margin-top:26px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px; color:Blue">任意保険情報</legend>
+           <table id="list61"></table>
+           <div id="gridPager21"></div>
+       </fieldset>
+     </div>
+
+
+      <div>
+       <fieldset title="サポートプラス"  style="margin-top:26px; margin-left:15px; width:1200px">
+        <legend style="font-size:12px; color:Blue">サポートプラス</legend>
+           <table id="list62"></table>
+           <div id="gridPager22"></div>
+       </fieldset>
+     </div>
+
+
+        <!--整備歴＆入庫歴-->
+            <div style="margin-left:20px; width:550px; float:left; margin-top:20px; height:250px">
+                    <div style="height: 100px">
+                                       <h2>
+                                        <span>
+                                            <a id="A21" style="display:none">
+                                                ▼整備歴＆入庫歴
+                                            </a>
+                                            <a id="A22">
+                                                ▼整備歴＆入庫歴
+                                            </a>
+                                        </span>
+                                    </h2>
+                    </div>
+
+                     <div>
+                          <table style="margin-top:-70px; margin-left:15px">
+                            <tr>
+                            <td>
+                             <input type="button"  style="height:30px; width:100px" 
+                                value="整備歴"/>
+                            </td>
+                            </tr>
+                          </table>
+                    </div>
+
+
+                    <div style="height:100px; width: 585px;" id="Div7">
+
+                             <table style="width:500px; margin-top:0px;margin-left:15px"
+                                             border="1px" cellspacing="0px">
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:100px; color:Green"><label><b>最新入庫日</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b>2014/02/05</label></td>
+                                                                    <td style="width:100px; color:Green"><label><b>走行距離</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b></label>35899</td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:100px; color:Green"><label><b>内容</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b>2014/02/05</label></td>
+                                                                    <td style="width:100px; color:Green"><label><b>月平均走行距離(km)</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b>1025</label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:100px; color:Green"><label><b>入庫店舗</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b>横＊＊店サ</label></td>
+                                                                    <td style="width:100px; color:Green"><label><b>パック商品</b></label></td>
+                                                                    <td style="width:100px; color:Blue"><label><b></b></label></td>
+                                                                </tr>
+
+
+                        </table>
+
+                        <table style="margin-left:15px">
+                                                                <tr>
+                                                                    <td>   
+                                                                    <label>入庫歴</label>
+                                                                    </td> 
+                                                                </tr>
+                           
+                        
+                        
+                        
+                        
+                        </table>
+
+                             <table style="width:500px; margin-top:0px;margin-left:15px"
+                                             border="1px" cellspacing="0px">
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>1</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>3</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>6</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>12</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>18</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>24</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>30</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>36</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>42</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>48</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>54</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>60</b></label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>○</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>66</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>72</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>78</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>84</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>90</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>96</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>102</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>108</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>114</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>120</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>126</b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b>132</b></label></td>
+                                                                </tr>
+                                                                <tr style="height:20px; width:30px">
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                    <td style="width:30px; color:Green; text-align:center"><label><b></b></label></td>
+                                                                </tr>
+
+
+                        </table>
+                        
+                        
+                </div>
+            </div>
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

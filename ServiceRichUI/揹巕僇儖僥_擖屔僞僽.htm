@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>電子カルテ_入庫タブ</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫予約No': 'X000000001',
+                                '見積りNo': '',
+                                '作業指示No': '',
+                                '納品書No': '',
+                                '後日': '',
+                                '区分': '',
+                                '売上/検収日': '',
+                                '請求/発注/見積金額': '',
+                                '商品名': '',
+                                'ﾌｫﾛｰ': '',
+                                'お客様': '',
+                                '車種名': '',
+                                '登No': '',
+                                '車両ST': '',
+                                '伝票ST': '',
+                                '主': '',
+                                '入庫形態': '',
+                                '入庫予定日時': '',
+                                '納車形態': '',
+                                '納車予定日時 or引渡予定日時': '',
+                                '代(車要否)': '',
+                                '保管': '',
+                                '部品納期': '',
+                                '外注(希望)納期': '',
+                                '依頼元受付No': '',
+                                '受付担当(者)': '',
+                                '作業担当(者)': '',
+                                '管理担当(者)': '',
+                                'コンタクト': '',
+                                '手段': '',
+                                '作予定h': '',
+                                '請求先/発注先': '',
+                                '受付拠点': '',
+                                '入力拠点': '',
+                                '入力担当': '',
+                                '更新担当': '',
+                                '修理支援連携': ''
+                            }
+            ];
+
+            var width = $(window).width() - 10;
+
+            $("#list46").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1200,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '入庫予約No',
+                             '見積りNo',
+                             '作業指示No',
+                             '納品書No',
+                             '後日',
+                             '区分',
+                             '売上/検収日',
+                             '請求/発注/見積金額',
+                             '商品名',
+                             'ﾌｫﾛｰ',
+                             'お客様',
+                             '車種名',
+                             '登No',
+                             '車両ST',
+                             '伝票ST',
+                             '主',
+                             '入庫形態',
+                             '入庫予定日時',
+                             '納車形態',
+                             '納車予定日時 or引渡予定日時',
+                             '代(車要否)',
+                             '保管',
+                             '部品納期',
+                             '外注(希望)納期',
+                             '依頼元受付No',
+                             '受付担当(者)',
+                             '作業担当(者)',
+                             '管理担当(者)',
+                             'コンタクト',
+                             '手段',
+                             '作予定h',
+                             '請求先/発注先',
+                             '受付拠点',
+                             '入力拠点',
+                             '入力担当',
+                             '更新担当',
+                             '修理支援連携'
+                ],
+                colModel: [
+               		        { name: '入庫予約No', index: '入庫予約No', width: 80, align: "left" },
+               		        { name: '見積りNo', index: '見積りNo', width: 60, align: "left" },
+               		        { name: '作業指示No', index: '作業指示No', width: 80, align: "left" },
+               		        { name: '納品書No', index: '納品書No', width: 80, align: "left" },
+               		        { name: '後日', index: '後日', width: 60, align: "left" },
+               		        { name: '区分', index: '区分', width: 60, align: "left" },
+               		        { name: '売上/検収日', index: '売上/検収日', width: 130, align: "left" },
+                            { name: '請求/発注/見積金額', index: '請求/発注/見積金額', width: 140, align: "left" },
+                            { name: '商品名', index: '商品名', width: 60, align: "left" },
+                            { name: 'ﾌｫﾛｰ', index: 'ﾌｫﾛｰ', width: 60, align: "left" },
+                            { name: 'お客様', index: 'お客様', width: 60, align: "left" },
+                            { name: '車種名', index: '車種名', width: 60, align: "left" },
+                            { name: '登No', index: '登No', width: 50, align: "left" },
+                            { name: '車両ST', index: '車両ST', width: 60, align: "left" },
+                            { name: '伝票ST', index: '伝票ST', width: 60, align: "left" },
+                            { name: '主', index: '主', width: 50, align: "left" },
+               		        { name: '入庫形態', index: '入庫形態', width: 80, align: "left" },
+               		        { name: '入庫予定日時', index: '入庫予定日時', width: 80, align: "left" },
+               		        { name: '納車形態', index: '納車形態', width: 100, align: "left" },
+               		        { name: '納車予定日時 or引渡予定日時', index: '納車予定日時 or引渡予定日時', width: 200, align: "left" },
+               		        { name: '代(車要否)', index: '代(車要否)', width: 80, align: "left" },
+               		        { name: '保管', index: '保管', width: 80, align: "left" },
+               		        { name: '部品納期', index: '部品納期', width: 100, align: "left" },
+               		        { name: '外注(希望)納期', index: '外注(希望)納期', width: 130, align: "left" },
+               		        { name: '依頼元受付No', index: '依頼元受付No', width: 110, align: "left" },
+               		        { name: '受付担当(者)', index: '受付担当(者)', width: 80, align: "left" },
+               		        { name: '作業担当(者)', index: '作業担当(者)', width: 80, align: "left" },
+               		        { name: '管理担当(者)', index: '管理担当(者)', width: 110, align: "left" },
+               		        { name: 'コンタクト', index: 'コンタクト', width: 100, align: "left" },
+               		        { name: '手段', index: '手段', width: 80, align: "left" },
+               		        { name: '作予定h', index: '作予定h', width: 100, align: "left" },
+               		        { name: '請求先/発注先', index: '請求先/発注先', width: 80, align: "left" },
+               		        { name: '受付拠点', index: '受付拠点', width: 80, align: "left" },
+               		        { name: '入力拠点', index: '入力拠点', width: 100, align: "left" },
+               		        { name: '入力担当', index: '入力担当', width: 100, align: "left" },
+                            { name: '更新担当', index: '更新担当', width: 100, align: "left" },
+                            { name: '修理支援連携', index: '修理支援連携', width: 100, align: "left" }
+                ],
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+            $("#list46").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            $("#list46").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫予約No': 'X000000002',
+                                '見積りNo': '',
+                                '作業指示No': '',
+                                '納品書No': '',
+                                '後日': '',
+                                '区分': '',
+                                '売上/検収日': '',
+                                '請求/発注/見積金額': '',
+                                '商品名': '',
+                                'ﾌｫﾛｰ': '',
+                                'お客様': '',
+                                '車種名': '',
+                                '登No': '',
+                                '車両ST': '',
+                                '伝票ST': '',
+                                '主': '',
+                                '入庫形態': '',
+                                '入庫予定日時': '',
+                                '納車形態': '',
+                                '納車予定日時 or引渡予定日時': '',
+                                '代(車要否)': '',
+                                '保管': '',
+                                '部品納期': '',
+                                '外注(希望)納期': '',
+                                '依頼元受付No': '',
+                                '受付担当(者)': '',
+                                '作業担当(者)': '',
+                                '管理担当(者)': '',
+                                'コンタクト': '',
+                                '手段': '',
+                                '作予定h': '',
+                                '請求先/発注先': '',
+                                '受付拠点': '',
+                                '入力拠点': '',
+                                '入力担当': '',
+                                '更新担当': '',
+                                '修理支援連携': ''
+                            }
+            ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1200,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '入庫予約No',
+                             '見積りNo',
+                             '作業指示No',
+                             '納品書No',
+                             '後日',
+                             '区分',
+                             '売上/検収日',
+                             '請求/発注/見積金額',
+                             '商品名',
+                             'ﾌｫﾛｰ',
+                             'お客様',
+                             '車種名',
+                             '登No',
+                             '車両ST',
+                             '伝票ST',
+                             '主',
+                             '入庫形態',
+                             '入庫予定日時',
+                             '納車形態',
+                             '納車予定日時 or引渡予定日時',
+                             '代(車要否)',
+                             '保管',
+                             '部品納期',
+                             '外注(希望)納期',
+                             '依頼元受付No',
+                             '受付担当(者)',
+                             '作業担当(者)',
+                             '管理担当(者)',
+                             'コンタクト',
+                             '手段',
+                             '作予定h',
+                             '請求先/発注先',
+                             '受付拠点',
+                             '入力拠点',
+                             '入力担当',
+                             '更新担当',
+                             '修理支援連携'
+                ],
+                colModel: [
+               		        { name: '入庫予約No', index: '入庫予約No', width: 80, align: "left" },
+               		        { name: '見積りNo', index: '見積りNo', width: 60, align: "left" },
+               		        { name: '作業指示No', index: '作業指示No', width: 80, align: "left" },
+               		        { name: '納品書No', index: '納品書No', width: 80, align: "left" },
+               		        { name: '後日', index: '後日', width: 60, align: "left" },
+               		        { name: '区分', index: '区分', width: 60, align: "left" },
+               		        { name: '売上/検収日', index: '売上/検収日', width: 130, align: "left" },
+                            { name: '請求/発注/見積金額', index: '請求/発注/見積金額', width: 140, align: "left" },
+                            { name: '商品名', index: '商品名', width: 60, align: "left" },
+                            { name: 'ﾌｫﾛｰ', index: 'ﾌｫﾛｰ', width: 60, align: "left" },
+                            { name: 'お客様', index: 'お客様', width: 60, align: "left" },
+                            { name: '車種名', index: '車種名', width: 60, align: "left" },
+                            { name: '登No', index: '登No', width: 50, align: "left" },
+                            { name: '車両ST', index: '車両ST', width: 60, align: "left" },
+                            { name: '伝票ST', index: '伝票ST', width: 60, align: "left" },
+                            { name: '主', index: '主', width: 50, align: "left" },
+               		        { name: '入庫形態', index: '入庫形態', width: 80, align: "left" },
+               		        { name: '入庫予定日時', index: '入庫予定日時', width: 80, align: "left" },
+               		        { name: '納車形態', index: '納車形態', width: 100, align: "left" },
+               		        { name: '納車予定日時 or引渡予定日時', index: '納車予定日時 or引渡予定日時', width: 200, align: "left" },
+               		        { name: '代(車要否)', index: '代(車要否)', width: 80, align: "left" },
+               		        { name: '保管', index: '保管', width: 80, align: "left" },
+               		        { name: '部品納期', index: '部品納期', width: 100, align: "left" },
+               		        { name: '外注(希望)納期', index: '外注(希望)納期', width: 130, align: "left" },
+               		        { name: '依頼元受付No', index: '依頼元受付No', width: 110, align: "left" },
+               		        { name: '受付担当(者)', index: '受付担当(者)', width: 80, align: "left" },
+               		        { name: '作業担当(者)', index: '作業担当(者)', width: 80, align: "left" },
+               		        { name: '管理担当(者)', index: '管理担当(者)', width: 110, align: "left" },
+               		        { name: 'コンタクト', index: 'コンタクト', width: 100, align: "left" },
+               		        { name: '手段', index: '手段', width: 80, align: "left" },
+               		        { name: '作予定h', index: '作予定h', width: 100, align: "left" },
+               		        { name: '請求先/発注先', index: '請求先/発注先', width: 80, align: "left" },
+               		        { name: '受付拠点', index: '受付拠点', width: 80, align: "left" },
+               		        { name: '入力拠点', index: '入力拠点', width: 100, align: "left" },
+               		        { name: '入力担当', index: '入力担当', width: 100, align: "left" },
+                            { name: '更新担当', index: '更新担当', width: 100, align: "left" },
+                            { name: '修理支援連携', index: '修理支援連携', width: 100, align: "left" }
+                ],
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫予約No': 'X000000003',
+                                '見積りNo': '',
+                                '作業指示No': '',
+                                '納品書No': '',
+                                '後日': '',
+                                '区分': '',
+                                '売上/検収日': '',
+                                '請求/発注/見積金額': '',
+                                '商品名': '',
+                                'ﾌｫﾛｰ': '',
+                                'お客様': '',
+                                '車種名': '',
+                                '登No': '',
+                                '車両ST': '',
+                                '伝票ST': '',
+                                '主': '',
+                                '入庫形態': '',
+                                '入庫予定日時': '',
+                                '納車形態': '',
+                                '納車予定日時 or引渡予定日時': '',
+                                '代(車要否)': '',
+                                '保管': '',
+                                '部品納期': '',
+                                '外注(希望)納期': '',
+                                '依頼元受付No': '',
+                                '受付担当(者)': '',
+                                '作業担当(者)': '',
+                                '管理担当(者)': '',
+                                'コンタクト': '',
+                                '手段': '',
+                                '作予定h': '',
+                                '請求先/発注先': '',
+                                '受付拠点': '',
+                                '入力拠点': '',
+                                '入力担当': '',
+                                '更新担当': '',
+                                '修理支援連携': ''
+                            }
+            ];
+
+            var width = $(window).width() - 10;
+
+            $("#list48").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1200,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '入庫予約No',
+                             '見積りNo',
+                             '作業指示No',
+                             '納品書No',
+                             '後日',
+                             '区分',
+                             '売上/検収日',
+                             '請求/発注/見積金額',
+                             '商品名',
+                             'ﾌｫﾛｰ',
+                             'お客様',
+                             '車種名',
+                             '登No',
+                             '車両ST',
+                             '伝票ST',
+                             '主',
+                             '入庫形態',
+                             '入庫予定日時',
+                             '納車形態',
+                             '納車予定日時 or引渡予定日時',
+                             '代(車要否)',
+                             '保管',
+                             '部品納期',
+                             '外注(希望)納期',
+                             '依頼元受付No',
+                             '受付担当(者)',
+                             '作業担当(者)',
+                             '管理担当(者)',
+                             'コンタクト',
+                             '手段',
+                             '作予定h',
+                             '請求先/発注先',
+                             '受付拠点',
+                             '入力拠点',
+                             '入力担当',
+                             '更新担当',
+                             '修理支援連携'
+                ],
+                colModel: [
+               		        { name: '入庫予約No', index: '入庫予約No', width: 80, align: "left" },
+               		        { name: '見積りNo', index: '見積りNo', width: 60, align: "left" },
+               		        { name: '作業指示No', index: '作業指示No', width: 80, align: "left" },
+               		        { name: '納品書No', index: '納品書No', width: 80, align: "left" },
+               		        { name: '後日', index: '後日', width: 60, align: "left" },
+               		        { name: '区分', index: '区分', width: 60, align: "left" },
+               		        { name: '売上/検収日', index: '売上/検収日', width: 130, align: "left" },
+                            { name: '請求/発注/見積金額', index: '請求/発注/見積金額', width: 140, align: "left" },
+                            { name: '商品名', index: '商品名', width: 60, align: "left" },
+                            { name: 'ﾌｫﾛｰ', index: 'ﾌｫﾛｰ', width: 60, align: "left" },
+                            { name: 'お客様', index: 'お客様', width: 60, align: "left" },
+                            { name: '車種名', index: '車種名', width: 60, align: "left" },
+                            { name: '登No', index: '登No', width: 50, align: "left" },
+                            { name: '車両ST', index: '車両ST', width: 60, align: "left" },
+                            { name: '伝票ST', index: '伝票ST', width: 60, align: "left" },
+                            { name: '主', index: '主', width: 50, align: "left" },
+               		        { name: '入庫形態', index: '入庫形態', width: 80, align: "left" },
+               		        { name: '入庫予定日時', index: '入庫予定日時', width: 80, align: "left" },
+               		        { name: '納車形態', index: '納車形態', width: 100, align: "left" },
+               		        { name: '納車予定日時 or引渡予定日時', index: '納車予定日時 or引渡予定日時', width: 200, align: "left" },
+               		        { name: '代(車要否)', index: '代(車要否)', width: 80, align: "left" },
+               		        { name: '保管', index: '保管', width: 80, align: "left" },
+               		        { name: '部品納期', index: '部品納期', width: 100, align: "left" },
+               		        { name: '外注(希望)納期', index: '外注(希望)納期', width: 130, align: "left" },
+               		        { name: '依頼元受付No', index: '依頼元受付No', width: 110, align: "left" },
+               		        { name: '受付担当(者)', index: '受付担当(者)', width: 80, align: "left" },
+               		        { name: '作業担当(者)', index: '作業担当(者)', width: 80, align: "left" },
+               		        { name: '管理担当(者)', index: '管理担当(者)', width: 110, align: "left" },
+               		        { name: 'コンタクト', index: 'コンタクト', width: 100, align: "left" },
+               		        { name: '手段', index: '手段', width: 80, align: "left" },
+               		        { name: '作予定h', index: '作予定h', width: 100, align: "left" },
+               		        { name: '請求先/発注先', index: '請求先/発注先', width: 80, align: "left" },
+               		        { name: '受付拠点', index: '受付拠点', width: 80, align: "left" },
+               		        { name: '入力拠点', index: '入力拠点', width: 100, align: "left" },
+               		        { name: '入力担当', index: '入力担当', width: 100, align: "left" },
+                            { name: '更新担当', index: '更新担当', width: 100, align: "left" },
+                            { name: '修理支援連携', index: '修理支援連携', width: 100, align: "left" }
+                ],
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+            $("#list48").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            $("#list48").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+        })
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                '入庫予約No': 'X000000004',
+                                '見積りNo': '',
+                                '作業指示No': '',
+                                '納品書No': '',
+                                '後日': '',
+                                '区分': '',
+                                '売上/検収日': '',
+                                '請求/発注/見積金額': '',
+                                '商品名': '',
+                                'ﾌｫﾛｰ': '',
+                                'お客様': '',
+                                '車種名': '',
+                                '登No': '',
+                                '車両ST': '',
+                                '伝票ST': '',
+                                '主': '',
+                                '入庫形態': '',
+                                '入庫予定日時': '',
+                                '納車形態': '',
+                                '納車予定日時 or引渡予定日時': '',
+                                '代(車要否)': '',
+                                '保管': '',
+                                '部品納期': '',
+                                '外注(希望)納期': '',
+                                '依頼元受付No': '',
+                                '受付担当(者)': '',
+                                '作業担当(者)': '',
+                                '管理担当(者)': '',
+                                'コンタクト': '',
+                                '手段': '',
+                                '作予定h': '',
+                                '請求先/発注先': '',
+                                '受付拠点': '',
+                                '入力拠点': '',
+                                '入力担当': '',
+                                '更新担当': ''
+                            }
+            ];
+
+            var width = $(window).width() - 10;
+
+            $("#list49").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 100,
+                width: 1200,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             '入庫予約No',
+                             '見積りNo',
+                             '作業指示No',
+                             '納品書No',
+                             '外注発注No',
+                             '区分',
+                             '売上/検収日',
+                             '請求/発注/見積金額',
+                             'お客様',
+                             '車種名',
+                             '登No',
+                             '車両ST',
+                             '伝票ST',
+                             '入庫形態',
+                             '入庫予定日時',
+                             '納車形態',
+                             '納車予定日時 or引渡予定日時',
+                             '代(車要否)',
+                             '保管',
+                             '部品納期',
+                             '外注(希望)納期',
+                             '依頼元受付No',
+                             '受付担当(者)',
+                             '作業担当(者)',
+                             '管理担当(者)',
+                             'コンタクト',
+                             '手段',
+                             '作予定h',
+                             '請求先/発注先',
+                             '受付拠点',
+                             '入力拠点',
+                             '入力担当',
+                             '更新担当'
+                ],
+                colModel: [
+               		        { name: '入庫予約No', index: '入庫予約No', width: 80, align: "left" },
+               		        { name: '見積りNo', index: '見積りNo', width: 60, align: "left" },
+               		        { name: '作業指示No', index: '作業指示No', width: 80, align: "left" },
+               		        { name: '納品書No', index: '納品書No', width: 80, align: "left" },
+               		        { name: '外注発注No', index: '外注発注No', width: 80, align: "left" },
+               		        { name: '区分', index: '区分', width: 80, align: "left" },
+               		        { name: '売上/検収日', index: '売上/検収日', width: 110, align: "left" },
+                            { name: '請求/発注/見積金額', index: '請求/発注/見積金額', width: 140, align: "left" },
+                            { name: 'お客様', index: 'お客様', width: 80, align: "left" },
+                            { name: '車種名', index: '車種名', width: 80, align: "left" },
+                            { name: '登No', index: '登No', width: 60, align: "left" },
+                            { name: '車両ST', index: '車両ST', width: 80, align: "left" },
+                            { name: '伝票ST', index: '伝票ST', width: 80, align: "left" },
+               		        { name: '入庫形態', index: '入庫形態', width: 100, align: "left" },
+               		        { name: '入庫予定日時', index: '入庫予定日時', width: 110, align: "left" },
+               		        { name: '納車形態', index: '納車形態', width: 100, align: "left" },
+               		        { name: '納車予定日時 or引渡予定日時', index: '納車予定日時 or引渡予定日時', width: 200, align: "left" },
+               		        { name: '代(車要否)', index: '代(車要否)', width: 80, align: "left" },
+               		        { name: '保管', index: '保管', width: 60, align: "left" },
+               		        { name: '部品納期', index: '部品納期', width: 100, align: "left" },
+               		        { name: '外注(希望)納期', index: '外注(希望)納期', width: 110, align: "left" },
+               		        { name: '依頼元受付No', index: '依頼元受付No', width: 110, align: "left" },
+               		        { name: '受付担当(者)', index: '受付担当(者)', width: 80, align: "left" },
+               		        { name: '作業担当(者)', index: '作業担当(者)', width: 80, align: "left" },
+               		        { name: '管理担当(者)', index: '管理担当(者)', width: 80, align: "left" },
+               		        { name: 'コンタクト', index: 'コンタクト', width: 80, align: "left" },
+               		        { name: '手段', index: '手段', width: 60, align: "left" },
+               		        { name: '作予定h', index: '作予定h', width: 80, align: "left" },
+               		        { name: '請求先/発注先', index: '請求先/発注先', width: 100, align: "left" },
+               		        { name: '受付拠点', index: '受付拠点', width: 100, align: "left" },
+               		        { name: '入力拠点', index: '入力拠点', width: 100, align: "left" },
+               		        { name: '入力担当', index: '入力担当', width: 100, align: "left" },
+                            { name: '更新担当', index: '更新担当', width: 100, align: "left" }
+                ],
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+            $("#list49").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            $("#list49").closest(".ui-jqgrid-bdiv").css({ 'overflow-x': 'scroll' });
+        })
+    </script>
+
+
+
+
+
+</head>
+<body style="overflow: scroll;">
+    <div style="overflow: auto; height: 780px">
+        <div style="margin-top: 10px; margin-left: 3px;">
+            <button style="height: 50px; width: 120px; font-size: 13px;">入庫予約新規</button>
+            <button style="height: 50px; width: 100px; font-size: 13px;">見積新規</button>
+            <button style="height: 50px; width: 100px; font-size: 13px;">外注新規</button>
+            <button style="height: 50px; width: 100px; font-size: 13px;">外注検収</button>
+            <button style="height: 50px; width: 100px; font-size: 13px;">部品発注</button>
+            <button style="height: 50px; width: 100px; font-size: 13px;">修理支援</button>
+        </div>
+
+        <div style="margin-top: 15px">
+            <fieldset title="入庫予定一覧">
+                <legend style="font-size: 12px; color: Blue">入庫予定一覧</legend>
+                <table id="list46"></table>
+            </fieldset>
+        </div>
+
+        <div style="margin-top: 15px; overflow: hidden">
+            <fieldset title="入庫済一覧" style="width: 510px">
+                <legend style="font-size: 12px; color: Blue">入庫済一覧</legend>
+                <table id="list47"></table>
+            </fieldset>
+        </div>
+
+        <div style="margin-top: 15px; overflow: hidden">
+            <fieldset title="納車済一覧" style="width: 510px">
+                <legend style="font-size: 12px; color: Blue">納車済一覧</legend>
+                <table id="list48"></table>
+            </fieldset>
+        </div>
+
+        <div style="margin-top: 15px; overflow: hidden">
+            <fieldset title="外注一覧" style="width: 710px">
+                <legend style="font-size: 12px; color: Blue">外注一覧</legend>
+                <table id="list49"></table>
+            </fieldset>
+        </div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+﻿
+
+#gratitudemesage {
+    font-family:'Meiryo UI';
+    font-weight:bold;
+    padding:10px 30px;
+    height:105px;
+    background: #4169E1; 
+
+}
+
+#gratitudemesage h2 {
+    font-size:40px;
+    color:white;
+    text-align:center;
+    margin-bottom:5px;
+}
+
+#gratitudemesage h3 {
+            align-content:center;
+            font-size:30px;
+            color: #4169E1;
+            margin:0px 300px;
+            padding: 5px 20px 5px 20px;
+            height:40px;
+            text-align: center;            
+            background: white;            
+            border-radius: 100px 100px 100px 100px;
+}
+
+#welcom-customer{
+            font-family:'Meiryo UI';
+            font-size:20px;
+            padding:5px;
+}
+
+#welcom-customer thead tr th{
+            text-align:center;
+
+}
+
+table.grid{
+	margin:10px auto 40px;
+	border-collapse:collapse;
+}
+
+table.grid th,
+table.grid td{
+	border:2px solid #b0c4de;
+}
+table.grid th{
+	background-color:#69C;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #244386), color-stop(0.00, #4375a8));
+	background: -webkit-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -moz-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -ms-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: -o-linear-gradient(top, #4375a8 0%, #244386 100%);
+	background: linear-gradient(top, #4375a8 0%, #244386 100%);
+	color:#fff;
+	padding:7px 7px;
+	border-top:none;
+	text-align:left;
+	font-weight: bold;
+}
+table.grid th span{
+	padding-left:12px;
+}
+
+table.grid td{
+	padding:10px 20px;
+	line-height: 1;
+}
+
+/*角丸の制御*/
+table.grid thead tr th:first-child{
+	border-radius:3px 0 0 0;
+	border-left:none;
+}
+table.grid thead tr th:last-child{
+	border-radius:0 3px 0 0;
+	border-right:none;
+}
+
+/*偶数行の背景*/
+table.grid tbody tr:nth-child(2n){
+	background: rgba(239,239,239,0.5);
+}
+
+
+/*====ロールオーバー時について====*/
+table.grid td.over{
+	background: rgba(248,246,213,0.3);
+}
+
+/*====選択された列について====*/
+
+/*選択された列のセルの背景*/
+table.grid tbody tr td.active{
+	background: rgba(218,243,251,0.5);
+}
+
+/*選択された列のth*/
+table.grid thead tr th.active{
+	background-color: #4580ba;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #162c5a), color-stop(0.00, #3c6896));
+	background: -webkit-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -moz-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -ms-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: -o-linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	background: linear-gradient(top, #3c6896 0%, #162c5a 100%);
+	color:#fff;
+}
+
+

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>整備売上実績送信ログ明細照会</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            var mydata = [
+                                {
+                                    '納品書№': 'XXXXXXX1X',
+                                    '伝票区分': 'N',
+                                    '計上日': '____/__/__',
+                                    '受付№': 'XXXXXXX1X',
+                                    '請求額': '999,999,999',
+                                    '店舗': 'NNNNNN',
+                                    '拠点': 'NNNNNN'
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+                                {
+                                    '納品書№': '',
+                                    '伝票区分': '',
+                                    '計上日': '____/__/__',
+                                    '受付№': '',
+                                    '請求額': '',
+                                    '店舗': '',
+                                    '拠点': ''
+                                },
+
+                            ];
+
+            var width = $(window).width() - 10;
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 300,
+                width: 800,
+                shrinkToFit: false,
+                rowNum: 20,
+                colNames: [
+                             '納品書№',
+                             '伝票区分',
+                             '計上日',
+                             '受付№',
+                             '請求額',
+                             '店舗',
+                             '拠点'
+
+                           ],
+                colModel: [
+               		        { name: '納品書№', index: '納品書№', width: 100, align: "left" },
+               		        { name: '伝票区分', index: '伝票区分', width: 100, align: "left" },
+                            { name: '計上日', index: '計上日', width: 100, align: "left" },
+               		        { name: '受付№', index: '受付№', width: 100, align: "right" },
+                            { name: '請求額', index: '請求額', width: 100, align: "right" },
+                            { name: '店舗', index: '店舗', width: 100, align: "right" },
+                            { name: '拠点', index: '拠点', width: 100, align: "right" }
+               	        ],
+                pager: "#gridPager",
+                viewrecords: true,
+                rownumbers: true,
+                loadonce: true
+                // multiselect: true
+            });
+        })
+    </script>
+</head>
+<body>
+<div>
+    <div style="margin-top:10px; margin-left:3px;">
+        <button style="height:50px; width:50px; font-size:13px;">終了</button>
+    </div>
+    <div style="margin-top:10px">
+        <fieldset title="基本情報">
+            
+            <table style="height:30px; width:800px;">
+                <tr>
+                                <td style="width:7%"><label>送信日時</label></td>
+                                <td style="width:18%">
+                                    <input style="width:100%;" type="text" value="YYYY/MM/DD HH:MM:SS" />
+                                </td>
+                                <td style="width:3%">
+                                </td>
+                                <td style="width:10%"><label>レコード作成日</label></td>
+                                <td style="width:18%">
+                                    <input style="width:100%;" type="text" value="YYYY/MM/DD HH:MM:SS" />
+                                </td>
+                                <td style="width:3%;text-align:center;"><labe>～</label></td>
+                                <td style="width:18%">
+                                    <input style="width:100%;" type="text" value="YYYY/MM/DD HH:MM:SS" />
+                                </td>
+                                <td style="width:3%">
+                                </td>
+                                <td style="width:7%"><label>送信件数</label></td>
+                                <td style="width:5%">
+                                    <input style="width:100%;" type="text" value="99,999" />
+                                </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+    <div style="margin-top:20px; margin-left:3px; height:300px;">
+        <table id="list47"></table>
+
+    </div>
+</div>
+</body>
+</html>

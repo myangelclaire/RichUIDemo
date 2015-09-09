@@ -1,0 +1,608 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+<!--    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+
+    <script>
+        function selectDiv(value) {
+            if (value == "0") {
+                $("#select1").show();
+                $("#select2").hide();
+                $("#select3").hide();
+            } else if (value == "4" || value == "5") {
+                $("#select1").hide();
+                $("#select2").hide();
+                $("#select3").show();
+            } else {
+                $("#select1").hide();
+                $("#select2").hide();
+                $("#select3").hide();
+            }
+        }
+
+    </script>
+
+    <style type="text/css">
+        .style1
+        {
+            height: 17px;
+        }
+        .style2
+        {
+            overflow: hidden;
+            height: 17px;
+        }
+    </style>
+
+    </head>
+<body style="width: 1000px; height: 350px;">
+    <div id="quote-optionlist" style="height: 20px;">
+        <ul>
+            <li style="height:30px;">
+                <span>■支払い方法選択</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="payment-selection">
+        <div style="margin-left:20px; height: 20px;">
+        <table width="700px">
+            <tr>
+                <th>
+                    <div>
+                        <form>
+                            <span style="font-size:16px">支払方法</span>
+                            <input type="radio" name="payment_method" value="0" style="margin-left:10px;" checked onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">ローン、クレジット</label>
+                            <input type="radio" name="payment_method" value="1" style="margin-left:10px;" onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">現金</label>
+                            <input type="radio" name="payment_method" value="2" style="margin-left:10px;" onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">専業リース</label>
+                            <input type="radio" name="payment_method" value="3" style="margin-left:10px;" onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">ディーラーリース</label>
+                            <input type="radio" name="payment_method" value="4" style="margin-left:10px;" onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">手形</label>
+                            <input type="radio" name="payment_method" value="5" style="margin-left:10px;" onclick="selectDiv(value);"/>
+                            <label style="margin-left:5px;font-size:14px;">一本手形</label>
+                        </form>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        </div>
+        <div id="select1">
+        <div id="quote-optionlist" style="height: 30px;">
+            <ul>
+                <li style="height:20px;">
+                    <span style="color: crimson;">■クレジットプラン選択</span>
+                    <span style="float:right;"><input type="button" class="quotation_button" value="審査申請" /></span>
+                    <span style="float:right;"><input type="button" class="quotation_button" value="シュミレーション" /></span>
+                </li>
+            </ul>
+        </div>
+        <div id="credit-plan1">
+            <form>
+                <table>
+                    <tr>
+                        <th rowspan="2" colspan="2">
+                            <input type="radio" style="margin-right:3px;" checked />
+                            <label style="font-size:18px">プラン１</label>
+                        </th>
+                        <th class="style1">マツダスカイプラン</th>
+                        <td formxmlcolspan="1" width="130px" valign="top" colspan="3" class="style2">
+                        <table class="ms-crm-Lookup" id="Table3" style="width: 130px;
+                            table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                        <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                            style="width: 200px; height: 20px;">
+                                            <li style="display: inline; white-space: nowrap;">
+                                                <span 
+                                                    class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                    oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                    otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                    <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img5" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                    <span class="ms-crm-LookupItem-Name" wrapper="true">マツダクレジット</span>
+                                                </span>
+                                            </li>
+                                        </div>
+ 
+                                    </td>
+                                    <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                            id="Img6" style="-ms-ime-mode: auto;" 
+                                            src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                            req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                            isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                            disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                            lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                            lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                            lookuptypes="1" forcesubmit="false">
+                                            <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>初回支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>頭金</th>
+                        <td align="right" width="80px">￥0</td>
+                        <th>月々お支払</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥15,000</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">×12回</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>クレジット元金</th>
+                        <td align="right">￥2,410,700</td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span>7月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                        <td rowspan="2">×8回</td>
+                    </tr>
+                    <tr>
+                        <th>お支払総額</th>
+                        <td align="right">￥2,723,073</td>
+                        <th></th>
+                        <td align="right">
+                            <span>12月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>分割払手数料率</th>
+                        <td align="left">3.9%</td>
+                        <th>ボーナススキップ</th>
+                        <td colspan="3">無</td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left">2014/6</td>
+                        <th>ボーナスス加算</th>
+                        <td colspan="3">非加算</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right">～2019/5</td>
+                        <th>最終1回前</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>総支払回数</th>
+                        <td align="left">
+                            <span>60回</span>
+                        </td>
+                        <th>最終支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払日</th>
+                        <td align="left">
+                            <span>毎月26日</span>
+                        </td>
+                        <th>据置支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="credit-plan2">
+            <form>
+                <table>
+                    <tr>
+                        <th rowspan="2" colspan="2">
+                            <input type="radio" style="margin-right:3px;" checked />
+                            <label style="font-size:18px">プラン２</label>
+                        </th>
+                        <th>他信販会社プラン</th>
+                        <td style="overflow: hidden;" formxmlcolspan="1" width="130px" valign="top" colspan="3">
+                        <table class="ms-crm-Lookup" id="Table2" style="width: 130px;
+                            table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                        <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                            style="width: 200px; height: 20px;">
+                                            <li style="display: inline; white-space: nowrap;">
+                                                <span 
+                                                    class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                    oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                    otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                    <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img3" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                    <span class="ms-crm-LookupItem-Name" wrapper="true">オリコ</span>
+                                                </span>
+                                            </li>
+                                        </div>
+                                        <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text2"
+                                            style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                            border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                            ime-mode="auto">
+                                    </td>
+                                    <td class="Lookup_RenderButton_td" style="width: 0px;">
+                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                            id="Img4" style="-ms-ime-mode: auto;" 
+                                            src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                            req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                            isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                            disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                            lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                            lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                            lookuptypes="1" forcesubmit="false">
+                                            <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>初回支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>頭金</th>
+                        <td align="right" width="80px">￥0</td>
+                        <th>月々お支払</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥15,000</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">×12回</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>クレジット元金</th>
+                        <td align="right">￥2,410,700</td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span>7月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                        <td rowspan="2">×8回</td>
+                    </tr>
+                    <tr>
+                        <th>お支払総額</th>
+                        <td align="right">￥2,723,073</td>
+                        <th></th>
+                        <td align="right">
+                            <span>12月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>分割払手数料率</th>
+                        <td align="left">3.9%</td>
+                        <th>ボーナススキップ</th>
+                        <td colspan="3">無</td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left">2014/6</td>
+                        <th>ボーナスス加算</th>
+                        <td colspan="3">非加算</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right">～2019/5</td>
+                        <th>最終1回前</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>総支払回数</th>
+                        <td align="left">
+                            <span>60回</span>
+                        </td>
+                        <th>最終支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払日</th>
+                        <td align="left">
+                            <span>毎月26日</span>
+                        </td>
+                        <th>据置支払分</th>
+                        <td align="right">
+                            <span>2014/6</span>
+                        </td>
+                        <td colspan="2">
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="credit-step1">
+            <form>
+                <table>
+                    <tr>
+                        <th>ステップ２</th>
+                        <td width="80px"></td>
+                        <th>月々お支払い</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥46,283</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">×39回</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left">2015/6</td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span>7月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                        <td rowspan="2">×8回</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right">～2019/4</td>
+                        <th></th>
+                        <td align="right">
+                            <span>12月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="credit-step2">
+            <form>
+                <table>
+                    <tr>
+                        <th>ステップ２</th>
+                        <td width="80px"></td>
+                        <th>月々お支払い</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left"></td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right"></td>
+                        <th></th>
+                        <td align="right">
+                            <span></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="credit-step1">
+            <form>
+                <table>
+                    <tr>
+                        <th>ステップ３</th>
+                        <td width="80px"></td>
+                        <th>月々お支払い</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥46,283</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">×39回</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left">2015/6</td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span>7月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                        <td rowspan="2">×8回</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right">～2019/4</td>
+                        <th></th>
+                        <td align="right">
+                            <span>12月</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;">￥100,000</span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="credit-step2">
+            <form>
+                <table>
+                    <tr>
+                        <th>ステップ３</th>
+                        <td width="80px"></td>
+                        <th>月々お支払い</th>
+                        <td></td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>支払期間</th>
+                        <td align="left"></td>
+                        <th>ボーナス支払</th>
+                        <td align="right">
+                            <span></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right"></td>
+                        <th></th>
+                        <td align="right">
+                            <span></span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;font-weight:normal;"></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </div>
+        <div id="select2" style="display: none"></div>
+        <div id="select3" style="display: none; margin-left:10px;">
+            <div id="quote-optionlist" style="height: 30px;">
+                <ul>
+                    <li style="height:30px;">
+                        <span style="color: crimson;">■手形購入プラン</span>
+                        <span style="margin-left:180px;"><input type="button" class="quotation_button" value="割賦元金計算" /></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="credit-pay">
+                <form>
+                    <table width="400px">
+                        <tr>
+                            <td width="30px"></td>
+                            <th width="200px">お見積り金額</th>
+                            <td width="150px" align="right">
+                                <span>2,410,700円</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <th>割賦手数料</th>
+                            <td align="right">
+                                <input type="text" value="94,017" style="text-align: right; width: 100px;" />円
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <th>頭金（現金）</th>
+                            <td align="right">
+                                <span style="color: #FF0000">▲</span>
+                                <input type="text" value="20,000" style="text-align: right; color: #FF0000; width: 100px;"/>円
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: solid black;"></td>
+                            <th style="border-top: solid black;">割賦元金（合計）</th>
+                            <td  style="border-top: solid black;" align="right">
+                                <span>2,404,717円</span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

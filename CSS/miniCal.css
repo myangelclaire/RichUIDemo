@@ -1,0 +1,45 @@
+table.ms-crm-MiniCal {
+	background: white; width: 100%; table-layout: fixed;
+}
+table.ms-crm-MiniCal td {
+	line-height: normal;
+}
+td.ms-crm-MiniCal-Header {
+	height: 18px; text-align: center; background-repeat: repeat-x;
+}
+tr.ms-crm-MiniCal-Nav {
+	height: 18px; cursor: pointer;
+}
+td.ms-crm-MiniCal-DayOfWeek {
+	width: 20px; height: 18px; text-align: center; cursor: default;
+}
+td.ms-crm-MiniCal-Week-Number {
+	border-width: 0px; border-style: solid; width: 20px; height: 18px; text-align: center; color: rgb(0, 0, 255); cursor: default;
+}
+td.ms-crm-MiniCal-Day {
+	width: 20px; height: 18px; text-align: center;
+}
+td.ms-crm-MiniCal-Day-Hilited-NotCurrent {
+	color: rgb(255, 255, 255); background-color: rgb(167, 205, 240);
+}
+td.ms-crm-MiniCal-Day-Selected {
+	background-color: rgb(217, 224, 238);
+}
+tr.ms-crm-MiniCal-TodayBar {
+	height: 19px; line-height: 19px;
+}
+td.ms-crm-MiniCal-Month {
+	text-align: center; cursor: pointer;
+}
+td.ms-crm-MiniCal-TodayBar {
+	text-align: center; border-top-width: 1px; border-top-style: solid; cursor: pointer;
+}
+td.ms-crm-MiniCal-TodayBar-Hovered {
+	text-align: center; border-top-width: 1px; border-top-style: solid; cursor: pointer;
+}
+div.ms-crm-MiniCal-TodayBar {
+	height: 16px; background-repeat: repeat-x;
+}
+img.ms-crm-MiniCal {
+	
+}

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>車両ステータス変更</title>
+    <link href="/JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="/JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="/JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="/JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { ReceptNo: "1009120089", Custom: "もくだみほもくだみぼ", Carname: "ﾌﾞｼﾞﾖｰ", RegNo: "広島500ｺ4567", Differ: "ＭＳＣ１", nyuukozumi: 1, tyuu: 1, kanryou: 1, mati: 1, zumi: 0 },
+                            { ReceptNo: "1003060008", Custom: "福島　九太郎", Carname: "ｱﾃﾝｻﾞ", RegNo: "八王子300ｻ0987", Differ: "一般", nyuukozumi: 1, tyuu: 1, kanryou: 1, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003060017", Custom: "月初　登録", Carname: '', RegNo: "多摩550ｽ1234", Differ: "ＭＳＣ１", nyuukozumi: 1, tyuu: 1, kanryou: 0, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003060089", Custom: "甲斐　テスト", Carname: '', RegNo: "室蘭300ｱ1111", Differ: "車検業者", nyuukozumi: 0, tyuu: 0, kanryou: 0, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003100007", Custom: "佐藤　稔", Carname: "MPV", RegNo: "長野330ﾀ3333", Differ: "車検", nyuukozumi: 1, tyuu: 1, kanryou: 0, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003100008", Custom: "テスト顧客１１０１え", Carname: "ﾃﾞﾐｵ", RegNo: "広島590ﾈ1100", Differ: "車検", nyuukozumi: 1, tyuu: 1, kanryou: 0, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003100014", Custom: "原口　隆", Carname: "ｷﾔﾛﾙ", RegNo: "尾張小牧50ｲ0123", Differ: "１２点検", nyuukozumi: 0, tyuu: 0, kanryou: 0, mati: 0, zumi: 0 },
+                            { ReceptNo: "1003100015", Custom: "一之瀬　龍之介　です", Carname: '', RegNo: "広島330ｱ1111", Differ: "一般", nyuukozumi: 0, tyuu: 0, kanryou: 0, mati: 0, zumi: 0 }
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 185,
+                width: 890,
+                colNames: ['受付No', 'お客様', '通称車名', '登録No', '入庫区分', '入庫済', '作業中', '作業完了', '納車待ち', '納車済'],
+                colModel: [
+               		        { name: 'ReceptNo', index: 'ReceptNo', width: 100, sortable: false },
+                            { name: 'Custom', index: 'Custom', width: 150, sortable: false },
+               		        { name: 'Carname', index: 'Carname', width: 80, sortable: false },
+                            { name: 'RegNo', index: 'RegNo', width: 120, sortable: false },
+                            { name: 'Differ', index: 'Differ', width: 80, sortable: false },
+                            { name: 'nyuukozumi', index: 'zumi', width: 60, align: "center", formatter: "checkbox", formatoptions: { disabled: false }, sortable: false },
+                            { name: 'tyuu', index: 'tyuu', width: 60, align: "center", formatter: "checkbox", formatoptions: { disabled: false }, sortable: false },
+                            { name: 'kanryou', index: 'kanryou', width: 60, align: "center", formatter: "checkbox", formatoptions: { disabled: false }, sortable: false },
+                            { name: 'mati', index: 'mati', width: 60, align: "center", formatter: "checkbox", formatoptions: { disabled: false }, sortable: false },
+                            { name: 'zumi', index: 'zumi', width: 60, align: "center", formatter: "checkbox", formatoptions: { disabled: false }, sortable: false }
+               	        ],
+                
+                pager: "#gridPager",
+                //autowidth: true,
+                //autoheight:true,
+                viewrecords: true,
+                //shrinkToFit: false,
+                //rownumbers: true,
+                //multiselect: true,
+                //pgbuttons: true
+                loadonce: true,
+                rownumbers: true,
+                //multiselect: true,
+                pgbuttons: true
+            });
+            $("#list47").closest(".ui-jqgrid-bdiv").css({ 'overflow-y': 'scroll' });
+            })  
+    </script>
+</head>
+<body>
+    <div style="height:700px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:10px; margin-left:3px;">
+        <button id="Button3" type="button" style=" height:35px; margin-right:60px; margin-right:0px;">Esc<br />キャンセル</button>
+        <button id="Button4" type="button" style=" height:35px; margin-right:60px; margin-right:0px;">F10<br />確定</button>
+    　　</div>
+        <div style="width:900px; background-color: #CCCCCC; height: 250px;">
+              <table style="width:100%">
+                <tr>
+                   <td style="text-align:left">
+                      <div>
+                        <table id="list47"></table>
+                      </div>
+                   </td>
+                </tr>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

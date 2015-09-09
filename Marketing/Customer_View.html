@@ -1,0 +1,1354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLink.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/customerview.css" />
+
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+
+    <title>お客様ビュー</title>
+    <style >
+    </style>
+
+</head>
+<body>     
+    <div id="coustomerview">
+        <!--ヘッダー（お客様情報）-->
+        <div id="customer-information" style="height:50px;">
+            <ul>
+                <li style="height:50px;">
+                    <label class="data" style="font-size:30px;font-weight:bold; width: 200px;">
+                        山田 太郎
+                        <span style="font-size:16px;">
+                            （ヤマダ タロウ）
+                        </span>
+                        様
+                        <span style="font-size:16px;">
+                            男性・35歳
+                        </span>
+                    </label>
+                    <select name="new_listboxtest" tabindex="7" class="ms-crm-SelectBox" 
+                        id="Select2" style="-ms-ime-mode: auto; width: 120px;" attrpriv="7" 
+                        attrname="new_listboxtest" req="0" defaultselected="">
+                        <option value="option1" selected="selected">出会いステージ</option>
+                        <option value="option2"></option>
+                        <option value="option3"></option>
+                    </select>
+                    <label for="new_checkboxtest">C</label>
+                    <input tabindex="11" class="ms-crm-CheckBox" id="new_checkboxtest" 
+                            type="checkbox" attrpriv="7" attrname="new_checkboxtest" req="0" align="middle">
+                    &nbsp;
+                    <label for="new_checkboxtest">￥</label>
+                    <input tabindex="11" class="ms-crm-CheckBox" id="Checkbox1" 
+                            type="checkbox" attrpriv="7" attrname="new_checkboxtest" req="0" align="middle">
+                    &nbsp;&nbsp;&nbsp;
+                    <label class="title" style="width:120px;">担当営業</label>
+                    <label class="data" style="width: 90px;">松田　デミ夫</label>
+                    <label class="operation" title="保存" style="width: 100px">保存</label>
+                    <label class="operation" title="お客様情報画面" style="width: 140px">お客様情報画面</label>
+                    <label class="operation" title="来店予約入力" style="width: 140px">来店予約入力</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab" id="displayTabs">
+            <!--タブメニュー-->
+            <div id="choice" suffix="_tc">
+                <ul id="tab">
+                    <li id="t1" style="width: 220px">お客様情報</li>
+                    <li id="t2" style="width: 220px; height: 20px;">
+                        <table width="100%">
+                            <tr>
+                                <td style="overflow: hidden;" formxmlcolspan="1" width="10%">
+                                <table class="ms-crm-Lookup" id="Table3" style="width: 220px;
+                                    table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div tabindex="-1" class="ms-c2rm-Lookup" role="list" ime-mode="auto" 
+                                                    style="width: 208px; height: 20px;" align="left">
+                                                    <input tabindex="1010" class="ms-crm-Input" id="new_name" style="-ms-ime-mode: auto;"
+                                                    type="text" maxlength="100" value="尾張子" attrformat="text" attrpriv="7" attrname="new_name"
+                                                    req="2">
+                                                </div>
+                                            </td>
+                                            <td class="Lookup_RenderButton_td" style="width: 38px;">
+                                                <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                    id="Img6" style="-ms-ime-mode: auto;" 
+                                                    src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                    req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                    isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                    disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                    lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                    lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                    lookuptypes="1" forcesubmit="false">
+                                                    <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="results" suffix="_sh">
+                <div id="t1_tc" class="content_wrap" style="height: 550px">
+                    <div id="customerview-detail">
+                        <table>
+                            <tr valign="top">
+                                <td>
+                                <div style="overflow-y:scroll; height:530px;">
+                                    <div style="float:left; width: 600px;">
+                                    <!--ターゲティングリスト-->
+                                    <h2>
+                                        <span>
+                                            <a id="s1" style="display:none">
+                                                ▼活動
+                                            </a>
+                                            <a id="h1">
+                                                ▲活動
+                                            </a>
+                                        </span>
+                                    </h2>
+                                    <div id="s1_sh" style="height:260px;">
+                                    <table>
+                                    <tr>
+                                        <th width="90px">相手</th>
+                                        <td width="100px">
+                                            <select name="" id="" style="width:100px;">
+                                                <option selected="selected">ご本人</option>
+                                                <option>ご家族</option>
+                                                <option>その他</option>
+                                            </select>
+                                        </td>
+                                        <th width="90px">手段</th>
+                                        <td width="100px">
+                                            <select name="" id="Select3" style="width:100px;">
+                                                <option selected="selected">電話</option>
+                                                <option>DM</option>
+                                                <option>メール</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button type="button" id="button2" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; margin-left: 100px; float: right">保存</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="90px" colspan="2">次回コンタクト予定日</th>
+                                        <td colspan="3">
+                                            <input type="text" value="2014/6/20" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th width="90px">メモ</th>
+                                        <td colspan="3">
+                                            <textarea rows="2"></textarea>
+                                        </td>
+                                    </tr>
+                                </table>
+                                    <br/>
+                                    <div>
+                                    <div id="targetinglist-area" style="height:230px;display:block; margin-left:50px">
+                                    <form style="overflow-x: scroll;">
+                                    <table id="targetinglist-grid">
+                                        <tr>
+                                            <th style="width:35px;"></th>
+                                            <td style="width:60px;text-align:center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                            <td style="width: 60px; text-align: center;"><input type="checkbox" style="width:30px;" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px;">対象月</th>
+                                            <td style="width: 60px;">当月</td>
+                                            <td style="width: 60px;">当月</td>
+                                            <td style="width: 60px;">当月</td>
+                                            <td style="width:60px;">次月</td>
+                                            <td style="width:60px;">次月</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px;">種別</th>
+                                            <td style="width:60px;">車検</td>
+                                            <td style="width:60px;">保険</td>
+                                            <td style="width:60px;">車検</td>
+                                            <td style="width:60px;">点検</td>
+                                            <td style="width:60px;">保険</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px;">車種</th>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">アクセラ</td>
+                                            <td style="width:60px;">デミオ</td>
+                                            <td style="width:60px;">アクセラ</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="width: 35px;">ｽﾃｰﾀｽ</th>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select>
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select>
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select>
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select>
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                            <td style="width: 60px; margin-right: 0px;padding:1px 0px;">
+                                                <select>
+                                                    <option selected="selected">未対応</option>
+                                                    <option>継続</option>
+                                                    <option>確約</option>
+                                                    <option>お断り</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </form>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <!--お客様とマツダとのコンタクト状況-->
+                                    <div>
+                                        <h2>
+                                            <span>
+                                                <a id="s7">
+                                                    ▼お客様とマツダとのコンタクト状況
+                                                </a>
+                                                <a id="h7" style="display:none">
+                                                    ▲お客様とマツダとのコンタクト状況
+                                                </a>
+                                            </span>
+                                        </h2>
+                                        <div id="s7_sh" style="display:none">
+                                            <div style="margin: 5px 0px 5px 15px;">
+                                            <label>領域</label>
+                                            <select style="margin-right:10px;">
+                                                <option>来店促進</option>
+                                                <option>商談</option>
+                                            </select>
+                                            <label>種別</label>
+                                            <select style="margin-right:10px;">
+                                                <option>車販</option>
+                                                <option>点検</option>
+                                                <option>保険</option>
+                                                <option>リコール</option>
+                                            </select>
+                                            <label>内容</label>
+                                            <input type="text" style="width: 120px; margin-right: 10px;" />
+                                            <button type="button" id="button6" value="code" class="customerviewgrid_button" style="height: auto; width: 80px; margin-right: 10px;">絞込み</button>
+                                            </div>
+                                            <div id="customerview-data">
+                                            <div id="contact-status" 
+                                                    style="height:150px; display:block; overflow-y:scroll; width: 550px;">
+                                                <table id="targetinglist-grid" width="100%">
+                                                    <tr>
+                                                        <th style="width:30px;"></th>
+                                                        <th style="width:50px;">日時</th>
+                                                        <th style="width:50px;">領域</th>
+                                                        <th style="width:50px;">担当者</th>
+                                                        <th style="width:50px;">内容</th>
+                                                        <th style="width:50px;">種別</th>
+                                                        <th style="width:50px;">手段</th>
+                                                        <th style="width:50px;">結果</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:50px;">2014/7/14</td>
+                                                        <td style="width:50px;">来店促進</td>
+                                                        <td style="width:50px;">松田　デミ男</td>
+                                                        <td style="width:50px;text-decoration:underline;color:blue;">展示会</td>
+                                                        <td style="width:50px;">車販</td>
+                                                        <td style="width:50px;">電話</td>
+                                                        <td style="width:50px;">キャンペーン告知した</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/18</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">松田　デミ男</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">電話不通のため継続フォロー</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/19</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">松田　デミ男</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">展示会</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">電話</td>
+                                                        <td style="width:40px;">来店確約を取った</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/8/27</td>
+                                                        <td style="width:40px;">来店促進</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">メモ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">お財布は奥さん</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/14</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">振り返り</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">価格がネック</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/21</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">店長コメ</td>
+                                                        <td style="width:40px;">車販</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">競合の見積り金額聞いて</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width: 30px">
+                                                            <input type="checkbox" name="check1" style="width: 30px" />
+                                                        </td>
+                                                        <td style="width:40px;">2014/9/28</td>
+                                                        <td style="width:40px;">商談</td>
+                                                        <td style="width:40px;">阿久　世良</td>
+                                                        <td style="width:40px; text-decoration: underline; color: blue;">査定</td>
+                                                        <td style="width:40px;">買取</td>
+                                                        <td style="width:40px;">対面</td>
+                                                        <td style="width:40px;">査定中</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                            <textarea rows="2" style="margin-left:35px; width:400px;"></textarea>
+                                            
+                                            <button type="button" id="button7" value="code" class="customerviewgrid_button" style="height: auto; width: auto; margin-left: 40px;">コメント</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                <div style="overflow-y:scroll; height:530px;">
+                                    <!--お客様基本情報-->
+                                    <div id="customerview-category" style="float:right;width:550px;">
+                                        <h2>
+                                            <span>
+                                                <a id="s2">
+                                                    ▼お客様基本情報
+                                                </a>
+                                                <a id="h2" style="display:none">
+                                                    ▲お客様基本情報
+                                                </a>
+                                            </span>
+                                        </h2>
+                                        <div id="s2_sh" style="display: none">
+                                        <div id="general-information">
+                                            <form>
+                                                <table>
+                                                    <tr>
+                                                        <th>生年月日</th>
+                                                        <td>                                            
+                                                            <input type="date" value="1983/8/4" style="width: 100px" />
+                                                        </td>
+                                                        <th>干支</th>
+                                                        <td>                                                
+                                                            <select style="width: 100px">
+                                                                <option>子年</option>
+                                                                <option>丑年</option>
+                                                                <option>寅年</option>
+                                                                <option>卯年</option>
+                                                                <option>辰年</option>
+                                                                <option>巳年</option>
+                                                                <option>午年</option>
+                                                                <option>未年</option>
+                                                                <option>申年</option>
+                                                                <option>酉年</option>
+                                                                <option>戌年</option>
+                                                                <option selected="selected">亥年</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>星座</th>
+                                                        <td>                                                
+                                                            <select style="width: 100px">
+                                                                <option>おひつじ座</option>
+                                                                <option>おうし座</option>
+                                                                <option>ふたご座</option>
+                                                                <option>かに座</option>
+                                                                <option selected="selected">しし座</option>
+                                                                <option>おとめ座</option>
+                                                                <option>てんびん座</option>
+                                                                <option>さそり座</option>
+                                                                <option>いて座</option>
+                                                                <option>やぎ座</option>
+                                                                <option>みずがめ座</option>
+                                                                <option>うお座</option>
+                                                            </select>
+                                                        </td>
+                                                        <th>血液型</th>
+                                                        <td>
+                                                            <select style="width: 100px">
+                                                                <option selected ="selected">A型</option>
+                                                                <option>B型</option>
+                                                                <option>O型</option>
+                                                                <option>AB型</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>顧客区分</th>
+                                                        <td>                                                
+                                                            <select style="width: 100px">
+                                                                <option selected ="selected">ストック</option>
+                                                                <option>顧客</option>
+                                                                <option>元顧客</option>
+                                                            </select>
+                                                        </td>
+                                                        <th>きっかけ</th>
+                                                        <td>                                            
+                                                            <select style="width: 100px">
+                                                                <option selected="selected">紹介</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>補足</th>
+                                                        <td colspan="4">
+                                                            <textarea style="height:50px; width:300px;"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <!--ご希望のコンタクト詳細-->
+                                    <div id="customerview-category" style="float:right;width:550px;">
+                                        <h2>
+                                            <span>
+                                                <a id="s3" style="float:right;width:550px;">
+                                                    ▼ご希望のコンタクト詳細
+                                                </a>
+                                                <a id="h3" style="display:none">
+                                                    ▲ご希望のコンタクト詳細
+                                                </a>
+                                            </span>
+                                        </h2>
+                                        <div id="s3_sh" style="display: none">
+                                        <div id="contact-condition">
+                                            <form>
+                                                <table id="customerviewgrid">
+                                                    <tr>
+                                                        <th style="width:30px;">希望</th>
+                                                        <th style="width:50px;">手段</th>
+                                                        <th style="width:50px;">曜日</th>
+                                                        <th style="width:50px;">時間帯</th>
+                                                        <th style="width:100px;">連絡先１</th>
+                                                        <th style="width:100px;">連絡先２</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:50px;">第１</td>
+                                                        <td style="width:50px;">
+                                                            <select style="width:70px;">
+                                                                <option selected="selected">電話</option>
+                                                            </select>
+                                                        </td>
+                                                        <td style="width:50px;">
+                                                            <select style="width:80px;">
+                                                                <option selected="selected">土</option>
+                                                            </select>
+                                                        </td>
+                                                        <td style="width:30px;">
+                                                            <select style="width:100px;">
+                                                                <option selected="selected">9:00-12:00</option>
+                                                                <option >12:00-13:00</option>
+                                                                <option >13:00-15:00</option>
+                                                                <option >15:00-18:00</option>
+                                                                <option >18:00-19:00</option>
+                                                                <option >19:00-20:00</option>
+                                                                <option >いつでも</option>
+                                                            </select>
+                                                        </td>
+                                                        <td style="width:100px;">                                                
+                                                            <input type="text" value="090-0000-0000" style="width:100px;" />
+                                                        </td>
+                                                        <td style="width:100px;">
+                                                            <input type="text" value="090-1111-1111" style="width:100px;" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">第２</td>
+                                                        <td style="width:50px;">
+                                                            <select style="width:70px;">
+                                                                <option selected="selected">メール</option>
+                                                            </select>
+                                                        </td>
+                                                        <td style="width:50px;">
+                                                            <select style="width:80px;">
+                                                                <option selected="selected">いつでも</option>
+                                                            </select>                                            
+                                                        </td>
+                                                        <td style="width:50px;">
+                                                            <select style="width:100px;">
+                                                                <option>9:00-12:00</option>
+                                                                <option>12:00-13:00</option>
+                                                                <option>13:00-15:00</option>
+                                                                <option>15:00-18:00</option>
+                                                                <option>18:00-19:00</option>
+                                                                <option>19:00-20:00</option>
+                                                                <option selected="selected">いつでも</option>
+                                                            </select>          
+                                                        </td>
+                                                        <td style="width:100px;">
+                                                            <input type="text" value="abc@def.com" style="width:100px;" />
+                                                        </td>
+                                                        <td style="width:100px;">
+                                                            <input type="text" value="" style="width:100px;" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <form style="margin-top:15px;">
+                                                <table>
+                                                    <tr style="margin-top:15px;">
+                                                        <th colspan="3" style="width:200px; text-align:left; padding-left:10px;">前回アンケート結果</th>
+                                                        <td colspan="3" style="width:300px;text-align:right;">回答日時：<a style="text-decoration: underline;">2014/5/30</a></td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <!--パーソナル情報-->
+                                    <div id="customerview-category" style="float:right;width:550px;">
+                                        <h2>
+                                            <span>
+                                                <a id="h4" style="display:none">
+                                                    ▲パーソナル情報
+                                                    <span style="margin-left:230px;font-size:12px;font-weight:normal;color:black;">最終更新日：2014/2/28</span>
+                                                </a>
+                                                <a id="s4">
+                                                    ▼パーソナル情報
+                                                    <span style="margin-left: 230px; font-size: 12px; font-weight: normal; color: black;">最終更新日：2014/2/28</span>
+                                                </a>
+                                            </span>
+                                        </h2>
+                                        <div id="s4_sh" style="display: none">
+                                        <div id="personal-information">
+                                            <form>
+                                                <table>
+                                                    <tr>
+                                                        <th>郵便番号</th>
+                                                        <td>
+                                                            <input type="text" value="730-8670" />                                                
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>住所</th>
+                                                        <td colspan="3">
+                                                            <input type="text" style="width:350px;" value="広島県安芸郡府中町新天地1-1-1" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>ご職業</th>
+                                                        <td>
+                                                            <input type="text" value="IT業界" />                                                
+                                                        </td>
+                                                        <th>休日</th>
+                                                        <td>                                                
+                                                            <select>
+                                                                <option selected="selected">土日/祝日</option>
+                                                                <option>土日</option>
+                                                                <option>平日</option>
+                                                                <option>不定期</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>休日の過ごし方</th>
+                                                        <td>
+                                                            <input type="text" value="家族と遠出/マラソン" />
+                                                        </td>
+                                                        <th>ご趣味</th>
+                                                        <td>
+                                                            <input type="text" value="マラソン" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>関心事</th>
+                                                        <td>
+                                                            <input type="text" value="キャンプ" />
+                                                        </td>
+                                                        <td colspan="2">
+                                                        </td>
+                                                        <!--<th>結婚記念日</th>
+                                                        <td>
+                                                            <input type="date" value="2005/6/2" />
+                                                        </td>-->
+                                                    </tr>
+
+                                                    <tr>
+                                                        <th>使用用途</th>
+                                                        <td colspan="3">                                           
+                                                            <input type="text" style="width:350px;" value="家族と遠出する（キャンプなど）" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="margin-top:15px;">
+                                                        <th colspan="2" style="text-align:left; padding-left:10px;">家族・紹介者</th>
+                                                        <td colspan="3">
+                                                            <button type="button" id="button" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; margin-right: 10px; float: right">除外</button>
+                                                            <button type="button" id="button" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; margin-right: 10px; float: right">追加</button>  
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <form>
+                                            <div style="overflow-y:scroll; height: 120px; width: 520px;">
+                                                <table id="customerviewgrid">
+                                                    <tr>
+                                                        <th style="width:30px;"></th>
+                                                        <th style="width:50px;">お名前</th>
+                                                        <th style="width:50px;">ご関係</th>
+                                                        <th style="width:50px;">生年月日</th>
+                                                        <th style="width:50px;">年齢</th>
+                                                        <th style="width:50px;">更新日</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">
+                                                            <input type="checkbox" style="width:30px;" />
+                                                        </td>
+                                                        <td style="width:50px;">山田　ひろし</td>
+                                                        <td style="width:50px;">父</td>
+                                                        <td style="width:50px;">1950/1/1</td>
+                                                        <td style="width:50px;">64</td>
+                                                        <td style="width:50px;">2010/3/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">
+                                                            <input type="checkbox" style="width:30px;" />
+                                                        </td>
+                                                        <td style="width:50px;">山田　花子</td>
+                                                        <td style="width:50px;">配偶者</td>
+                                                        <td style="width:50px;">1980/8/3</td>
+                                                        <td style="width:50px;">33</td>
+                                                        <td style="width:50px;">2010/3/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">
+                                                            <input type="checkbox" style="width:30px;" />
+                                                        </td>
+                                                        <td style="width:50px;">山田　結衣</td>
+                                                        <td style="width:50px;">娘</td>
+                                                        <td style="width:50px;">2009/10/15</td>
+                                                        <td style="width:50px;">5</td>
+                                                        <td style="width:50px;">2010/3/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">
+                                                            <input type="checkbox" style="width:30px;" />
+                                                        </td>
+                                                        <td style="width:50px;">山田　陸</td>
+                                                        <td style="width:50px;">息子</td>
+                                                        <td style="width:50px;">2013/7/25</td>
+                                                        <td style="width:50px;">1</td>
+                                                        <td style="width:50px;">2014/3/15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="width:30px;">
+                                                            <input type="checkbox" style="width:30px;" />
+                                                        </td>
+                                                        <td style="width:50px;">田中　ひとし</td>
+                                                        <td style="width:50px;">紹介元</td>
+                                                        <td style="width:50px;">1973/5/30</td>
+                                                        <td style="width:50px;">36</td>
+                                                        <td style="width:50px;">2010/3/15</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                        
+                                    <!--今後カーライフに望むこと-->
+                                    <div id="customerview-category" style="float:right;width:550px;">
+                                        <h2>
+                                            <span>
+                                                <a id="s5">
+                                                    ▼今後カーライフに望むこと
+                                                </a>
+                                                <a id="h5" style="display:none">
+                                                    ▲今後カーライフに望むこと
+                                                </a>
+                                            </span>
+                                        </h2>
+                                        <div id="s5_sh" style="display: none">
+                                        <div id="carlife-hope">
+                                            <form>
+                                                <table>
+                                                    <tr>
+                                                        <th>ニーズ</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="安全性能_特にSCBS" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="サイズ_荷室スペース" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="デザイン" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="乗り心地" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="運転のしやすさ（小回り）" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>6.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="値段" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>7.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>8.</th>
+                                                        <td colspan="4">
+                                                            <input type="text" value="" style="width:370px;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>お客様の動向</th>
+                                                        <td colspan="2">
+                                                            <input type="radio" checked="checked" style="width:20px;"/>継続サービス
+                                                            <input type="radio" style="width:20px;margin-left:30px;" />車販：コンタクト予定日
+                                                            <input type="text" value="2014/6/20" style="width: 80px" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th></th>
+                                                        <td colspan="4">
+                                                            <textarea style="height:150px; width:370px;"></textarea>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="t2_tc" class="content_wrap" style="height: 550px">
+                    <div>
+                        <table>
+                            <tr valign="top">
+                                <td>
+                                    <div style="float:left; width:580px;">
+                                    <!--ターゲティングリスト-->
+                                    <h2>
+                                        <span>
+                                            <a id="s6" style="display:none">
+                                                ▼マツダとのつながり状況（車、商品）
+                                            </a>
+                                            <a id="h6">
+                                                ▲マツダとのつながり状況（車、商品）
+                                            </a>
+                                        </span>
+                                    </h2>
+                                    <div id="s6_sh">
+                                        <table>
+                                            <tr>
+                                                <th width="90px" align="right">つながりの強さ</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select1" style="width:100px;">
+                                                        <option selected="selected">ＸＸＸＸＸＸ</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <td colspan="2"></td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">併有車</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select4" style="width:100px;">
+                                                        <option selected="selected"></option>
+                                                        <option>なし</option>
+                                                    </select>
+                                                </td>
+                                                <td colspan="2">
+                                                    <select name="" id="Select11" style="width:120px;">
+                                                        <option selected="selected">▼保有車を選択</option>
+                                                        <option>なし</option>
+                                                    </select>
+                                                    <button type="button" id="button8" value="code" class="customerviewgrid_button" style="height: auto; width: 50px;">保存</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th align="right">車種</th>
+                                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                                    <table class="ms-crm-Lookup" id="Table1" style="width: 120px;
+                                                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                                                        style="width: 120px;">
+                                                                        <li style="display: inline; white-space: nowrap;">
+                                                                            <span 
+                                                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img5" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                                                <span class="ms-crm-LookupItem-Name" wrapper="true">CX-5</span>
+                                                                            </span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text3"
+                                                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                                                        ime-mode="auto">
+                                                                </td>
+                                                                <td class="Lookup_RenderButton_td" style="width: 18px;">
+                                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                                        id="Img1" style="-ms-ime-mode: auto;" 
+                                                                        src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                                        lookuptypes="1" forcesubmit="false">
+                                                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <th width="90px" align="right">登録番号</th>
+                                                <td width="100px">
+                                                   <input type="text" value="尾張子" style="width: 100px" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">型式</th>
+                                                <td width="100px">
+                                                   <input type="text" value="DBA-XX5XX" style="width: 100px" />
+                                                </td>
+                                                <th width="90px" align="right">排気量</th>
+                                                <td width="200px">
+                                                   <input type="text" value="2,488" style="width: 100px" /><label>CC</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">車両区分</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select5" style="width:100px;">
+                                                        <option selected="selected">新車</option>
+                                                        <option>中古車</option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <th align="right">グレード</th>
+                                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                                    <table class="ms-crm-Lookup" id="Table2" style="width: 120px;
+                                                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                                                        style="width: 120px;">
+                                                                        <li style="display: inline; white-space: nowrap;">
+                                                                            <span 
+                                                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img2" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                                                <span class="ms-crm-LookupItem-Name" wrapper="true">XDXXXXX</span>
+                                                                            </span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text1"
+                                                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                                                        ime-mode="auto">
+                                                                </td>
+                                                                <td class="Lookup_RenderButton_td" style="width: 18px;">
+                                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                                        id="Img3" style="-ms-ime-mode: auto;" 
+                                                                        src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                                        lookuptypes="1" forcesubmit="false">
+                                                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th align="right">単体色</th>
+                                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                                    <table class="ms-crm-Lookup" id="Table4" style="width: 120px;
+                                                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                                                        style="width: 120px;">
+                                                                        <li style="display: inline; white-space: nowrap;">
+                                                                            <span 
+                                                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img4" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                                                <span class="ms-crm-LookupItem-Name" wrapper="true">ソウルレッド</span>
+                                                                            </span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text2"
+                                                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                                                        ime-mode="auto">
+                                                                </td>
+                                                                <td class="Lookup_RenderButton_td" style="width: 18px;">
+                                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                                        id="Img7" style="-ms-ime-mode: auto;" 
+                                                                        src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                                        lookuptypes="1" forcesubmit="false">
+                                                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <th align="right">内装</th>
+                                                <td style="overflow: hidden;" formxmlcolspan="1">
+                                                    <table class="ms-crm-Lookup" id="Table5" style="width: 120px;
+                                                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                                                        style="width: 120px;">
+                                                                        <li style="display: inline; white-space: nowrap;">
+                                                                            <span 
+                                                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img8" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                                                <span class="ms-crm-LookupItem-Name" wrapper="true">ブラックレザー</span>
+                                                                            </span>
+                                                                        </li>
+                                                                    </div>
+                                                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text4"
+                                                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                                                        ime-mode="auto">
+                                                                </td>
+                                                                <td class="Lookup_RenderButton_td" style="width: 18px;">
+                                                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                                        id="Img9" style="-ms-ime-mode: auto;" 
+                                                                        src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                                        lookuptypes="1" forcesubmit="false">
+                                                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">エンジン</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select6" style="width:100px;">
+                                                        <option selected="selected">ＤＥ</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <th width="90px" align="right">ミッション</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select7" style="width:100px;">
+                                                        <option selected="selected">6ＡＴ</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">ご契約日</th>
+                                                <td width="200px">
+                                                   <input type="text" value="2013/3/3" style="width: 100px" />
+                                                </td>
+                                                <th width="90px" align="right">納車日</th>
+                                                <td width="200px">
+                                                   <input type="text" value="2013/3/3" style="width: 100px" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">前回入庫日</th>
+                                                <td width="200px">
+                                                   <input type="text" value="2013/3/3" style="width: 100px" />
+                                                </td>
+                                                <th width="90px" align="right">曜日</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select8" style="width:100px;">
+                                                        <option selected="selected">土</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">前回入庫種別</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select9" style="width:100px;">
+                                                        <option selected="selected">車検</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                                <th width="90px" align="right">購入形態</th>
+                                                <td width="100px">
+                                                    <select name="" id="Select10" style="width:100px;">
+                                                        <option selected="selected">クレジット</option>
+                                                        <option></option>
+                                                        <option></option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px" align="right">特記事項</th>
+                                                <td width="100px" colspan="3">
+                                                    <input type="text" value="注文書"  style="width:350px;"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th width="90px">加入商品</th>
+                                                <td colspan="3" align="right">
+                                                <button type="button" id="button4" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; margin-right: 70px; float: right">削除</button>
+                                                <button type="button" id="button5" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; float: right">編集</button>
+                                                <button type="button" id="button3" value="code" class="customerviewgrid_button" style="height: auto; width: 50px; float: right">追加</button>
+                                            </tr>
+                                        </table>
+                                        <div style="overflow-y:scroll; height: 120px; width: 530px;">
+                                        <table id="customerviewgrid" style="margin-left: 10px;">
+                                            <tr>
+                                                <th style="width:30px;"></th>
+                                                <th style="width:50px;"></th>
+                                                <th style="width:50px;">満了日</th>
+                                                <th style="width:50px;">クレジット残高</th>
+                                                <th style="width:50px;">売掛金残高</th>
+                                                <th style="width:50px;">ステータス</th>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">サービス商品</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">2000円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">保険</td>
+                                                <td style="width:50px;">2014/4/4</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">クレジット</td>
+                                                <td style="width:50px;">2014/5/5</td>
+                                                <td style="width:50px;">1,200,000円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:30px;">
+                                                    <input type="checkbox" style="width:30px;" />
+                                                </td>
+                                                <td style="width:50px;">延長保証</td>
+                                                <td style="width:50px;">2014/6/6</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;">0円</td>
+                                                <td style="width:50px;"></td>
+                                            </tr>
+                                        </table>
+                                        </div>
+                                    </div>
+                                 </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

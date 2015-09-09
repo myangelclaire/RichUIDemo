@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+<!--    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <!--CSS-->
+    <link href="../CSS/theme2.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls3.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global2.css" rel="stylesheet" type="text/css" />
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="../JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="../JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="../JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+
+</head>
+<body style="width: 1000px; height: 350px;">
+    <div id="quote-optionlist" style="height: 30px;">
+        <ul>
+            <li style="height:30px;">
+                <span>■中古車在庫選択</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="quotation-detail" style="height:30px;">
+        <form>
+            <table>
+                <tr>
+                    <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">中古車ナンバー</th>
+                    <td style="font-size: 18px;font-weight:bold; text-align: center; width: 100px;">
+                        <a style="text-decoration: underline">XXXXXXXX</a>
+                    </td>
+                    <th style="font-size: 18px;font-weight:bold; text-align: center; width: 150px;">販売価格</th>
+                    <td style="font-size: 18px;font-weight:bold; text-align: center; width: 100px;">
+                        <label>199.9</label>万円
+                    </td>
+                    <td>
+                        <input class="blue_btn_class" type="button" value="検索" style="width:120px;" />
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div id="old-car-area">
+        <table class="oldcarselect">
+            <tr>
+                <th>
+                    <span>銘柄</span>
+                </th>
+                <td>
+                    <span>マッダ</span>
+                </td>
+                <th>
+                    <span>車名</span>
+                </th>
+                <td>
+                    <span>アテンザセダン</span>
+                </td>
+                <th>
+                    <span>グレード名</span>
+                </th>
+                <td>
+                    <span>20Ｓ</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span>年式</span>
+                </th>
+                <td>
+                    <span>2013(H25)年式</span>
+                </td>
+                <th>
+                    <span>走行距離</span>
+                </th>
+                <td>
+                    <span>0.5万km</span>
+                </td>
+                <th>
+                    <span>車検</span>
+                </th>
+                <td>
+                    <span>2016年1月</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span>排気量</span>
+                </th>
+                <td>
+                    <span>2,000cc</span>
+                </td>
+                <th>
+                    <span>ミッション</span>
+                </th>
+                <td>
+                    <span>6EC-AT</span>
+                </td>
+                <th>
+                    <span>ボディカラー</span>
+                </th>
+                <td>
+                    <span>トウルーレッド</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span>修理歴</span>
+                </th>
+                <td>
+                    <span>あり</span>
+                </td>
+                <th>
+                    <span>認定U-Car</span>
+                </th>
+                <td>
+                    <span>○</span>
+                </td>
+                <th>
+                    <span>ボディタイプ</span>
+                </th>
+                <td>
+                    <span>セダン</span>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span>新車保証継承</span>
+                </th>
+                <td>
+                    <select style="width:190px;">
+                        <option>する</option>
+                        <option>しない</option>
+                    </select>
+                </td>
+                <td>
+                    <span style="font-weight: bolder">特別：</span>
+                    <span>期間</span>
+                    <input type="text" value="3" style="width: 50px" />年
+                </td>
+                <td colspan="3">
+                    <span>走行距離</span>
+                    <input type="text" value="10" style="width: 50px" />万km
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+                <td>
+                    <span style="font-weight: bolder">一般：</span>
+                    <span>期間</span>
+                    <input type="text" value="1" style="width: 50px" />年
+                </td>
+                <td colspan="3">
+                    <span>走行距離</span>
+                    <input type="text" value="6" style="width: 50px" />万km
+                </td>
+            </tr>
+            <tr>
+                <th>中古車保証</th>
+                <td style="overflow: hidden;" formxmlcolspan="1" width="130px" valign="top">
+                    <table class="ms-crm-Lookup" id="Table3" style="width: 130px;
+                        table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                        <tbody>
+                            <tr>
+                                <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                    <div tabindex="-1" class="ms-crm-Lookup" role="list" ime-mode="auto" 
+                                        style="width: 190px; height: 25px;">
+                                        <li style="display: inline; white-space: nowrap;"
+                                                otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                            <span 
+                                                class="ms-crm-Lookup-Item" contenteditable="false" onclick=""
+                                                oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account">
+                                                <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="Img5" alt="" src="../_imgs/imagestrips/transparent_spacer.gif">
+                                                <span class="ms-crm-LookupItem-Name" wrapper="true">マツダクレジット</span>
+                                            </span>
+                                        </li>
+                                    </div>
+                                    <input tabindex="1" disabled="" class="ms-crm-Hidden-NoBehavior" id="Text3"
+                                        style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                        border-right-width: 0px; border-right-style: none;" type="text" maxlength="100"
+                                        ime-mode="auto">
+                                </td>
+                                <td class="Lookup_RenderButton_td" style="width: 25px;">
+                                    <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                        id="Img6" style="-ms-ime-mode: auto;" 
+                                        src="../_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                        req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                        isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                        disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                        lookupstyle="single" lookupbrowse="0" lookuptypeicons="../_imgs/ico_16_1.gif?ver=-210197509"
+                                        lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                        lookuptypes="1" forcesubmit="false">
+                                        <a tabindex="-1" onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td colspan="4">
+                    <span>期間</span>
+                    <input type="text" value="12" style="width: 50px" />ヶ月
+                    <input type="radio" name="radio1" style="margin-left: 10px;"/>無制限
+                    <input type="radio" name="radio1" style="margin-left: 30px;"/>制限あり：
+                    <span>走行距離</span>
+                    <input type="text" value="10" style="width: 50px" />千km
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span style="font-weight: bolder">定期点検整備</span>
+                </th>
+                <td colspan="5">
+                    <input type="radio" name="radio2" />実施済み
+                    <input type="radio" name="radio2" style="margin-left: 30px;"/>納車時実施：価格に整備費用を
+                    <select style="width:80px;">
+                        <option>含む</option>
+                        <option>不含</option>
+                    </select>
+                    <input type="radio" name="radio2" style="margin-left: 30px;"/>なし：要点検整備箇所
+                    <select style="width:80px;">
+                        <option>あり</option>
+                        <option>なし</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <span>納車予定日</span>
+                </th>
+                <td>
+                    <input type="text" value="2016年1月15日"/>
+                </td>
+                <th>
+                    <span>販売時走行距離</span>
+                </th>
+                <td>
+                    <input type="text" value="50,000"/>
+                </td>
+                <th>
+                    <span>在庫拠点</span>
+                </th>
+                <td>
+                    <span>東京店</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

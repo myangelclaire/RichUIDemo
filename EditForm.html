@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+    <!--title-->
+    <title>Microsoft Dynamics CRM</title>
+    <!--Meta-->
+    <meta content="IE=8.0000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="" ie="8">
+    <meta name="DownloadOptions" content="noopen">
+    <!--favicon-->
+    <link href="favicon.ico" rel="SHORTCUT ICON">
+    <!--CSS-->
+    <link href="CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <!--    
+    <link href="CSS/appgrid.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/CompositeControl.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/cui.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/menu.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/miniCal.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/nav.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/notectrl.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/notifications.css" rel="stylesheet" type="text/css" />
+    -->
+    <!-- Ms CRM2011が利用する Javascipt Lib  -->
+    <script src="JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="JavascriptCommon/jquery_ui_1.8.21.min.js" type="text/javascript"></script>
+    <!-- Ms Javascipt Lib  -->
+    <script src="JavascriptMzd/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="JavascriptCommon/Global.js" type="text/javascript"></script>
+    <!-- 当プロジェクト作成するJavascript Lib  -->
+    <script src="JavascriptMzd/TekiJsAccounting.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsTextBox.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsDateBox.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsTimeBox.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsCollapsibleTab.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="JavascriptMzd/TekiJsDisableControls.js" type="text/javascript"></script>
+</head>
+<body>
+    <form name="crmForm" class="ms-crm-Form" id="crmForm" formtype="2" setinitialfocus="true">
+    <div class="ms-crm-modalDialog" id="Dialog_new_datetimetestTimeselectPopup" style="border: 1px solid rgb(0, 0, 0);
+        width: 126px; height: 119px; display: none; position: absolute; z-index: 2035;"
+        rendering="false" displayed="true">
+    </div>
+    <div class="ms-crm-InlineTabContainer" id="crmFormTabContainer" isquickform="False">
+        <div class="ms-crm-InlineTab" id="tab0" isviewporttab="0">
+            <table class="ms-crm-InlineTabHeader ms-crm-InlineTabBorder" id="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}_Header"
+                cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td class="ms-crm-InlineTabHeaderExpander">
+                            <a tabindex="1000" href="#">
+                                <img title="Collapse this tab" class="ms-crm-InlineTabExpander ms-crm-ImageStrip-tab_down"
+                                    id="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}_Expander" alt="Collapse this tab"
+                                    src="_imgs/imagestrips/transparent_spacer.gif"></a>
+                        </td>
+                        <td class="ms-crm-InlineTabHeaderText">
+                            <a name="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}" tabindex="1001" class="ms-crm-InlineTabHeaderText"
+                                href="#">
+                                <h2 class="ms-crm-Form">
+                                    General</h2>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="ms-crm-InlineTabBody" cellspacing="0" cellpadding="0">
+                <colgroup>
+                    <col width="100%">
+                    <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="ms-crm-FormSection-Container">
+                                    <table height="1%" class="ms-crm-FormSection" id="{79f81ea5-c410-485b-b7a2-0c3ed52b58a5}"
+                                        style="table-layout: fixed;" cellspacing="0" cellpadding="3" columns="2" valign="top"
+                                        label="General" isviewportsection="0">
+                                        <colgroup>
+                                            <col width="115">
+                                            <col>
+                                            <col width="115">
+                                            <col>
+                                            <tbody>
+                                                <tr height="5">
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                    <td>
+                                                    </td>
+                                                </tr>
+                                                <!--Link Test-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="Td1">
+                                                        <label for="new_wholenumbertest">
+                                                            LinkTest</label>
+                                                    </td>
+                                                    <td id="Td2" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                        </div>
+                                                        <a href="http://www.w3c.org" style="text-decoration: underline; color: Blue">LinkTest1</a>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Button Test-->
+                                                <tr valign="top">
+                                                    <td title="Button Test" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_singlelinetexttest_c">
+                                                        <label for="new_singlelinetexttest">
+                                                            ButtonTest</label>
+                                                    </td>
+                                                    <td id="new_singlelinetexttest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container" id="new_singlelinetexttest_container">
+                                                            <!--<input class="ms-crm-Input" id="xxxx" type="button">-->
+                                                            <input type="button" class="ms-crm-Input" id="DisableBtn" value="DisableAll">
+                                                            <input type="button" class="ms-crm-Input" id="EnableBtn" value="EnableAll">
+                                                        </div>
+                                                    </td>
+                                                    <td class="FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Single Line Text Test-->
+                                                <tr valign="top">
+                                                    <td title="Name" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Required"
+                                                        id="new_name_c">
+                                                        <label for="new_name">
+                                                            Name
+                                                            <img class="ms-crm-ImageStrip-frm_required" alt="Required" src="_imgs/imagestrips/transparent_spacer.gif">
+                                                        </label>
+                                                    </td>
+                                                    <td id="new_name_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container" id="new_name_container">
+                                                            <input tabindex="1010" class="ms-crm-Input" id="new_name" style="-ms-ime-mode: auto;"
+                                                                type="text" maxlength="100" value="Test" attrformat="text" attrpriv="7" attrname="new_name"
+                                                                req="2">
+                                                        </div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--半角カナ変換 Test-->
+                                                <tr valign="top">
+                                                    <td title="Name" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Required"
+                                                        id="Td3">
+                                                        <label for="new_name">
+                                                            half-katakana Test
+                                                        </label>
+                                                    </td>
+                                                    <td id="Td4" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container" id="Div1">
+                                                            <input tabindex="1010" class="ms-crm-Input" id="Text1" style="-ms-ime-mode: auto;"
+                                                                type="text" maxlength="100" value="ｷｮｳｶﾗｵﾚﾊ" attrformat="text" attrpriv="7" attrname="new_name"
+                                                                imeextmod="half-katakana" req="2">
+                                                        </div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--英字大文字変換 Test-->
+                                                <tr valign="top">
+                                                    <td title="Name" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Required"
+                                                        id="Td5">
+                                                        <label for="new_name">
+                                                            en-upper-case Test
+                                                        </label>
+                                                    </td>
+                                                    <td id="Td6" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container" id="Div2">
+                                                            <input tabindex="1010" class="ms-crm-Input" id="Text2" style="-ms-ime-mode: auto;"
+                                                                type="text" maxlength="100" value="Test" attrformat="text" attrpriv="7" attrname="new_name"
+                                                                imeextmod="en-upper-case" req="2">
+                                                        </div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--lookup Test-->
+                                                <tr valign="top">
+                                                    <td title="LookupTestEntity" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_lookuptestentity_c">
+                                                        <label for="new_lookuptestentity">
+                                                            LookupTestEntity</label>
+                                                    </td>
+                                                    <td id="new_lookuptestentity_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table class="ms-crm-Lookup" id="new_lookuptestentity_lookupTable" style="width: 100%;
+                                                            table-layout: fixed;" cellspacing="0" cellpadding="0" lookupid="new_lookuptestentity">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td valign="top" style="padding-right: 1px; padding-left: 1px;">
+                                                                        <div tabindex="1031" class="ms-crm-Lookup" role="list" ime-mode="auto">
+                                                                            <ul style="width: 100%; text-align: left; float: left;">
+                                                                                <li style="display: inline; white-space: nowrap;"><span title="Fourth Coffee (sample)"
+                                                                                    class="ms-crm-Lookup-Item" contenteditable="false" onclick="openlui(new Sys.UI.DomEvent(event))"
+                                                                                    oncontextmenu="handleGridRightClick(new Sys.UI.DomEvent(event))" otypename="account"
+                                                                                    otype="1" oid="{C777C3B2-081D-E411-9104-8851FB6DA34D}">
+                                                                                    <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="ico_16_1" alt="" src="_imgs/imagestrips/transparent_spacer.gif">
+                                                                                    <span class="ms-crm-LookupItem-Name" wrapper="true">Fourth Coffee (sample)</span>
+                                                                                </span></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <input tabindex="1030" disabled="" class="ms-crm-Hidden-NoBehavior" id="new_lookuptestentity_ledit"
+                                                                            style="padding: 2px 0px 1px; height: 100%; border-right-color: currentColor;
+                                                                            border-right-width: 0px; border-right-style: none;" type="text" maxlength="1000"
+                                                                            ime-mode="auto">
+                                                                    </td>
+                                                                    <td class="Lookup_RenderButton_td" style="width: 21px;">
+                                                                        <img title="Click to select a value for LookupTestEntity." class="ms-crm-ImageStrip-btn_off_lookup ms-crm-Lookup"
+                                                                            id="new_lookuptestentity" style="-ms-ime-mode: auto;" alt="Click to select a value for LookupTestEntity."
+                                                                            src="_imgs/imagestrips/transparent_spacer.gif" attrpriv="7" attrname="new_lookuptestentity"
+                                                                            req="0" defaultviewid="{A9AF0AB8-861D-4CFA-92A5-C6281FED7FAB}" savedquerytype=""
+                                                                            isdisplayonly="false" resolveemailaddress="0" showproperty="1" disableviewpicker="0"
+                                                                            disablequickfind="0" disablemru="0" allowfilteroff="1" autoresolve="1" defaulttype="1"
+                                                                            lookupstyle="single" lookupbrowse="0" lookuptypeicons="_imgs/ico_16_1.gif?ver=-210197509"
+                                                                            lookuptypenames="account:1:Account" crmattributeid="{29085691-fc9d-43a4-852a-2322d318a7d9}"
+                                                                            lookuptypes="1" forcesubmit="false"><a tabindex="-1" title="Click to select a value for LookupTestEntity."
+                                                                                onclick="Mscrm.Utilities.click(previousSibling);" href="#"></a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--DateOnlyTest-->
+                                                <tr valign="top">
+                                                    <td title="DateOnlyTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_dateonlytest_c">
+                                                        <label for="new_dateonlytest">
+                                                            DateOnlyTest</label>
+                                                    </td>
+                                                    <td id="new_dateonlytest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table width="100%" class="ms-crm-DateTime" id="new_dateonlytest" style="table-layout: fixed;"
+                                                            cellspacing="0" cellpadding="0" attrformat="date" attrpriv="7" attrname="new_dateonlytest"
+                                                            req="0" cachevaluesonclient="false" initialallowtimeedit="true" initialalldaydisplaymode="false"
+                                                            initialdisableinit="false" initialallowblankdate="true" initialshowtime="true"
+                                                            format="date">
+                                                            <colgroup>
+                                                                <col>
+                                                                <col width="5">
+                                                                <col width="36">
+                                                                <col width="1">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container">
+                                                                            <input tabindex="1050" class="ms-crm-Input" id="Text3" style="-ms-ime-mode: auto;"
+                                                                                type="text" value=""><label for="DateInput"></label>
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="new_dateonlytestimg"
+                                                                                alt="Select date" src="_imgs/btn_off_Cal.gif">
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--DateTimeTest-->
+                                                <tr valign="top">
+                                                    <td title="DateTimeTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_datetimetest_c">
+                                                        <label for="new_datetimetest">
+                                                            DateTimeTest</label>
+                                                    </td>
+                                                    <td id="new_datetimetest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table width="100%" class="ms-crm-DateTime" id="new_datetimetest" style="table-layout: fixed;"
+                                                            cellspacing="0" cellpadding="0" attrformat="datetime" attrpriv="7" attrname="new_datetimetest"
+                                                            req="0" initialvalue="2014-08-06T00:30:00" cachevaluesonclient="false" initialallowtimeedit="true"
+                                                            initialalldaydisplaymode="false" initialdisableinit="false" initialallowblankdate="true"
+                                                            initialshowtime="true" format="datetime">
+                                                            <colgroup>
+                                                                <col>
+                                                                <col width="5">
+                                                                <col width="36">
+                                                                <col width="1">
+                                                                <col>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="DateTimeUI_RenderDateControl_td ms-crm-Input-Container">
+                                                                            <input tabindex="1040" class="ms-crm-Input" id="DateInput" name="DateInput" style="-ms-ime-mode: auto;"
+                                                                                type="text" value="2014/08/06"><label for="DateInput"></label>
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img title="Select date" class="ms-crm-DateTime ms-crm-ImageStrip-btn_off_cal" id="new_datetimetestimg"
+                                                                                alt="Select date" src="_imgs/btn_off_Cal.gif"><div id="new_datetimetestCalContainer"
+                                                                                    style="width: 0px; height: 0px; line-height: 0px; display: inline; position: relative;">
+                                                                                </div>
+                                                                        </td>
+                                                                        <td>
+                                                                        </td>
+                                                                        <td class="DateTimeUI_RenderTimeControl_td2">
+                                                                            <div>
+                                                                                <label class="ms-crm-Hidden" for="time">
+                                                                                    Select a time</label>
+                                                                                <span class="ms-crm-SelectBox" id="new_datetimetestTime" allowvalueedit="true" value="12:30 AM"
+                                                                                    tabbingindex="1040" defaultimemode="auto" dropdownfontsize="11" defaultbgcolor=""
+                                                                                    buttontitle="Select a time" name="new_datetimetestTimeInput">
+                                                                                    <table id="selectTable" style="width: 100%; table-layout: fixed;" cellspacing="0"
+                                                                                        cellpadding="0">
+                                                                                        <colgroup>
+                                                                                            <col>
+                                                                                            <col width="18">
+                                                                                        </colgroup>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td class="ms-crm-Select-Input-Container">
+                                                                                                    <input tabindex="1040" class="ms-crm-SelectBox" id="new_datetimetestTimeInput" style=""
+                                                                                                        contenteditable="true" req="0" crmtype="sel" lastvalue="12:30 AM" returnvalue="12:30 AM"
+                                                                                                        defaultvalue="12:30 AM" olddisplayvalue="12:30 AM" rownum="1" timecontrol="true">
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <img title="Select a time" class="select_htc_img_selectOff" alt="Select a time" src="_imgs/selectOff.gif"
+                                                                                                        alight="absmiddle">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </span>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Radio Button Test-->
+                                                <tr valign="top">
+                                                    <td title="TwoOptionsTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_twooptionstest_c">
+                                                        <label for="new_twooptionstest">
+                                                            TwoOptionsTest</label>
+                                                    </td>
+                                                    <td id="new_twooptionstest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <fieldset class="ms-crm-radio-fieldset">
+                                                            <legend class="ms-crm-radio-fieldset">TwoOptionsTest</legend>
+                                                            <div class="ms-crm-RadioButton" id="new_twooptionstest" style="-ms-ime-mode: auto;"
+                                                                attrpriv="7" attrname="new_twooptionstest" req="0" atype="Boolean">
+                                                                <label style="top: -200px; position: absolute;" for="rad_new_twooptionstest1">
+                                                                    TwoOptionsTest No
+                                                                </label>
+                                                                <label style="top: -200px; position: absolute;" for="rad_new_twooptionstest2">
+                                                                    TwoOptionsTest Yes
+                                                                </label>
+                                                                <table>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input name="rad_new_twooptionstest" tabindex="1050" class="ms-crm-RadioButton" id="rad_new_twooptionstest1"
+                                                                                    style="margin-left: 0px;" type="radio" value="0"><label for="rad_new_twooptionstest1">No</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input name="rad_new_twooptionstest" tabindex="1050" class="ms-crm-RadioButton" id="rad_new_twooptionstest2"
+                                                                                    type="radio" value="1"><label for="rad_new_twooptionstest2">Yes</label>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </fieldset>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Floating Point Number Test-->
+                                                <tr valign="top">
+                                                    <td title="FloatingPointNumberTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_floatingpointnumbertest_c">
+                                                        <label for="new_floatingpointnumbertest">
+                                                            FloatingPointNumberTest</label>
+                                                    </td>
+                                                    <td id="new_floatingpointnumbertest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1060" class="ms-crm-Number ms-crm-Input" id="new_floatingpointnumbertest"
+                                                                style="-ms-ime-mode: auto;" type="text" min="0.00" max="1000000000.00" attrpriv="7"
+                                                                attrname="new_floatingpointnumbertest" req="0" dt="float" acc="2"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Whole Number Test-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_wholenumbertest_c">
+                                                        <label for="new_wholenumbertest">
+                                                            WholeNumberTest</label>
+                                                    </td>
+                                                    <td id="new_wholenumbertest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1070" class="ms-crm-Number ms-crm-Input" id="new_wholenumbertest"
+                                                                style="-ms-ime-mode: auto;" type="text" min="-2147483648" max="2147483647" attrpriv="7"
+                                                                attrname="new_wholenumbertest" req="0" dt="int" acc="0" blockformsubmit="true"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--Decimal Number Test-->
+                                                <tr valign="top">
+                                                    <td title="DecimalNumberTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_decimalnumbertest_c">
+                                                        <label for="new_decimalnumbertest">
+                                                            DecimalNumberTest</label>
+                                                    </td>
+                                                    <td id="new_decimalnumbertest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container">
+                                                            <input tabindex="1100" class="ms-crm-Number ms-crm-Input" id="new_decimalnumbertest"
+                                                                style="-ms-ime-mode: auto;" type="text" min="0.00" max="1000000000.00" attrpriv="7"
+                                                                attrname="new_decimalnumbertest" req="0" dt="decimal" acc="2"></div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--List Box Test-->
+                                                <tr valign="top">
+                                                    <td title="ListBoxTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_listboxtest_c">
+                                                        <label for="new_listboxtest">
+                                                            ListBoxTest</label>
+                                                    </td>
+                                                    <td id="new_listboxtest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <select name="new_listboxtest" tabindex="1110" class="ms-crm-SelectBox" id="new_listboxtest"
+                                                            style="-ms-ime-mode: auto;" attrpriv="7" attrname="new_listboxtest" req="0" defaultselected="">
+                                                            <option title="" selected="selected" value=""></option>
+                                                            <option title="ItemA" value="0">ItemA</option>
+                                                            <option title="ItemB" value="1">ItemB</option>
+                                                            <option title="ItemC" value="2">ItemC</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--check box-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_checkboxtest_c">
+                                                        <label for="new_checkboxtest">
+                                                            CheckBoxTest</label>
+                                                    </td>
+                                                    <td id="new_checkboxtest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <input tabindex="1120" class="ms-crm-CheckBox" id="new_checkboxtest" type="checkbox"
+                                                            attrpriv="7" attrname="new_checkboxtest" req="0">
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td style="overflow: hidden;" formxmlcolspan="1">
+                                                    </td>
+                                                </tr>
+                                                <!--CurrencyPriceTest-->
+                                                <tr valign="top">
+                                                    <td title="CurrencyPriceTest" class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_currencypricetest_c">
+                                                        <label for="new_currencypricetest">
+                                                            CurrencyPriceTest</label>
+                                                    </td>
+                                                    <td id="new_currencypricetest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table width="100%" class="ms-crm-Money" id="new_currencypricetest_table" style="background-color: rgb(255, 255, 255);"
+                                                            dir="ltr" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="ms-crm-Money-CurrencySymbol">
+                                                                        <span tabindex="-1" title="Currency" class="ms-crm-Money-CurrencySymbol" id="new_currencypricetest_sym">
+                                                                            ¥</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="ms-crm-Input-Container">
+                                                                            <input tabindex="1110" class="ms-crm-Money ms-crm-Input" id="new_currencypricetest"
+                                                                                style="-ms-ime-mode: auto;" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                                                                value="123.00" attrpriv="7" attrname="new_currencypricetest" req="0" dt="money"
+                                                                                acc="2" presrc="1" isbasecur="0"></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--CurrencyCurencyTest-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_currencycurencytest_c">
+                                                        <label for="new_currencycurencytest">
+                                                            CurrencyCurencyTest</label>
+                                                    </td>
+                                                    <td id="new_currencycurencytest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table width="100%" class="ms-crm-Money" id="new_currencycurencytest_table" style="background-color: rgb(255, 255, 255);"
+                                                            dir="ltr" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="ms-crm-Money-CurrencySymbol">
+                                                                        <span tabindex="-1" title="Currency" class="ms-crm-Money-CurrencySymbol" id="new_currencycurencytest_sym">
+                                                                            ¥</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="ms-crm-Input-Container">
+                                                                            <input tabindex="1120" class="ms-crm-Money ms-crm-Input" id="new_currencycurencytest"
+                                                                                style="-ms-ime-mode: auto;" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                                                                value="456.00" attrpriv="7" attrname="new_currencycurencytest" req="0" dt="money"
+                                                                                acc="2" presrc="2" isbasecur="0"></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--CurrencyCustomTest-->
+                                                <tr valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_currencycustomtest_c">
+                                                        <label for="new_currencycustomtest">
+                                                            CurrencyCustomTest</label>
+                                                    </td>
+                                                    <td id="new_currencycustomtest_d" style="overflow: hidden;" formxmlcolspan="1">
+                                                        <table width="100%" class="ms-crm-Money" id="new_currencycustomtest_table" style="background-color: rgb(255, 255, 255);"
+                                                            dir="ltr" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="ms-crm-Money-CurrencySymbol">
+                                                                        <span tabindex="-1" title="Currency" class="ms-crm-Money-CurrencySymbol" id="new_currencycustomtest_sym">
+                                                                            ¥</span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="ms-crm-Input-Container">
+                                                                            <input tabindex="1130" class="ms-crm-Money ms-crm-Input" id="new_currencycustomtest"
+                                                                                style="-ms-ime-mode: auto;" contenteditable="true" type="text" min="0.00" max="1000000000.00"
+                                                                                value="789,456.0000" attrpriv="7" attrname="new_currencycustomtest" req="0" dt="money"
+                                                                                acc="4" presrc="0" isbasecur="0"></div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!--mutiple text area-->
+                                                <tr height="25" valign="top">
+                                                    <td class="ms-crm-FieldLabel-LeftAlign  FormSection_CellPadding ms-crm-Field-Normal"
+                                                        id="new_mutilinetexttest_c" rowspan="5">
+                                                        <label for="new_mutilinetexttest">
+                                                            MutiLineTextTest</label>
+                                                    </td>
+                                                    <td id="new_mutilinetexttest_d" style="height: 133px; overflow: hidden;" rowspan="5"
+                                                        formxmlcolspan="1">
+                                                        <div class="ms-crm-Input-Container " id="new_mutilinetexttest_container" style="height: 99%;">
+                                                            <textarea tabindex="1130" class="ms-crm-Input " id="new_mutilinetexttest" style="height: 99%;
+                                                                position: relative; top: 0px; left: 0px;" maxlength="5" attrpriv="7" attrname="new_mutilinetexttest"
+                                                                req="0"></textarea>
+                                                        </div>
+                                                    </td>
+                                                    <td class=" FormSection_CellPadding" style="overflow: hidden;" colspan="2" formxmlcolspan="1">
+                                                        <div class="ms-crm-FieldLabel-LeftAlign ms-crm-Field-Normal" style="display: none;"
+                                                            sl="false">
+                                                            <label>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td style="overflow: hidden;" formxmlcolspan="1">
+                                                            <iframe id="myIframe" src="TekiiframePage.htm" width="200px" height="133px"></iframe>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>入庫予約管理表（日別）</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        input {width:auto;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            { okeyaku: "小＊＊＊＊＊", kurumaname: "MPV", no: "7847", kbn: "車検", syaryouST: "入庫済", tenpyouST: "仮見積済 ", nyukokeitai: "自宅引取", yoteidate: "01/13",
+                              kurumakeitai: "対象外",kurumayoteidate: "03/13",dai: "無",honka: "",bunnouki: "2010/01/15",gaityounouki: "2010/01/15",iraiuketukeNo: "",uketukeenter: "小＊ 林＊",sakenter: "M＊PAT",
+                              karyuenter: "高＊菜＊ ",kotakuto: "",syuden: "",uketukeNo: "1310010329",yoteih: "1.23",saikyuno: "小＊＊＊＊＊",uketukekyute: "湯＊＊",nyuryukukyute: "湯＊＊",nyuryukuenter: "小林　優美",updenter: "小林　優美" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" },
+                            { okeyaku: "", kurumaname: "", no: "", kbn: "", syaryouST: "", tenpyouST: "", nyukokeitai: "", yoteidate: "",kurumakeitai: "",kurumayoteidate: "",dai: "",honka: "",bunnouki: "",gaityounouki: "",iraiuketukeNo: "",uketukeenter: "",sakenter: "",karyuenter: "",kotakuto: "",syuden: "",uketukeNo: "",yoteih: "",saikyuno: "＊",uketukekyute: "",nyuryukukyute: "",nyuryukuenter: "",updenter: "" }
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 368,
+                width: 892,
+                shrinkToFit: false,
+                colNames: ['お客様', '車種名', '登No', '区分', '車両ST', '伝票ST', '入庫形態', '入庫予定日時', '納車形態', '納車予定日時', '代', '保管', '部品納期', '外注納期', '依頼元受付No'
+                			, '受付担当', '作業担当', '管理担当', 'コンタクト', '手段', '受付No', '作予定h', '請求先', '受付拠点', '入力拠点', '入力担当', '更新担当'],
+                colModel: [
+               		        { name: 'okeyaku', index: 'okeyaku', width: 87, frozen: true },
+                            { name: 'kurumaname', index: 'kurumaname', width: 87, frozen: true },
+               		        { name: 'no', index: 'no', width: 49, frozen: true },
+                            { name: 'kbn', index: 'kbn', width: 39, frozen: true },
+                            { name: 'syaryouST', index: 'syaryouST', width: 54 },
+                            { name: 'tenpyouST', index: 'tenpyouST', width: 56},
+                            { name: 'nyukokeitai', index: 'nyukokeitai', width: 60 },
+                            { name: 'yoteidate', index: 'yoteidate', width: 80 },
+                            { name: 'kurumakeitai', index: 'kurumakeitai', width: 55 },
+                            { name: 'kurumayoteidate', index: 'kurumayoteidate', width: 85 },
+                            { name: 'dai', index: 'dai', width: 34},
+                            { name: 'honka', index: 'honka', width: 35 },
+                            { name: 'bunnouki', index: 'bunnouki', width: 82 },
+                            { name: 'gaityounouki', index: 'gaityounouki', width: 82 },
+                            { name: 'iraiuketukeNo', index: 'iraiuketukeNo', width: 80 },
+                            { name: 'uketukeenter', index: 'uketukeenter', width: 70 },
+                            { name: 'sakenter', index: 'sakenter', width: 70 },
+                            { name: 'karyuenter', index: 'karyuenter', width: 70 },
+                            { name: 'kotakuto', index: 'kotakuto', width: 80 },
+                            { name: 'syuden', index: 'syuden', width: 45 },
+                            { name: 'uketukeNo', index: 'uketukeNo', width: 80 },
+                            { name: 'yoteih', index: 'yoteih', width: 50 ,align: "right" },
+                            { name: 'saikyuno', index: 'saikyuno', width: 120 },
+                            { name: 'uketukekyute', index: 'uketukekyute', width: 80 },
+                            { name: 'nyuryukukyute', index: 'nyuryukukyute', width: 80 },
+                            { name: 'nyuryukuenter', index: 'nyuryukuenter', width: 80 },
+                            { name: 'updenter', index: 'updenter', width: 80 },
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                pgbuttons: true
+            });
+            jQuery("#list47").jqGrid('setFrozenColumns');
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:10px;">
+            <button id="Button2" type="button" style=" height:35px; width:60px; margin-right:0px;">F1<br />終了</button>
+            <button id="Button3" type="button" style=" height:35px; width:60px; margin-right:0px;">F9<br />実行</button>
+            <button id="Button4" type="button" style=" height:35px; width:60px; margin-right:0px;">F11<br />顧客検索</button>
+            <button id="Button5" type="button" style=" height:35px; width:60px; margin-right:0px;">F12<br />最新表示</button>
+            <button id="Button6" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+1<br />表示切替</button>
+            <button id="Button7" type="button" style=" height:35px; width:63px; margin-right:0px;">Ctrl+2<br />車ST変更</button>
+            <button id="Button8" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+3<br />作業予実</button>
+            <button id="Button9" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+4<br />並べ替え</button>
+            <button id="Button10" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+5<br />予定確認</button>
+            <button id="Button11" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+6<br />削除</button>
+            <button id="Button12" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+7<br />他拠点</button>
+            <button id="Button13" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+8<br />新車架装</button>
+            <button id="Button14" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+9<br />印刷</button>
+            <button id="Button15" type="button" style=" height:35px; width:60px; margin-right:0px;">Ctrl+0<br />受付台帳</button><br/><br/>
+            <button id="Button1" type="button" style=" height:35px; margin-left:750px;">消耗品印刷</button>
+        </div>
+        <div style="margin-top:-35px; margin-left:3px; margin-bottom:5px;">
+            <label style="margin-left:50px; background-color: #ffffcc; font-size:larger; font-style:inherit">対象年月日</label>
+            <input type="text" value="2010/04/14" style="width:60px; margin-left:0px; text-align:center"/>
+            <input type="text" value="水曜日" style="width:50px; margin-left:0px; text-align:center" disabled="disabled"/>
+            <input type="text" value="全て" style="width:100px; margin-left:200px; text-align:center" disabled="disabled"/></label><br/>
+            <label style="margin-left:50px; background-color: #add8e6; padding: 1px 20px; font-size:larger; font-style:inherit">拠点</label>
+            <input type="text" value="131" style="width:30px; margin-left:0px; text-align:center" disabled="disabled"/>
+            <input type="text" value="効率店" style="width:80px; margin-left:0px; text-align:left" disabled="disabled"/>
+        </div>
+        <div style="margin-top:5px; margin-left:1px; height:20px;">
+            <table id="list47"></table>
+        </div>
+    </div>
+</body>
+</html>

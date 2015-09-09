@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/app/tabchange.js"></script>
+    <title>UI MOC メニュー</title>
+
+    <link rel="stylesheet" type="text/css" href="/Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/MainMenu.css" />
+
+</head>
+<body>
+    <div>
+        <!--SFA-->
+        <h1 style="margin-bottom:10px;">UI MOC メニュー</h1>
+
+        <div id="mainmenu" style="float:left; padding-left:100px;">
+            <h2>SFA</h2>
+
+            <!--<h3>共通</h3>-->
+            <h4><a href="Communication_Board.html">コミュニケーションボード</a></h4>
+            <h4><a href="OpportunityAlart.html">商談アラート</a></h4>
+
+            <h3>来店</h3>
+            <h4><a href="Appointment/Appointment_List.html">お客様情報検索&予定一覧＆来店者一覧</a></h4>
+            <h4><a href="MessageWindow/Appointment/SearchResult.html" onclick="window.open('MessageWindow/Appointment/SearchResult.html', '', 'width=640,height=250'); return false;">検索結果メッセージ</a></h4>
+            <h4><a href="MessageWindow/Appointment/ChangeStatus.html" onclick="window.open('MessageWindow/Appointment/ChangeStatus.html', '', 'width=640,height=250'); return false;">状況変更メッセージ</a></h4>
+            <h4><a href="Appointment/Welcom_Board.html">ウェルカムボード</a></h4>
+
+            <h3>アンケート</h3>
+            <h4><a href="Questionnaire/Questionnaire_entry.html">アンケート登録画面</a></h4>
+
+            <h3>試乗</h3>
+            <h4><a href="TestDrive/TestDrive_TestCarList.html">試乗車一覧</a></h4>
+            <h4><a href="TestDrive/TestDrive_Course.html">試乗コース選択</a></h4>
+            <h4><a href="TestDrive/TestDrive_Evaluation.html">試乗評価</a></h4>
+
+            <h3>見積</h3>
+            <h4><a href="ProposedProducts/Quotation.html">見積画面（個人）</a></h4>
+            <h4><a href="ProposedProducts/Quotation2.html">見積画面（法人）</a></h4>
+            <h4><a href="ProposedProducts/Grade_Comparison.html">グレード比較</a></h4>
+            <h4><a href="ProposedProducts/ShopOption_List.html">ショップオプション一覧画面</a></h4>
+            <h4><a href="ProposedProducts/MandatoryShopOption_List.html">必須ショップオプション一覧画面</a></h4>
+            <h4><a href="ProposedProducts/ShopOption_DirectEntry.html" onclick="window.open('ProposedProducts/ShopOption_DirectEntry.html', '', 'width=640,height=340'); return false;">ショップオプション直接入力画面</a></h4>
+            <h4><a href="ProposedProducts/AssesmentCar_Choice.html">査定情報選択画面</a></h4>
+            <h4><a href="ProposedProducts/Expenses_Detail1.html">諸費用明細－税金・保険－</a></h4>
+            <h4><a href="ProposedProducts/Expenses_Detail2.html">諸費用明細－販売諸費用－</a></h4>
+            <h4><a href="ProposedProducts/Expenses_Detail3.html">諸費用明細－預り法定費用－</a></h4>
+            <h4><a href="ProposedProducts/Expenses_Detail4.html">諸費用明細－その他－</a></h4>
+            <h3>査定</h3>
+            <h4><a href="MessageWindow/Assessment/AssesmentType_choice.html" onclick="window.open('MessageWindow/Assessment/AssesmentType_choice.html', '', 'width=520,height=250'); return false;">査定方法選択</a></h4>
+        </div>
+
+        <!--MKT-->
+        <div id="mainmenu" style=" padding-left:100px;margin-right:400px; float:right">
+            <h2>MKT</h2>
+            <h3>お客様ビュー</h3>
+            <h4><a href="Marketing/Customer_View.html">お客様ビュー</a></h4>
+            <h3>ターゲティングリスト</h3>
+            <h4><a href="Marketing/Targeting_List.html">ターゲティングリスト</a></h4>
+            <br />
+
+            <h2>STM</h2>
+            <h3>ログシート</h3>
+            <h4><a href="StoreManagement/LogSheet_twoline.html">ログシート</a></h4>
+            <h4><a href="StoreManagement/LogSheet_twoline_related.html">ログシート（関連ログ検索）</a></h4>
+
+            <h3>受注登録納車回収管理表</h3>
+            <h4><a href="StoreManagement/AfterOrder_StatusConfirmation_multipleline.html">受注登録納車回収管理表</a></h4>
+            <h4><a href="StoreManagement/AfterOrder_StatusConfirmation.html">受注ー納車状況表(店舗用)</a></h4>
+
+            <h2>CST</h2>
+            <h3>お客様検索</h3>
+            <h4><a href="CustomerDB/CustomerSearch_Screen.html">お客様検索画面</a></h4>
+
+        </div>
+    </div>
+</body>
+
+</html>

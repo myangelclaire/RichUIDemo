@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/tabchange.js"></script>
+    <script src="/Scripts/dialog.js"></script>
+
+    <title>諸費用詳細画面</title>
+
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+
+    <style>
+    </style>
+
+</head>
+<body style="width: 1000px; height: 600px; margin-top:20px">
+        <!--諸費用明細-->
+            <div id="quotation-category" style="height:40px;">
+                <h2>■諸費用詳細　　－税金・保険－
+                    <span>
+                        <input type="submit" value="確定" class="quotation_button" style="height:25px; width:100px; float:right" />
+                        <input type="submit" value="削除" class="quotation_button" style="height:25px; width:100px; float:right" />
+                        <input type="submit" value="追加" class="quotation_button" style="height: 25px; width: 100px; float: right; " />
+                    </span>
+                </h2>   
+            </div>
+            <div id="expencelist">
+                <table class="quotaiontable" style="margin-left:10px;">
+                    <tr>
+                        <th></th>
+                        <th scope="col" style="width:150px;">分類１</th>
+                        <th scope="col" style="width:150px;">分類２</th>
+                        <th scope="col" style="width:300px;">費目</th>
+                        <th scope="col" style="width:50px;">数量</th>
+                        <th scope="col" style="width:50px;">単位</th>
+                        <th scope="col" style="width:150px;">費用</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;"></td>
+                        <td style="width:400px; text-align: left;">自動車税</td>
+                        <td style="width: 50px; text-align: right;">4</td>
+                        <td style="width: 50px; text-align: center;">月</td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="36,200" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;"></td>
+                        <td style="width:400px; text-align: left;">取得税</td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="12,800" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;"></td>
+                        <td style="width:400px; text-align: left;">重量税</td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="5,600" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;"></td>
+                        <td style="width:400px; text-align: left;">自賠責</td>
+                        <td style="width: 50px; text-align: right;">37</td>
+                        <td style="width: 50px; text-align: center;">ヶ月</td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="40,040" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;"></td>
+                        <td style="width:400px; text-align: left;">用品取得税</td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="0" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" /></td>
+                        <td style="width:150px;">税金・保険</td>
+                        <td style="width:150px;">
+                                  </td>
+                        <td style="width:400px; text-align: left;">
+                            <select style="width:300px;">
+                                <option>-費目を選択-</option>
+                            </select>
+                        </td>
+                        <td style="width: 50px; text-align: center;">
+                            <input type="number" value="1" style="text-align:right;"/>
+                        </td>
+                        <td style="width: 50px; text-align: center;"></td>
+                        <td style="width:150px;"><input type="number" style="width:130px;font-size:16px;text-align:right;" value="20,000" /></td>
+                    </tr>
+                </table>
+            </div>
+</body>
+</html>

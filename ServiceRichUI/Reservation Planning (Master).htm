@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>入庫計画策定（月別）</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            var mydata = [
+                            { shukeikubun: "01", shukeikubunmei: "車検", gekanmokuhyotaisu: "100", hiritu: "50", uriagemokuhyo: "1200", genkamokuhyo: '820', heijitumokuhyotaisu: "5", syumatumokuhyotaisu: "3" },
+                            { shukeikubun: "11", shukeikubunmei: "6点検", gekanmokuhyotaisu: "200", hiritu: "0", uriagemokuhyo: "40", genkamokuhyo: '32', heijitumokuhyotaisu: "12", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "13", shukeikubunmei: "12点検", gekanmokuhyotaisu: "300", hiritu: "120", uriagemokuhyo: "450", genkamokuhyo: '280', heijitumokuhyotaisu: "11", syumatumokuhyotaisu: "13" },
+                            { shukeikubun: "18", shukeikubunmei: "ＭＳＣ", gekanmokuhyotaisu: "0", hiritu: "150", uriagemokuhyo: "350", genkamokuhyo: '175', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "20", shukeikubunmei: "スケ点検", gekanmokuhyotaisu: "0", hiritu: "120", uriagemokuhyo: "80", genkamokuhyo: '48', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "21", shukeikubunmei: "一般処理", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "31", shukeikubunmei: "外装", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "41", shukeikubunmei: "部用品", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "51", shukeikubunmei: "ﾊﾟｯｸ販売", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "61", shukeikubunmei: "保証", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "62", shukeikubunmei: "新車3点検", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "63", shukeikubunmei: "新車6点検", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "64", shukeikubunmei: "中古1点検", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "66", shukeikubunmei: "部用品サ", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "67", shukeikubunmei: "新車サ", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "68", shukeikubunmei: "中古車サ", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "70", shukeikubunmei: "保証", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "72", shukeikubunmei: "整備サ", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "73", shukeikubunmei: "特定", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "75", shukeikubunmei: "新車架装", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "76", shukeikubunmei: "中古車再生", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "77", shukeikubunmei: "中古架装", gekanmokuhyotaisu: "0", hiritu: "0", uriagemokuhyo: "0", genkamokuhyo: '0', heijitumokuhyotaisu: "0", syumatumokuhyotaisu: "0" },
+                            { shukeikubun: "XX", shukeikubunmei: "ＮＮＮＮ５", gekanmokuhyotaisu: "9,999", hiritu: "999", uriagemokuhyo: "999,999", genkamokuhyo: '999,999', heijitumokuhyotaisu: "999", syumatumokuhyotaisu: "999" },
+                        ];
+
+            $("#list47").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 437,
+                width: 892,
+                cellEdit: true,
+                shrinkToFit: false,
+                colNames: ['', '集計区分', '月間目標台数', '平日/土日祝比率（％）', '売上目標', '原価目標', '日別平日目標台数', '日別土日祝目標台数'],
+                colModel: [
+                            { name: 'shukeikubun', index: 'shukeikubun', width: 25, align: "center" },
+               		        { name: 'shukeikubunmei', index: 'shukeikubunmei', width: 90, align: "left" },
+                            { name: 'gekanmokuhyotaisu', index: 'gekanmokuhyotaisu', width: 120, editable: true, align: "right" },
+               		        { name: 'hiritu', index: 'hiritu', width: 120, editable: true, align: "right" },
+                            { name: 'uriagemokuhyo', index: 'uriagemokuhyo', width: 120, align: "right" },
+                            { name: 'genkamokuhyo', index: 'genkamokuhyo', width: 120, align: "right" },
+                            { name: 'heijitumokuhyotaisu', index: 'heijitumokuhyotaisu', width: 120, align: "right" },
+                            { name: 'syumatumokuhyotaisu', index: 'syumatumokuhyotaisu', width: 120, align: "right" },
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                pgbuttons: true
+            });
+
+            jQuery("#list47").setCell(1, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(2, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(3, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(4, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(5, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(6, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(7, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(8, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(9, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(10, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(11, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(12, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(13, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(14, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(15, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(16, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(17, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(18, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(19, 0, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(20, 0, '', { 'background': '#ffffcc' });
+
+            jQuery("#list47").setCell(1, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(2, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(3, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(4, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(5, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(6, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(7, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(8, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(9, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(10, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(11, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(12, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(13, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(14, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(15, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(16, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(17, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(18, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(19, 1, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(20, 1, '', { 'background': '#ffffcc' });
+
+            jQuery("#list47").setCell(1, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(2, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(3, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(4, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(5, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(6, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(7, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(8, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(9, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(10, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(11, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(12, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(13, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(14, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(15, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(16, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(17, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(18, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(19, 6, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(20, 6, '', { 'background': '#ffffcc' });
+
+            jQuery("#list47").setCell(1, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(2, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(3, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(4, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(5, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(6, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(7, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(8, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(9, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(10, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(11, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(12, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(13, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(14, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(15, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(16, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(17, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(18, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(19, 7, '', { 'background': '#ffffcc' });
+            jQuery("#list47").setCell(20, 7, '', { 'background': '#ffffcc' });
+        })
+    </script>
+</head>
+<body>
+    <div style="height:20px; margin-top:3px; margin-left:3px;">
+        <div style="margin-top:15px;">
+            <button id="Button1" type="button" style=" height:40px; margin-right:0px;">F1<br />終了</button>
+            <button id="Button2" type="button" style=" height:40px; margin-right:0px;">F9<br />実行</button>
+            <button id="Button3" type="button" style=" height:40px; margin-right:0px;">Ctrl+9<br />日別計画</button>
+        </div>
+        <div style="margin-top:10px; margin-left:3px; margin-bottom:5px;">
+            <label style="margin-left:10px; background-color: #ffff99; padding: 1px 13px; font-size:larger; font-style:inherit">対象年月</label>
+            <input type="text" value="2014/04" style="width:45px;  margin-left:0px; margin-top:2px; text-align:left"/>
+            <br />
+            <label style="margin-left:10px; margin-top:8px; background-color: #add8e6; padding: 1px 20px; font-size:larger; font-style:inherit">稼働日</label>
+            <input type="text" value="25" style="width:17px;  margin-left:0px; margin-top:8px; text-align:right"/>
+            <label style="margin-left:18px; margin-top:8px; background-color: #add8e6; padding: 1px 20px; font-size:larger; font-style:inherit">平日数</label>
+            <input type="text" value="17" style="width:17px;  margin-left:0px; margin-top:8px; text-align:right"/>
+             <label style="margin-left:10px; margin-top:8px; background-color: #add8e6; padding: 1px 10px; font-size:larger; font-style:inherit">土日祝数</label>
+            <input type="text" value="99" style="width:17px;  margin-left:0px; margin-top:8px; text-align:right"/>
+        </div>
+        <div style="margin-top:5px; margin-left:1px; height:20px;">
+            <table id="list47"></table>
+        </div>
+        <div style="margin-top:-20px; margin-left:910px; height:460px; width:150px; border: 3px solid #ccc;">
+            <tr>
+                <td>【月間目標台数】<br />
+                    　 各集計区分の月間目標台数を<br />
+                   　　入力します。<br />
+                    ※目標台数は販社本部<br />
+                    　より通達された台数を<br />
+                    　入力してください。<br />
+                    <br />
+                    【平日／土日祝比率(％) 】<br />
+                      目標台数の休日割合(平日/休日<br />
+                      の目標設定台数のバランス)を<br />
+                      入力します。<br />
+                    ※平日１日当りの目標台数の増減を<br />
+                    　　設定してください。<br />
+                     (例)<br />
+                     ・休日と平日の目標台数を同じにする場合<br />
+                     →「平日／土日祝比率（％）」を"100"にします。<br />
+                     ・休日が平日より20%少ない場合<br />
+                     →「平日／土日祝比率（％）」を"80"にします。<br />
+                     ・休日が平日より20%多い場合<br />
+                     →「平日／土日祝比率（％）」を"120"にします。<br />
+                 </td>
+            </tr>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link id="uiThemes" rel="stylesheet" type="text/css" media="screen" href="../JQGrid/styles/jquery.ui.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../JQGrid/styles/ui.jqgrid.css" />
+    <!-- 引入jQuery -->
+    <script type="text/javascript" src="../JQGrid/scripts/jquery_1.11.0.min.js"></script>
+    <script type="text/javascript" src="../JQGrid/scripts/jquery_ui_1.11.0.js"></script>
+    <script type="text/javascript" src="../JQGrid/scripts/grid.locale_en.js"></script>
+    <script type="text/javascript" src="../JQGrid/scripts/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript">
+
+          var parameters = {};
+//        var mydata = [{"Car":"AT青","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT綠","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT黃","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT藍","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT紫","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT紅","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT粉","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT黃","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT黑","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"AT白","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複",
+//                    "D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"}];
+
+//        var mydata=[{"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0001","D_15":"車の\n車検","D_16": "==\n  ","D_17":"==\n  ","D_18":"==\n  ","D_19": "==\n  ","D_20":"==\n  ","D_21":"=>\n  ","D_22": "ヤマダ\n12", "D_23": "サトウ\n6点","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15":"", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT青碶","D_Number":"0002","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT黑碶","D_Number":"0003","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0004","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT白碶","D_Number":"0005","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0006","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0007","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0008","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+//                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複"},
+
+//                    ];
+
+
+        var mydata=[{"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0001","D_15":"テスト\n車検","D_16": "==\n  ","D_17":"==\n  ","D_18":"==\n  ","D_19": "==\n  ","D_20":"==\n  ","D_21":"=>\n  ","D_22": "ヤマダ\n12", "D_23": "サトウ\n6点","D_24":"複","D_25":"スズキ","D_26": "複","D_27":"キタ\n12","D_28":"＝＝","D_29":"複","D_30":"ミナミ\n6点","D_31": "","D_1":"","D_2":"","D_3":"","D_4":""},
+                    {"Car":"2012/07/10","D_Number":"","D_15":"", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT青碶","D_Number":"0002","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT黑碶","D_Number":"0003","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0004","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT白碶","D_Number":"0005","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0006","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0007","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"ファミリアーSワゴンAT緑碶","D_Number":"0008","D_15": "複", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+                    {"Car":"2012/07/10","D_Number":"","D_15": "", "D_16": "複","D_17":"複","D_18":"複","D_19": "複","D_20":"複","D_21":"複","D_22": "複", "D_23": "複","D_24":"複","D_25":"複","D_26": "複","D_27":"複","D_28":"複","D_29":"複","D_30":"複","D_31": "複","D_1":"複","D_2":"複","D_3":"複","D_4":"複"},
+
+                    ];
+
+
+
+        $(function() {
+            $("#gridTable").jqGrid({
+                //url: "LogData.aspx",
+                //datatype: "json",
+                datatype: "local",
+                data: mydata,
+                width: "1102",
+                autoScroll:false,
+               shrinkToFit: false,
+                height: "auto",
+                colNames: ['','','15水', '16木', '17金','18土','19日','20月','21火','22水', '23木', '24金','25土','26日','27月','28火','29水', '30木', '31金','1土','2日','3月','4火'],
+		colModel : [{
+				name : 'Car',
+				index : 'Car',
+				width : 200,
+				frozen : true,
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+					if (Number(rowId) % 2 == 0) {
+						return 'colspan=2'
+					}
+
+				}
+			},
+			{
+				name : 'D_Number',
+				index : 'D_Number',
+				width : 35,
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+					if (Number(rowId) % 2 == 0) {
+						return 'style="display:none;"'
+					}
+
+				}
+
+			}, {
+				name : 'D_15',
+				index : 'D_15',
+				width : 35,
+                align:'center',
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+                  //if(Number(rowId)>1){return 'style="background-color: yellow;"'};
+
+					if (Number(rowId) % 2 != 0) {
+						return 'rowspan=2;style="background-color: yellow;"'
+					} else if (Number(rowId) % 2 == 0) {
+						return 'style="display:none;"'
+					}
+					//if (Number(rowId)%2==0) { return 'sytle="border-left:0px"' }
+				}
+
+			}, {
+				name : 'D_16',
+				index : 'D_16',
+				width : 35,
+                align:'center',
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+					if (Number(rowId) % 2 != 0) {
+						return 'rowspan=2;style="background-color: yellow;"'
+					} else if (Number(rowId) % 2 == 0) {
+						return 'style="display:none;"'
+					}
+				}
+			}, {
+				name : 'D_17',
+				index : 'D_17',
+				width : 35,
+                align:'center',
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+					if (Number(rowId) % 2 != 0) {
+						return 'rowspan=2;style="background-color: yellow;"'
+					} else if (Number(rowId) % 2 == 0) {
+						return 'style="display:none;"'
+					}
+				}
+
+			}, {
+				name : 'D_18',
+				index : 'D_18',
+				width : 35,
+                align:'center',
+				cellattr : function (rowId, tv, rawObject, cm, rdata) {
+					if (Number(rowId) % 2 != 0) {
+						return 'rowspan=2;style="background-color: yellow;"'
+					} else if (Number(rowId) % 2 == 0) {
+						return 'style="display:none;"'
+					}
+				}}, {
+					name : 'D_19',
+					index : 'D_19',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_20',
+					index : 'D_20',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_21',
+					index : 'D_21',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_22',
+					index : 'D_22',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_23',
+					index : 'D_23',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_24',
+					index : 'D_24',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_25',
+					index : 'D_25',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_26',
+					index : 'D_26',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_27',
+					index : 'D_27',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_28',
+					index : 'D_28',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_29',
+					index : 'D_29',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_30',
+					index : 'D_30',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_31',
+					index : 'D_31',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_1',
+					index : 'D_1',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_2',
+					index : 'D_2',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_3',
+					index : 'D_3',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}, {
+					name : 'D_4',
+					index : 'D_4',
+					width : 35,
+                align:'center',
+					cellattr : function (rowId, tv, rawObject, cm, rdata) {
+						if (Number(rowId) % 2 != 0) {
+							return 'rowspan=2;style="background-color: yellow;"'
+						} else if (Number(rowId) % 2 == 0) {
+							return 'style="display:none;"'
+						}
+					}
+				}
+
+				],
+//                jsonReader: {
+//                    root: "rows",
+//                    page: "page",
+//                    total: "total",
+//                    records: "records",
+//                    cell: "",
+//                    id: "0"
+//                },
+//                prmNames: {
+//                    page: 'PageNumber',
+//                    rows: 'PageSize',
+//                    sort: 'SortIndex',
+//                    order: 'SortOrder'
+//                },
+                beforeSelectRow: function (rowid, e) {
+                    var content = $(e.target).html();
+                    var $td = $(e.target).closest("tr td");
+                    var icol = $.jgrid.getCellIndex($td[0]);
+                    parameters["param" + rowid + '-' + icol] = content;
+                    alert(JSON.stringify(parameters));
+                },
+                loadonce:true,
+                
+                sortname: 'Date',
+                sortorder: 'asc',
+                viewrecords: true,
+                rowNum: 26,
+                rowList: [10, 20, 30],
+                pager: "#gridPager",
+                //caption: "日志记录"
+            }).navGrid('#pager2', { edit: false, add: false, del: false });
+
+            jQuery("#gridTable").setCell (1,2,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,3,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,4,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,5,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,6,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,7,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,8,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,9,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,10,'',{'background':'#FFFFFF'});
+          //  jQuery("#gridTable").setCell (1,11,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,12,'',{'background':'#FFFFFF'});
+          //  jQuery("#gridTable").setCell (1,13,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,14,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,15,'',{'background':'#FFFFFF'});
+          //  jQuery("#gridTable").setCell (1,16,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,17,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,18,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,19,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,20,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,21,'',{'background':'#FFFFFF'});
+            jQuery("#gridTable").setCell (1,22,'',{'background':'#FFFFFF'});
+
+
+
+        });
+
+        $(document).ready(function () {
+            $("#Button6").on("click", function () {
+                var url = "DiscountFunction.htm?" + JSON.stringify(parameters);
+                var res = window.showModalDialog(url, "小計値引", "dialogHeight:150px;dialogWidth:300px");
+            });
+        });
+    
+    </script>
+</head>
+<body>
+    <div id="button_list">
+        <button>
+            F1<br />
+            終了</button>
+<!--        <button>
+            F6<br />
+            &nbsp;</button>-->
+        <button>
+            F9<br />
+            印刷</button>
+<!--        <button>
+            F11<br />
+            &nbsp;</button>-->
+        <button>
+            F12<br />
+            最新表示</button>
+        <button>
+            Ctrl+1<br />
+            前週表示</button>
+        <button>
+            Ctrl+2<br />
+            翌週表示</button>
+        <button>
+            Ctrl+3<br />
+            本日</button>
+        <button>
+            Ctrl+4<br />
+            日付変更</button>
+<!--        <button>
+            Ctrl+5<br />
+            &nbsp;</button>-->
+        <button id ="Button6" >
+            Ctrl+6<br />
+            車両入替</button>
+<!--            <input id="Button6" type="button" value="Ctrl+6 車両入替" style="height:44px" />-->
+        <button>
+            Ctrl+7<br />
+            入替解除</button>
+<!--        <button>
+            Ctrl+8<br />
+            &nbsp;</button>-->
+<!--        <button>
+            Ctrl+9<br />
+            &nbsp;</button>-->
+<!--        <button>
+            Ctrl+0<br />
+            &nbsp;</button>-->
+<!--        <button>
+            End<br />
+            &nbsp;</button>-->
+    </div>
+    <div>
+        <label style=" background:#6699ff">
+            表示開始日：</label><input type="text" value="2009/07/15" />
+        <input type="text" style="margin-left: 718px" />
+    </div>
+    <div id="mygrid">
+        <table id="gridTable" style="width:1000">
+        </table>
+        <div id="gridPager"></div>
+    </div>
+</body>
+</html>

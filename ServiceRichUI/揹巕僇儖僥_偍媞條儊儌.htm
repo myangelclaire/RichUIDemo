@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+    .quotation_button {
+        cursor: pointer;
+        font-size: 14px;
+        font-family: Arial;
+        font-weight: normal;
+        -moz-border-radius: 9px;
+        -webkit-border-radius: 9px;
+        border-radius: 9px;
+        border: 1px solid #337fed;
+        padding: 0px;
+        text-decoration: none;
+        background: -moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+        background: -ms-linear-gradient( top, #3d94f6 5%, #1e62d0 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #3d94f6), color-stop(100%, #1e62d0) );
+        background-color: #3d94f6;
+        color: #ffffff;
+        display: inline-block;
+        text-shadow: 1px 1px 1px #1570cd;
+        -webkit-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        -moz-box-shadow: inset 1px 1px 0px 0px #97c4fe;
+        box-shadow: inset 1px 1px 0px 0px #97c4fe;
+    };
+    </style>
+    
+    <script type="text/javascript">
+        $(function () {
+
+            var mydata = [
+                            {
+                                'ID': '1',
+                                'メモ': '来店促進',
+                                '更新者': '松田　デミ男',
+                                '更新日': '4月1日'
+                            },
+                            {
+                                'ID': '2',
+                                'メモ': '来店促進',
+                                '更新者': '松田　デミ男',
+                                '更新日': '4月2日'
+                            },
+                            {
+                                'ID': '3',
+                                'メモ': '来店促進',
+                                '更新者': '松田　デミ男',
+                                '更新日': '4月3日'
+                            },
+                            {
+                                'ID': '4',
+                                'メモ': '来店促進',
+                                '更新者': '松田　デミ男',
+                                '更新日': '4月4日'
+                            },
+                            {
+                                'ID': '5',
+                                'メモ': '来店促進',
+                                '更新者': '松田　デミ男',
+                                '更新日': '4月5日'
+                            }
+
+                         ];
+
+            var width = $(window).width() - 10;
+
+            $("#list53").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 120,
+                width: 550,
+                shrinkToFit: false,
+                rowNum: 10,
+                colNames: [
+                             'ID',
+                             'メモ',
+                             '更新者',
+                             '更新日'
+                           ],
+                colModel: [
+               		        { name: 'ID', index: 'ID', width: 50, align: "right" },
+               		        { name: 'メモ', index: 'メモ', width: 220, align: "left" },
+               		        { name: '更新者', index: '更新者', width: 100, align: "left" },
+               		        { name: '更新日', index: '更新日', width: 100, align: "right" }
+               	        ],
+                pager: "#gridPager7",
+                viewrecords: true,
+                loadonce: true,
+                multiselect: true
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+
+<div style="margin-left:60px; margin-top:40px">
+    <tr >
+        <td>
+        
+        <label>お客様メモ</label>
+        
+        </td>
+    
+    
+    </tr>
+        
+
+
+</div>
+
+
+        <fieldset  style="width:600px;  margin-left:60px; height:540px; margin-top:15px;  border-color:Black">
+
+
+
+
+
+
+    
+    <div style="margin-left:30px; margin-top:25px">
+          <tr >
+              <td>
+               <label><b style="font-size:16px; text-decoration: underline;">お客様メモ</b></label>
+              </td>
+              <td>
+                    <input type="button" value="反映" style="width:80px; margin-left:300px; height:30px"/>
+              </td>
+         </tr>
+   </div>
+
+
+               <div style="height: 40px; margin-left:30px; margin-top:20px">
+                                      <h2>
+                                        <span>
+                                            <a id="h2">
+                                                <b style=" color:#add8e6; text-decoration: underline;">▼ 入力欄</b>
+                                            </a>
+                                        </span>
+                                    </h2>
+
+             </div>
+  
+
+
+
+        <div>
+
+                <table>
+                    <tr>
+                        <td>
+                            <textarea style="width:430px; margin-left:50px; height:120px"></textarea>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                         <td>
+                        <label style="height:12px; width:60px; margin-left: 50px; margin-top:10px">最終更新:</label> 
+                            <input style="margin-left:12px; width:100px" value="李郎"/>
+                        </td>
+                         <td>
+                        <label style="height:12px; width:60px; margin-left: -200px; margin-top:90px">最終更新日:</label> 
+                            <input style="margin-left:12px; width:110px" value="4/1"/>
+                        </td>
+                    
+                    </tr>
+
+
+                </table>
+
+        </div>
+
+
+
+
+
+    <div style="height: 30px; margin-top:20px;margin-left:30px">
+            <h2>
+                <span>
+                    <a>
+                         <b style=" color:#add8e6;  text-decoration: underline;">▼ 更新履歴</b>
+                    </a>
+                </span>
+            </h2>
+    </div>
+
+
+      <div>
+       <fieldset title="更新履歴"  style="margin-top:10px; margin-left:32px; width:550px">
+        <legend style="font-size:12px; color:Blue">更新履歴</legend>
+           <table id="list53"></table>
+           <div id="gridPager7"></div>
+       </fieldset>
+     </div>
+
+
+
+        </fieldset>
+
+
+</body>
+</html>

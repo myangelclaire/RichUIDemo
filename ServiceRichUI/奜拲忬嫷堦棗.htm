@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>外注状況一覧</title>
+    <link href="../JQGrid/styles/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <link href="../JQGrid/styles/jquery.ui.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/global.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/main.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/theme.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/controls.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/select.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/tabs.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    
+    .label-blue
+    {            background-color: #add8e6;
+            border: 1px solid #e6e6fa;
+            padding: 2px 3px;
+            text-align: center;
+
+        
+        }
+    
+    </style>
+
+    <script src="../JavascriptTeki/TekiJsLookupParent.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_1.11.0.min.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery_ui_1.11.0.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/grid.locale_en.js" type="text/javascript"></script>
+    <script src="../JQGrid/scripts/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function ()
+        {
+
+
+            var mydata = [
+                            { 外注発注No: "XXXX", 状況: "XXX", 入庫区分: "XXXXX", 発注先: "XXXXXXXXXX1", 希望納期: "yyyy/mm/dd"},
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                            { 外注発注No: "", 状況: "", 入庫区分: "", 発注先: "", 希望納期: "" },
+                         ];
+            $("#gridlist1").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 250,
+                colNames: [ '外注発注No', '状況', '入庫区分', '発注先', '希望納期'],
+                colModel: [
+               		        { name: '外注発注No', index: '外注発注No', width: 100 },
+                            { name: '状況', index: '状況', width: 100 },
+                            { name: '入庫区分', index: '入庫区分', width: 100 },
+                            { name: '発注先', index: '発注先', width: 100 },
+                            { name: '希望納期', index: '希望納期', width: 100 }
+               	          ],
+                pager: "#gridPager",
+                viewrecords: true,
+                loadonce: true,
+                rownumbers: true,
+                multiselect: true,
+                pgbuttons: true
+
+                //caption: "Manipulating Array Data"
+            });
+
+            //  $("#cb_list47").hide();
+
+            $("#btn_esc").on("click", function ()
+            {
+
+                alert(document.title);
+
+                //document.title = "連携対象部品選択";
+
+            });
+
+            function resizeJqGridWidth(grid_id, div_id, width)
+            {
+                $(window).bind('resize', function ()
+                {
+                    $('#' + grid_id).setGridWidth(width, true); //Back to original width
+                    $('#' + grid_id).setGridWidth($('#' + div_id).width(), true); //Resized to new width as per window
+                }).trigger('resize');
+            };
+
+            resizeJqGridWidth("list47", "div1", "150");
+
+
+
+        })
+    </script>
+</head>
+<body>
+
+ <div style="width:400px">
+    <table>
+    <tbody>
+    <tr>
+    <td>
+                <button id="Button1" type="button" style="width:80px; height: 40px; margin-right:0px">
+                Esc<br />
+                キャンセル</button>
+
+    </td>
+        <td>
+                <button id="Button2" type="button" style="width:80px; height: 40px; margin-right:0px">
+                F3<br />
+                新規依頼</button>
+
+    </td>
+
+    <td>
+                <button id="Button3" type="button" style="width:80px; height: 40px; margin-right:0px">
+                F8<br />
+                削除</button>
+
+    </td>
+
+    <td>
+                <button id="Button4" type="button" style="width:80px; height: 40px; margin-right:0px">
+                F10<br />
+                依頼修正</button>
+
+    </td>
+
+    </tr>
+    </tbody>
+    </table>
+    </div>
+
+    <div id="firstPanel" style="width:400px">
+    <table>
+    <tbody>
+    <tr>
+    <td class="label-blue" style=" width:60px">
+    受付No
+    </td>
+    <td>
+    <input type="text" value="XXXXXXX1" />
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+    <div id="panel2" style="width:400px">
+    <table id="gridlist1" ></table>
+    </div>
+
+   
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+﻿<ul style="width: 100%; text-align: left; float: left;">
+    <li style="display: inline; white-space: nowrap;">
+        <span title="#title#" class="ms-crm-Lookup-Item" contenteditable="false" onclick="#onclick#" oncontextmenu="#oncontextmenu#" otypename="#otypename#" otype="1" oid="#oid#">
+            <img class="ms-crm-ImageStrip-ico_16_1 ms-crm-Lookup-Item" id="ico_16_1" alt="" src="/_imgs/imagestrips/transparent_spacer.gif">
+                <span class="ms-crm-LookupItem-Name" wrapper="true">#DisplayContent#</span>
+            </span>
+    </li>
+</ul>

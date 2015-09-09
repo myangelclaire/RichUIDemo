@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+<!--    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTab.js" type="text/javascript"></script>
+    <script>
+        function openpage() {
+            var iWidth = 1000;
+            var iHeight = 600;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            var ihtml = "Grade_Comparison.html";
+            var ititle = "グレード比較";
+            window.open(ihtml, ititle, "height=" + iHeight + ",width=" + iWidth + ",top=" + iTop + ",left=" + iLeft);
+        }
+    </script>
+</head>
+<body style="width: 1000px; height: 390px;">
+    <div id="quote-optionlist" style="height: 30px;">
+        <ul>
+            <li>
+                <span>■販売車種コード直接入力</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="quotation-detail" style="height:30px;">
+        <div id="message-header">
+            <form>
+                <table>
+                    <tr style="line-height:20px;">
+                        <td>
+                            <input type="text" maxlength="3" value="LD2" style="font-size:16px;text-align:center; width:60px;" />
+                            <input type="text" maxlength="2" value="B2" style="font-size: 16px; text-align: center; width: 40px;" />
+                            <input type="text" maxlength="2" value="Y3" style="font-size: 16px; text-align: center; width: 40px;" />
+                            <input type="text" maxlength="1" value="2" style="font-size: 16px; text-align: center; width: 20px;" />
+                            <span style="font-size: 16px; font-weight: bold; margin-left:50px;"><lable>アテンザ　セダン　XD L Package</lable></span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <div id="quote-optionlist" style="height: 30px;">
+        <ul>
+            <li>
+                <span>■グレード選択</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="quotation-detail" style="height:250px;">
+        <div id="message-header">
+            <form>
+                <table>
+                    <tr>
+                        <th width="100px"><label for="name">車種</label></th>
+                        <td width="150px">
+                            <select style="width:150px;">
+                                <option>アテンザ</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100px"><label for="name">2WD/4WD</label></th>
+                        <td width="150px">
+                            <select style="width:150px;">
+                                <option selected="selected">4WD</option>
+                                <option>2WD</option>
+                            </select>
+                        </td>
+
+                        <th width="100px"><label for="name">ミッション</label></th>
+                        <td width="150px">
+                            <select style="width:150px;">
+                                <option selected="selected">6EC-AT</option>
+                                <option></option>
+                            </select>
+                        </td>
+
+                        <th width="100px"><label for="name">エンジンタイプ</label></th>
+                        <td width="150px">
+                            <select style="width:150px;">
+                                <option selected="selected">FF</option>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="100px"><label for="name">グレード</label></th>
+                        <td colspan="4">
+                            <input type="button" class="quotation_button" value="検索" />
+                            <input type="button" class="quotation_button" value="比較" onclick="openpage();" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form>
+                <table class="gradechoice" style="margin-left:130px; width:600px;float:none;">
+                    <tr style="line-height: 20px;">
+                        <th></th>
+                        <th style="text-align:center;">グレード</th>
+                        <th style="text-align:center;">燃費</th>
+                        <th style="text-align:center;">減税対象</th>
+                        <th style="text-align:center;">補助金対象</th>
+                        <th style="text-align:center;">エンジン</th>
+                        <th style="text-align:center;">駆動方式</th>
+                        <th style="text-align:center;">ミッション</th>
+                        <th style="text-align:center;">金額</th>
+                    </tr>
+                    <tr style="line-height: 20px;">
+                        <td><input type="checkbox" /></td>
+                        <td width="150px;">アテンザセダン ２０Ｓ</td>
+                        <td width="70px;" style="text-align:center;">XXXXXX</td>
+                        <td width="70px;" style="text-align:center;">免税</td>
+                        <td width="70px;" style="text-align:center;">○</td>
+                        <td width="50px;" class="text">4WD</td>
+                        <td width="50px;" class="text">6EC-AT</td>
+                        <td width="50px;" class="text">FF</td>
+                        <td width="100px;" class="numeric">3,568,720円</td>
+                    </tr>
+                    <tr style="line-height: 20px;">
+                        <td><input type="checkbox" /></td>
+                        <td>アテンザセダン ２０Ｓ</td>
+                        <td width="70px;" style="text-align:center;">XXXXXX</td>
+                        <td width="70px;" style="text-align:center;">免税</td>
+                        <td width="70px;" style="text-align:center;">○</td>
+                        <td width="50px;" class="text">4WD</td>
+                        <td width="50px;" class="text">XXXXXX</td>
+                        <td width="50px;" class="text">XX</td>
+                        <td width="100px;" class="numeric">0,000,000円</td>
+                    </tr>
+                    <tr style="line-height: 20px;">
+                        <td><input type="checkbox" /></td>
+                        <td>アテンザセダン ＸＤ Ｌパッケージ</td>
+                        <td width="70px;" style="text-align:center;">XXXXXX</td>
+                        <td width="70px;" style="text-align:center;">減税</td>
+                        <td width="70px;" style="text-align:center;">×</td>
+                        <td width="50px;" class="text">4WD</td>
+                        <td width="50px;" class="text">XXXXXX</td>
+                        <td width="50px;" class="text">XX</td>
+                        <td width="100px;" class="numeric">0,000,000円</td>
+                    </tr>
+                    <tr style="line-height: 20px;">
+                        <td><input type="checkbox" /></td>
+                        <td>アテンザセダン　２５Ｓ Ｌパッケージ</td>
+                        <td width="70px;" style="text-align:center;">XXXXXX</td>
+                        <td width="70px;" style="text-align:center;">なし</td>
+                        <td width="70px;" style="text-align:center;">×</td>
+                        <td width="50px;" class="text">4WD</td>
+                        <td width="50px;" class="text">XXXXXX</td>
+                        <td width="50px;" class="text">XX</td>
+                        <td width="100px;" class="numeric">0,000,000円</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

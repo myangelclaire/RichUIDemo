@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>ログシート</title>
+
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Styles/CommonStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/SlideMenu.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/logsheet.css" />
+
+    <link rel="stylesheet" type="text/css" href="../dropdown/jquery.multiselect.css" />
+    <link rel="stylesheet" type="text/css" href="../dropdown/assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="../dropdown/assets/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../dropdown/assets/prettify.js"></script>
+    <script type="text/javascript" src="../dropdown/src/jquery.multiselect.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("select").multiselect(
+                {
+                    selectedList: 4 // 0-based index
+                }
+                );
+        });
+    </script>
+
+    <style></style>
+
+</head>
+<body id="test" style="width:1280px;height:768px; margin:0px; padding:0px;" onload="prettyPrint();">
+    <!--ログシート-->
+    <div id="logsheet-content">
+        <h2>ログシート（2段組案）</h2>
+        <!--検索条件-->
+        <div style="width:1240px;height:728px;">
+            <div id="logsheet-search-condition">
+                <form>
+                    <table>
+                        <tr>
+                            <th width="100px">店舗</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                            <th width="100px">検索日付</th>
+                            <td width="120px" colspan="6">
+                                <input type="date" name="name" id="name" />～
+                                <input type="date" name="name" id="name" />
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <th width="320px" colspan="3">検索データに対する表示データの制御</th>
+                            <td width="450px" colspan="9">
+                                <input type="radio" value="1" /><label>検索日付の範囲のみ</label>
+                                <input type="radio" value="1" /><label>関連ログを含む</label>
+                                <input type="radio" value="1" /><label>最新のログのみ</label>
+                            </td>
+                        </tr>-->
+                        <tr>
+                            <th width="100px">担当者</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                            <th width="100px">お客様</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                            <th width="100px">商談案件番号</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+                        </tr>
+
+                        <tr>
+                            <th width="100px">目的</th>
+                            <td width="120px" colspan="2">
+                                <!--<select name="subject" id="subject">
+                                    <option value="" selected="selected"> - 選択 -</option>
+                                    <option value="Option1">新車</option>
+                                    <option value="Option2">中古車</option>
+                                    <option value="Option3">新車／中古車</option>
+                                </select>-->
+                                <select title="Basic example" multiple="multiple" name="example-basic" size="5">
+                                    <option value="Option1">新車</option>
+                                    <option value="Option2">中古車</option>
+                                    <option value="Option3">新車／中古車</option>
+                                </select>
+                            </td>
+
+                            <th width="100px">AB/NON-AB</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="Option1">AB</option>
+                                    <option value="Option2">NON-AB</option>
+                                </select>
+                            </td>
+
+                            <th width="100px">源泉</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="Option1"></option>
+                                    <option value="Option2"></option>
+                                </select>
+                            </td>
+
+                            <th width="100px">見込車種</th>
+                            <td width="100px">
+                                <input type="text" name="name" id="name" />
+                            </td>
+                            <td width="20px;" class="lookup"></td>
+
+                        </tr>
+
+                        <tr>
+
+                            <th width="100px">確度</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="Option1">90</option>
+                                    <option value="Option2">70</option>
+                                    <option value="Option2">50</option>
+                                    <option value="Option2">30</option>
+                                    <option value="Option2">10</option>
+                                </select>
+                            </td>
+
+                            <th width="100px">成約見込日</th>
+                            <td width="120px" colspan="2">
+                                <input type="date" name="name" id="name" />
+                            </td>
+
+                            <th width="100px">登録見込月</th>
+                            <td width="120px" colspan="2">
+                                <input type="month" name="name" id="name" />
+                            </td>
+
+                            <th width="100px">今回の結果</th>
+                            <td width="120px" colspan="2">
+                                <select name="subject" id="subject">
+                                    <option value="Option1"></option>
+                                    <option value="Option2"></option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="entry-submit" style="margin-bottom:10px;height:30px;">
+                <input type="submit" value="最新ログ検索" class="blue_btn_class" style="float:right; padding: 2px; height: 25px; width:120px; margin-left:10px;" />
+                <input type="submit" value="関連ログ検索" class="blue_btn_class" style="float:right; padding: 2px; height: 25px; width:120px; margin-left:10px;" />
+                <input type="submit" value="検索" class="blue_btn_class" style="float: right; padding: 2px; height: 25px; width: 120px; margin-left: 10px;" />
+            </div>
+
+            <div id="logsheet-search-result">
+                <form>
+                    <table class="logsheet-result-twoline">
+                        <thead>
+                            <!--ラベル-->
+                            <tr>
+                                <th rowspan="2"></th>
+                                <th rowspan="1">日時</th>
+                                <th rowspan="1">お客様</th>
+                                <th rowspan="1">目的</th>
+                                <th rowspan="2">きっ<br />かけ</th>
+                                <th rowspan="2">担当者</th>
+                                <th rowspan="1" colspan="11">成約プロセス</th>
+                                <th rowspan="2">商談<br />回数</th>
+                                <th rowspan="1">見込車種</th>
+                                <th rowspan="1">見積</th>
+                                <th rowspan="2">競合車</th>
+                                <th rowspan="1">商談時メモ</th>
+                                <th rowspan="1">AB<br />区分</th>
+                                <th rowspan="1">成約見込日</th>
+                                <th rowspan="2">今回の<br />結果</th>
+                                <th rowspan="1">営業スタッフコメント</th>
+                            </tr>
+                            <tr id="opportunity-process-twoline">
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">状況</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">商談案件番号</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">源泉</th>
+                                <th rowspan="1" style="white-space:normal;">アンケート</th>
+                                <th rowspan="1" style="white-space:normal;">商品説明</th>
+                                <th rowspan="1" style="white-space:normal;">デモ</th>
+                                <th rowspan="1" style="white-space:normal;">査定</th>
+                                <th rowspan="1" style="white-space:normal;">つながり</th>
+                                <th rowspan="1" style="white-space:normal;">クレジット</th>
+                                <th rowspan="1" style="white-space:normal;">見積</th>
+                                <th rowspan="1" style="white-space:normal;">保険</th>
+                                <th rowspan="1" style="white-space:normal;">コミット</th>
+                                <th rowspan="1" style="white-space:normal;">店長承認</th>
+                                <th rowspan="1" style="white-space:normal;">捺印</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">下取車</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">値引き</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">ネック／他</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">確度</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">登録見込月</th>
+                                <th rowspan="1" style="white-space: nowrap; writing-mode:lr-tb;">店長フォロー／指示</th>
+                            </tr>
+                        </thead>
+                        <!--データ-->
+                        <tbody>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2"><input type="checkbox" /></td>
+                                <td rowspan="1">2014/04/20<br />12:00</td>
+                                <td rowspan="1"><span style="text-decoration: underline; color: blue;">野村　謙二郎</span>様</td>
+                                <td rowspan="1">新</td>
+                                <td rowspan="2">DM</td>
+                                <td rowspan="2">松田<br />デミ男</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2" style="text-decoration: underline; color: blue;">○</td>
+                                <td rowspan="2">3</td>
+                                <td rowspan="1">アテンザセダン<br>XD</td>
+                                <td rowspan="1">2,568,414</td>
+                                <td rowspan="2">マークX</td>
+                                <td rowspan="1">・乗り心地満足</td>
+                                <td rowspan="1">A</td>
+                                <td rowspan="1">2014/06/25</td>
+                                <td rowspan="2">継続検討</td>
+                                <td rowspan="1">2014/04/20<br />ボーナスを原資に買い替えを<br />検討されているようです。</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1">来店中</td>
+                                <td rowspan="1"><span style="text-decoration:underline; color:blue;">OP00000000</span></td>
+                                <td rowspan="1">源泉</td>
+                                <td rowspan="1">H17<br />スカイライン</td>
+                                <td rowspan="1">▲220,000</td>
+                                <td rowspan="1">2014/04/20<br />予算が少し合わないようです。</td>
+                                <td rowspan="1">90%</td>
+                                <td rowspan="1">14/08</td>
+                                <td rowspan="1">2014/04/20<br />デモカー手配して、来店確認<br />フォローを確実に。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

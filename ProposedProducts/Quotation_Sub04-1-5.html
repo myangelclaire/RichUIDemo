@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/CommonStyle2.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/SlideMenu.css" />
+<!--    <link rel="stylesheet" type="text/css" href="../Styles/communicationboard.css" />-->
+    <link rel="stylesheet" type="text/css" href="../Styles/quotation2.css" />
+    <script src="../JavascriptCommon/jquery1.7.2.min.js" type="text/javascript"></script>
+    <script src="../JavascriptMzd/TekiJsTab.js" type="text/javascript"></script>
+
+</head>
+    <script>
+        function openpage() {
+            var iWidth = 1020;
+            var iHeight = 800;
+            var iTop = (window.screen.availHeigh - 30 - iHeight) / 2;
+            var iLeft = (window.screen.availWidth - 10 - iWidth) / 2;
+            var ihtml = "Quotation_Sub04-1-5-1.html";
+            var ititle = "査定情報検索画面";
+
+            window.open(ihtml, ititle, "height=" + iHeight + ",width=" + iWidth + ",top=" + iTop + ",left=" + iLeft);
+        }
+    </script>
+<body style="width: 1000px; height: 350px;">
+    <div id="quote-optionlist" style="height: 30px;">
+        <ul>
+            <li style="height:30px;">
+                <span>■下取車情報</span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="解除" /></span>
+                <span style="float:right;"><input type="button" class="quotation_button" value="確定" /></span>
+            </li>
+        </ul>
+    </div>
+    <div id="quotation-detail">
+        <div id="quote-optionlist" style="height: 250px;">
+            <div>
+                <ul>
+                    <li style="height:25px;">
+                        <button type="button" id="button" value="code" class="quotation_button" style="height: auto;width:100px; margin-right: 10px; float: right">削除</button>
+                        <button type="button" id="button" value="code" class="quotation_button" style="height: auto; width: 100px; margin-right: 10px; float: right" onclick="openpage();">査定情報選択</button>
+                    </li>
+                </ul>
+                <form>
+                    <table class="quotaiontable" style="height: auto;">
+                        <tr>
+                            <th width="30px;"></th>
+                            <th width="400px;">車名</th>
+                            <th width="100px;">査定番号</th>
+                            <th width="100px;">査定日</th>
+                            <th width="100px;">下取価格</th>
+                            <th width="100px;">残価基準日</th>
+                            <th width="100px;">残債価格</th>
+                        </tr>
+                        <tr>
+                            <td width="30px;"><input type="checkbox" /></td>
+                            <td width="375px;">H17 スカイライン</td>
+                            <td width="75px;">XXXXXXXXX</td>
+                            <td width="75px;" style="text-align:center;">2014/6/20</td>
+                            <td width="100px;" class="numeric">￥350,000</td>
+                            <td width="75px;" style="text-align:center;">2014/9/1</td>
+                            <td width="100px;" class="numeric">￥200,000</td>
+                        </tr>
+                        <tr>
+                            <td width="30px;"><input type="checkbox" /></td>
+                            <td width="375px;">H17 スカイライン</td>
+                            <td width="75px;">XXXXXXXXX</td>
+                            <td width="75px;" style="text-align:center;">2014/6/20</td>
+                            <td width="100px;" class="numeric">￥350,000</td>
+                            <td width="75px;" style="text-align:center;">2014/9/1</td>
+                            <td width="100px;" class="numeric">￥1200,000</td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
